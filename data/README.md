@@ -24,11 +24,24 @@ Heurísticas referenciadas: `../MLB_Heuristicas_Mercados_v2_040526_070526.txt`
     fuente: <enum fuente>            # ver vocabulario abajo
     pitcher_vulnerable_tipo: A | B | C | null
 
+  cuotas_pre_partido:                # opcional, solo si se conocen
+    ml_favorito: float
+    ml_underdog: float
+
   apuesta:
     mercado: string                  # mercado literal jugado
     tipo_mercado: <enum tipo_mercado>
+    inning_corte: int                # opcional, solo para partial_DNB / partial_under
+    cuota: float | null
+    stake: full | medio | chico | null
     resultado: ganó | perdió | push | null
     notas_apuesta: string            # opcional, si el mercado/resultado se infirió
+
+  picks_analizadas_no_jugadas:       # opcional; menú considerado pero descartado
+    - pick: string
+      cuota: float
+      resultado_hipotetico: ganó | perdió
+      motivo: string                 # qué habría hecho cobrar/perder
 
   contexto_resultado:
     # campos libres relevantes: líneas de abridores, bates clave, factor clave, etc.
@@ -36,9 +49,12 @@ Heurísticas referenciadas: `../MLB_Heuristicas_Mercados_v2_040526_070526.txt`
   postmortem:
     lectura_correcta: sí | no | parcialmente
     mercado_capturo_edge: sí | no | parcialmente
-    clasificacion: <enum clasificación>
+    clasificacion_jugada: <enum clasificación> | null     # según lo realmente apostado
+    clasificacion_analitica: <enum clasificación>         # según el frame analítico del raw
     mercado_correcto_retrospectiva: string | null
     tipo_mercado_correcto: <enum tipo_mercado> | null
+
+  fuente: string                     # opcional: "raw", "conversación pre/post + raw", etc.
 
   patron_v2:
     aplicable: [int, ...]            # números de patrón en heurísticas v2
@@ -70,6 +86,7 @@ Tomado de la **Jerarquía de Edges** en heurísticas v2 (de más a menos confiab
 - `F5_side` — lado primeras 5
 - `F5_DNB` — lado F5 con empate devuelve
 - `F5_under` — total bajo primeras 5
+- `partial_DNB` — lado o empate tras N entradas (N en `apuesta.inning_corte`)
 - `TT_full_game` — team total partido completo
 - `over_under_full` — total partido completo
 - `ML` — moneyline
@@ -84,8 +101,20 @@ Tomado de la **Jerarquía de Edges** en heurísticas v2 (de más a menos confiab
 - `prop_bateador_RBI`
 - `combo` — varios mercados jugados juntos
 
-### `postmortem.clasificacion`
-Tomado del template original:
+### `postmortem.clasificacion_jugada` y `clasificacion_analitica`
+Dos campos separados porque a veces la pick **jugada** cobra mientras el
+**frame analítico** del raw discute un mercado distinto (analizado pero no
+jugado) como el correcto/incorrecto. Mantenemos ambos para no perder ninguna
+lectura.
+
+- `clasificacion_jugada`: clasificación según la apuesta efectivamente
+  colocada. Solo se llena cuando hay confirmación (ej: log de conversación).
+- `clasificacion_analitica`: clasificación según cómo el raw enmarca el
+  análisis. Se llena siempre desde la prosa.
+
+Si solo hay raw y no se sabe qué se jugó, dejar `clasificacion_jugada: null`.
+
+Valores (mismos para los dos campos), tomado del template original:
 
 - `ACIERTO_LIMPIO` — lectura correcta + mercado correcto + cobró
 - `ACIERTO_RUIDOSO` — cobró por motivo distinto al proyectado

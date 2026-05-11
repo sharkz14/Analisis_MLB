@@ -28,7 +28,7 @@ partidos:
     postmortem:
       lectura_correcta: parcialmente
       mercado_capturo_edge: no
-      clasificacion: ERROR_DE_MERCADO
+      clasificacion_analitica: ERROR_DE_MERCADO
       mercado_correcto_retrospectiva: "Ohtani outs / Ks"
       tipo_mercado_correcto: prop_pitcher_outs
     patron_v2:
@@ -55,7 +55,7 @@ partidos:
     postmortem:
       lectura_correcta: sí
       mercado_capturo_edge: no
-      clasificacion: ERROR_DE_MERCADO
+      clasificacion_analitica: ERROR_DE_MERCADO
       mercado_correcto_retrospectiva: "Miami team total / Miami F5 TT / props ofensivas de Miami"
       tipo_mercado_correcto: F5_TT
     patron_v2:
@@ -83,7 +83,7 @@ partidos:
     postmortem:
       lectura_correcta: parcialmente
       mercado_capturo_edge: no
-      clasificacion: ERROR_DE_LECTURA
+      clasificacion_analitica: ERROR_DE_LECTURA
       mercado_correcto_retrospectiva: "Cardinals +1.5 / under 8.5 / Padres F5 DNB"
       tipo_mercado_correcto: run_line_underdog_1.5
     patron_v2:
@@ -111,7 +111,7 @@ partidos:
     postmortem:
       lectura_correcta: no
       mercado_capturo_edge: no
-      clasificacion: ERROR_DE_LECTURA
+      clasificacion_analitica: ERROR_DE_LECTURA
       mercado_correcto_retrospectiva: null
       tipo_mercado_correcto: null
     patron_v2:
@@ -139,7 +139,7 @@ partidos:
     postmortem:
       lectura_correcta: parcialmente
       mercado_capturo_edge: no
-      clasificacion: ERROR_DE_MERCADO
+      clasificacion_analitica: ERROR_DE_MERCADO
       mercado_correcto_retrospectiva: "Witt total bases O1.5 / KC TT full game over 4.5 / over full game"
       tipo_mercado_correcto: prop_bateador_bases
     patron_v2:
@@ -165,7 +165,7 @@ partidos:
     postmortem:
       lectura_correcta: sí
       mercado_capturo_edge: no
-      clasificacion: ERROR_DE_MERCADO
+      clasificacion_analitica: ERROR_DE_MERCADO
       mercado_correcto_retrospectiva: "Pittsburgh F5 TT / Pittsburgh F5 protegido / Gallen hits allowed over"
       tipo_mercado_correcto: F5_TT
     patron_v2:
@@ -176,29 +176,52 @@ partidos:
   - id: phillies-athletics-050526
     fecha: 2026-05-05
     partido: "Phillies vs Athletics"
-    marcador: null
+    marcador: "Phillies 9 - Athletics 1"
+    cuotas_pre_partido:
+      ml_favorito: 1.53     # Phillies
+      ml_underdog: 2.57     # Athletics
     edge:
       frase: "Phillies lineup vs Severino (tráfico) + bullpen Oakland débil + parque/clima."
       fuente: edge_combinado   # lineup + abridor + bullpen + ambiental
       pitcher_vulnerable_tipo: null
     apuesta:
-      mercado: "Phillies F5 TT over 2.5"
-      tipo_mercado: F5_TT
-      resultado: perdió
+      mercado: "Phillies o empate tras 7 entradas (parlay leg)"
+      tipo_mercado: partial_DNB
+      inning_corte: 7
+      cuota: 1.31
+      stake: null
+      resultado: ganó
+      notas_apuesta: "Pierna de parlay. Tras 7 entradas iban Phillies 6-0, cobró cómodo."
+    picks_analizadas_no_jugadas:
+      - {pick: "Phillies F5 TT over 2.5", cuota: 1.82, resultado_hipotetico: perdió, motivo: "Phillies solo 1 R tras 5 inn — tráfico sin conversión"}
+      - {pick: "Sánchez under 18.5 outs", cuota: 1.78, resultado_hipotetico: perdió, motivo: "Sánchez 8.0 IP = 24 outs"}
+      - {pick: "Harper +1.5 bases", cuota: 1.98, resultado_hipotetico: ganó, motivo: "3 H, 2 HR, 9 TB"}
+      - {pick: "Marsh +1.5 bases", cuota: 2.15, resultado_hipotetico: ganó, motivo: "3 H, 3 TB"}
+      - {pick: "Sánchez over 6.5 Ks", cuota: 1.72, resultado_hipotetico: ganó, motivo: "10 K"}
+      - {pick: "Severino under 16.5 outs", cuota: 1.88, resultado_hipotetico: ganó, motivo: "5.0 IP = 15 outs"}
+      - {pick: "Severino under 4.5 Ks", cuota: 2.20, resultado_hipotetico: ganó, motivo: "3 K"}
+      - {pick: "Phillies TT over 5.5", cuota: 2.07, resultado_hipotetico: ganó, motivo: "Phillies 9 R"}
+      - {pick: "Over 9.5", cuota: 2.05, resultado_hipotetico: ganó, motivo: "10 R totales"}
+      - {pick: "Harper anota carrera", cuota: 1.80, resultado_hipotetico: ganó, motivo: "3 R"}
+      - {pick: "Harper RBI", cuota: 2.25, resultado_hipotetico: ganó, motivo: "3 RBI"}
     contexto_resultado:
-      abridor_rival: "Severino: tráfico pero sobrevivió 5 IP."
-      factor_clave: "Phillies generó tráfico temprano sin convertir; daño explotó 7ª-8ª (8 carreras vs bullpen)."
-      bates_clave: "Harper bases / Marsh bases cobraban; no dependían de timing F5."
+      abridor_rival: "Severino: 5.0 IP, 7 H, 1 ER, 2 BB, 3 K"
+      abridor_propio: "Sánchez: 8.0 IP, 10 K"
+      bullpen_rival: "Oakland: 3 IP, 7 H, 8 ER (daño grande en 7ª-8ª)"
+      bates_clave: "Harper 3H/2HR/3R/3RBI/9TB. Marsh 3H/3TB."
+      factor_clave: "Phillies generó tráfico temprano sin convertir (1 R tras 5 inn); 8 R en 7ª-8ª contra bullpen."
     postmortem:
       lectura_correcta: sí
-      mercado_capturo_edge: no
-      clasificacion: ERROR_DE_MERCADO
-      mercado_correcto_retrospectiva: "Phillies TT full game / props bases Harper/Marsh"
+      mercado_capturo_edge: sí
+      clasificacion_jugada: ACIERTO_LIMPIO
+      clasificacion_analitica: ERROR_DE_MERCADO   # el F5 TT analizado habría fallado; props/TT full game eran mejores
+      mercado_correcto_retrospectiva: "Props de bases (Harper/Marsh) o TT full game cubrían más escenarios; el DNB7 jugado cobró cómodo."
       tipo_mercado_correcto: prop_bateador_bases
     patron_v2:
       aplicable: [3, 10]
       emergente: null
     leccion: "Si el abridor rival es vulnerable pero tiene leash para sobrevivir 5 IP y el bullpen rival es débil, preferir TT full game o props de bases antes que F5 TT. El edge era Phillies ofensiva completa, no solo temprana."
+    fuente: "conversación pre/in/post-partido + raw"
 
   - id: yankees-rangers-050526
     fecha: 2026-05-05
@@ -218,7 +241,7 @@ partidos:
     postmortem:
       lectura_correcta: sí
       mercado_capturo_edge: no
-      clasificacion: ERROR_DE_MERCADO
+      clasificacion_analitica: ERROR_DE_MERCADO
       mercado_correcto_retrospectiva: "Yankees ML full game / TT full game / props de poder"
       tipo_mercado_correcto: ML
     patron_v2:
@@ -244,7 +267,7 @@ partidos:
     postmortem:
       lectura_correcta: parcialmente
       mercado_capturo_edge: no
-      clasificacion: ERROR_DE_MERCADO
+      clasificacion_analitica: ERROR_DE_MERCADO
       mercado_correcto_retrospectiva: "Minnesota F5 TT over / Minnesota TT / Cavalli outs under / hits permitidos over"
       tipo_mercado_correcto: F5_TT
     patron_v2:
@@ -270,7 +293,7 @@ partidos:
     postmortem:
       lectura_correcta: sí
       mercado_capturo_edge: sí
-      clasificacion: ACIERTO_LIMPIO
+      clasificacion_analitica: ACIERTO_LIMPIO
       mercado_correcto_retrospectiva: null
       tipo_mercado_correcto: null
     patron_v2:
@@ -296,7 +319,7 @@ partidos:
     postmortem:
       lectura_correcta: parcialmente
       mercado_capturo_edge: no
-      clasificacion: ERROR_DE_LECTURA
+      clasificacion_analitica: ERROR_DE_LECTURA
       mercado_correcto_retrospectiva: "Cardinals F5 TT / Cardinals carreras temprano"
       tipo_mercado_correcto: F5_TT
     patron_v2:
@@ -323,7 +346,7 @@ partidos:
     postmortem:
       lectura_correcta: parcialmente
       mercado_capturo_edge: no
-      clasificacion: ERROR_DE_MERCADO
+      clasificacion_analitica: ERROR_DE_MERCADO
       mercado_correcto_retrospectiva: "Cubs ML (aburrido pero correcto)"
       tipo_mercado_correcto: ML
     patron_v2:
@@ -351,7 +374,7 @@ partidos:
     postmortem:
       lectura_correcta: parcialmente
       mercado_capturo_edge: no
-      clasificacion: ERROR_DE_MERCADO
+      clasificacion_analitica: ERROR_DE_MERCADO
       mercado_correcto_retrospectiva: "Over full game / TT full game BOS"
       tipo_mercado_correcto: over_under_full
     patron_v2:
@@ -377,7 +400,7 @@ partidos:
     postmortem:
       lectura_correcta: no
       mercado_capturo_edge: no
-      clasificacion: ERROR_DE_LECTURA
+      clasificacion_analitica: ERROR_DE_LECTURA
       mercado_correcto_retrospectiva: "Under 8.5 / F5 under / Vásquez outs"
       tipo_mercado_correcto: over_under_full
     patron_v2:
