@@ -236,28 +236,50 @@ partidos:
   - id: dbacks-pirates-070526
     fecha: 2026-05-07
     partido: "D-backs vs Pirates"
-    marcador: null
+    marcador: "Pittsburgh 4 - Arizona 2"
+    cuotas_pre_partido:
+      ml_favorito: 1.85     # Arizona
+      ml_underdog: 1.98     # Pittsburgh (cuotas casi coin-flip)
     edge:
-      frase: "Gallen vulnerable por contacto fuerte permitido."
+      frase: "Gallen vulnerable por contacto (4.45 ERA / 5.22 xERA / 7.1% K-BB); Keller con mejor perfil (2.85 ERA / 2.90 FIP / 11.7% K-BB); lineup PIT zurdo/switch contra Gallen RHP."
       fuente: tipo_vulnerabilidad_pitcher
       pitcher_vulnerable_tipo: B
     apuesta:
-      mercado: "Gallen under Ks / under outs"
-      tipo_mercado: prop_pitcher_Ks
-      resultado: perdió
+      mercado: "pass — ninguna pick tomada"
+      tipo_mercado: pass
+      cuota: null
+      stake: null
+      resultado: null
+      notas_apuesta: "Análisis recomendó pass en Arizona ML @1.85 y identificó valor pequeño/moderado en Pittsburgh +1 F5 handicap 3-vías @1.70 (est. 62% vs 58.8% break-even, sugerido 0.75-1u). Usuario pasó completamente."
+    picks_analizadas_no_jugadas:
+      - {pick: "Arizona ML", cuota: 1.85, resultado_hipotetico: perdió, motivo: "PIT ganó 4-2; análisis pre-partido ya recomendaba pass"}
+      - {pick: "Pittsburgh +1 F5 handicap 3-vías", cuota: 1.70, resultado_hipotetico: ganó, motivo: "PIT ganó F5 3-2. Era la pick principal recomendada."}
+      - {pick: "Pittsburgh F5 DNB", cuota: 1.93, resultado_hipotetico: ganó, motivo: "PIT 3-2 al F5"}
+      - {pick: "Pittsburgh F5 TT over 2.5", cuota: 2.22, resultado_hipotetico: ganó, motivo: "PIT 3 R en F5"}
+      - {pick: "Gallen under 4.5 Ks", cuota: 1.95, resultado_hipotetico: perdió, motivo: "5 K (por 1)"}
+      - {pick: "Gallen under 15.5 outs", cuota: 1.82, resultado_hipotetico: perdió, motivo: "6.0 IP = 18 outs"}
+      - {pick: "Gallen over 5.5 hits permitidos", cuota: 1.98, resultado_hipotetico: ganó, motivo: "6 H permitidos"}
+      - {pick: "O'Hearn over 1.5 bases", cuota: 2.15, resultado_hipotetico: perdió, motivo: "1 TB"}
+      - {pick: "Brandon Lowe over 1.5 bases", cuota: 2.12, resultado_hipotetico: ganó, motivo: "3 H, HR, 6 TB"}
+      - {pick: "O'Hearn RBI", cuota: 2.42, resultado_hipotetico: ganó, motivo: "1 RBI"}
+      - {pick: "Oneil Cruz SB", cuota: 4.85, resultado_hipotetico: ganó, motivo: "Robó base"}
     contexto_resultado:
-      abridor_rival: "Gallen: 6.0 IP, 6 H, 4 ER, 2 HR, 5 K — permitió daño real pero llegó a 6 IP y 5 K."
-      factor_clave: "Tipo B: vulnerable por contacto, no por leash corto."
+      abridor_rival: "Gallen: 6.0 IP, 6 H, 4 ER, 2 BB, 5 K, 2 HR — permitió daño (HR Lowe, HR Bart, rally 2 R en 5º) pero llegó a 6 IP y 5 K."
+      bates_clave: "Lowe HR/3H/6TB. Bart HR. Cruz SB."
+      factor_clave: "Tipo B confirmado: Gallen vulnerable por contacto (4 ER, 2 HR) pero sobrevivió 6 IP. F5: PIT 3-2. Edge temprano de PIT se materializó."
     postmortem:
       lectura_correcta: sí
       mercado_capturo_edge: no
+      clasificacion_jugada: PASS_INCORRECTO
       clasificacion_analitica: ERROR_DE_MERCADO
-      mercado_correcto_retrospectiva: "Pittsburgh F5 TT / Pittsburgh F5 protegido / Gallen hits allowed over"
+      mercado_correcto_retrospectiva: "Pittsburgh +1 F5 handicap 3-vías @1.70 (ganó) / PIT F5 DNB @1.93 / PIT F5 TT over 2.5 @2.22 / Gallen hits allowed over"
       tipo_mercado_correcto: F5_TT
+      nota_meta: "Análisis identificó correctamente el mercado correcto (PIT +1 F5 3-vías) con valor modesto (62% vs 58.8%). El usuario pasó pese a edge identificado. Las picks F5 de PIT cobraron las 3; las under Ks/outs de Gallen perdieron como advierte el raw."
     patron_v2:
       aplicable: [1, 4]
-      emergente: null
+      emergente: "Pitcher Tipo B con leash de nombre/ace puede permitir el contacto/daño esperado pero seguir completando innings y acumulando Ks contra lineups con K naturales. Las picks under Ks/outs fallan; F5 TT del rival y hits allowed sí cobran. El diagnóstico de vulnerabilidad sigue siendo correcto, solo el mercado."
     leccion: "Si un pitcher con leash de abridor fuerte es vulnerable por contacto (Tipo B), priorizar daño permitido (hits, TB, F5 TT, F5 lado) antes que under Ks/outs."
+    fuente: "conversación pre/post-partido + raw"
 
   - id: phillies-athletics-050526
     fecha: 2026-05-05
