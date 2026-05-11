@@ -152,11 +152,11 @@ Referencia a los 12 patrones numerados en heurísticas v2:
 
 ```bash
 # Contar por clasificación
-yq '.partidos[].postmortem.clasificacion' data/postmortems.yaml | sort | uniq -c
+yq '.partidos[].postmortem.clasificacion_jugada' data/postmortems.yaml | sort | uniq -c
 
 # Errores de mercado donde el tipo correcto era F5_TT
 yq '.partidos[]
-  | select(.postmortem.clasificacion == "ERROR_DE_MERCADO"
+  | select(.postmortem.clasificacion_jugada == "ERROR_DE_MERCADO"
        and .postmortem.tipo_mercado_correcto == "F5_TT")
   | .id' data/postmortems.yaml
 
@@ -166,9 +166,26 @@ yq '.partidos[].patron_v2.aplicable[]' data/postmortems.yaml | sort | uniq -c | 
 # Casos donde la fuente del edge era "bullpen rival débil" → mercado jugado
 yq '.partidos[]
   | select(.edge.fuente == "bullpen_rival_debil")
-  | {id: .id, mercado: .apuesta.mercado, clasificacion: .postmortem.clasificacion}' \
+  | {id: .id, mercado: .apuesta.mercado, clasificacion: .postmortem.clasificacion_jugada}' \
   data/postmortems.yaml
 ```
+
+## Reporte agregado: `scripts/stats.py`
+
+Para una vista de pájaro del dataset (win rate, ROI, patrones más invocados,
+fuentes de edge más propensas a error, calidad del menú vs lo jugado,
+divergencias jugada/analítica, etc.):
+
+```bash
+# Imprime el reporte a stdout
+python3 scripts/stats.py
+
+# Genera/actualiza data/stats_report.md
+python3 scripts/stats.py --output data/stats_report.md
+```
+
+El reporte se regenera con cada nuevo partido que sumes al YAML. Útil para
+recalibración cada 2-3 semanas (los pendientes que menciona la nota v2).
 
 ## Caveats
 
