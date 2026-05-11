@@ -452,27 +452,45 @@ partidos:
     fecha: 2026-05-04
     partido: "Orioles vs Yankees"
     marcador: "Yankees 12 - Orioles 1"
+    cuotas_pre_partido:
+      ml_favorito: 1.47     # Yankees
+      ml_underdog: 2.75     # Orioles
     edge:
-      frase: "Yankees lineup vs Baz + bullpen Baltimore vulnerable = carreras de Yankees."
+      frase: "Yankees lineup vs Baz + bullpen Baltimore vulnerable + Schlittler con matchup favorable contra Baltimore (24.4% K vs RHP, parte baja con Cowser/Alexander muy atacable, sin Taylor Ward) = carreras concentradas de Yankees."
       fuente: matchup_mano_repertorio
       pitcher_vulnerable_tipo: null
     apuesta:
-      mercado: "Yankees F5 TT over 2.5 + Yankees TT over 4.5 + Bellinger H+R+RBI"
-      tipo_mercado: combo   # F5_TT + TT_full_game + prop_bateador_HRR_RBI
+      mercado: "Parlay: Bellinger H+R+RBI over 1.5 + Yankees ML"
+      tipo_mercado: combo   # prop_bateador_HRR_RBI + ML
+      cuota: 2.646          # 1.80 × 1.47
+      stake: null
       resultado: ganó
+      notas_apuesta: "Parlay de 2 piernas. Bellinger 1 H + 1 R + 3 RBI = 5 eventos; Yankees ganó 12-1. Ambas piernas cobraron cómodo."
+    picks_analizadas_no_jugadas:
+      - {pick: "Yankees F5 TT over 2.5", cuota: 1.90, resultado_hipotetico: ganó, motivo: "3 R en F5"}
+      - {pick: "Yankees TT over 4.5", cuota: null, resultado_hipotetico: ganó, motivo: "12 R"}
+      - {pick: "Over general", cuota: null, resultado_hipotetico: ganó, motivo: "13 R totales, casi todo Yankees"}
+      - {pick: "Schlittler over 6.5 Ks", cuota: null, resultado_hipotetico: perdió, motivo: "Solo 4 K"}
+      - {pick: "Bellinger hit simple over 0.5", cuota: null, resultado_hipotetico: ganó, motivo: "1 hit"}
     contexto_resultado:
-      factor_clave: "Yankees F5 TT cobró (3 R en 5 IP); TT full game cobrado sobrado; Bellinger 1H+1R+3RBI=5 eventos."
-      baltimore: "10 H, 1 R, 0-7 RISP — tráfico sin conversión, no sostuvo over general."
+      abridor_propio: "Schlittler: 4 K — menos K de los proyectados (línea 6.5 habría perdido)"
+      abridor_rival: "Baz: castigado por lineup Yankees"
+      bates_clave: "Bellinger: 1 H, 1 R, 3 RBI (sac fly + batazo clave en 8ª) = 5 eventos H+R+RBI"
+      baltimore: "10 H, 1 R, 0-7 RISP — tráfico sin conversión, no sostuvo over general"
+      factor_clave: "Yankees concentró el daño contra Baz y bullpen Baltimore vulnerable. Schlittler controló sin necesitar Ks altos."
     postmortem:
       lectura_correcta: sí
       mercado_capturo_edge: sí
+      clasificacion_jugada: ACIERTO_LIMPIO
       clasificacion_analitica: ACIERTO_LIMPIO
       mercado_correcto_retrospectiva: null
       tipo_mercado_correcto: null
+      nota_meta: "Único caso en el dataset donde el análisis acertó, las picks correctas se jugaron, y todo cobró. Validación de la jerarquía: F5 TT / props H+R+RBI de bates 2º-5º > ML caro > Ks props. La pick de Schlittler Ks fue conscientemente descartada por cuota ajustada y eso evitó el único leg que habría perdido."
     patron_v2:
       aplicable: [5, 10]
-      emergente: null
+      emergente: "Combinar prop H+R+RBI de bate 2º-5º (cuota mediana) + ML del favorito (cuota corta) en parlay captura mejor el edge que ML single. El ML corto no paga la confianza solo; sumar el prop multiplica la cuota y reduce el costo de oportunidad."
     leccion: "Si el edge está en un lineup fuerte contra abridor vulnerable + bullpen débil, jerarquía: F5 TT del equipo fuerte > TT full game > props H+R+RBI de bates 2º-5º > ML caro > over general."
+    fuente: "conversación pre/in/post-partido + raw"
 
   - id: cardinals-brewers-040526
     fecha: 2026-05-04
