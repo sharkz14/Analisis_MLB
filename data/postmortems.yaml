@@ -887,3 +887,246 @@ partidos:
       emergente: null
     leccion: "Prop del bate top con volumen + matchup es el mercado con menos dependencias cuando el side tiene ruido y el favorito puede producir tarde. No requiere victoria, no requiere timing F5, no requiere clutch."
     fuente: "conversación pre/in/post-partido"
+
+  - id: braves-rockies-030526
+    fecha: 2026-05-03
+    partido: "Braves vs Rockies"
+    marcador: "Braves 11 - Rockies 6"
+    cuotas_pre_partido:
+      ml_favorito: 1.65     # Atlanta
+      ml_underdog: 2.27     # Colorado
+    edge:
+      frase: "Atlanta lineup (Olson, Albies, Riley) vs Freeland LHP en Coors; Colorado lineup top vs Strider con leash incierto post-IL. Edge ofensivo en TT, no ML."
+      fuente: parque_clima
+      pitcher_vulnerable_tipo: B
+    apuesta:
+      mercado: "pass — ninguna pick tomada"
+      tipo_mercado: pass
+      cuota: null
+      stake: null
+      resultado: null
+      notas_apuesta: "Análisis recomendó Atlanta TT over 4.5 / Olson TB / Moniak TB. Usuario pasó. Las picks principales habrían cobrado."
+    picks_analizadas_no_jugadas:
+      - {pick: "Atlanta TT over 4.5", cuota: null, resultado_hipotetico: ganó, motivo: "Atlanta 11 R"}
+      - {pick: "Atlanta TT over 5.5", cuota: null, resultado_hipotetico: ganó, motivo: "11 R"}
+      - {pick: "Atlanta ML", cuota: 1.65, resultado_hipotetico: ganó, motivo: "Braves ganó 11-6"}
+      - {pick: "Olson over 1.5 TB", cuota: null, resultado_hipotetico: ganó, motivo: "HR + TB"}
+      - {pick: "Moniak over 1.5 TB", cuota: null, resultado_hipotetico: ganó, motivo: "HR + TB"}
+      - {pick: "Over 9.5 partido", cuota: null, resultado_hipotetico: ganó, motivo: "17 R"}
+      - {pick: "Atlanta F5 TT over 2.5", cuota: null, resultado_hipotetico: ganó, motivo: "Braves 3 R en F5"}
+      - {pick: "Strider under 5.5 Ks", cuota: null, resultado_hipotetico: perdió, motivo: "6 K en 3.1 IP"}
+      - {pick: "Rockies ML", cuota: 2.27, resultado_hipotetico: perdió, motivo: "COL perdió"}
+      - {pick: "Rockies +1.5", cuota: null, resultado_hipotetico: perdió, motivo: "Perdieron por 5"}
+      - {pick: "Colorado TT over 4.5", cuota: null, resultado_hipotetico: ganó, motivo: "COL 6 R"}
+    contexto_resultado:
+      abridor_braves: "Strider: 3.1 IP, 87 pitcheos, 6 K, salida corta — pero acumuló Ks pese al leash"
+      abridor_rockies: "Freeland: 4.1 IP, 8 H, 6 ER, 3 BB, 2 HR — vulnerabilidad confirmada en Coors"
+      bates_clave_atl: "Olson HR; Heim 2H/5RBI; Mateo 2H/2RBI; White 2H/1RBI — daño distribuido 1-9"
+      bates_clave_col: "Moniak HR; varios extra-base hits"
+      factor_clave: "Edge ofensivo Atlanta TT confirmado. Coors generó 17 R como esperado. Strider acumuló Ks pese a leash corto (lección: K stuff puede dar volumen en pocos innings)."
+    postmortem:
+      lectura_correcta: sí
+      mercado_capturo_edge: no
+      clasificacion_jugada: PASS_INCORRECTO
+      clasificacion_analitica: ERROR_DE_MERCADO
+      mercado_correcto_retrospectiva: "Atlanta TT over 4.5/5.5 / Olson TB / Moniak TB / Over 9.5"
+      tipo_mercado_correcto: TT_full_game
+    patron_v2:
+      aplicable: [5, 9, 10, 11]
+      emergente: "En Coors, parte baja del lineup no necesita ser élite para aportar al TT (Heim 5 RBI, Mateo/White produciendo). Para TT en parques ofensivos, no mirar solo 1-5; revisar si 6-9 evita outs automáticos. // K upside puede dar volumen pese a leash corto si pitcher tiene whiff pitch elite y rival tiene K natural."
+    leccion: "En parques ofensivos, edge en carreras → TT del equipo > ML > run line. K upside con leash corto sigue pudiendo cobrar over Ks si el rival tiene K spots."
+    fuente: "conversación pre/post-partido"
+
+  - id: royals-mariners-030526
+    fecha: 2026-05-03
+    partido: "Royals vs Mariners"
+    marcador: "Royals 4 - Mariners 1"
+    cuotas_pre_partido:
+      ml_favorito: 1.886    # Seattle
+      ml_underdog: 2.04     # Royals
+    edge:
+      frase: "Castillo (Seattle) vulnerable por contacto fuerte permitido + lineup KC zurdo-heavy contra RHP + Bubic con stuff sólido. Edge KC F5 (Bubic temprano > Castillo)."
+      fuente: matchup_mano_repertorio
+      pitcher_vulnerable_tipo: B
+    apuesta:
+      mercado: "KC F5 hándicap 0"
+      tipo_mercado: F5_DNB
+      cuota: 1.89
+      stake: null
+      formato: single
+      resultado: ganó
+      notas_apuesta: "Tomada single. F5: KC 3 - SEA 1, cobró cómodo."
+    picks_analizadas_no_jugadas:
+      - {pick: "KC F5 TT over 1.5", cuota: 1.65, resultado_hipotetico: ganó, motivo: "3 R en F5"}
+      - {pick: "KC TT over 3.5", cuota: 1.70, resultado_hipotetico: ganó, motivo: "4 R full game"}
+      - {pick: "Witt over 0.5 hits", cuota: 1.26, resultado_hipotetico: ganó, motivo: "Witt produjo"}
+      - {pick: "Maikel García over 0.5 hits", cuota: 1.41, resultado_hipotetico: ganó, motivo: "produjo"}
+      - {pick: "Witt under 1.5 TB", cuota: 1.95, resultado_hipotetico: ganó, motivo: "TB controladas"}
+      - {pick: "Seattle TT under 4.5", cuota: null, resultado_hipotetico: ganó, motivo: "SEA 1 R"}
+      - {pick: "Castillo under 4.5 Ks", cuota: null, resultado_hipotetico: perdió, motivo: "5 K"}
+      - {pick: "Julio over 1.5 TB", cuota: null, resultado_hipotetico: perdió, motivo: "1 sencillo"}
+      - {pick: "Over 7.5 full game", cuota: null, resultado_hipotetico: perdió, motivo: "5 R totales"}
+    contexto_resultado:
+      abridor_propio_kc: "Bubic: 7.0 IP, 4 H, 1 ER, 2 BB, 7 K — incluso mejor de lo proyectado"
+      abridor_rival_seattle: "Castillo: 6.0 IP, 6 H, 4 ER, 2 BB, 5 K — cedió daño clave en 2ª vuelta"
+      ofensiva_seattle: "4 H, 1 R, 10 K — sin Raleigh, lineup muy dependiente de Julio/Naylor"
+      factor_clave: "Edge madre confirmado: Bubic > Castillo en F5. KC fabricó sin HR. Pick F5 0 evitó el bullpen KC (su parte más frágil)."
+    postmortem:
+      lectura_correcta: sí
+      mercado_capturo_edge: sí
+      clasificacion_jugada: ACIERTO_LIMPIO
+      clasificacion_analitica: ACIERTO_LIMPIO
+      mercado_correcto_retrospectiva: null
+      tipo_mercado_correcto: null
+    patron_v2:
+      aplicable: [10, 12]
+      emergente: null
+    leccion: "F5 hándicap 0 captura edge temprano del underdog cuando: abridor underdog tiene mejor stuff que abridor favorito + ofensiva del underdog puede atacar al rival + bullpen propio es la parte frágil. Evita ML (depende del bullpen) y -1.5 (depende del margen)."
+    fuente: "conversación pre/in/post-partido"
+
+  - id: phillies-marlins-040526
+    fecha: 2026-05-04
+    partido: "Phillies vs Marlins"
+    marcador: "Phillies 1 - Marlins 0"
+    cuotas_pre_partido:
+      ml_favorito: 1.90     # Phillies
+      ml_underdog: 1.93     # Marlins (coin-flip)
+    edge:
+      frase: "Miami con lineup zurdo-heavy (7 zurdos/switch) vs Nola RHP que sufre vs LHB; Junk vulnerable pero con stuff. Edge supuesto: Miami F5 / Miami TT por platoon."
+      fuente: matchup_mano_repertorio
+      pitcher_vulnerable_tipo: null
+    apuesta:
+      mercado: "pass — ninguna pick tomada"
+      tipo_mercado: pass
+      cuota: null
+      stake: null
+      resultado: null
+      notas_apuesta: "Análisis recomendó Miami F5 ML / Miami TT over como mejores mercados. Usuario pasó. Esos picks habrían perdido — Nola dominó (6 IP / 0 ER / 5 K / 0 BB). Mercados correctos eran under / F5 under / props de outs."
+    picks_analizadas_no_jugadas:
+      - {pick: "Miami F5 ML", cuota: null, resultado_hipotetico: perdió, motivo: "F5 sin carreras de Miami"}
+      - {pick: "Miami ML", cuota: 1.93, resultado_hipotetico: perdió, motivo: "PHI 1-0"}
+      - {pick: "Miami TT over 3.5", cuota: null, resultado_hipotetico: perdió, motivo: "Miami 0 R"}
+      - {pick: "Under 8.5 full game", cuota: null, resultado_hipotetico: ganó, motivo: "Solo 1 R total"}
+      - {pick: "F5 under", cuota: null, resultado_hipotetico: ganó, motivo: "F5 0-0 (HR Harper en 3ª)"}
+      - {pick: "Junk over outs", cuota: null, resultado_hipotetico: ganó, motivo: "5.1 IP"}
+      - {pick: "Nola over 15.5 outs", cuota: null, resultado_hipotetico: ganó, motivo: "6.0 IP = 18 outs"}
+      - {pick: "Phillies ML", cuota: 1.90, resultado_hipotetico: ganó, motivo: "PHI 1-0"}
+    contexto_resultado:
+      abridor_phillies_nola: "6.0 IP, 5 H, 0 R, 0 BB, 5 K, 90 pitcheos — controló la zurdera de Miami"
+      abridor_marlins_junk: "5.1 IP, 5 H, 1 ER, 0 BB, 6 K, 82 pitcheos — mejor de lo proyectado"
+      ofensiva_marlins: "7 H, 0 R, 0 BB, 7 K, 0-3 RISP, 5 LOB, 2 caught stealing — hits aislados sin conversión"
+      bate_decisivo: "HR Harper en 3ª — única carrera del partido"
+      ambiente: "Roof closed, viento 0 mph"
+      factor_clave: "Lineup con platoon favorable no garantiza producción si no hay BB y RISP execution. Miami: 0 BB, sin BB = no tráfico extra. Caught stealings cortaron rallies."
+    postmortem:
+      lectura_correcta: no
+      mercado_capturo_edge: no
+      clasificacion_jugada: PASS_CORRECTO
+      clasificacion_analitica: ERROR_DE_LECTURA
+      mercado_correcto_retrospectiva: "Under 8.5 / F5 under / Nola over outs / Junk over outs — partido under-friendly por techo cerrado, viento 0, ambos abridores con leash"
+      tipo_mercado_correcto: over_under_full
+    patron_v2:
+      aplicable: [3, 9]
+      emergente: "Lineup con platoon favorable en papel necesita 2 confirmaciones para traducirse en TT/ML: (1) capacidad de tomar BB para tráfico extra; (2) ejecución con RISP. Sin esas, los hits quedan aislados y el ace rival se estabiliza. Roof closed + viento 0 + ambos abridores con CSW/curva → under es default."
+    leccion: "Pitcher con K alto y CSW puede estabilizarse aunque tenga split malo vs zurdos, especialmente con descanso extra y ambiente under-friendly. El platoon teórico no basta sin BB y RISP execution."
+    fuente: "conversación pre/post-partido"
+
+  - id: bluejays-twins-020526
+    fecha: 2026-05-02
+    partido: "Blue Jays vs Twins"
+    marcador: "Blue Jays 11 - Twins 4"
+    cuotas_pre_partido:
+      ml_favorito: 1.75     # Blue Jays
+      ml_underdog: 2.12     # Twins
+    edge:
+      frase: "Cease (Toronto) con K upside real; Prielipp (MIN) joven con bajo Zone% + Toronto con K bajo vs LHP (16.2%) → leash corto Prielipp + bullpen MIN expuesto."
+      fuente: matchup_mano_repertorio
+      pitcher_vulnerable_tipo: A
+    apuesta:
+      mercado: "Más de 5.5 carreras"
+      tipo_mercado: over_under_full
+      cuota: 1.32
+      stake: null
+      formato: parlay_leg
+      resultado_pierna: ganó
+      resultado_parlay_total: desconocido
+      notas_apuesta: "Pierna de parlay multi-leg. Cobró ya en B5 (6 carreras). Final 15 R totales — sobrada."
+    picks_analizadas_no_jugadas:
+      - {pick: "Cease over 6.5 Ks", cuota: 1.80, resultado_hipotetico: ganó, motivo: "7 K en 7 IP — la mejor pick del board"}
+      - {pick: "Toronto TT over 4.5", cuota: 2.05, resultado_hipotetico: ganó, motivo: "TOR 11 R"}
+      - {pick: "Toronto ML", cuota: 1.75, resultado_hipotetico: ganó, motivo: "TOR 11-4"}
+      - {pick: "Okamoto RBI", cuota: 2.55, resultado_hipotetico: ganó, motivo: "2 RBI + HR"}
+      - {pick: "Twins ML", cuota: 2.12, resultado_hipotetico: perdió, motivo: "MIN perdió"}
+      - {pick: "Clement under 0.5 K", cuota: null, resultado_hipotetico: perdió, motivo: "1 K"}
+      - {pick: "Clement over 1.5 TB", cuota: null, resultado_hipotetico: perdió, motivo: "1 sencillo"}
+      - {pick: "Twins +1.5", cuota: null, resultado_hipotetico: perdió, motivo: "Perdieron por 7"}
+    contexto_resultado:
+      abridor_toronto_cease: "7.0 IP, 7 K — dominó como esperado"
+      abridor_twins_prielipp: "5.0 IP, 2 ER, 4 K — competitivo, no fue el problema"
+      bullpen_twins: "García + Banda: 8 R combinadas en la 8ª — colapso brutal que rompió el partido"
+      bates_clave_tor: "Okamoto 2 HR + 2 RBI; producción distribuida"
+      factor_clave: "Edge real era Cease Ks + bullpen MIN expuesto. Parlay capturó el run environment full game sin depender de F5."
+    postmortem:
+      lectura_correcta: sí
+      mercado_capturo_edge: sí
+      clasificacion_jugada: ACIERTO_LIMPIO
+      clasificacion_analitica: ACIERTO_LIMPIO
+      mercado_correcto_retrospectiva: null
+      tipo_mercado_correcto: null
+    patron_v2:
+      aplicable: [10]
+      emergente: "Cuando el favorito tiene mejor abridor Y el bullpen rival es el verdadero punto débil, el mejor mercado no es F5: es prop del abridor (Cease Ks) + TT/over full game del favorito. El daño puede llegar contra bullpen tarde."
+    leccion: "Over full game protegido > F5 over cuando el daño grande proyecta llegar contra bullpen, no contra el abridor rival."
+    fuente: "conversación pre/in/post-partido"
+
+  - id: dbacks-cubs-020526
+    fecha: 2026-05-02
+    partido: "D-backs vs Cubs"
+    marcador: "Cubs 2 - D-backs 0"
+    cuotas_pre_partido:
+      ml_favorito: 1.60     # Cubs
+      ml_underdog: 2.37     # D-backs
+    edge:
+      frase: "Imanaga (LHP, splitter/sweeper élite) > Nelson; Wrigley con clima/umpire pitcher-friendly. Edge Cubs F5 temprano sin pedir paliza ni TT alto."
+      fuente: matchup_mano_repertorio
+      pitcher_vulnerable_tipo: null
+    apuesta:
+      mercado: "Cubs/Empate F5"
+      tipo_mercado: F5_doble_oportunidad
+      cuota: 1.39
+      stake: null
+      formato: parlay_leg
+      resultado_pierna: ganó
+      resultado_parlay_total: desconocido
+      notas_apuesta: "Pierna de parlay multi-leg. F5: Cubs 1-0, cobró cómodo."
+    picks_analizadas_no_jugadas:
+      - {pick: "Cubs F5 ganador (sin empate)", cuota: 1.62, resultado_hipotetico: ganó, motivo: "Cubs 1-0 F5"}
+      - {pick: "Cubs F5 -0.5", cuota: null, resultado_hipotetico: ganó, motivo: "Cubs ganó F5"}
+      - {pick: "Cubs ML full game", cuota: 1.60, resultado_hipotetico: ganó, motivo: "Cubs 2-0"}
+      - {pick: "Under 7.5", cuota: 1.80, resultado_hipotetico: ganó, motivo: "2 R totales"}
+      - {pick: "Under 8.5", cuota: 1.53, resultado_hipotetico: ganó, motivo: "2 R"}
+      - {pick: "Imanaga over 4.5 Ks", cuota: null, resultado_hipotetico: ganó, motivo: "5 K"}
+      - {pick: "Imanaga over 15.5 outs", cuota: null, resultado_hipotetico: ganó, motivo: "7.0 IP = 21 outs"}
+      - {pick: "Happ TB over 1.5", cuota: null, resultado_hipotetico: ganó, motivo: "HR + extra base"}
+      - {pick: "Busch TB over 1.5", cuota: null, resultado_hipotetico: ganó, motivo: "doble"}
+      - {pick: "Cubs F5 TT over 1.5", cuota: null, resultado_hipotetico: perdió, motivo: "Cubs solo 1 R en F5"}
+      - {pick: "Cubs -1.5 full game", cuota: 2.27, resultado_hipotetico: ganó, motivo: "Cobró por R en 8ª; era pick incómoda"}
+      - {pick: "Arizona +1.5", cuota: 1.65, resultado_hipotetico: perdió, motivo: "perdieron por 2"}
+    contexto_resultado:
+      abridor_cubs_imanaga: "7.0 IP, 5 K — dominó con splitter/sweeper como esperado"
+      abridor_dbacks_nelson: "Sobrevivió pero contenido"
+      bullpen_cubs: "Ben Brown 2 IP perfectas — bonus, no necesario para la apuesta F5"
+      bate_decisivo: "Happ HR; Busch doble"
+      factor_clave: "Pitching duel exactamente como proyectaba el clima/umpire. F5 doble oportunidad capturó edge temprano sin exigir paliza."
+    postmortem:
+      lectura_correcta: sí
+      mercado_capturo_edge: sí
+      clasificacion_jugada: ACIERTO_LIMPIO
+      clasificacion_analitica: ACIERTO_LIMPIO
+      mercado_correcto_retrospectiva: null
+      tipo_mercado_correcto: null
+    patron_v2:
+      aplicable: [11, 12]
+      emergente: null
+    leccion: "F5 doble oportunidad captura edge temprano sin pedir paliza ni F5 TT (que requiere conversion). Mejor que F5 -0.5 cuando la ofensiva propia no es confiable y el partido proyecta bajo."
+    fuente: "conversación pre/in/post-partido"
