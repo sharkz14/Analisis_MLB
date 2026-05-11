@@ -557,80 +557,138 @@ partidos:
   - id: reds-cubs-040526
     fecha: 2026-05-04
     partido: "Reds vs Cubs"
-    marcador: null
+    marcador: "Cubs 5 - Reds 4 (walk-off 9ª)"
+    cuotas_pre_partido:
+      ml_favorito: 1.47     # Cubs
+      ml_underdog: 2.72     # Reds
     edge:
-      frase: "Cubs lineup vs Petty frágil + Wrigley/viento."
+      frase: "Cubs con mejor lineup + Petty (Reds) frágil en papel + Wrigley/viento proyectado out. Ruta a TT alto si los factores ambientales se confirman."
       fuente: matchup_mano_repertorio
       pitcher_vulnerable_tipo: null
     apuesta:
-      mercado: "Cubs TT over 5.5"
-      tipo_mercado: TT_full_game
-      resultado: perdió
-      notas_apuesta: "Inferido del texto: el raw discute fragilidad del TT over alto."
+      mercado: "pass — ninguna pick tomada"
+      tipo_mercado: pass
+      cuota: null
+      stake: null
+      resultado: null
+      notas_apuesta: "Análisis recomendó: #1 Cubs TT Over 5.5 si disponible (habría perdido), #2 Cubs ML @1.47 para parlay (habría ganado). Usuario pasó. La conclusión del análisis fue 'edge no enorme, no jugaría como gratis' — sugería cautela."
+    picks_analizadas_no_jugadas:
+      - {pick: "Cubs TT Over 5.5", cuota: null, resultado_hipotetico: perdió, motivo: "Cubs 5 R (línea exacta, perdió por margen)"}
+      - {pick: "Cubs ML", cuota: 1.47, resultado_hipotetico: ganó, motivo: "Cubs 5-4 walk-off en 9ª"}
+      - {pick: "Cubs F5 ML", cuota: null, resultado_hipotetico: perdió, motivo: "Daño grande llegó por HR de Suzuki (3 R) y walk-off Conforto, no F5"}
+      - {pick: "Cubs -1.5", cuota: null, resultado_hipotetico: perdió, motivo: "Ganó por 1"}
+      - {pick: "Over 11.5", cuota: null, resultado_hipotetico: perdió, motivo: "9 R totales"}
     contexto_resultado:
-      abridor_rival: "Petty: 5.2 IP, 3 ER, 75 pitcheos — sobrevivió casi 6 IP."
-      factor_clave: "Viento real más bajo de lo proyectado; Cubs ganó pero sin explosión ofensiva."
+      abridor_rival: "Petty: 5.2 IP, 4 H, 3 ER, 2 BB, 1 K, 1 HR, 75 pitcheos — sobrevivió casi 6 IP, más eficiente que las métricas previas"
+      abridor_propio: "Cabrera: 6 IP, 9 H, 3 ER, 8 K, 2 HR — Ks altos pero permitió daño"
+      bates_clave: "Suzuki HR 3 R; Conforto walk-off HR en 9ª"
+      ofensiva_reds: "10 H, 4 BB, 2 HR (Bleday, Hayes), pero solo 4 R"
+      factor_clave: "Clima real (65°F, viento 4 mph) muy distinto a la proyección ofensiva inicial. Partido cerrado decidido por 2 HR puntuales de Cubs."
     postmortem:
       lectura_correcta: parcialmente
       mercado_capturo_edge: no
+      clasificacion_jugada: PASS_CORRECTO
       clasificacion_analitica: ERROR_DE_MERCADO
-      mercado_correcto_retrospectiva: "Cubs ML (aburrido pero correcto)"
+      mercado_correcto_retrospectiva: "Cubs ML @1.47 (aburrido pero correcto) — el TT over alto exigía confirmación de viento que no llegó"
       tipo_mercado_correcto: ML
+      nota_meta: "Pass correcto vs el #1 (TT Over 5.5 perdió por 1 carrera). El #2 (ML) habría cobrado. El análisis ya advertía 'edge no enorme', así que la cautela del pass se alinea con la propia incertidumbre del análisis. Patrón: cuando el análisis identifica edge modesto y advierte de fragilidad ambiental no confirmada, el pass es coherente."
     patron_v2:
       aplicable: [6, 11]
-      emergente: null
+      emergente: "TT alto del favorito necesita pre-confirmación de clima/viento en ventana <2h del game time. Proyecciones tempranas de viento a 10+ mph que no se confirman in-game son la fuente más común de TT over frágiles. Si el viento no está confirmado, bajar el TT over a opción secundaria y subir ML/under."
     leccion: "TT del favorito ya alto exige confirmación fuerte de clima, viento, lineup profundo, leash corto rival y bullpen expuesto. Si una pieza falla, el TT over se vuelve frágil aunque el favorito gane."
+    fuente: "conversación pre/post-partido + raw"
 
   - id: redsox-tigers-040526
     fecha: 2026-05-04
     partido: "Red Sox vs Tigers"
-    marcador: "5 - 4"
+    marcador: "Red Sox 5 - Tigers 4"
+    cuotas_pre_partido:
+      ml_favorito: 1.91     # Tigers
+      ml_underdog: 2.013    # Red Sox (cuotas casi coin-flip)
     edge:
-      frase: "Bullpen game DET frágil tras Skubal."
+      frase: "Bullpen game DET (Skubal scratched, Holton + Madden) + ambos bullpens usados + run environment para over. Edge en carreras/full game, no en side."
       fuente: leash_bullpen
       pitcher_vulnerable_tipo: null
     apuesta:
-      mercado: "F5 contra DET / F5 TT BOS"
-      tipo_mercado: F5_TT
-      resultado: perdió
-      notas_apuesta: "Inferido — el raw discute fragilidad del F5 frente al edge real de full game."
+      mercado: "pass — ninguna pick tomada"
+      tipo_mercado: pass
+      cuota: null
+      stake: null
+      resultado: null
+      notas_apuesta: "Análisis recomendó Over 8 @1.83 con stake 0.5-0.75u tras checklist completa explícita. Usuario pasó. La pick habría cobrado (9 R)."
+    picks_analizadas_no_jugadas:
+      - {pick: "Over 8", cuota: 1.83, resultado_hipotetico: ganó, motivo: "9 R totales — era la pick principal recomendada"}
+      - {pick: "Over 8.5", cuota: 2.063, resultado_hipotetico: ganó, motivo: "9 R"}
+      - {pick: "Red Sox TT over 3.5", cuota: 1.62, resultado_hipotetico: ganó, motivo: "Boston 5 R"}
+      - {pick: "Tigers TT over 3.5", cuota: 1.76, resultado_hipotetico: ganó, motivo: "Tigers 4 R"}
+      - {pick: "Red Sox F5 hándicap 0", cuota: 1.82, resultado_hipotetico: push, motivo: "F5 0-0 (Madden + Tolle dominaron)"}
+      - {pick: "Tigers +1.5", cuota: 1.674, resultado_hipotetico: ganó, motivo: "Perdieron por 1"}
+      - {pick: "Red Sox ML", cuota: 1.876, resultado_hipotetico: ganó, motivo: "Boston 5-4"}
+      - {pick: "Tigers ML", cuota: 2.051, resultado_hipotetico: perdió, motivo: "Detroit perdió"}
+      - {pick: "Tolle under 5.5 Ks", cuota: null, resultado_hipotetico: perdió, motivo: "Tolle 8 K (lean descartado al final)"}
     contexto_resultado:
-      abridores_det: "Holton + Madden: 6 IP sin carrera limpia."
-      abridor_bos: "Tolle: 7 IP, 1 H, 8 K — dominante (no proyectado)."
-      bullpen_det: "Vanasco: 4 ER en 0.2 IP — daño grande en 6ª-9ª, no F5."
+      abridores_det: "Holton + Madden: 6 IP sin carrera limpia. Madden 5.0 IP, 4 H, 0 ER, 0 BB, 7 K — mejor de lo proyectado."
+      abridor_bos: "Tolle: 7.0 IP, 1 H, 2 R, 0 ER, 1 BB, 8 K — dominante (lean a under Ks era el mercado más peligroso considerado)"
+      bullpen_det: "Vanasco: 0.2 IP, 3 H, 4 ER, 1 BB, 1 HR — colapso en 7ª, 5 R Boston en ese inning"
+      factor_clave: "El daño no llegó por F5 (push 0-0) sino por blow-up del bullpen DET en la 7ª. Over full game capturaba mejor que F5 over."
     postmortem:
       lectura_correcta: parcialmente
       mercado_capturo_edge: no
+      clasificacion_jugada: PASS_INCORRECTO
       clasificacion_analitica: ERROR_DE_MERCADO
-      mercado_correcto_retrospectiva: "Over full game / TT full game BOS"
+      mercado_correcto_retrospectiva: "Over 8 @1.83 (la pick principal recomendada) / Over 8.5 / ambos TT over / Boston ML"
       tipo_mercado_correcto: over_under_full
+      nota_meta: "Pass incorrecto: el análisis hizo checklist completa explícita y recomendó Over 8 @1.83 con stake 0.5-0.75u. Habría cobrado. 8 de 9 picks analizadas habrían ganado/push. Solo Tigers ML y Tolle under Ks habrían perdido."
     patron_v2:
       aplicable: [3, 8]
-      emergente: "Subestimar abridor con K%, SwStr%, CSW% y leash real puede convertir un under Ks en el mercado más peligroso."
+      emergente: "Subestimar abridor con K%, SwStr%, CSW% y leash real puede convertir un under Ks en el mercado más peligroso de la sesión. Si las métricas avanzadas del pitcher señalan dominio (Tolle aquí), no flippear a under Ks por paciencia del rival salvo línea muy alta."
     leccion: "Cuando el edge nace en 'pitching plan frágil + bullpen usado', el mejor mercado suele ser over full game o TT full game, no F5. El daño puede llegar en 6ª-9ª."
+    fuente: "conversación pre/post-partido + raw"
 
   - id: padres-giants-040526
     fecha: 2026-05-04
     partido: "Padres vs Giants"
-    marcador: null
+    marcador: "Giants 3 - Padres 2"
+    cuotas_pre_partido:
+      ml_favorito: 1.75     # Padres
+      ml_underdog: 2.10     # Giants
     edge:
-      frase: "McDonald (spot starter) frágil por BB en Triple-A → Padres F5."
-      fuente: forma_individual   # BB Triple-A, ruidoso según jerarquía v2
+      frase: "McDonald (spot starter Giants) frágil por mala línea Triple-A (BB altos) + Padres con lineup más estable que Giants vs LHP. Tesis: Padres ataca a McDonald temprano y gana F5."
+      fuente: forma_individual   # BB Triple-A, ruidoso según jerarquía v2 — alerta no respetada
       pitcher_vulnerable_tipo: null
     apuesta:
-      mercado: "Padres F5"
-      tipo_mercado: F5_side
+      mercado: "Padres F5 1-5 hándicap 2 (0)"   # Padres F5 con empate devuelve
+      tipo_mercado: F5_DNB
+      cuota: 1.727
+      stake: null
+      formato: single
       resultado: perdió
+      notas_apuesta: "Tomada single. F5 terminó Giants 2 - Padres 1 — Padres perdió F5, el handicap 0 no aplicó push. HR Arraez en 1ª + HR Schmitt en 6ª; HR Merrill por Padres."
+    picks_analizadas_no_jugadas:
+      - {pick: "Vásquez over 15.5 outs", cuota: null, resultado_hipotetico: ganó, motivo: "5.2 IP = 17 outs"}
+      - {pick: "McDonald under 3.5 Ks", cuota: null, resultado_hipotetico: perdió, motivo: "8 K — error grande, McDonald dominó"}
+      - {pick: "Under 8.5", cuota: null, resultado_hipotetico: ganó, motivo: "5 R totales"}
+      - {pick: "Giants TT under 3.5", cuota: null, resultado_hipotetico: ganó, motivo: "Giants 3 R"}
+      - {pick: "F5 under 4.5", cuota: null, resultado_hipotetico: ganó, motivo: "F5: 2-1, 3 R en F5"}
+      - {pick: "Machado over 1.5 TB", cuota: null, resultado_hipotetico: perdió, motivo: "0 hits"}
+      - {pick: "Padres -1.5", cuota: null, resultado_hipotetico: perdió, motivo: "Padres perdió"}
+      - {pick: "Padres ML", cuota: 1.75, resultado_hipotetico: perdió, motivo: "Giants ganó 3-2"}
     contexto_resultado:
-      abridor_rival: "McDonald: 7.0 IP, 0 BB, 8 K, 81 pitcheos — arsenal real."
-      padres: "0 BB, 10 K, 3 H — sin paciencia, sin contacto útil."
+      abridor_rival: "McDonald: 7.0 IP, 2 H, 1 ER, 0 BB, 8 K, 81 pitcheos — dominante, exactamente contrario a la tesis"
+      abridor_propio: "Vásquez: 5.2 IP (17 outs) — permitió daño temprano (HR Arraez 1ª) y tardío (HR Schmitt 6ª) pero llegó a 5+ IP"
+      ofensiva_padres: "0 BB, 10 K, 3 H — sin paciencia, sin contacto útil. McDonald los neutralizó"
+      bates_clave: "Arraez HR 1ª; Schmitt HR 6ª; Merrill HR por Padres"
+      factor_clave: "La fuente del edge (forma_individual / BB Triple-A) es la #8 en la Jerarquía de Edges v2 — entre las más ruidosas. El raw confirma: 'no basta con BB Triple-A si el pitcher tiene arsenal real y el rival no eleva conteos'."
     postmortem:
       lectura_correcta: no
       mercado_capturo_edge: no
+      clasificacion_jugada: ERROR_DE_LECTURA
       clasificacion_analitica: ERROR_DE_LECTURA
-      mercado_correcto_retrospectiva: "Under 8.5 / F5 under / Vásquez outs"
+      mercado_correcto_retrospectiva: "Under 8.5 / F5 under 4.5 / Vásquez over 15.5 outs"
       tipo_mercado_correcto: over_under_full
+      nota_meta: "Apuesta jugada @1.727 single. La tesis fundacional (McDonald frágil) era equivocada — McDonald 7 IP / 8 K / 0 BB la destruyó. De 8 picks analizadas, 4 cobraban (todas las del lado conservador: under, Vásquez outs); las pro-Padres todas perdieron."
     patron_v2:
       aplicable: [8]
-      emergente: null
+      emergente: "Antes de fadear a un opener/spot starter por leash o comando o malas líneas Triple-A, exigir 2 confirmaciones: (1) que el lineup rival tenga paciencia/bajo chase / OBP funcional; (2) que las muestras MLB previas del pitcher (no Triple-A) también señalen el problema. Sin esas, la fuente queda en la zona ruidosa de la jerarquía v2."
     leccion: "Antes de fadear a un opener/spot starter por leash o comando, validar si el lineup rival tiene paciencia, bajo chase, buen contacto y capacidad de convertir tráfico. No basta con que el pitcher parezca vulnerable."
+    fuente: "conversación pre/in/post-partido + raw"
