@@ -398,28 +398,55 @@ partidos:
   - id: nationals-twins-050526
     fecha: 2026-05-05
     partido: "Nationals vs Twins"
-    marcador: null
+    marcador: "Twins 11 - Nationals 3"
+    cuotas_pre_partido:
+      ml_favorito: 1.85     # Twins
+      ml_underdog: 1.98     # Nationals (cuotas casi coin-flip)
     edge:
-      frase: "Cavalli con K upside (línea 4.5)."
-      fuente: forma_individual   # K%, CSW; raw lo señala como ruidoso
+      frase: "Cavalli con K upside (K%, CSW altos) pero WHIP alto + BB issues + Minnesota con OBP funcional arriba; perfil real de salida corta por tráfico, no over Ks."
+      fuente: forma_individual   # K%, CSW; raw lo señala como ruidoso por mezcla con tráfico
       pitcher_vulnerable_tipo: A
     apuesta:
-      mercado: "Cavalli over Ks 4.5"
-      tipo_mercado: prop_pitcher_Ks
-      resultado: perdió
+      mercado: "pass — probablemente no apostó"
+      tipo_mercado: pass
+      cuota: null
+      stake: null
+      resultado: null
+      notas_apuesta: "Usuario: 'no sé si aposté en este partido (creo que no)'. Pick principal recomendada: Cavalli over 4.5 Ks @1.80 (1u). Habría perdido — Cavalli solo 2 K en 4 IP."
+    picks_analizadas_no_jugadas:
+      - {pick: "Cavalli over 4.5 Ks", cuota: 1.80, resultado_hipotetico: perdió, motivo: "Solo 2 K en 4.0 IP — salida corta antes de acumular volumen"}
+      - {pick: "Cavalli under 15.5 outs", cuota: 1.59, resultado_hipotetico: ganó, motivo: "4.0 IP = 12 outs"}
+      - {pick: "Cavalli over 4.5 hits permitidos", cuota: null, resultado_hipotetico: ganó, motivo: "5 hits permitidos"}
+      - {pick: "Cavalli over 2.5 ER", cuota: null, resultado_hipotetico: ganó, motivo: "3 ER (6 R total, 3 ganadas)"}
+      - {pick: "Trevor Larnach over 0.5 BB", cuota: 2.12, resultado_hipotetico: ganó, motivo: "Larnach participó en rally (no BB confirmado en raw, pero doble + producción)"}
+      - {pick: "CJ Abrams H+R+RBI over 1.5", cuota: 1.80, resultado_hipotetico: perdió, motivo: "0 H, 0 TB"}
+      - {pick: "James Wood over 0.5 BB", cuota: 1.645, resultado_hipotetico: perdió, motivo: "0 BB"}
+      - {pick: "James Wood over 1.5 TB", cuota: null, resultado_hipotetico: ganó, motivo: "Doble en el 8º = 2 TB"}
+      - {pick: "James Wood hit", cuota: 1.525, resultado_hipotetico: ganó, motivo: "1 hit (doble)"}
+      - {pick: "Minnesota F5 TT over 2.5", cuota: null, resultado_hipotetico: ganó, motivo: "Twins 6 R en F5"}
+      - {pick: "Minnesota TT over 4.5", cuota: null, resultado_hipotetico: ganó, motivo: "Twins 11 R"}
+      - {pick: "Over 9.5 juego", cuota: null, resultado_hipotetico: ganó, motivo: "14 R totales"}
+      - {pick: "Washington TT over 4.5", cuota: null, resultado_hipotetico: perdió, motivo: "Washington solo 3 R"}
+      - {pick: "Buxton HR", cuota: 3.60, resultado_hipotetico: ganó, motivo: "HR confirmado"}
     contexto_resultado:
-      abridor: "Cavalli: 4.0 IP, 5 H, 3 BB, 6 R, 3 ER, 2 K — salida corta por tráfico."
-      factor_clave: "Minnesota: OBP arriba, zurdos/switch, paciencia, velocidad. 6 carreras en F5."
+      abridor: "Cavalli: 4.0 IP, 5 H, 3 BB, 6 R, 3 ER, 2 K — 76 pitcheos, 48 strikes. Salida corta por tráfico, exactamente Tipo A confirmado."
+      bates_clave_twins: "Buxton HR; Larnach 2B; Lee 2B; Jeffers 2B — daño por extra bases + walks + HBP + errores."
+      ofensiva_twins: "11 R, F5 6 R. Daño contra Cavalli y luego bullpen WSH (5 R adicionales)."
+      bate_wood: "Wood 1/4, 2 K, 0 BB, 1 doble = 2 TB."
+      factor_clave: "El edge real no era Cavalli over Ks sino Minnesota TT / F5 TT / Cavalli outs under. Minnesota lo sacó por estrés antes de que pudiera acumular Ks."
     postmortem:
       lectura_correcta: parcialmente
       mercado_capturo_edge: no
+      clasificacion_jugada: PASS_CORRECTO
       clasificacion_analitica: ERROR_DE_MERCADO
-      mercado_correcto_retrospectiva: "Minnesota F5 TT over / Minnesota TT / Cavalli outs under / hits permitidos over"
+      mercado_correcto_retrospectiva: "Minnesota F5 TT over 2.5 / Minnesota TT over 4.5 / Over 9.5 / Cavalli under 15.5 outs @1.59 / Cavalli over hits allowed / James Wood TB over"
       tipo_mercado_correcto: F5_TT
+      nota_meta: "Usuario incierto si apostó. Si pasó, pass correcto (Cavalli over Ks @1.80 habría perdido). El análisis identificó Cavalli outs under @1.59 como pick secundaria (habría cobrado), pero priorizó over Ks. Mismo patrón que astros-dodgers: la pick correcta estaba en el menú pero descartada por cuota/jerarquía."
     patron_v2:
       aplicable: [1, 4]
-      emergente: null
+      emergente: "Cuando un abridor combina K upside + WHIP alto + BB + rival con OBP funcional, el orden de mercados debería ser: TT rival > F5 TT rival > hits permitidos > outs under > carreras permitidas > over Ks. La sucesión 'pitcher con stuff' → 'over Ks' es un atajo peligroso si el perfil real es de tráfico."
     leccion: "K upside + WHIP alto + BB + rival con OBP funcional = salida corta. Orden correcto: TT rival > F5 TT rival > hits permitidos > outs under > over Ks."
+    fuente: "conversación pre/post-partido + raw"
 
   - id: orioles-yankees-040526
     fecha: 2026-05-04
