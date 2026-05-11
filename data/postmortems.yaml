@@ -1,0 +1,386 @@
+# MLB — Postmortems estructurados
+# Fuente raw: ../MLB_Postmortems_Raw_040526_070526.txt
+# Template original: ../MLB_Template_Postmortem.txt
+# Schema y vocabularios: ./README.md
+#
+# Nota: los raw fueron escritos antes del template, así que muchos campos
+# (cuotas, stake, marcador exacto, líneas completas de abridor) están en null.
+# Esos huecos se llenan a futuro con postmortems escritos con el template.
+
+partidos:
+
+  - id: astros-dodgers-050526
+    fecha: 2026-05-05
+    partido: "Astros vs Dodgers"
+    marcador: null
+    edge:
+      frase: "Bullpen de Houston vulnerable; Dodgers puede atacarlo ofensivamente."
+      fuente: bullpen_rival_debil
+      pitcher_vulnerable_tipo: B   # Lambert según ejemplo en v2 Patrón 1
+    apuesta:
+      mercado: "Dodgers TT over 4.5"
+      tipo_mercado: TT_full_game
+      resultado: perdió
+    contexto_resultado:
+      abridor_rival: "Lambert: 7.0 IP, 0 ER"
+      factor_clave: "Lambert cubrió 7 IP en blanco; el bullpen solo apareció en 2 IP útiles."
+      ausencias: "Ohtani bateador fuera; reduce poder de Dodgers."
+    postmortem:
+      lectura_correcta: parcialmente
+      mercado_capturo_edge: no
+      clasificacion: ERROR_DE_MERCADO
+      mercado_correcto_retrospectiva: "Ohtani outs / Ks"
+      tipo_mercado_correcto: prop_pitcher_outs
+    patron_v2:
+      aplicable: [1, 3]
+      emergente: null
+    leccion: "Si el TT over depende de atacar bullpen rival, exigir que el abridor rival salga antes del 6º o que el lineup propio tenga poder pleno; si no, preferir prop del pitcher propio."
+
+  - id: orioles-marlins-050526
+    fecha: 2026-05-05
+    partido: "Orioles vs Marlins"
+    marcador: null
+    edge:
+      frase: "Bassitt vulnerable; Miami con poder en top/middle order."
+      fuente: matchup_mano_repertorio
+      pitcher_vulnerable_tipo: null
+    apuesta:
+      mercado: "Miami/Empate F5"
+      tipo_mercado: F5_DNB
+      resultado: perdió
+    contexto_resultado:
+      abridor_rival: "Bassitt: 4 ER en F5, 7 ER totales (Miami lo castigó)"
+      abridor_propio_marlins: "Alcantara: mala salida (bajo K%, contacto permitido)"
+      factor_clave: "Miami sí anotó (4 en F5, 7 totales), pero Alcantara no estabilizó: el side F5 dependía de él, no del bate de Miami."
+    postmortem:
+      lectura_correcta: sí
+      mercado_capturo_edge: no
+      clasificacion: ERROR_DE_MERCADO
+      mercado_correcto_retrospectiva: "Miami team total / Miami F5 TT / props ofensivas de Miami"
+      tipo_mercado_correcto: F5_TT
+    patron_v2:
+      aplicable: [2, 12]
+      emergente: null
+    leccion: "Si el favorito tiene edge ofensivo claro pero su abridor no domina por K y el rival conserva poder/paciencia arriba, priorizar team total o props ofensivas antes que F5 side conservador."
+
+  - id: padres-cardinals-070526
+    fecha: 2026-05-07
+    partido: "Padres vs Cardinals"
+    marcador: "Cardinals 2 - Padres 1"
+    edge:
+      frase: "Liberatore vulnerable; lineup Padres lleno de derechos debería producir."
+      fuente: matchup_mano_repertorio
+      pitcher_vulnerable_tipo: null
+    apuesta:
+      mercado: "Padres props ofensivas (Machado +1.5 bases) / Padres lado"
+      tipo_mercado: prop_bateador_bases
+      resultado: perdió
+    contexto_resultado:
+      abridor_rival: "Liberatore: 6.0 IP, 3 H, 1 ER, 6 K"
+      abridor_propio: "King: 6.0 IP, 1 H, 1 ER, 6 K"
+      factor_clave: "San Diego como equipo venía flojo vs LHP; Petco comprime carreras; parte baja sin volumen; partido definido por swings puntuales (HR Burleson, doble Walker, triple Winn)."
+      bates_clave: "Machado 0-3 BB; France 0-3; solo 4 hits totales de Padres."
+    postmortem:
+      lectura_correcta: parcialmente
+      mercado_capturo_edge: no
+      clasificacion: ERROR_DE_LECTURA
+      mercado_correcto_retrospectiva: "Cardinals +1.5 / under 8.5 / Padres F5 DNB"
+      tipo_mercado_correcto: run_line_underdog_1.5
+    patron_v2:
+      aplicable: [6, 10, 11]
+      emergente: null
+    leccion: "Cuando el favorito tiene edge de abridor pero no edge ofensivo colectivo repetible y el parque comprime carreras, priorizar protección (F5 DNB / under / underdog +1.5) antes que favoritos caros o props ofensivas."
+
+  - id: rangers-yankees-070526
+    fecha: 2026-05-07
+    partido: "Rangers vs Yankees"
+    marcador: null
+    edge:
+      frase: "Yankees abre con opener (Blackburn) → Rangers +1.5 / Texas TT over por fragilidad de pitching plan."
+      fuente: leash_bullpen
+      pitcher_vulnerable_tipo: null
+    apuesta:
+      mercado: "Rangers +1.5 / Texas TT over 3.5"
+      tipo_mercado: run_line_underdog_1.5
+      resultado: perdió
+    contexto_resultado:
+      abridor_rival: "Blackburn 1.0 IP (opener); Beck 3.0 IP, 2 ER; Hill/Headrick/Bird/Doval cerraron en cero."
+      abridor_propio_rangers: "Gore: 5.1 IP, 6 H, 5 ER, 3 BB, 3 K — colapsó en el 6º (3ª vuelta)."
+      bates_clave: "Bellinger 3H/2RBI; Grisham 3H/3RBI; McMahon 2H/2RBI; Escarra HR. Yankees 1-9 funcional."
+      texas: "6 H, 7 BB, 10 LOB, 1/5 RISP, solo 2 carreras."
+    postmortem:
+      lectura_correcta: no
+      mercado_capturo_edge: no
+      clasificacion: ERROR_DE_LECTURA
+      mercado_correcto_retrospectiva: null
+      tipo_mercado_correcto: null
+    patron_v2:
+      aplicable: [3, 7, 8]
+      emergente: null
+    leccion: "Spot starter del favorito + underdog con tráfico potencial NO es suficiente para +1.5. Exigir además: bullpen/bulk plan del favorito débil, underdog convierte tráfico (no solo OBP), abridor del underdog pasa la 3ª vuelta, favorito sin profundidad 6-9."
+
+  - id: guardians-royals-070526
+    fecha: 2026-05-07
+    partido: "Guardians vs Royals"
+    marcador: null
+    edge:
+      frase: "Lugo > Cecconi → KC F5 side."
+      fuente: matchup_mano_repertorio
+      pitcher_vulnerable_tipo: C   # Lugo según v2 Patrón 1
+    apuesta:
+      mercado: "KC F5 DNB"
+      tipo_mercado: F5_DNB
+      resultado: perdió
+    contexto_resultado:
+      abridor_propio: "Lugo: 4.0 IP, 7 H, 4 ER, 4 BB, 102 pitcheos — roto por tráfico, no por slugging."
+      abridor_rival: "Cecconi: 5.1 IP, 6 H, 3 BB, 2 ER — sobrevivió."
+      bates_clave_underdog: "Kwan, DeLauter, JRam, Manzardo, Schneemann, Bazzana, Rocchio — profundidad sin HR."
+      bate_top_favorito: "Witt: 4-4, HR, 1 R, 1 RBI, 7 TB (prop O1.5 TB cobraba limpio)."
+    postmortem:
+      lectura_correcta: parcialmente
+      mercado_capturo_edge: no
+      clasificacion: ERROR_DE_MERCADO
+      mercado_correcto_retrospectiva: "Witt total bases O1.5 / KC TT full game over 4.5 / over full game"
+      tipo_mercado_correcto: prop_bateador_bases
+    patron_v2:
+      aplicable: [2, 4, 10, 12]
+      emergente: null
+    leccion: "Si el favorito tiene mejor abridor pero no domina por whiff y el underdog es paciente/contact-heavy con zurdos/switch, el F5 side se rompe por pitch count antes de que aparezca la superioridad. Subir props del bate top + TT full game."
+
+  - id: dbacks-pirates-070526
+    fecha: 2026-05-07
+    partido: "D-backs vs Pirates"
+    marcador: null
+    edge:
+      frase: "Gallen vulnerable por contacto fuerte permitido."
+      fuente: tipo_vulnerabilidad_pitcher
+      pitcher_vulnerable_tipo: B
+    apuesta:
+      mercado: "Gallen under Ks / under outs"
+      tipo_mercado: prop_pitcher_Ks
+      resultado: perdió
+    contexto_resultado:
+      abridor_rival: "Gallen: 6.0 IP, 6 H, 4 ER, 2 HR, 5 K — permitió daño real pero llegó a 6 IP y 5 K."
+      factor_clave: "Tipo B: vulnerable por contacto, no por leash corto."
+    postmortem:
+      lectura_correcta: sí
+      mercado_capturo_edge: no
+      clasificacion: ERROR_DE_MERCADO
+      mercado_correcto_retrospectiva: "Pittsburgh F5 TT / Pittsburgh F5 protegido / Gallen hits allowed over"
+      tipo_mercado_correcto: F5_TT
+    patron_v2:
+      aplicable: [1, 4]
+      emergente: null
+    leccion: "Si un pitcher con leash de abridor fuerte es vulnerable por contacto (Tipo B), priorizar daño permitido (hits, TB, F5 TT, F5 lado) antes que under Ks/outs."
+
+  - id: phillies-athletics-050526
+    fecha: 2026-05-05
+    partido: "Phillies vs Athletics"
+    marcador: null
+    edge:
+      frase: "Phillies lineup vs Severino (tráfico) + bullpen Oakland débil + parque/clima."
+      fuente: edge_combinado   # lineup + abridor + bullpen + ambiental
+      pitcher_vulnerable_tipo: null
+    apuesta:
+      mercado: "Phillies F5 TT over 2.5"
+      tipo_mercado: F5_TT
+      resultado: perdió
+    contexto_resultado:
+      abridor_rival: "Severino: tráfico pero sobrevivió 5 IP."
+      factor_clave: "Phillies generó tráfico temprano sin convertir; daño explotó 7ª-8ª (8 carreras vs bullpen)."
+      bates_clave: "Harper bases / Marsh bases cobraban; no dependían de timing F5."
+    postmortem:
+      lectura_correcta: sí
+      mercado_capturo_edge: no
+      clasificacion: ERROR_DE_MERCADO
+      mercado_correcto_retrospectiva: "Phillies TT full game / props bases Harper/Marsh"
+      tipo_mercado_correcto: prop_bateador_bases
+    patron_v2:
+      aplicable: [3, 10]
+      emergente: null
+    leccion: "Si el abridor rival es vulnerable pero tiene leash para sobrevivir 5 IP y el bullpen rival es débil, preferir TT full game o props de bases antes que F5 TT. El edge era Phillies ofensiva completa, no solo temprana."
+
+  - id: yankees-rangers-050526
+    fecha: 2026-05-05
+    partido: "Yankees vs Rangers"
+    marcador: null
+    edge:
+      frase: "Yankees lineup con poder 1-9 vs deGrom con barrels permitidos en Yankee Stadium."
+      fuente: parque_clima   # combinado con perfil contacto deGrom
+      pitcher_vulnerable_tipo: null
+    apuesta:
+      mercado: "Yankees F5"
+      tipo_mercado: F5_side
+      resultado: perdió
+    contexto_resultado:
+      abridor_rival: "deGrom: 7 K, stuff de élite intacto; sostuvo temprano."
+      factor_clave: "Edge era full game (lineup + bullpen absorben golpe inicial), no temprano."
+    postmortem:
+      lectura_correcta: sí
+      mercado_capturo_edge: no
+      clasificacion: ERROR_DE_MERCADO
+      mercado_correcto_retrospectiva: "Yankees ML full game / TT full game / props de poder"
+      tipo_mercado_correcto: ML
+    patron_v2:
+      aplicable: [9, 11]
+      emergente: null
+    leccion: "As con K% alto + contacto aéreo/barrels permitidos en parque HR-friendly NO es bloqueador automático. El mercado correcto puede ser ML/TT/props de poder full game, no F5."
+
+  - id: nationals-twins-050526
+    fecha: 2026-05-05
+    partido: "Nationals vs Twins"
+    marcador: null
+    edge:
+      frase: "Cavalli con K upside (línea 4.5)."
+      fuente: forma_individual   # K%, CSW; raw lo señala como ruidoso
+      pitcher_vulnerable_tipo: A
+    apuesta:
+      mercado: "Cavalli over Ks 4.5"
+      tipo_mercado: prop_pitcher_Ks
+      resultado: perdió
+    contexto_resultado:
+      abridor: "Cavalli: 4.0 IP, 5 H, 3 BB, 6 R, 3 ER, 2 K — salida corta por tráfico."
+      factor_clave: "Minnesota: OBP arriba, zurdos/switch, paciencia, velocidad. 6 carreras en F5."
+    postmortem:
+      lectura_correcta: parcialmente
+      mercado_capturo_edge: no
+      clasificacion: ERROR_DE_MERCADO
+      mercado_correcto_retrospectiva: "Minnesota F5 TT over / Minnesota TT / Cavalli outs under / hits permitidos over"
+      tipo_mercado_correcto: F5_TT
+    patron_v2:
+      aplicable: [1, 4]
+      emergente: null
+    leccion: "K upside + WHIP alto + BB + rival con OBP funcional = salida corta. Orden correcto: TT rival > F5 TT rival > hits permitidos > outs under > over Ks."
+
+  - id: orioles-yankees-040526
+    fecha: 2026-05-04
+    partido: "Orioles vs Yankees"
+    marcador: "Yankees 12 - Orioles 1"
+    edge:
+      frase: "Yankees lineup vs Baz + bullpen Baltimore vulnerable = carreras de Yankees."
+      fuente: matchup_mano_repertorio
+      pitcher_vulnerable_tipo: null
+    apuesta:
+      mercado: "Yankees F5 TT over 2.5 + Yankees TT over 4.5 + Bellinger H+R+RBI"
+      tipo_mercado: combo   # F5_TT + TT_full_game + prop_bateador_HRR_RBI
+      resultado: ganó
+    contexto_resultado:
+      factor_clave: "Yankees F5 TT cobró (3 R en 5 IP); TT full game cobrado sobrado; Bellinger 1H+1R+3RBI=5 eventos."
+      baltimore: "10 H, 1 R, 0-7 RISP — tráfico sin conversión, no sostuvo over general."
+    postmortem:
+      lectura_correcta: sí
+      mercado_capturo_edge: sí
+      clasificacion: ACIERTO_LIMPIO
+      mercado_correcto_retrospectiva: null
+      tipo_mercado_correcto: null
+    patron_v2:
+      aplicable: [5, 10]
+      emergente: null
+    leccion: "Si el edge está en un lineup fuerte contra abridor vulnerable + bullpen débil, jerarquía: F5 TT del equipo fuerte > TT full game > props H+R+RBI de bates 2º-5º > ML caro > over general."
+
+  - id: cardinals-brewers-040526
+    fecha: 2026-05-04
+    partido: "Cardinals vs Brewers"
+    marcador: null
+    edge:
+      frase: "Ambos abridores vulnerables; elegir cuál era más explotable."
+      fuente: tipo_vulnerabilidad_pitcher
+      pitcher_vulnerable_tipo: A   # Patrick (Brewers), no Leahy
+    apuesta:
+      mercado: "Brewers TT (lado equivocado)"
+      tipo_mercado: TT_full_game
+      resultado: perdió
+      notas_apuesta: "Inferido — el raw no es explícito sobre qué se jugó; la lección señala que el lado correcto era Cardinals F5 TT."
+    contexto_resultado:
+      factor_clave: "Patrick (Brewers) tenía señales claras de Tipo A: BB alta, K% bajo, first-pitch strike bajo. Cardinals con Wetherholt/Herrera para embasarse y Burleson/Walker/Gorman/Church/Pagés para daño."
+    postmortem:
+      lectura_correcta: parcialmente
+      mercado_capturo_edge: no
+      clasificacion: ERROR_DE_LECTURA
+      mercado_correcto_retrospectiva: "Cardinals F5 TT / Cardinals carreras temprano"
+      tipo_mercado_correcto: F5_TT
+    patron_v2:
+      aplicable: [1, 5]
+      emergente: null
+    leccion: "Cuando ambos abridores son vulnerables, no elegir el lineup 'más mejorado' por defecto. Identificar cuál abridor tiene menos herramientas para apagar rallies (BB altos, K% bajo, mal control de conteo)."
+
+  - id: reds-cubs-040526
+    fecha: 2026-05-04
+    partido: "Reds vs Cubs"
+    marcador: null
+    edge:
+      frase: "Cubs lineup vs Petty frágil + Wrigley/viento."
+      fuente: matchup_mano_repertorio
+      pitcher_vulnerable_tipo: null
+    apuesta:
+      mercado: "Cubs TT over 5.5"
+      tipo_mercado: TT_full_game
+      resultado: perdió
+      notas_apuesta: "Inferido del texto: el raw discute fragilidad del TT over alto."
+    contexto_resultado:
+      abridor_rival: "Petty: 5.2 IP, 3 ER, 75 pitcheos — sobrevivió casi 6 IP."
+      factor_clave: "Viento real más bajo de lo proyectado; Cubs ganó pero sin explosión ofensiva."
+    postmortem:
+      lectura_correcta: parcialmente
+      mercado_capturo_edge: no
+      clasificacion: ERROR_DE_MERCADO
+      mercado_correcto_retrospectiva: "Cubs ML (aburrido pero correcto)"
+      tipo_mercado_correcto: ML
+    patron_v2:
+      aplicable: [6, 11]
+      emergente: null
+    leccion: "TT del favorito ya alto exige confirmación fuerte de clima, viento, lineup profundo, leash corto rival y bullpen expuesto. Si una pieza falla, el TT over se vuelve frágil aunque el favorito gane."
+
+  - id: redsox-tigers-040526
+    fecha: 2026-05-04
+    partido: "Red Sox vs Tigers"
+    marcador: "5 - 4"
+    edge:
+      frase: "Bullpen game DET frágil tras Skubal."
+      fuente: leash_bullpen
+      pitcher_vulnerable_tipo: null
+    apuesta:
+      mercado: "F5 contra DET / F5 TT BOS"
+      tipo_mercado: F5_TT
+      resultado: perdió
+      notas_apuesta: "Inferido — el raw discute fragilidad del F5 frente al edge real de full game."
+    contexto_resultado:
+      abridores_det: "Holton + Madden: 6 IP sin carrera limpia."
+      abridor_bos: "Tolle: 7 IP, 1 H, 8 K — dominante (no proyectado)."
+      bullpen_det: "Vanasco: 4 ER en 0.2 IP — daño grande en 6ª-9ª, no F5."
+    postmortem:
+      lectura_correcta: parcialmente
+      mercado_capturo_edge: no
+      clasificacion: ERROR_DE_MERCADO
+      mercado_correcto_retrospectiva: "Over full game / TT full game BOS"
+      tipo_mercado_correcto: over_under_full
+    patron_v2:
+      aplicable: [3, 8]
+      emergente: "Subestimar abridor con K%, SwStr%, CSW% y leash real puede convertir un under Ks en el mercado más peligroso."
+    leccion: "Cuando el edge nace en 'pitching plan frágil + bullpen usado', el mejor mercado suele ser over full game o TT full game, no F5. El daño puede llegar en 6ª-9ª."
+
+  - id: padres-giants-040526
+    fecha: 2026-05-04
+    partido: "Padres vs Giants"
+    marcador: null
+    edge:
+      frase: "McDonald (spot starter) frágil por BB en Triple-A → Padres F5."
+      fuente: forma_individual   # BB Triple-A, ruidoso según jerarquía v2
+      pitcher_vulnerable_tipo: null
+    apuesta:
+      mercado: "Padres F5"
+      tipo_mercado: F5_side
+      resultado: perdió
+    contexto_resultado:
+      abridor_rival: "McDonald: 7.0 IP, 0 BB, 8 K, 81 pitcheos — arsenal real."
+      padres: "0 BB, 10 K, 3 H — sin paciencia, sin contacto útil."
+    postmortem:
+      lectura_correcta: no
+      mercado_capturo_edge: no
+      clasificacion: ERROR_DE_LECTURA
+      mercado_correcto_retrospectiva: "Under 8.5 / F5 under / Vásquez outs"
+      tipo_mercado_correcto: over_under_full
+    patron_v2:
+      aplicable: [8]
+      emergente: null
+    leccion: "Antes de fadear a un opener/spot starter por leash o comando, validar si el lineup rival tiene paciencia, bajo chase, buen contacto y capacidad de convertir tráfico. No basta con que el pitcher parezca vulnerable."
