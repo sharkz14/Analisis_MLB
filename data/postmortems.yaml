@@ -23,10 +23,11 @@ partidos:
     apuesta:
       mercado: "Dodgers TT over 4.5"
       tipo_mercado: TT_full_game
-      cuota: null
+      cuota: 1.744
       stake: null
+      formato: single
       resultado: perdió
-      notas_apuesta: "Tomada single (no parlay)."
+      notas_apuesta: "Tomada single."
     picks_analizadas_no_jugadas:
       - {pick: "Ohtani over 17.5 outs", cuota: null, resultado_hipotetico: ganó, motivo: "7.0 IP = 21 outs"}
       - {pick: "Ohtani over 6.5 Ks", cuota: null, resultado_hipotetico: ganó, motivo: "8 K. Cuota baja, descartada por valor."}
@@ -67,12 +68,14 @@ partidos:
       fuente: matchup_mano_repertorio
       pitcher_vulnerable_tipo: A   # Bassitt: K% bajo + BB alto + 2.2% K-BB
     apuesta:
-      mercado: "Miami/Empate F5 (doble oportunidad, parlay leg)"
+      mercado: "Miami/Empate F5 (doble oportunidad)"
       tipo_mercado: F5_doble_oportunidad
       cuota: 1.40
       stake: null
-      resultado: perdió
-      notas_apuesta: "Pierna de parlay. F5 terminó 7-4 Baltimore (Alcantara colapsó 4.1 IP / 7 ER)."
+      formato: parlay_leg
+      resultado_pierna: perdió
+      resultado_parlay_total: perdió   # cuando una pierna pierde, el parlay completo pierde automáticamente
+      notas_apuesta: "Pierna de parlay multi-leg con otras picks de otros partidos. F5 terminó 7-4 Baltimore (Alcantara colapsó 4.1 IP / 7 ER). La pierna perdió, así que el parlay completo está perdido independientemente de las otras piernas."
     picks_analizadas_no_jugadas:
       - {pick: "Miami F5 DNB", cuota: 1.65, resultado_hipotetico: perdió, motivo: "F5 7-4 Baltimore"}
       - {pick: "Miami F5 3-way", cuota: 1.90, resultado_hipotetico: perdió, motivo: "Baltimore ganó F5"}
@@ -120,6 +123,7 @@ partidos:
       tipo_mercado: prop_bateador_bases
       cuota: 2.25
       stake: null
+      formato: single
       resultado: perdió
       notas_apuesta: "Tomada single. Machado 0-3, 1 BB, 1 R, 0 hits, 0 TB — el BB y la R suman para el equipo pero no para la prop."
     picks_analizadas_no_jugadas:
@@ -310,13 +314,14 @@ partidos:
       fuente: edge_combinado   # lineup + abridor + bullpen + ambiental
       pitcher_vulnerable_tipo: null
     apuesta:
-      mercado: "Phillies o empate tras 7 entradas (parlay leg)"
+      mercado: "Phillies o empate tras 7 entradas"
       tipo_mercado: partial_DNB
       inning_corte: 7
       cuota: 1.31
       stake: null
+      formato: single
       resultado: ganó
-      notas_apuesta: "Pierna de parlay. Tras 7 entradas iban Phillies 6-0, cobró cómodo."
+      notas_apuesta: "Tomada single. Tras 7 entradas iban Phillies 6-0, cobró cómodo."
     picks_analizadas_no_jugadas:
       - {pick: "Phillies F5 TT over 2.5", cuota: 1.82, resultado_hipotetico: perdió, motivo: "Phillies solo 1 R tras 5 inn — tráfico sin conversión"}
       - {pick: "Sánchez under 18.5 outs", cuota: 1.78, resultado_hipotetico: perdió, motivo: "Sánchez 8.0 IP = 24 outs"}
@@ -407,12 +412,12 @@ partidos:
       fuente: forma_individual   # K%, CSW; raw lo señala como ruidoso por mezcla con tráfico
       pitcher_vulnerable_tipo: A
     apuesta:
-      mercado: "pass — probablemente no apostó"
+      mercado: "pass — ninguna pick tomada"
       tipo_mercado: pass
       cuota: null
       stake: null
       resultado: null
-      notas_apuesta: "Usuario: 'no sé si aposté en este partido (creo que no)'. Pick principal recomendada: Cavalli over 4.5 Ks @1.80 (1u). Habría perdido — Cavalli solo 2 K en 4 IP."
+      notas_apuesta: "Pass confirmado. Pick principal recomendada: Cavalli over 4.5 Ks @1.80 (1u). Habría perdido — Cavalli solo 2 K en 4 IP."
     picks_analizadas_no_jugadas:
       - {pick: "Cavalli over 4.5 Ks", cuota: 1.80, resultado_hipotetico: perdió, motivo: "Solo 2 K en 4.0 IP — salida corta antes de acumular volumen"}
       - {pick: "Cavalli under 15.5 outs", cuota: 1.59, resultado_hipotetico: ganó, motivo: "4.0 IP = 12 outs"}
