@@ -1130,3 +1130,233 @@ partidos:
       emergente: null
     leccion: "F5 doble oportunidad captura edge temprano sin pedir paliza ni F5 TT (que requiere conversion). Mejor que F5 -0.5 cuando la ofensiva propia no es confiable y el partido proyecta bajo."
     fuente: "conversación pre/in/post-partido"
+
+  - id: royals-mariners-020526
+    fecha: 2026-05-02
+    partido: "Royals vs Mariners"
+    marcador: "Royals 3 - Mariners 2 (10 innings)"
+    cuotas_pre_partido:
+      ml_favorito: 1.70     # Seattle
+      ml_underdog: 2.20     # Royals
+    edge:
+      frase: "Hancock RHP vulnerable por contacto fuerte + KC lineup zurdo-heavy contra RHP + Castillo vulnerable. Edge KC F5 hcp +1 / TT moderado. Partido trampa por precio Seattle corto."
+      fuente: matchup_mano_repertorio
+      pitcher_vulnerable_tipo: B
+    apuesta:
+      mercado: "Kyle Isbel HR (sprinkle)"
+      tipo_mercado: prop_bateador_bases   # HR específico, no genérico
+      cuota: 8.50
+      stake: chico   # 0.05u "monedita entretenida"
+      formato: single
+      resultado: perdió
+      notas_apuesta: "Sprinkle por los loles consciente, no pick seria. Isbel terminó con doble + carrera ganadora en 10º, pero no HR."
+    picks_analizadas_no_jugadas:
+      - {pick: "KC F5 +1 hándicap triple", cuota: 1.80, resultado_hipotetico: ganó, motivo: "F5 1-1 — empate cubría hándicap +1"}
+      - {pick: "Lugo over 17.5 outs", cuota: 1.60, resultado_hipotetico: ganó, motivo: "6 IP = 18 outs"}
+      - {pick: "Seattle ML", cuota: 1.70, resultado_hipotetico: perdió, motivo: "KC ganó 3-2 en 10º"}
+      - {pick: "Seattle -1.5", cuota: null, resultado_hipotetico: perdió, motivo: "SEA perdió"}
+      - {pick: "KC TT over 3.5", cuota: null, resultado_hipotetico: perdió, motivo: "KC 3 R (por 1)"}
+      - {pick: "KC F5 TT over 1.5", cuota: null, resultado_hipotetico: perdió, motivo: "KC 1 R en F5"}
+      - {pick: "Lugo under 5.5 K", cuota: null, resultado_hipotetico: perdió, motivo: "6 K (por 1)"}
+      - {pick: "Over 7.5 full game", cuota: null, resultado_hipotetico: perdió, motivo: "5 R totales"}
+    contexto_resultado:
+      abridor_mariners_hancock: "7.0 IP, 14 K, 0 BB, 1 ER — dominante, completamente contrario a la lectura de 'atacable por contacto'"
+      abridor_royals_lugo: "6.0 IP, K estable"
+      ofensiva_kc: "17 K combinados; daño puntual en extras"
+      bate_decisivo: "Isbel doble + carrera ganadora en 10º"
+      factor_clave: "Hancock con salto real de stuff (K-BB% mejorado, nuevo pitch funcional). Lectura subestimó el techo de Ks. T-Mobile bajó overs/HR como esperado."
+    postmortem:
+      lectura_correcta: parcialmente
+      mercado_capturo_edge: no
+      clasificacion_jugada: VARIANZA
+      clasificacion_analitica: ERROR_DE_MERCADO
+      mercado_correcto_retrospectiva: "KC F5 +1 hándicap @1.80 (cobraría) / Lugo over outs @1.60 (cobró). El pase consciente de los mercados serios fue correcto."
+      tipo_mercado_correcto: F5_DNB
+      nota_meta: "Único caso de VARIANZA jugada: sprinkle HR @8.50 stake chico, decisión consciente de lottery. Lectura analítica de 'pasar de Seattle ML / -1.5' fue correcta. Error de mercado: subestimar el K upside real de Hancock cuando tiene nuevo arsenal."
+    patron_v2:
+      aplicable: [4]
+      emergente: "Cuando un pitcher llega con K-BB% mejorado y nuevo pitch funcional, no basta con 'el rival no tiene K% altísimo'. El salto de arsenal puede superar la disciplina del lineup, especialmente si trae bates jóvenes/volátiles. T-Mobile además limita overs/HR."
+    leccion: "Pitcher con nuevo arsenal funcional puede tener salto de K real aunque el rival tenga K% global moderado. Respetar más el salto reciente del pitcher que el K% de temporada del rival."
+    fuente: "conversación pre/in/post-partido"
+
+  - id: reds-pirates-010526
+    fecha: 2026-05-01
+    partido: "Reds vs Pirates"
+    marcador: "Pirates 9 - Reds 1"
+    cuotas_pre_partido:
+      ml_favorito: 1.72     # Pirates
+      ml_underdog: 2.15     # Reds
+    edge:
+      frase: "Singer (Reds) RHP de bajo K + sinker castigado + zurdos PIT (Cruz, Lowe, O'Hearn, Reynolds) arriba; Keller mejor abridor. Edge PIT temprano contra Singer."
+      fuente: tipo_vulnerabilidad_pitcher
+      pitcher_vulnerable_tipo: B   # Singer: contacto fuerte permitido + sinker .590 SLG
+    apuesta:
+      mercado: "Pirates F5 DNB"
+      tipo_mercado: F5_DNB
+      cuota: 1.75
+      stake: null
+      formato: parlay_leg
+      resultado_pierna: ganó
+      resultado_parlay_total: desconocido
+      notas_apuesta: "Pierna de parlay multi-leg. F5: Pirates 8-0, cobró sobrada. Partido tuvo delay por lluvia pero arrancó tras."
+    picks_analizadas_no_jugadas:
+      - {pick: "Pirates F5 TT over 2.5", cuota: 2.05, resultado_hipotetico: ganó, motivo: "PIT 3 R en 3ª (8 en F5)"}
+      - {pick: "Pirates ML", cuota: 1.72, resultado_hipotetico: ganó, motivo: "PIT 9-1"}
+      - {pick: "Pirates -1.5", cuota: null, resultado_hipotetico: ganó, motivo: "Ganaron por 8"}
+      - {pick: "O'Hearn +1.5 bases", cuota: 2.40, resultado_hipotetico: ganó, motivo: "2 H, 2 TB"}
+      - {pick: "Cruz +1.5 bases", cuota: 2.20, resultado_hipotetico: ganó, motivo: "Doble, 2 TB"}
+      - {pick: "O'Hearn RBI", cuota: 2.72, resultado_hipotetico: ganó, motivo: "RBI"}
+      - {pick: "Lowe +1.5 bases", cuota: 2.25, resultado_hipotetico: perdió, motivo: "0 H"}
+    contexto_resultado:
+      abridor_reds_singer: "3.1 IP, 7 H, 4 ER, 2 BB, 2 K — perfil de bajo K + contacto duro confirmado"
+      abridor_pirates_keller: "Estable"
+      bates_clave: "Cruz, O'Hearn, Reynolds — top order zurdo/switch dominó"
+      factor_clave: "Edge madre confirmado al máximo. Singer Tipo B se rompió por contacto temprano. F5 DNB capturó el tramo correcto sin depender de bullpen."
+    postmortem:
+      lectura_correcta: sí
+      mercado_capturo_edge: sí
+      clasificacion_jugada: ACIERTO_LIMPIO
+      clasificacion_analitica: ACIERTO_LIMPIO
+      mercado_correcto_retrospectiva: null
+      tipo_mercado_correcto: null
+    patron_v2:
+      aplicable: [1, 5, 12]
+      emergente: null
+    leccion: "F5 DNB captura edge temprano cuando el abridor rival es Tipo B (contacto fuerte) y el lineup propio tiene zurdos arriba concentrados — sin depender del bullpen full game."
+    fuente: "conversación pre/in/post-partido"
+
+  - id: rangers-tigers-010526
+    fecha: 2026-05-01
+    partido: "Rangers vs Tigers"
+    marcador: "Rangers 5 - Tigers 4"
+    cuotas_pre_partido:
+      ml_favorito: 1.83     # Detroit
+      ml_underdog: 2.02     # Texas
+    edge:
+      frase: "Flaherty (DET) con 18% BB + four-seam castigada + zurdos TX (Nimmo, Seager, Pederson, Carter) arriba. Edge Texas competir sin pedir margen. Gore también volátil."
+      fuente: matchup_mano_repertorio
+      pitcher_vulnerable_tipo: A   # Flaherty: BB alta, comando frágil
+    apuesta:
+      mercado: "Texas Rangers +1.5"
+      tipo_mercado: run_line_underdog_1.5
+      cuota: 1.47
+      stake: null
+      formato: parlay_leg
+      resultado_pierna: ganó
+      resultado_parlay_total: desconocido
+      notas_apuesta: "Pierna de parlay. Texas ganó 5-4 directo, cubrió cómodo. Partido cerrado como proyectaba."
+    picks_analizadas_no_jugadas:
+      - {pick: "Texas ML", cuota: 2.00, resultado_hipotetico: ganó, motivo: "TX 5-4"}
+      - {pick: "Texas TT over 3.5", cuota: 1.75, resultado_hipotetico: ganó, motivo: "5 R"}
+      - {pick: "Flaherty under 14.5 outs", cuota: 2.20, resultado_hipotetico: ganó, motivo: "3.2 IP = 11 outs"}
+      - {pick: "Flaherty over 2.5 BB", cuota: 1.98, resultado_hipotetico: ganó, motivo: "3 BB"}
+      - {pick: "Nimmo anota carrera", cuota: 1.95, resultado_hipotetico: ganó, motivo: "anotó"}
+      - {pick: "Detroit ML", cuota: 1.83, resultado_hipotetico: perdió, motivo: "Texas ganó"}
+    contexto_resultado:
+      abridor_detroit_flaherty: "3.2 IP, 5 H, 4 ER, 3 BB, 1 HR — Tipo A confirmado, colapsó por comando"
+      abridor_texas_gore: "3.2 IP, 3 ER, 3 BB, 3 K — también volátil, salida corta"
+      bullpen_texas: "Alexander + Junis + Latz: 3 IP limpias tras susto con Winn/Beeks"
+      factor_clave: "Partido cerrado 5-4 como proyectaba. Ambos abridores salieron temprano; bullpen TX fue diferencial."
+    postmortem:
+      lectura_correcta: sí
+      mercado_capturo_edge: sí
+      clasificacion_jugada: ACIERTO_LIMPIO
+      clasificacion_analitica: ACIERTO_LIMPIO
+      mercado_correcto_retrospectiva: null
+      tipo_mercado_correcto: null
+    patron_v2:
+      aplicable: [1, 7, 12]
+      emergente: null
+    leccion: "+1.5 underdog @cuota generosa funciona cuando: abridor favorito es Tipo A, abridor underdog también es volátil pero hay bullpen propio mejor, partido proyecta cerrado. Captura competitividad sin exigir win."
+    fuente: "conversación pre/in/post-partido"
+
+  - id: tigers-braves-300426
+    fecha: 2026-04-30
+    partido: "Tigers vs Braves"
+    marcador: "Tigers 5 - Braves 2"
+    cuotas_pre_partido:
+      ml_favorito: 1.80     # Atlanta
+      ml_underdog: 2.05     # Detroit
+    edge:
+      frase: "Valdez (DET) llegaba con bajo K% reciente + Atlanta con K bajo vs LHP. Hipótesis: under Ks por matchup."
+      fuente: forma_individual   # K% reciente — zona ruidosa de jerarquía v2
+      pitcher_vulnerable_tipo: null
+    apuesta:
+      mercado: "Framber Valdez under 4.5 Ks"
+      tipo_mercado: prop_pitcher_Ks
+      cuota: 1.88
+      stake: null
+      formato: single
+      resultado: perdió
+      notas_apuesta: "Tomada single. Valdez 8 K en 6 IP — destruyó la línea por casi el doble. Mantuvo arsenal/leash pese a forma reciente."
+    picks_analizadas_no_jugadas:
+      - {pick: "Valdez under 17.5 outs", cuota: 2.05, resultado_hipotetico: perdió, motivo: "6.0 IP = 18 outs (perdió por uno)"}
+      - {pick: "Albies over 1.5 TB", cuota: 2.03, resultado_hipotetico: ganó, motivo: "2 H + doble"}
+      - {pick: "Braves ML", cuota: 1.80, resultado_hipotetico: perdió, motivo: "DET ganó 5-2"}
+      - {pick: "Braves TT over", cuota: null, resultado_hipotetico: perdió, motivo: "Solo 2 R; 2-11 RISP, 8 LOB"}
+    contexto_resultado:
+      abridor_valdez: "6.0 IP, 6 H, 2 ER, 0 BB, 8 K, 97 pitcheos — mantuvo arsenal pese a forma reciente"
+      ofensiva_atlanta: "8 H, pero 2-11 RISP, 8 LOB — tráfico sin conversión"
+      ofensiva_detroit: "12 H, 8 BB — lineup más profundo de lo esperado (Torres, Keith, Torkelson, Carpenter, Vierling, Dingler)"
+      bullpen_atlanta: "Payamps + Suárez permitieron las carreras decisivas tarde"
+      factor_clave: "Valdez sí estaba 'tocable' (6 H permitidos) pero sus outs fueron por K, no por contacto débil. La fuente del edge (forma reciente) es ruidosa en la jerarquía v2."
+    postmortem:
+      lectura_correcta: no
+      mercado_capturo_edge: no
+      clasificacion_jugada: ERROR_DE_LECTURA
+      clasificacion_analitica: ERROR_DE_MERCADO
+      mercado_correcto_retrospectiva: "Albies over 1.5 TB @2.03 (la única que cobraba) — props ofensivos de bate top eran más limpios que prop de pitcher"
+      tipo_mercado_correcto: prop_bateador_bases
+    patron_v2:
+      aplicable: [1, 4, 10]
+      emergente: "Pitcher 'vulnerable por forma reciente' no equivale a 'pitcher con pocos Ks'. Separar: under Ks necesita whiff bajo en arsenal real, no solo K% reciente bajo; under outs necesita tráfico+pitch count; team total necesita conversión RISP. Si arsenal está intacto, el pitcher puede seguir acumulando Ks pese a permitir hits."
+    leccion: "Pitcher con bajo K% reciente pero arsenal/leash intactos puede acumular Ks contra lineup paciente. Cuando el edge real es 'el rival puede competirle al pitcher', el mejor mercado suele ser prop del bate top contrario, no prop negativo del pitcher."
+    fuente: "conversación pre/in/post-partido"
+
+  - id: rockies-reds-300426
+    fecha: 2026-04-30
+    partido: "Rockies vs Reds"
+    marcador: "Reds 6 - Rockies 4"
+    cuotas_pre_partido:
+      ml_favorito: 1.60     # Reds
+      ml_underdog: 2.35     # Rockies
+    edge:
+      frase: "Ambos abridores frágiles (Abbott 18% BB + Lorenzen 50% hard-hit). Edge en carreras/team totals + props ofensivos, no en sides."
+      fuente: tipo_vulnerabilidad_pitcher
+      pitcher_vulnerable_tipo: A   # Abbott Tipo A
+    apuesta:
+      mercado: "pass — ninguna pick tomada"
+      tipo_mercado: pass
+      cuota: null
+      stake: null
+      resultado: null
+      notas_apuesta: "Análisis recomendó shortlist de 3: Abbott under 4.5 Ks @2.01 / Lorenzen under 4.5 Ks @1.73 / Lowe over 1.5 TB @2.21. Usuario pasó. Shortlist 2-1 (Lorenzen + Lowe cobraban, Abbott perdió). Net positivo si stake igual."
+    picks_analizadas_no_jugadas:
+      - {pick: "Lorenzen under 4.5 Ks", cuota: 1.73, resultado_hipotetico: ganó, motivo: "Solo 2 K"}
+      - {pick: "Lowe over 1.5 TB", cuota: 2.21, resultado_hipotetico: ganó, motivo: "2 dobles"}
+      - {pick: "Abbott under 4.5 Ks", cuota: 2.01, resultado_hipotetico: perdió, motivo: "5 K (Colorado se ponchó 9 veces)"}
+      - {pick: "Rockies +1.5", cuota: 1.69, resultado_hipotetico: perdió, motivo: "Perdió por 2 (6-4)"}
+      - {pick: "Stewart over 1.5 TB", cuota: 1.85, resultado_hipotetico: perdió, motivo: "0 H (BB + R)"}
+      - {pick: "Abbott under 17.5 outs", cuota: 1.91, resultado_hipotetico: perdió, motivo: "6.0 IP = 18 outs (por uno)"}
+      - {pick: "Rockies TT over 3.5", cuota: 1.81, resultado_hipotetico: ganó, motivo: "4 R"}
+      - {pick: "Reds ML", cuota: 1.60, resultado_hipotetico: ganó, motivo: "6-4"}
+      - {pick: "Reds TT over 4.5", cuota: 1.82, resultado_hipotetico: ganó, motivo: "6 R"}
+      - {pick: "Over 9", cuota: 1.94, resultado_hipotetico: ganó, motivo: "10 R totales"}
+    contexto_resultado:
+      abridor_reds_abbott: "Permitió HR Freeman en 1ª; Colorado 2-0 temprano. Total 9 K (más de lo proyectado)"
+      abridor_rockies_lorenzen: "2 K (confirmó perfil de bajo whiff)"
+      bate_clave: "Lowe 2 dobles — captura el matchup contra Lorenzen Tipo B"
+      factor_clave: "Lectura macro correcta: carreras/team totals > sides. Pero Abbott consiguió Ks pese a forma reciente, igual que Valdez en tigers-braves-300426. Patrón recurrente."
+    postmortem:
+      lectura_correcta: sí
+      mercado_capturo_edge: no
+      clasificacion_jugada: PASS_INCORRECTO
+      clasificacion_analitica: ERROR_DE_MERCADO
+      mercado_correcto_retrospectiva: "Lorenzen under 4.5 Ks @1.73 + Lowe over 1.5 TB @2.21 + Reds TT over 4.5 @1.82 + Rockies TT over 3.5 @1.81 + Reds ML @1.60"
+      tipo_mercado_correcto: TT_full_game
+      nota_meta: "Misma trampa que tigers-braves-300426: under Ks contra pitcher con bajo K% reciente pero arsenal intacto. Abbott consiguió 5 K aunque tenga 18% BB. La lectura analítica de fondo (carreras > sides) era correcta; el error fue en la traducción específica a Abbott under Ks."
+    patron_v2:
+      aplicable: [1, 4, 5]
+      emergente: "Patrón recurrente en abril: under Ks de pitcher con forma reciente mala pero arsenal MLB intacto falla más de lo esperado. Si el pitcher tiene leash y stuff, los Ks llegan aunque el rival no tenga K% alto. Para ese edge, mejor team total / hits allowed / outs under con línea generosa."
+    leccion: "Cuando dos abridores son vulnerables, mejor TT over de cada equipo o over full game que sides/handicaps. Los under Ks contra pitchers con forma mala pero stuff intacto son trampa recurrente."
+    fuente: "conversación pre/post-partido"
