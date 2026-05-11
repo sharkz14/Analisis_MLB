@@ -58,29 +58,51 @@ partidos:
   - id: orioles-marlins-050526
     fecha: 2026-05-05
     partido: "Orioles vs Marlins"
-    marcador: null
+    marcador: "Orioles 9 - Marlins 7"
+    cuotas_pre_partido:
+      ml_favorito: 1.72     # Marlins
+      ml_underdog: 2.15     # Orioles
     edge:
-      frase: "Bassitt vulnerable; Miami con poder en top/middle order."
+      frase: "Bassitt vulnerable vs lineup zurdo/switch de Miami (sinker .388 AVG, 10.4% BB, 12.6% K)."
       fuente: matchup_mano_repertorio
-      pitcher_vulnerable_tipo: null
+      pitcher_vulnerable_tipo: A   # Bassitt: K% bajo + BB alto + 2.2% K-BB
     apuesta:
-      mercado: "Miami/Empate F5"
-      tipo_mercado: F5_DNB
+      mercado: "Miami/Empate F5 (doble oportunidad, parlay leg)"
+      tipo_mercado: F5_doble_oportunidad
+      cuota: 1.40
+      stake: null
       resultado: perdió
+      notas_apuesta: "Pierna de parlay. F5 terminó 7-4 Baltimore (Alcantara colapsó 4.1 IP / 7 ER)."
+    picks_analizadas_no_jugadas:
+      - {pick: "Miami F5 DNB", cuota: 1.65, resultado_hipotetico: perdió, motivo: "F5 7-4 Baltimore"}
+      - {pick: "Miami F5 3-way", cuota: 1.90, resultado_hipotetico: perdió, motivo: "Baltimore ganó F5"}
+      - {pick: "Miami F5 TT over 2.5", cuota: 1.91, resultado_hipotetico: ganó, motivo: "Miami 4 R en F5"}
+      - {pick: "Miami ML", cuota: 1.72, resultado_hipotetico: perdió, motivo: "9-7 Orioles"}
+      - {pick: "Miami TT over full game", cuota: null, resultado_hipotetico: ganó, motivo: "7 R"}
+      - {pick: "Over 8.5", cuota: null, resultado_hipotetico: ganó, motivo: "16 R totales"}
+      - {pick: "Alcantara under 5.5 Ks", cuota: 1.78, resultado_hipotetico: ganó, motivo: "5 K"}
+      - {pick: "Alcantara under 2.5 ER", cuota: 1.87, resultado_hipotetico: perdió, motivo: "7 ER"}
+      - {pick: "Alcantara 18+ outs", cuota: 1.47, resultado_hipotetico: perdió, motivo: "13 outs (4.1 IP)"}
+      - {pick: "Hicks hit/TB/run/RBI", cuota: null, resultado_hipotetico: ganó, motivo: "4-5, HR, 3 RBI"}
+      - {pick: "Lopez over 1.5 TB", cuota: null, resultado_hipotetico: ganó, motivo: "HR, 1 RBI"}
     contexto_resultado:
-      abridor_rival: "Bassitt: 4 ER en F5, 7 ER totales (Miami lo castigó)"
-      abridor_propio_marlins: "Alcantara: mala salida (bajo K%, contacto permitido)"
-      factor_clave: "Miami sí anotó (4 en F5, 7 totales), pero Alcantara no estabilizó: el side F5 dependía de él, no del bate de Miami."
+      abridor_rival_bassitt: "Vulnerado por Miami (4 R en F5, 7 R totales)."
+      abridor_propio_alcantara: "4.1 IP, 8 H, 7 ER, 3 BB, 5 K — perfil Tipo C (contact management sin whiff) explotó contra poder de Alonso/Basallo/Ward/Henderson."
+      ofensiva_marlins: "7 R, 9 H, 5 BB."
+      bates_clave: "Hicks 4-5/HR/3 RBI. Lopez HR/1 RBI."
+      factor_clave: "El edge contra Bassitt sí apareció (Miami anotó), pero el side F5 dependía de Alcantara y Alcantara colapsó."
     postmortem:
       lectura_correcta: sí
       mercado_capturo_edge: no
+      clasificacion_jugada: ERROR_DE_MERCADO
       clasificacion_analitica: ERROR_DE_MERCADO
-      mercado_correcto_retrospectiva: "Miami team total / Miami F5 TT / props ofensivas de Miami"
+      mercado_correcto_retrospectiva: "Miami F5 TT over 2.5 / Miami TT full game / props ofensivas (Hicks, Lopez) / Alcantara under Ks"
       tipo_mercado_correcto: F5_TT
     patron_v2:
       aplicable: [2, 12]
-      emergente: null
+      emergente: "Un favorito con mejor ERA/WHIP pero perfil Tipo C como abridor propio puede ser MÁS frágil para F5 side que el rival con perfil Tipo A — el rival se rompe por tráfico (predecible), el propio puede colapsar por contacto explotado (varianza)."
     leccion: "Si el favorito tiene edge ofensivo claro pero su abridor no domina por K y el rival conserva poder/paciencia arriba, priorizar team total o props ofensivas antes que F5 side conservador."
+    fuente: "conversación pre/in/post-partido + raw"
 
   - id: padres-cardinals-070526
     fecha: 2026-05-07

@@ -84,7 +84,8 @@ Tomado de la **Jerarquía de Edges** en heurísticas v2 (de más a menos confiab
 
 - `F5_TT` — team total primeras 5
 - `F5_side` — lado primeras 5
-- `F5_DNB` — lado F5 con empate devuelve
+- `F5_DNB` — lado F5 con empate devuelve stake (no cobra empate)
+- `F5_doble_oportunidad` — lado F5 o empate, cobra ambos (1X / X2)
 - `F5_under` — total bajo primeras 5
 - `partial_DNB` — lado o empate tras N entradas (N en `apuesta.inning_corte`)
 - `TT_full_game` — team total partido completo
