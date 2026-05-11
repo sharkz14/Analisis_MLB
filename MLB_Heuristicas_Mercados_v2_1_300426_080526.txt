@@ -8,11 +8,16 @@ Fuente estructurada: data/postmortems.yaml
 Reemplaza a: MLB_Heuristicas_Mercados_v2_040526_070526.txt
 
 Cambios respecto a v2:
+- Patrón 1: agregada jerarquía de atacabilidad A > B > C.
 - Patrón 4 ampliado con la alerta espejada: forma reciente mala del pitcher
   no equivale a pocos Ks si el arsenal sigue intacto.
 - Patrón 6: agregado tier de severidad (3+ condiciones vs todas las 5).
 - Patrón 7: agregada nota de validación con caso confirmado.
-- Filtro final: agregado check sobre el filtro de selección (menú vs jugado).
+- Patrón 11: regla de confirmación de viento afinada (observación real, no
+  pronóstico, dentro de 90 minutos del primer pitch).
+- Filtro final: agregado check sobre el filtro de selección con gatillo duro
+  para descarte de picks de cuota >1.80 que capturan el edge top.
+- Corolario final con matiz sobre tamaño de muestra del efecto.
 - Resto de patrones sin cambios estructurales.
 
 Propósito:
@@ -340,10 +345,15 @@ Umpire:
 [ ] Revisar antes de cualquier prop de Ks o BB, no después.
 
 Confirmación pre-partido (incorporado en v2.1):
-[ ] Viento debe confirmarse en ventana <2h del game time, no en pronóstico
-    matinal. Una proyección de viento out 10+ mph que no se materializa
-    in-game es la fuente más común de TT over frágiles (caso: Reds/Cubs 04/05,
-    viento real 4 mph vs proyección, Cubs TT over 5.5 perdió por margen).
+[ ] Viento debe confirmarse con observación real (mph + dirección medidos
+    en el parque o estación meteorológica local) dentro de 90 minutos del
+    primer pitch, no con pronóstico matinal ni con pronóstico actualizado.
+    Una proyección de viento out 10+ mph que no se materializa in-game es
+    la fuente más común de TT over frágiles (caso: Reds/Cubs 04/05, viento
+    real 4 mph vs proyección, Cubs TT over 5.5 perdió por margen).
+[ ] Un pronóstico actualizado a 2h también puede equivocarse; la diferencia
+    es entre "lo que dice el modelo" y "lo que el anemómetro mide". Solo
+    lo segundo cuenta como confirmación.
 
 
 PATRÓN 12 — SIDE CON RUIDO → MERCADO MÁS LIMPIO
@@ -398,10 +408,18 @@ FILTRO FINAL (recorrer en orden antes de confirmar)
 Check de selección final (incorporado en v2.1):
 [ ] Antes de descartar una pick del top 3 del análisis: escribir POR QUÉ se
     descarta (¿cuota baja? ¿sensación? ¿demasiado obvia?).
+[ ] Gatillo duro: si la pick descartada tenía cuota >1.80 Y capturaba el
+    edge top identificado en el análisis, requerir al menos UNA razón
+    específica más allá de "la cuota es baja". Razones válidas: lineup no
+    confirmado, bullpen contradice el guion, parque hostil para la lectura,
+    timing del daño no calza, dependencia adicional no contemplada en el
+    edge original. Cuota corta SOLA no es razón válida para descartar.
 [ ] Si la única razón es la cuota baja, revisar si esa pick captura el edge
     mejor que la alternativa elegida. En la ventana 30/04-08/05, el menú
     considerado tuvo ROI hipotético +15.9% mientras lo realmente jugado tuvo
-    ROI -37.5%. El filtro de selección destruye más valor del que protege.
+    ROI -37.5%. Ese delta es direccionalmente fuerte pero la muestra es
+    chica (8 singles reales); tratar como señal de revisar el filtro, no
+    como medida exacta del costo.
 [ ] Casos típicos de descarte erróneo: Ohtani outs @cuota baja (Astros/Dodgers
     05/05), Cavalli outs under @1.59 (Nationals/Twins 05/05), Pittsburgh +1
     F5 3-vías @1.70 (D-backs/Pirates 07/05).
@@ -414,10 +432,11 @@ mercado equivocado. La mejor apuesta es la que necesita menos supuestos para
 que el edge cobre. Pasar es jugada, no rendición.
 
 Y un corolario nuevo de v2.1:
-El segundo error más común no es el análisis sino el filtro de selección.
-Si tres mercados capturan el edge y se descarta el de mejor cuota porque
-"paga poco" o "es muy aburrido", la heurística está pidiendo que se revise
-ese descarte explícitamente antes de cerrar el ticket.
+El segundo error más común parece no ser el análisis sino el filtro de
+selección. Si tres mercados capturan el edge y se descarta el de mejor
+cuota porque "paga poco" o "es muy aburrido", la heurística está pidiendo
+que se revise ese descarte explícitamente antes de cerrar el ticket. La
+fuerza exacta del efecto requiere más muestra; la dirección está clara.
 
 
 NOTAS PARA SIGUIENTES ITERACIONES
