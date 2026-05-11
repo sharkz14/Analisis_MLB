@@ -162,30 +162,47 @@ partidos:
   - id: rangers-yankees-070526
     fecha: 2026-05-07
     partido: "Rangers vs Yankees"
-    marcador: null
+    marcador: "Yankees 9 - Rangers 2"
+    cuotas_pre_partido:
+      ml_favorito: 1.62     # Yankees
+      ml_underdog: 2.32     # Rangers
     edge:
-      frase: "Yankees abre con opener (Blackburn) → Rangers +1.5 / Texas TT over por fragilidad de pitching plan."
+      frase: "Yankees abre con opener (Blackburn 1 IP) + ausencias Rice/Stanton; Texas top 1-4 zurdo (Nimmo/Seager/Pederson) bien armado vs Blackburn RHP. Rangers +1.5 captura el lineup recortado del favorito sin exigir win."
       fuente: leash_bullpen
       pitcher_vulnerable_tipo: null
     apuesta:
-      mercado: "Rangers +1.5 / Texas TT over 3.5"
-      tipo_mercado: run_line_underdog_1.5
-      resultado: perdió
+      mercado: "pass — ninguna pick tomada"
+      tipo_mercado: pass
+      cuota: null
+      stake: null
+      resultado: null
+      notas_apuesta: "Análisis recomendó Rangers +1.5 @1.62 como mejor pick (est. 64.5% vs 61.7% break-even, +2.8 pp edge, sugerido 1u). Usuario pasó. La pick recomendada habría perdido — Yankees ganó 9-2."
+    picks_analizadas_no_jugadas:
+      - {pick: "Rangers +1.5", cuota: 1.62, resultado_hipotetico: perdió, motivo: "Yankees ganó por 7"}
+      - {pick: "Texas TT over 3.5", cuota: null, resultado_hipotetico: perdió, motivo: "Texas solo 2 R (tráfico sin conversión: 10 LOB, 1-5 RISP)"}
+      - {pick: "Texas TT over 4.0", cuota: null, resultado_hipotetico: perdió, motivo: "Texas solo 2 R"}
+      - {pick: "Yankees ML", cuota: 1.62, resultado_hipotetico: ganó, motivo: "Yankees ganó 9-2 (análisis recomendaba pass, pero habría cobrado)"}
+      - {pick: "Texas ML", cuota: 2.32, resultado_hipotetico: perdió, motivo: "Yankees ganó por 7"}
     contexto_resultado:
-      abridor_rival: "Blackburn 1.0 IP (opener); Beck 3.0 IP, 2 ER; Hill/Headrick/Bird/Doval cerraron en cero."
-      abridor_propio_rangers: "Gore: 5.1 IP, 6 H, 5 ER, 3 BB, 3 K — colapsó en el 6º (3ª vuelta)."
-      bates_clave: "Bellinger 3H/2RBI; Grisham 3H/3RBI; McMahon 2H/2RBI; Escarra HR. Yankees 1-9 funcional."
-      texas: "6 H, 7 BB, 10 LOB, 1/5 RISP, solo 2 carreras."
+      abridor_rival_yankees: "Blackburn 1.0 IP, 0 H, 0 ER, 2 BB (opener — Texas no lo castigó). Beck 3.0 IP, HR Duran, 2 ER. Bullpen Yankees (Hill/Headrick/Bird/Doval): 5.0 IP, 0 R."
+      abridor_propio_rangers: "Gore: 5.1 IP, 6 H, 5 ER, 3 BB, 3 K — sostuvo 5 IP, colapsó en el 6º (3ª vuelta vs Yankees)."
+      bates_clave_favorito: "Bellinger 3H/2RBI; Grisham 3H/3RBI; McMahon 2H/2RBI; Schuemann RBI; Escarra HR/RBI. Judge solo 1H/1RBI — daño distribuido 1-9."
+      ofensiva_texas: "6 H, 7 BB, 10 LOB, 1-5 RISP, 2 R. Tráfico sin conversión."
+      ausencias_yankees: "Sin Rice (day-to-day), sin Stanton (IL), sin Caballero (descanso post-HBP), sin Wells (catcher Escarra)."
+      factor_clave: "Yankees ejecutó plan opener + bulk + bullpen sin grieta; lineup recortado produjo 9 R con daño distribuido (no solo Judge). El opener corto NO era debilidad sino plan funcional."
     postmortem:
       lectura_correcta: no
       mercado_capturo_edge: no
+      clasificacion_jugada: PASS_CORRECTO
       clasificacion_analitica: ERROR_DE_LECTURA
-      mercado_correcto_retrospectiva: null
-      tipo_mercado_correcto: null
+      mercado_correcto_retrospectiva: "Yankees ML @1.62 era el único mercado correcto (que el análisis recomendaba pass)."
+      tipo_mercado_correcto: ML
+      nota_meta: "Caso interesante: el análisis identificó correctamente que Yankees ML era el favorito real, pero recomendó pass sobre ese mercado y se inclinó por Rangers +1.5 como 'mejor traducción del análisis'. El pass fue correcto vs Rangers +1.5 (que perdió) pero dejó pasar Yankees ML (que ganó). Lectura de fondo equivocada."
     patron_v2:
       aplicable: [3, 7, 8]
-      emergente: null
+      emergente: "Las 4 condiciones para tomar underdog +1.5: (1) bulk plan del favorito débil O incierto, no solo el opener; (2) underdog convierte tráfico, no solo OBP; (3) abridor del underdog limita inning grande en 2ª/3ª vuelta; (4) favorito sin profundidad 6-9. Si falla 2+, pasar. Refinamiento del Patrón 7 v2."
     leccion: "Spot starter del favorito + underdog con tráfico potencial NO es suficiente para +1.5. Exigir además: bullpen/bulk plan del favorito débil, underdog convierte tráfico (no solo OBP), abridor del underdog pasa la 3ª vuelta, favorito sin profundidad 6-9."
+    fuente: "conversación pre/post-partido + raw"
 
   - id: guardians-royals-070526
     fecha: 2026-05-07
