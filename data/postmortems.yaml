@@ -459,13 +459,22 @@ partidos:
       frase: "Yankees lineup vs Baz + bullpen Baltimore vulnerable + Schlittler con matchup favorable contra Baltimore (24.4% K vs RHP, parte baja con Cowser/Alexander muy atacable, sin Taylor Ward) = carreras concentradas de Yankees."
       fuente: matchup_mano_repertorio
       pitcher_vulnerable_tipo: null
-    apuesta:
-      mercado: "Parlay: Bellinger H+R+RBI over 1.5 + Yankees ML"
-      tipo_mercado: combo   # prop_bateador_HRR_RBI + ML
-      cuota: 2.646          # 1.80 × 1.47
-      stake: null
-      resultado: ganó
-      notas_apuesta: "Parlay de 2 piernas. Bellinger 1 H + 1 R + 3 RBI = 5 eventos; Yankees ganó 12-1. Ambas piernas cobraron cómodo."
+    apuestas:                # múltiples apuestas independientes sobre el mismo partido
+      - mercado: "Bellinger H+R+RBI over 1.5"
+        tipo_mercado: prop_bateador_HRR_RBI
+        cuota: 1.80
+        stake: null
+        formato: single
+        resultado: ganó
+        notas_apuesta: "Bellinger 1 H + 1 R + 3 RBI = 5 eventos. Cobró sobrado."
+      - mercado: "Yankees ML"
+        tipo_mercado: ML
+        cuota: 1.47
+        stake: null
+        formato: parlay_leg
+        resultado_pierna: ganó
+        resultado_parlay_total: desconocido
+        notas_apuesta: "Pierna de parlay multi-leg con otras picks de otros partidos. Yankees ganó 12-1, la pierna cobró; el resultado del parlay completo depende de las otras piernas (no registradas)."
     picks_analizadas_no_jugadas:
       - {pick: "Yankees F5 TT over 2.5", cuota: 1.90, resultado_hipotetico: ganó, motivo: "3 R en F5"}
       - {pick: "Yankees TT over 4.5", cuota: null, resultado_hipotetico: ganó, motivo: "12 R"}
@@ -485,10 +494,10 @@ partidos:
       clasificacion_analitica: ACIERTO_LIMPIO
       mercado_correcto_retrospectiva: null
       tipo_mercado_correcto: null
-      nota_meta: "Único caso en el dataset donde el análisis acertó, las picks correctas se jugaron, y todo cobró. Validación de la jerarquía: F5 TT / props H+R+RBI de bates 2º-5º > ML caro > Ks props. La pick de Schlittler Ks fue conscientemente descartada por cuota ajustada y eso evitó el único leg que habría perdido."
+      nota_meta: "Dos apuestas independientes sobre el partido: (1) Bellinger H+R+RBI over 1.5 @1.80 como single (cobró), (2) Yankees ML @1.47 como pierna de parlay con picks de otros partidos (pierna cobró, parlay total desconocido). El análisis identificó correctamente la jerarquía de mercados y descartó conscientemente Schlittler over Ks @cuota ajustada (habría perdido con 4 K)."
     patron_v2:
       aplicable: [5, 10]
-      emergente: "Combinar prop H+R+RBI de bate 2º-5º (cuota mediana) + ML del favorito (cuota corta) en parlay captura mejor el edge que ML single. El ML corto no paga la confianza solo; sumar el prop multiplica la cuota y reduce el costo de oportunidad."
+      emergente: "Cuando el favorito tiene ML muy corto (1.47) en un spot de lineup fuerte vs abridor vulnerable, jugarlo como pierna de parlay multi-leg + tomar la prop H+R+RBI/TB de un bate 2º-5º como single separado es buena gestión: el ML corto aporta a cuota acumulada en otro vehículo, y el prop captura el edge del partido con cuota viva propia."
     leccion: "Si el edge está en un lineup fuerte contra abridor vulnerable + bullpen débil, jerarquía: F5 TT del equipo fuerte > TT full game > props H+R+RBI de bates 2º-5º > ML caro > over general."
     fuente: "conversación pre/in/post-partido + raw"
 

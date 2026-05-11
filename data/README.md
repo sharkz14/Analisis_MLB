@@ -28,14 +28,20 @@ Heurísticas referenciadas: `../MLB_Heuristicas_Mercados_v2_040526_070526.txt`
     ml_favorito: float
     ml_underdog: float
 
-  apuesta:
+  apuesta:                           # usar cuando hay UNA sola apuesta
     mercado: string                  # mercado literal jugado
     tipo_mercado: <enum tipo_mercado>
     inning_corte: int                # opcional, solo para partial_DNB / partial_under
     cuota: float | null
     stake: full | medio | chico | null
+    formato: single | parlay_leg | combo    # opcional; default single
     resultado: ganó | perdió | push | null
-    notas_apuesta: string            # opcional, si el mercado/resultado se infirió
+    resultado_pierna: ganó | perdió         # solo para parlay_leg
+    resultado_parlay_total: ganó | perdió | desconocido   # solo para parlay_leg
+    notas_apuesta: string            # opcional
+
+  apuestas:                          # alternativa a 'apuesta': lista cuando hay
+    - { ...mismo schema que apuesta }    # múltiples apuestas independientes en el mismo partido
 
   picks_analizadas_no_jugadas:       # opcional; menú considerado pero descartado
     - pick: string
