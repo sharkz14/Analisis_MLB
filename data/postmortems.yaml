@@ -351,28 +351,49 @@ partidos:
   - id: yankees-rangers-050526
     fecha: 2026-05-05
     partido: "Yankees vs Rangers"
-    marcador: null
+    marcador: "Yankees 7 - Rangers 4"
+    cuotas_pre_partido:
+      ml_favorito: 1.80     # Yankees
+      ml_underdog: 2.05     # Rangers
     edge:
-      frase: "Yankees lineup con poder 1-9 vs deGrom con barrels permitidos en Yankee Stadium."
-      fuente: parque_clima   # combinado con perfil contacto deGrom
+      frase: "Yankees lineup 1-9 con poder distribuido vs deGrom con barrels/contacto aéreo permitidos en Yankee Stadium HR-friendly. Pese a ausencias (Rice, Stanton), parte alta peligrosa + bullpen para absorber golpe inicial."
+      fuente: parque_clima   # combinado con perfil contacto deGrom + HR-friendly
       pitcher_vulnerable_tipo: null
     apuesta:
-      mercado: "Yankees F5"
-      tipo_mercado: F5_side
-      resultado: perdió
+      mercado: "pass — ninguna pick tomada"
+      tipo_mercado: pass
+      cuota: null
+      stake: null
+      resultado: null
+      notas_apuesta: "Análisis explícitamente marcó Yankees ML @1.80 como 'jugable solo como lectura full game' (no F5). Usuario pasó. La pick habría cobrado — Yankees ganó 7-4."
+    picks_analizadas_no_jugadas:
+      - {pick: "Yankees ML full game", cuota: 1.80, resultado_hipotetico: ganó, motivo: "Yankees ganó 7-4. Era la pick principal recomendada como full game."}
+      - {pick: "Yankees F5", cuota: null, resultado_hipotetico: perdió, motivo: "Texas 3 R en 1ª contra Elmer; Yankees no dominó temprano"}
+      - {pick: "Yankees -1.5", cuota: null, resultado_hipotetico: ganó, motivo: "Ganó 7-4 (margen 3)"}
+      - {pick: "Yankees TT over alto", cuota: null, resultado_hipotetico: ganó, motivo: "Yankees 7 R"}
+      - {pick: "Texas ML", cuota: 2.05, resultado_hipotetico: perdió, motivo: "Yankees ganó"}
+      - {pick: "Bellinger total bases / props", cuota: null, resultado_hipotetico: ganó, motivo: "2 H, 3 RBI, doble"}
+      - {pick: "deGrom over Ks", cuota: null, resultado_hipotetico: ganó, motivo: "7 K"}
     contexto_resultado:
-      abridor_rival: "deGrom: 7 K, stuff de élite intacto; sostuvo temprano."
-      factor_clave: "Edge era full game (lineup + bullpen absorben golpe inicial), no temprano."
+      abridor_rival: "deGrom: 6.1 IP, 7 H, 6 ER, 1 BB, 7 K, 2 HR — stuff de élite intacto (7 K) pero permitió daño real por contacto fuerte (6 ER, 2 HR)."
+      abridor_propio: "Elmer Rodríguez: 4.2 IP, 6 H, 3 ER, 4 BB, 2 K — sufrió temprano (3 R en 1ª) como advertía el análisis."
+      bullpen_propio: "Headrick (1.1 IP, 0 H, 0 R, 3 K) + Hill/Cruz/Bednar: 4.1 IP, 4 H, 1 R — estabilizó tras Elmer."
+      bates_clave: "Bellinger 2H/3RBI doble; Chisholm HR/RBI; McMahon 2H/HR/2RBI; Goldschmidt 2H/2R; Caballero 1H/1R. Daño distribuido pese a ausencias."
+      ofensiva_texas: "Texas: 12 LOB, 3-13 RISP — tráfico sin conversión (mismo patrón que rangers-yankees-070526)."
+      factor_clave: "deGrom no fue bloqueador automático: Yankees le hizo R en 1ª, 2ª, 6ª y 7ª; le rompió el partido directo, no esperó al bullpen rival."
     postmortem:
       lectura_correcta: sí
       mercado_capturo_edge: no
+      clasificacion_jugada: PASS_INCORRECTO
       clasificacion_analitica: ERROR_DE_MERCADO
-      mercado_correcto_retrospectiva: "Yankees ML full game / TT full game / props de poder"
+      mercado_correcto_retrospectiva: "Yankees ML full game @1.80 (el análisis lo identificó como 'jugable')"
       tipo_mercado_correcto: ML
+      nota_meta: "El análisis pre-partido identificó correctamente Yankees ML full game como mercado correcto y advirtió contra Yankees F5. El usuario pasó pese a la recomendación con edge identificado. Distinto a guardians-royals (donde el frame era equivocado): aquí el frame era correcto, solo faltó actuar."
     patron_v2:
       aplicable: [9, 11]
-      emergente: null
+      emergente: "Pitcher élite (K% alto) con grietas de contacto fuerte/barrels en parque HR-friendly NO es bloqueador automático del lineup rival. La grieta importa más que la ERA. Mercado correcto: ML/TT/props de poder full game, no F5 (que sigue dependiendo de dominio temprano del ace)."
     leccion: "As con K% alto + contacto aéreo/barrels permitidos en parque HR-friendly NO es bloqueador automático. El mercado correcto puede ser ML/TT/props de poder full game, no F5."
+    fuente: "conversación pre/post-partido + raw"
 
   - id: nationals-twins-050526
     fecha: 2026-05-05
