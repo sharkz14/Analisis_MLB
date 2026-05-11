@@ -504,28 +504,50 @@ partidos:
   - id: cardinals-brewers-040526
     fecha: 2026-05-04
     partido: "Cardinals vs Brewers"
-    marcador: null
+    marcador: "Cardinals 6 - Brewers 3"
+    cuotas_pre_partido:
+      ml_favorito: 1.80     # Brewers
+      ml_underdog: 2.05     # Cardinals
     edge:
-      frase: "Ambos abridores vulnerables; elegir cuál era más explotable."
+      frase: "Ambos abridores vulnerables. El análisis priorizó atacar a Leahy (vs lineup Brewers L/S/L/S, BB% 12.0, velocidad/SB) pero el edge más limpio era Cardinals vs Patrick (Tipo A: BB alta, K% bajo, first-pitch strike bajo, parte alta STL con Wetherholt/Herrera para OBP)."
       fuente: tipo_vulnerabilidad_pitcher
-      pitcher_vulnerable_tipo: A   # Patrick (Brewers), no Leahy
+      pitcher_vulnerable_tipo: A   # Patrick (Brewers), el verdadero objetivo
     apuesta:
-      mercado: "Brewers TT (lado equivocado)"
-      tipo_mercado: TT_full_game
-      resultado: perdió
-      notas_apuesta: "Inferido — el raw no es explícito sobre qué se jugó; la lección señala que el lado correcto era Cardinals F5 TT."
+      mercado: "pass — ninguna pick tomada"
+      tipo_mercado: pass
+      cuota: null
+      stake: null
+      resultado: null
+      notas_apuesta: "Análisis recomendó ranking: 1) Brewers TT over 4.0/4.5, 2) Over 8.5, 3) Cardinals F5 TT over, 4) Brewers ML, 5) Cardinals ML. Usuario pasó. La pick #1 (Brewers TT over) habría perdido; las que sí cobraron estaban más abajo en la jerarquía."
+    picks_analizadas_no_jugadas:
+      - {pick: "Brewers TT over 4.0", cuota: null, resultado_hipotetico: perdió, motivo: "Brewers solo 3 R (1 vs Leahy + 2 vs bullpen). Recomendación #1."}
+      - {pick: "Brewers TT over 4.5", cuota: null, resultado_hipotetico: perdió, motivo: "3 R totales"}
+      - {pick: "Over 8.5", cuota: null, resultado_hipotetico: ganó, motivo: "9 R totales (por poco)"}
+      - {pick: "Over 9.0", cuota: null, resultado_hipotetico: push, motivo: "Exactamente 9 R"}
+      - {pick: "Cardinals F5 TT over", cuota: null, resultado_hipotetico: ganó, motivo: "STL 4 R en F5 contra Patrick"}
+      - {pick: "Brewers ML", cuota: 1.80, resultado_hipotetico: perdió, motivo: "Patrick 3.1 IP / 4 ER colapsó; STL ganó 6-3"}
+      - {pick: "Cardinals ML", cuota: 2.05, resultado_hipotetico: ganó, motivo: "STL ganó 6-3 (mejor de lo que el análisis le daba)"}
+      - {pick: "YRFI", cuota: null, resultado_hipotetico: perdió, motivo: "No hubo carrera en la 1ª"}
     contexto_resultado:
-      factor_clave: "Patrick (Brewers) tenía señales claras de Tipo A: BB alta, K% bajo, first-pitch strike bajo. Cardinals con Wetherholt/Herrera para embasarse y Burleson/Walker/Gorman/Church/Pagés para daño."
+      abridor_brewers_patrick: "Patrick: 3.1 IP, 7 H, 4 ER, 3 BB, 4 K — Tipo A confirmado, colapsó por tráfico/BB"
+      abridor_cardinals_leahy: "Leahy: 5.1 IP, 6 H, 1 ER, 2 BB, 5 K, 0 HR — mejor de lo proyectado, sobrevivió la presión de Milwaukee"
+      ofensiva_brewers: "11 H, 12 LOB, 2-12 RISP — tráfico sin conversión (mismo patrón que rangers-yankees-070526 y baltimore-yankees-040526)"
+      ofensiva_cardinals: "4-0 al final del 4º; 6 R totales, 11 H, 9 LOB, 4-10 RISP — más eficiencia con corredores"
+      bullpen_cardinals: "Susto tarde con Graceffo/O'Brien + HR Turang en 9º, pero margen suficiente para sobrevivir"
+      factor_clave: "El edge más explotable era Patrick (Tipo A), no Leahy. STL ganó el partido en el F5 vs Patrick (4-0); Milwaukee no convirtió tráfico contra Leahy ni contra bullpen STL."
     postmortem:
-      lectura_correcta: parcialmente
+      lectura_correcta: no
       mercado_capturo_edge: no
+      clasificacion_jugada: PASS_CORRECTO
       clasificacion_analitica: ERROR_DE_LECTURA
-      mercado_correcto_retrospectiva: "Cardinals F5 TT / Cardinals carreras temprano"
+      mercado_correcto_retrospectiva: "Cardinals F5 TT over (ganó) / Cardinals ML @2.05 (ganó) / Over 8.5 (ganó por poco)"
       tipo_mercado_correcto: F5_TT
+      nota_meta: "Pass correcto vs la recomendación #1 (Brewers TT over perdió). El análisis identificó Cardinals F5 TT como opción #3, pero priorizó Brewers TT. El error de fondo fue elegir mal cuál abridor era más explotable. Patrón recurrente del dataset: cuando hay 2 abridores vulnerables, el Tipo A (BB alta, K% bajo) suele ser más atacable que el RHP de contacto fuerte permitido — el primero no sobrevive innings, el segundo sí."
     patron_v2:
       aplicable: [1, 5]
-      emergente: null
+      emergente: "Cuando ambos abridores son vulnerables, comparar por Tipo: A (comando frágil → no sobrevive innings con tráfico) > B (contacto fuerte permitido → puede sobrevivir con whiff parcial) > C (sin whiff pero command management → suele sobrevivir si no enfrenta paciencia). El Tipo A es el más atacable para TT/F5 TT del rival; el B/C requiere ataques más específicos (hits allowed over) que pueden no convertirse en runs."
     leccion: "Cuando ambos abridores son vulnerables, no elegir el lineup 'más mejorado' por defecto. Identificar cuál abridor tiene menos herramientas para apagar rallies (BB altos, K% bajo, mal control de conteo)."
+    fuente: "conversación pre/post-partido + raw"
 
   - id: reds-cubs-040526
     fecha: 2026-05-04
