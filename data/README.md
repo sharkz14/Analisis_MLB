@@ -39,8 +39,8 @@ Heurísticas referenciadas: `../MLB_Heuristicas_Mercados_v2_040526_070526.txt`
 
   picks_analizadas_no_jugadas:       # opcional; menú considerado pero descartado
     - pick: string
-      cuota: float
-      resultado_hipotetico: ganó | perdió
+      cuota: float | null
+      resultado_hipotetico: ganó | perdió | push
       motivo: string                 # qué habría hecho cobrar/perder
 
   contexto_resultado:

@@ -108,29 +108,56 @@ partidos:
     fecha: 2026-05-07
     partido: "Padres vs Cardinals"
     marcador: "Cardinals 2 - Padres 1"
+    cuotas_pre_partido:
+      ml_favorito: 1.60     # Padres
+      ml_underdog: 2.37     # Cardinals
     edge:
-      frase: "Liberatore vulnerable; lineup Padres lleno de derechos debería producir."
+      frase: "Liberatore vulnerable (4.50 ERA, 14.6% K, 5.84 FIP); lineup Padres lleno de derechos contra LHP; Machado split individual fuerte vs zurdos."
       fuente: matchup_mano_repertorio
       pitcher_vulnerable_tipo: null
     apuesta:
-      mercado: "Padres props ofensivas (Machado +1.5 bases) / Padres lado"
+      mercado: "Machado +1.5 bases"
       tipo_mercado: prop_bateador_bases
+      cuota: 2.25
+      stake: null
       resultado: perdió
+      notas_apuesta: "Tomada single. Machado 0-3, 1 BB, 1 R, 0 hits, 0 TB — el BB y la R suman para el equipo pero no para la prop."
+    picks_analizadas_no_jugadas:
+      - {pick: "Padres F5 DNB", cuota: 1.57, resultado_hipotetico: push, motivo: "F5 1-1, stake devuelto"}
+      - {pick: "Padres F5 resultado (sin empate)", cuota: 1.85, resultado_hipotetico: perdió, motivo: "Empate al 5º cuenta como pérdida en F5 sin empate"}
+      - {pick: "Padres F5 -1.5", cuota: 2.40, resultado_hipotetico: perdió, motivo: "F5 1-1"}
+      - {pick: "Ty France over 0.5 hits", cuota: 1.47, resultado_hipotetico: perdió, motivo: "0-3, 1 K"}
+      - {pick: "Machado over 0.5 hits", cuota: 1.44, resultado_hipotetico: perdió, motivo: "0-3"}
+      - {pick: "Machado over 0.5 RBI", cuota: 2.42, resultado_hipotetico: perdió, motivo: "0 RBI"}
+      - {pick: "Padres ML", cuota: 1.60, resultado_hipotetico: perdió, motivo: "Cardinals ganó 2-1"}
+      - {pick: "Padres -1.5", cuota: 2.32, resultado_hipotetico: perdió, motivo: "Padres perdió"}
+      - {pick: "Cardinals +1.5", cuota: 1.62, resultado_hipotetico: ganó, motivo: "Cardinals ganó directo"}
+      - {pick: "Under 8.5", cuota: 1.78, resultado_hipotetico: ganó, motivo: "3 R totales"}
+      - {pick: "Over 8.5", cuota: 2.05, resultado_hipotetico: perdió, motivo: "3 R totales"}
+      - {pick: "Más de 14.5 hits combinados", cuota: 1.60, resultado_hipotetico: perdió, motivo: "Padres 4 H, juego bajo"}
+      - {pick: "King ER under", cuota: null, resultado_hipotetico: ganó, motivo: "1 ER en 6 IP"}
+      - {pick: "King over 5.5 Ks", cuota: null, resultado_hipotetico: ganó, motivo: "6 K"}
+      - {pick: "Liberatore under outs", cuota: null, resultado_hipotetico: perdió, motivo: "6 IP = 18 outs, salió mejor de lo esperado"}
+      - {pick: "Liberatore over hits allowed", cuota: null, resultado_hipotetico: perdió, motivo: "solo 3 H"}
+      - {pick: "Liberatore under Ks", cuota: null, resultado_hipotetico: perdió, motivo: "6 K"}
     contexto_resultado:
-      abridor_rival: "Liberatore: 6.0 IP, 3 H, 1 ER, 6 K"
-      abridor_propio: "King: 6.0 IP, 1 H, 1 ER, 6 K"
-      factor_clave: "San Diego como equipo venía flojo vs LHP; Petco comprime carreras; parte baja sin volumen; partido definido por swings puntuales (HR Burleson, doble Walker, triple Winn)."
-      bates_clave: "Machado 0-3 BB; France 0-3; solo 4 hits totales de Padres."
+      abridor_rival: "Liberatore: 6.0 IP, 3 H, 1 ER, 3 BB, 6 K — neutralizó a los derechos clave"
+      abridor_propio: "King: 6.0 IP, 1 H, 1 ER, 2 BB, 6 K — cumplió la lectura pro-King"
+      bates_clave_cardinals: "HR Burleson, doble Walker, triple Winn (clutch puntual)"
+      ofensiva_padres: "4 hits totales. Machado 0-3 BB. France 0-3 con K."
+      factor_clave: "Liberatore neutralizó derechos clave; Padres como conjunto venía flojo vs LHP; Petco comprime carreras; partido definido por 3 swings de Cardinals."
     postmortem:
-      lectura_correcta: parcialmente
+      lectura_correcta: no
       mercado_capturo_edge: no
+      clasificacion_jugada: ERROR_DE_LECTURA
       clasificacion_analitica: ERROR_DE_LECTURA
-      mercado_correcto_retrospectiva: "Cardinals +1.5 / under 8.5 / Padres F5 DNB"
+      mercado_correcto_retrospectiva: "Cardinals +1.5 @1.62 (ganó) / Under 8.5 @1.78 (ganó) / Padres F5 DNB @1.57 (push)"
       tipo_mercado_correcto: run_line_underdog_1.5
     patron_v2:
       aplicable: [6, 10, 11]
-      emergente: null
-    leccion: "Cuando el favorito tiene edge de abridor pero no edge ofensivo colectivo repetible y el parque comprime carreras, priorizar protección (F5 DNB / under / underdog +1.5) antes que favoritos caros o props ofensivas."
+      emergente: "Cuando se cumplen estas 5 condiciones juntas — favorito con edge de abridor, lineup favorito 'parece' bien por mano pero split colectivo flojo vs esa mano, parque pitcher-friendly, parte baja del favorito poco profunda, underdog competente con bullpen funcional — la jerarquía correcta es: F5 protegido / under / underdog +1.5 > ML favorito > props ofensivas del favorito > run line favorito."
+    leccion: "No usar 'pitcher vulnerable' como argumento único para hits/TB/RBI si el rival no tiene forma colectiva contra esa mano. El split individual de Machado vs zurdos era cierto, pero dependía de que el matchup se materializara en contacto de calidad, que Liberatore evitó."
+    fuente: "conversación pre/post-partido + raw"
 
   - id: rangers-yankees-070526
     fecha: 2026-05-07
