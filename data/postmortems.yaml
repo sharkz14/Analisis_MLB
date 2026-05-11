@@ -692,3 +692,198 @@ partidos:
       emergente: "Antes de fadear a un opener/spot starter por leash o comando o malas líneas Triple-A, exigir 2 confirmaciones: (1) que el lineup rival tenga paciencia/bajo chase / OBP funcional; (2) que las muestras MLB previas del pitcher (no Triple-A) también señalen el problema. Sin esas, la fuente queda en la zona ruidosa de la jerarquía v2."
     leccion: "Antes de fadear a un opener/spot starter por leash o comando, validar si el lineup rival tiene paciencia, bajo chase, buen contacto y capacidad de convertir tráfico. No basta con que el pitcher parezca vulnerable."
     fuente: "conversación pre/in/post-partido + raw"
+
+  - id: phillies-rockies-080526
+    fecha: 2026-05-08
+    partido: "Phillies vs Rockies"
+    marcador: "Rockies 9 - Phillies 7 (11 innings)"
+    cuotas_pre_partido:
+      ml_favorito: 1.45     # Phillies
+      ml_underdog: 2.82     # Rockies
+    edge:
+      frase: "Luzardo (LHP) vs lineup Colorado mal vs LHP (.649 OPS) + Moniak/McCarthy fuera; Phillies con zurdos (Harper, Schwarber, Marsh) vs Dollander RHP atacable. Edge en run prevention temprano + props ofensivos zurdos."
+      fuente: matchup_mano_repertorio
+      pitcher_vulnerable_tipo: B   # Dollander permite hard contact
+    apuesta:
+      mercado: "pass — ninguna pick tomada"
+      tipo_mercado: pass
+      cuota: null
+      stake: null
+      resultado: null
+      notas_apuesta: "Análisis recomendó 2 picks principales: Luzardo under 1.5 BB @1.80 y Harper +1.5 bases @2.15. Usuario pasó."
+    picks_analizadas_no_jugadas:
+      - {pick: "Harper +1.5 bases", cuota: 2.15, resultado_hipotetico: ganó, motivo: "2 H, 2 TB"}
+      - {pick: "Harper H+R+RBI 1+", cuota: 1.29, resultado_hipotetico: ganó, motivo: "2 H + 1 R"}
+      - {pick: "Harper hit over 0.5", cuota: 1.40, resultado_hipotetico: ganó, motivo: "2 hits"}
+      - {pick: "Luzardo under 1.5 BB", cuota: 1.80, resultado_hipotetico: perdió, motivo: "3 BB en 3 IP — error de precio en línea ajustada"}
+      - {pick: "Luzardo +7.5 Ks", cuota: 1.70, resultado_hipotetico: perdió, motivo: "Solo 6 K en 3 IP — el problema fue salida corta"}
+      - {pick: "Rockies TT under 2.5", cuota: 1.91, resultado_hipotetico: perdió, motivo: "Colorado 9 R"}
+      - {pick: "Phillies ML", cuota: 1.44, resultado_hipotetico: perdió, motivo: "Phillies perdió 9-7 en 11 inn"}
+      - {pick: "Phillies F5 DNB", cuota: 1.50, resultado_hipotetico: perdió, motivo: "Luzardo rompió F5"}
+      - {pick: "Phillies -1.5", cuota: 2.00, resultado_hipotetico: perdió, motivo: "Phillies perdió"}
+      - {pick: "Phillies TT over 4.5", cuota: 2.07, resultado_hipotetico: ganó, motivo: "Phillies 7 R"}
+      - {pick: "Over 7.5", cuota: 2.05, resultado_hipotetico: ganó, motivo: "16 R totales"}
+      - {pick: "Under 7.5", cuota: 1.78, resultado_hipotetico: perdió, motivo: "16 R"}
+      - {pick: "Harper HR", cuota: 4.00, resultado_hipotetico: perdió, motivo: "0 HR"}
+    contexto_resultado:
+      abridor_propio: "Luzardo: 3.0 IP, 6 H, 6 ER, 3 BB, 6 K, 1 HR — K rate alto pero salida corta por estrés/BB"
+      abridor_rival: "Dollander: 5.2 IP, 3 H, 2 ER, 5 BB, 5 K, 1 HR — sobrevivió pese a BB altos"
+      ofensiva_rockies: "13 H, 9 R, 3 BB, 16 K, 5-17 RISP — convirtió tráfico"
+      bates_clave: "Goodman 4 RBI; Castro 2 H; Karros 2 RBI; Johnston/McCarthy desde banca"
+      viento_final: "12 mph hacia CF (más pro-carry que la proyección inicial lateral)"
+      factor_clave: "Luzardo: K upside ≠ run prevention. 6 K + 6 ER muestra que el K rate no garantizó control. Línea de BB 1.5 muy frágil. Colorado convirtió contacto y RISP contra todo el pitcheo Phillies."
+    postmortem:
+      lectura_correcta: no
+      mercado_capturo_edge: no
+      clasificacion_jugada: PASS_INCORRECTO
+      clasificacion_analitica: ERROR_DE_LECTURA
+      mercado_correcto_retrospectiva: "Harper +1.5 bases @2.15 (única pick principal recomendada que cobró) / Phillies TT over 4.5 / Over 7.5"
+      tipo_mercado_correcto: prop_bateador_bases
+      nota_meta: "Pass incorrecto: Harper TB era pick principal recomendada y cobró. Pero la otra principal (Luzardo under BB) habría perdido. Mixed pero net incorrecto por la prop. El análisis acertó en Harper TB y en advertir contra Phillies -1.5 / Harper HR. Falló en confundir K upside con run prevention y en no actualizar la lectura por viento out-to-CF final."
+    patron_v2:
+      aplicable: [1, 4, 11]
+      emergente: "K upside no es run prevention. Una prop de BB sobre 1.5 es estructuralmente frágil: necesita guion limpio, no solo buen BB% de temporada. Si el pitcher entra bajo estrés o tiene salida corta, la línea se rompe rápido. Para pitcher con K alto + perfil de tráfico, mejor outs over / hits allowed que BB under."
+    leccion: "K upside y run prevention no son lo mismo. Un abridor puede sacar muchos K y aun así destruir un ML/TT under si permite tráfico y contacto fuerte entre ponches. Y un under de BB 1.5 necesita guion limpio, no solo métricas de temporada."
+    fuente: "conversación pre/post-partido"
+
+  - id: pirates-giants-080526
+    fecha: 2026-05-08
+    partido: "Pirates vs Giants"
+    marcador: "Giants 5 - Pirates 2"
+    cuotas_pre_partido:
+      ml_favorito: 1.91     # Giants
+      ml_underdog: 1.90     # Pirates (coin-flip)
+    edge:
+      frase: "Robbie Ray (LHP) > Mlodzinski (RHP, vulnerable por contacto/hits permitidos); SF lineup no élite pero suficiente para evitar perder F5; bullpen PIT vulnerable (Lawrence)."
+      fuente: matchup_mano_repertorio
+      pitcher_vulnerable_tipo: B   # Mlodzinski
+    apuesta:
+      mercado: "SF Giants +0.5 F5"
+      tipo_mercado: F5_doble_oportunidad   # +0.5 F5 = gana o empata F5
+      cuota: 1.65
+      stake: null
+      formato: parlay_leg
+      resultado_pierna: ganó
+      resultado_parlay_total: desconocido
+      notas_apuesta: "Pierna de parlay multi-leg. F5 terminó SF 2 - PIT 1, la pierna cobró cómodo."
+    picks_analizadas_no_jugadas:
+      - {pick: "SF Giants F5 ganador (DNB)", cuota: 1.85, resultado_hipotetico: ganó, motivo: "F5 2-1 SF"}
+      - {pick: "Pittsburgh F5 TT under 2.5", cuota: 1.51, resultado_hipotetico: ganó, motivo: "PIT 1 R en F5"}
+      - {pick: "F5 total under 4.0", cuota: 1.96, resultado_hipotetico: ganó, motivo: "Total F5 = 3"}
+      - {pick: "SF -0.5 F5", cuota: 2.24, resultado_hipotetico: ganó, motivo: "SF ganó F5"}
+      - {pick: "SF ML", cuota: 1.91, resultado_hipotetico: ganó, motivo: "Giants ganó 5-2"}
+      - {pick: "Ray over 5.5 Ks", cuota: null, resultado_hipotetico: ganó, motivo: "7 K"}
+      - {pick: "Mlodzinski over 4.5 hits allowed", cuota: null, resultado_hipotetico: ganó, motivo: "7 H permitidos"}
+      - {pick: "SF TT over 3.5 full game", cuota: null, resultado_hipotetico: ganó, motivo: "5 R"}
+    contexto_resultado:
+      abridor_propio: "Ray: 6.0 IP, 4 H, 1 ER, 4 BB, 7 K — sostuvo F5 pese a BB"
+      abridor_rival: "Mlodzinski: 6.0 IP, 7 H, 2 ER, 0 BB, 1 K — permitió tráfico y contacto pero sobrevivió 6 IP"
+      bullpen_pirates: "Lawrence: 0.0 IP, 3 H, 3 ER — colapso en 7ª, ahí se rompió el partido"
+      factor_clave: "Edge madre se confirmó (Ray temprano). F5 2-1 fue el guion ideal para +0.5. Daño grande full game vino del bullpen, no del F5."
+    postmortem:
+      lectura_correcta: sí
+      mercado_capturo_edge: sí
+      clasificacion_jugada: ACIERTO_LIMPIO
+      clasificacion_analitica: ACIERTO_LIMPIO
+      mercado_correcto_retrospectiva: null
+      tipo_mercado_correcto: null
+      nota_meta: "Acierto limpio. Pick protegida (F5 +0.5) capturó edge temprano sin pedir margen. Aplica regla madre del v2: edge identificado → mercado con menos dependencias."
+    patron_v2:
+      aplicable: [12]
+      emergente: null   # ya cubierto por regla madre del v2
+    leccion: "Cuando el edge es abridor zurdo temprano y la ofensiva favorita no es confiable, F5 +0.5/DNB es mejor que ML, run line o TT temprano alto."
+    fuente: "conversación pre/in/post-partido"
+
+  - id: yankees-brewers-080526
+    fecha: 2026-05-08
+    partido: "Yankees vs Brewers"
+    marcador: "Brewers 6 - Yankees 0"
+    cuotas_pre_partido:
+      ml_favorito: 1.80     # Yankees
+      ml_underdog: 2.05     # Brewers
+    edge:
+      frase: "Misiorowski (BRE) con K upside real + Fried (NYY) como piso estable → F5 under como protección de ambos abridores; Brewers ML como underdog value si Misiorowski cumple."
+      fuente: matchup_mano_repertorio
+      pitcher_vulnerable_tipo: null
+    apuesta:
+      mercado: "Menos 4.5 carreras en F5"
+      tipo_mercado: F5_under
+      cuota: 1.57
+      stake: null
+      formato: parlay_leg
+      resultado_pierna: perdió
+      resultado_parlay_total: perdió   # pierna perdedora → parlay total perdió
+      notas_apuesta: "Pierna de parlay. Brewers anotó 4 R contra Fried en B2 (manufactura: Lockridge/Frelick/Ortiz extendieron + Chourio volteó lineup + 5-11 RISP). F5 total = 5 carreras (por encima de 4.5)."
+    picks_analizadas_no_jugadas:
+      - {pick: "Misiorowski over Ks", cuota: null, resultado_hipotetico: ganó, motivo: "11 K en 6 IP — la mejor pick del board"}
+      - {pick: "Brewers ML", cuota: 2.05, resultado_hipotetico: ganó, motivo: "Brewers 6-0"}
+      - {pick: "Brewers +1.5", cuota: 1.62, resultado_hipotetico: ganó, motivo: "Ganaron por 6"}
+      - {pick: "Under 7.5 full game", cuota: 1.83, resultado_hipotetico: ganó, motivo: "6 R totales"}
+      - {pick: "Fried over 17.5 outs", cuota: null, resultado_hipotetico: ganó, motivo: "6 IP = 18 outs"}
+      - {pick: "Yankees ML", cuota: 1.80, resultado_hipotetico: perdió, motivo: "Yankees 0 R"}
+    contexto_resultado:
+      abridor_brewers_misiorowski: "6.0 IP, 2 H, 0 ER, 2 BB, 11 K — dominó completamente"
+      abridor_yankees_fried: "6.0 IP, 6 H, 5 ER, 3 BB, 5 K — 4 ER en B2 destruyó el F5"
+      ofensiva_brewers: "Manufactura sin HR: Lockridge 2H/2RBI, Frelick 1H/1RBI, Ortiz 1H/1RBI, Vaughn 2B/2R. 5-11 RISP."
+      factor_clave: "Misiorowski era el edge real. Trasladar el edge a F5 under (asumiendo piso Fried) ignoró que Brewers podía fabricar sin HR contra command/contact-management. Mismo patrón que orioles-marlins (Tipo C frágil contra paciencia + manufactura)."
+    postmortem:
+      lectura_correcta: parcialmente
+      mercado_capturo_edge: no
+      clasificacion_jugada: ERROR_DE_LECTURA
+      clasificacion_analitica: ERROR_DE_MERCADO
+      mercado_correcto_retrospectiva: "Misiorowski Ks over / Brewers ML @2.05 / Brewers +1.5 / Under 7.5 full game"
+      tipo_mercado_correcto: ML
+      nota_meta: "Misiorowski Ks era el mejor mercado del partido. El edge K real se debió quedar en prop del pitcher, no trasladarlo a F5 under que requería que también Fried cumpliera. Misma trampa que orioles-marlins (mejor abridor propio Tipo C puede romperse contra manufactura)."
+    patron_v2:
+      aplicable: [2, 9, 10]
+      emergente: "F5 under con dos abridores 'buenos en papel' es frágil si uno de los dos lineups tiene perfil de manufactura (contacto + velocidad + paciencia + parte baja funcional). El ace estable puede romperse sin HR. Para edges de K de un abridor específico, dejar la apuesta en prop del pitcher, no trasladar a F5 under."
+    leccion: "Cuando el underdog tiene el abridor con mayor techo real y el favorito depende de un abridor de contacto/command, no basta con decir 'ambos abridores sostienen under F5'. Hay que revisar si el lineup underdog puede fabricar temprano sin HR."
+    fuente: "conversación pre/in/post-partido"
+
+  - id: tigers-royals-080526
+    fecha: 2026-05-08
+    partido: "Tigers vs Royals"
+    marcador: "Royals 4 - Tigers 3"
+    cuotas_pre_partido:
+      ml_favorito: 1.70     # Royals
+      ml_underdog: 2.20     # Tigers
+    edge:
+      frase: "Witt vs Montero: Witt es el bate top con mejor matchup y volumen arriba del lineup contra abridor vulnerable por contacto."
+      fuente: matchup_mano_repertorio
+      pitcher_vulnerable_tipo: B
+    apuesta:
+      mercado: "Bobby Witt Jr. 1+ base"
+      tipo_mercado: prop_bateador_bases
+      cuota: 1.36
+      stake: null
+      formato: parlay_leg
+      resultado_pierna: ganó
+      resultado_parlay_total: perdió   # parlay de 2 legs, la otra perdió
+      notas_apuesta: "Pierna de parlay de 2 legs. Witt: 1 doble = 2 TB, cobró cómodo. La otra pierna del parlay perdió (no en este partido), así que el parlay total perdió."
+    picks_analizadas_no_jugadas:
+      - {pick: "Witt +1.5 bases", cuota: 1.91, resultado_hipotetico: ganó, motivo: "2 TB (doble)"}
+      - {pick: "Royals ML", cuota: 1.70, resultado_hipotetico: ganó, motivo: "KC 4-3"}
+      - {pick: "Royals -1.5", cuota: 2.45, resultado_hipotetico: perdió, motivo: "Ganaron por 1"}
+      - {pick: "Royals TT over 4.5", cuota: 2.00, resultado_hipotetico: perdió, motivo: "KC 4 R (por 1)"}
+      - {pick: "Over 8.5 partido", cuota: null, resultado_hipotetico: perdió, motivo: "7 R totales"}
+      - {pick: "Montero over 5.5 hits allowed", cuota: 1.98, resultado_hipotetico: perdió, motivo: "Solo 3 H permitidos"}
+      - {pick: "Montero outs over 15.5", cuota: null, resultado_hipotetico: ganó, motivo: "18 outs"}
+      - {pick: "Witt carrera", cuota: 1.90, resultado_hipotetico: perdió, motivo: "0 R anotada"}
+    contexto_resultado:
+      abridor_rival: "Montero: 6.0 IP, 3 H, 1 ER, 1 BB, 4 K — mejor de lo proyectado, comando y leash"
+      bate_top: "Witt: 1 doble (2 TB) — único hit relevante del top de KC"
+      ofensiva_kc: "Frío temprano, 1-1 al F5, daño llegó tarde contra bullpen Detroit (3 R entre 8ª y 9ª)"
+      factor_clave: "Edge full game > F5 era correcto. Montero hits allowed over 5.5 era la mala traducción del análisis (Montero tenía leash). Witt prop fue la pick más limpia: no dependió de victoria, RBI, HR ni timing."
+    postmortem:
+      lectura_correcta: sí
+      mercado_capturo_edge: sí
+      clasificacion_jugada: ACIERTO_LIMPIO
+      clasificacion_analitica: ACIERTO_LIMPIO
+      mercado_correcto_retrospectiva: null
+      tipo_mercado_correcto: null
+      nota_meta: "La pierna sobre este partido cobró limpio. El parlay total perdió por otra pierna externa. Validación de Patrón 10 (props salen del guion) y de la lectura full game > F5 cuando el favorito puede dejar corredores y producir tarde."
+    patron_v2:
+      aplicable: [10, 12]
+      emergente: null
+    leccion: "Prop del bate top con volumen + matchup es el mercado con menos dependencias cuando el side tiene ruido y el favorito puede producir tarde. No requiere victoria, no requiere timing F5, no requiere clutch."
+    fuente: "conversación pre/in/post-partido"
