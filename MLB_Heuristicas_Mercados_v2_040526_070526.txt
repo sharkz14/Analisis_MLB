@@ -1,0 +1,344 @@
+MLB_Heuristicas_Mercados_v2_040526_070526.txt
+
+NOTA ACTIVA — HEURÍSTICAS DE TRADUCCIÓN EDGE → MERCADO (MLB)
+
+Versión: v2 (revisión 10/05/26)
+Ventana de muestra: 04/05/26 al 07/05/26 (14 partidos)
+Fuente raw: MLB_Postmortems_Raw_040526_070526.txt
+Reemplaza a: MLB_Patrones_Maestros_Mercados_040526_070526.txt
+
+Propósito:
+Guía operativa pre-partido para evitar el error más caro: identificar el edge
+correctamente pero traducirlo al mercado equivocado.
+
+Naturaleza del documento:
+Son heurísticas activas, no leyes. Salen de una ventana corta y un raw con sesgo
+hacia errores (poca muestra de aciertos limpios). Recalibrar cada 2-3 semanas
+con muestra nueva y revisar si algún patrón ya no aplica.
+
+
+REGLA MADRE
+
+[ ] Primero identificar dónde nace el edge (en una frase).
+[ ] Después elegir el mercado que lo captura con menos dependencias.
+[ ] No apostar al equipo, apostar al mercado que mejor expresa el edge.
+[ ] Si el mercado elegido necesita demasiadas cosas perfectas, bajar stake o pasar.
+
+
+JERARQUÍA DE FUENTES DE EDGE (de más confiable a más ruidoso)
+
+[ ] Parque + clima confirmado el día del partido.
+[ ] Matchup mano/repertorio del pitcher vs perfil colectivo del lineup.
+[ ] Leash del abridor + plan/profundidad del bullpen.
+[ ] Tipo de vulnerabilidad del pitcher (ver Patrón 1).
+[ ] Forma reciente del lineup contra esa mano (no contra cualquier mano).
+[ ] Umpire de home (zona, K%).
+[ ] Lineup spot del bateador analizado.
+[ ] Forma reciente individual (últimos 10-15 PA, alto ruido).
+[ ] Narrativa de momentum / rachas de equipo (último, casi siempre ruido).
+
+Si el edge principal viene de las posiciones 7-9 de esta lista, bajar stake
+o buscar confirmación en otra fuente más alta antes de apostar.
+
+
+PATRÓN 1 — TIPOLOGÍA DE VULNERABILIDADES DEL PITCHER
+
+No todos los pitchers vulnerables apuntan al mismo mercado. Antes de elegir,
+clasificar qué TIPO de vulnerabilidad tiene:
+
+Tipo A — Comando frágil (BB alto + first-pitch strike bajo + K% bajo)
+Casos: Patrick (Cardinals/Brewers), Cavalli (Nationals/Twins).
+[ ] Apuntar a tráfico temprano y pitch count.
+[ ] Mercados: F5 TT rival, hits permitidos over, BB permitidos over.
+[ ] El rival no necesita poder, necesita paciencia.
+
+Tipo B — Contacto fuerte permitido pero leash sólido
+Casos: Gallen (D-backs/Pirates), Lambert (Astros/Dodgers, lado defensivo).
+[ ] El pitcher permite daño pero llega a 5-6 IP.
+[ ] Mercados: hits allowed over, ER allowed over, F5 TT rival, total bases.
+[ ] EVITAR under Ks/outs y fade automático del pitcher.
+
+Tipo C — Comando/contact management sin whiff
+Casos: Lugo (Guardians/Royals), Alcantara perfil teórico (Orioles/Marlins).
+[ ] Vulnerable a tráfico acumulado y pitch count, no a slugging.
+[ ] Mercados: BB permitidos, hits allowed, F5 TT rival si el rival es paciente.
+[ ] EVITAR confiarse del K% bajo del rival; el problema no es el ponche.
+
+Antes de apostar contra un pitcher, exigir respuesta clara:
+[ ] ¿Qué tipo de vulnerabilidad tiene (A, B o C)?
+[ ] ¿El lineup rival tiene el perfil para explotar ESE tipo?
+[ ] ¿El mercado elegido cobra por ese tipo específico, no por otro?
+
+
+PATRÓN 2 — "MEJOR ABRIDOR" NO ES F5 SIDE AUTOMÁTICO
+
+[ ] No convertir "abridor mejor" en F5 ML/DNB si no domina por K/whiff.
+[ ] Un abridor de comando/contact management puede perder F5 por tráfico,
+    BB y pitch count, no por slugging del rival.
+[ ] Lineups pacientes, zurdos/switch y con velocidad rompen F5 sin HR.
+
+Checklist antes de F5 side favorito:
+[ ] ¿El abridor favorito tiene whiff real o solo command?
+[ ] ¿El underdog tiene 4-5 bates pacientes arriba?
+[ ] ¿Hay muchos zurdos/switch contra el abridor?
+[ ] ¿El umpire da zona grande?
+[ ] ¿El underdog puede correr si se embasa?
+[ ] ¿La parte baja del underdog puede extender innings?
+[ ] ¿El favorito puede dejar corredores y producir tarde, no temprano?
+
+Si 3 o más respuestas son adversas:
+[ ] Bajar F5 side.
+[ ] Subir: TT full game del favorito, prop del bate top, over protegido.
+[ ] Evitar: run line, F5 -0.5/-1.5.
+
+
+PATRÓN 3 — TIMING DEL DAÑO: F5 VS FULL GAME
+
+El edge ofensivo correcto puede llegar tarde. Casos recurrentes en raw:
+Astros/Dodgers (daño llega contra bullpen tras Lambert), Phillies/Athletics
+(8 carreras en 7ª-8ª), Red Sox/Tigers (Vanasco explota en 0.2 IP),
+Rangers/Yankees (Gore se rompe en el 6º).
+
+[ ] Si el abridor rival tiene leash para llegar a 5-6 IP, el F5 TT exige
+    conversión rápida que muchas veces no aparece.
+[ ] Si el edge real es "bullpen rival vulnerable", el daño aparece en 6ª-9ª.
+[ ] Si el abridor del underdog es volátil en la 3ª vuelta, el +1.5 muere ahí.
+[ ] No forzar F5 cuando el guion natural del partido es full game.
+
+Antes de elegir F5 TT vs TT full game:
+[ ] ¿El daño DEBE ser temprano o puede ser distribuido?
+[ ] ¿El abridor rival es del Tipo A (sale temprano) o B/C (sobrevive)?
+[ ] ¿El bullpen rival entra en innings tempranos o medios?
+[ ] ¿La ofensiva propia convierte tráfico rápido o tarde?
+
+Traducción rápida:
+[ ] Daño debe ser temprano (Tipo A + leash corto) → F5 TT, F5 lado.
+[ ] Daño es full game (Tipo B/C o bullpen débil) → TT full game, props volumen.
+[ ] Daño contra bullpen medio → live después del cambio + over full game.
+
+
+PATRÓN 4 — K UPSIDE NO ES OVER Ks SI HAY TRÁFICO
+
+[ ] K upside + WHIP alto + BB alto + rival con OBP funcional = salida corta.
+[ ] El edge real está en carreras tempranas y tráfico, no en ponches.
+[ ] Un lineup zurdo/switch + paciente saca al pitcher antes de que acumule Ks.
+
+Orden de mercados cuando hay K upside + tráfico permitido:
+[ ] TT rival.
+[ ] F5 TT rival.
+[ ] Hits permitidos over.
+[ ] Outs under.
+[ ] ER permitidos over.
+[ ] Over Ks solo si el leash y el matchup lo sostienen (revisar Patrón 1).
+
+
+PATRÓN 5 — UN SOLO EQUIPO CON RUTAS DE ANOTACIÓN → SU TT
+
+[ ] No tomar over general si la mayoría de carreras proyectadas vienen de un
+    solo equipo.
+[ ] Tráfico sin conversión del otro equipo no sostiene over (caso clásico:
+    Baltimore 10 hits, 1 carrera, 0-for-7 con RISP).
+[ ] El TT/F5 TT del equipo fuerte captura mejor el edge específico.
+
+Jerarquía cuando el edge es claramente unilateral:
+[ ] F5 TT del equipo fuerte (si el daño debe ser temprano).
+[ ] TT full game del equipo fuerte (si el bullpen rival también es débil).
+[ ] Props H+R+RBI / total bases de bates 2º-5º.
+[ ] ML del equipo fuerte si el precio paga.
+[ ] Over general solo si el rival también tiene ruta real.
+
+Nota sobre H+R+RBI:
+Cuando un bate top está en lineup spot 2º-5º y su equipo tiene TT alto,
+H+R+RBI suele ser mejor que hit simple, porque cobra por participación
+ofensiva total y no exige conexión limpia.
+
+
+PATRÓN 6 — FAVORITO SIN EDGE OFENSIVO COLECTIVO
+
+Combinación a vigilar:
+[ ] Favorito con mejor abridor.
+[ ] Lineup favorito "parece" bien por mano pero el split colectivo vs esa
+    mano es flojo.
+[ ] Parte baja del favorito poco profunda.
+[ ] Parque pitcher-friendly o clima que comprime carreras.
+[ ] Underdog competente con bullpen funcional.
+
+Si se cumplen 3+ de las anteriores:
+[ ] F5 protegido del favorito.
+[ ] Under.
+[ ] Underdog +1.5 (con condiciones del Patrón 7).
+[ ] Pitcher props del favorito.
+[ ] ML favorito solo si el precio paga (aburrido pero correcto).
+[ ] Evitar: run line favorito, TT over alto, props ofensivas del favorito.
+
+Sublección sobre TT alto:
+Si la línea de TT del favorito ya está alta, exige confirmación fuerte de
+clima, viento, lineup completo, leash corto rival y bullpen expuesto temprano.
+Si una de esas piezas falla, el TT over se vuelve frágil aunque el favorito gane.
+
+
+PATRÓN 7 — UNDERDOG +1.5 NECESITA CONVERSIÓN, NO SOLO TRÁFICO
+
+[ ] Embasarse no basta. Necesita convertir: RISP, contacto útil, poder
+    distribuido, bates con RBI equity.
+[ ] La parte baja no puede cortar innings.
+[ ] El abridor del underdog debe sobrevivir la 2ª/3ª vuelta sin blow-up.
+[ ] Si el favorito tiene daño distribuido 6-9, el +1.5 es más frágil.
+
+Las 4 condiciones para tomar +1.5:
+[ ] El bulk/bullpen del favorito es débil O incierto, no solo el opener.
+[ ] El underdog convierte tráfico, no solo OBP.
+[ ] El abridor del underdog limita inning grande en 2ª/3ª vuelta.
+[ ] El favorito no tiene profundidad 6-9.
+[ ] El precio paga el riesgo de inning grande.
+
+Si faltan 2 o más, pasar.
+
+
+PATRÓN 8 — OPENER / SPOT STARTER NO ES FADE AUTOMÁTICO
+
+[ ] El opener corto puede ser parte de un plan preparado, no debilidad.
+[ ] Revisar: ¿hay bulk plan real? ¿bullpen capaz de 6-8 IP sin romperse?
+[ ] Un spot starter con mala línea Triple-A puede tener arsenal real si el
+    rival no eleva conteos (McDonald vs Padres es el caso límite).
+
+Antes de fadear:
+[ ] ¿El rival tiene perfil para atacar ese plan? (paciencia, contacto, poder)
+[ ] ¿El bullpen del favorito tiene exposición temprana real?
+[ ] ¿El rival sabe convertir tráfico, no solo generarlo?
+
+Si las respuestas son débiles, mejor:
+[ ] Under / F5 under.
+[ ] Pitcher outs del opener si tiene arsenal real.
+[ ] Pasar el lado.
+
+
+PATRÓN 9 — PITCHER ÉLITE NO BLOQUEA AUTOMÁTICAMENTE
+
+[ ] Un as con K% alto puede ser vulnerable si permite barrels/flyballs/aéreo fuerte.
+[ ] En parques HR-friendly, el poder distribuido del lineup puede pesar más que
+    el nombre del pitcher.
+[ ] "Rival tiene ace" NO es pass automático.
+
+Cuándo apostar al lineup fuerte contra un as:
+[ ] ML/TT full game si el bullpen propio también acompaña.
+[ ] Props de poder / total bases.
+[ ] HR sprinkle si el perfil de barrels + parque lo permite.
+
+Evitar:
+[ ] F5 del equipo fuerte (el as suele sostener ventaja temprana).
+[ ] Fade del lineup solo por nombre del pitcher rival.
+
+
+PATRÓN 10 — PROPS SALEN DEL GUION, NO DEL MENÚ
+
+[ ] Definir primero el guion del partido (carreras, tráfico, poder, pitcheo,
+    baja anotación).
+[ ] La prop correcta deriva del guion + lineup spot + matchup, no al revés.
+[ ] H+R+RBI cuando el bate está 2º-5º y el TT del equipo es alto.
+[ ] Total bases cuando el perfil es slug/contacto fuerte.
+[ ] RBI exige tráfico delante; runs exige OBP + bates detrás.
+
+Orden de evaluación de prop:
+[ ] Guion del partido.
+[ ] Lineup spot (PA volumen).
+[ ] Matchup mano/repertorio.
+[ ] Tipo de prop según forma de producir.
+[ ] Precio y varianza.
+
+Aplicación clave:
+Si el side tiene ruido pero un bate top tiene volumen + matchup limpio,
+la prop puede ser MEJOR apuesta que ML/F5/run line (caso Witt en Guardians/Royals).
+
+
+PATRÓN 11 — FACTORES AMBIENTALES (PARQUE, CLIMA, UMPIRE)
+
+Tratar como filtro previo, no como adorno final.
+
+Parque:
+[ ] HR-friendly (Coors, Great American, Yankee Stadium, Wrigley con viento out):
+    sube props de poder y totales, baja under.
+[ ] Pitcher-friendly (Petco, Oracle, T-Mobile): baja TT over, sube under
+    y +1.5 underdog viable.
+[ ] Foul territory grande (Oakland histórico): puede comprimir ofensiva más
+    de lo que parece por dimensiones.
+
+Clima:
+[ ] Viento out 10+ mph en parques HR-friendly: confirmación fuerte para over/TT alto.
+[ ] Viento in 10+ mph: mata over alto incluso con lineups fuertes.
+[ ] Temperatura <55°F: comprime carry; baja HR props.
+[ ] Humedad alta + calor: pelota viaja más.
+[ ] Lluvia confirmada: revisar si afecta a un solo abridor o ambos.
+
+Umpire:
+[ ] Zona grande (alto K%): sube over Ks de ambos abridores, baja BB props,
+    baja F5 TT que dependa de tráfico por BB.
+[ ] Zona chica (alto BB%): lo contrario; ayuda a Tipo A (Patrón 1) a romperse.
+[ ] Revisar antes de cualquier prop de Ks o BB, no después.
+
+
+PATRÓN 12 — SIDE CON RUIDO → MERCADO MÁS LIMPIO
+
+Si ganador probable y margen no dicen lo mismo: evitar run line.
+Si abridor favorece a un equipo pero bullpen contradice: separar F5 de full game.
+Si lineup favorece a un equipo pero su abridor preocupa: TT/props antes que ML.
+Si ambos equipos tienen rutas distintas de anotar: over o ambos TT antes que side.
+Si solo una pieza del análisis es fuerte: elegir el mercado que dependa de esa pieza.
+
+Tabla de traducción rápida:
+[ ] Edge en abridor propio → F5 / Ks / outs / TT rival under.
+[ ] Edge contra abridor rival → F5 TT rival / hits allowed / bases bateadores.
+[ ] Edge contra bullpen rival → TT full game / over full game / live.
+[ ] Edge en lineup completo → TT / ML si bullpen acompaña.
+[ ] Edge en parque/clima → total / TT / props de poder.
+[ ] Edge en bateador específico → prop, no necesariamente side.
+[ ] Edge en underdog competitivo → +1.5 si convierte y evita inning grande.
+
+
+CUÁNDO PASAR (NO ES "BAJAR STAKE", ES PASAR)
+
+Pasar la jugada si:
+[ ] El edge requiere 3 o más supuestos encadenados para cobrar.
+[ ] No se puede formular el edge en una sola frase clara.
+[ ] El mercado elegido tiene 2+ dependencias ajenas al edge principal.
+[ ] La cuota ya cobró la lectura (no queda valor frente a la línea).
+[ ] El edge principal viene de las posiciones 7-9 de la Jerarquía de Edges.
+[ ] No hay confirmación clima/ump y son piezas relevantes del guion.
+[ ] El bateador del prop bate 6º-9º y el equipo no tiene TT alto.
+
+Pasar es una jugada activa. No es ausencia de jugada.
+
+
+FILTRO FINAL (recorrer en orden antes de confirmar)
+
+[ ] ¿Cuál es el edge principal en una frase?
+[ ] ¿De qué posición de la Jerarquía de Edges viene?
+[ ] ¿El mercado elegido captura ese edge directamente?
+[ ] ¿Qué tipo de vulnerabilidad tiene el pitcher rival (A, B o C)?
+[ ] ¿El lineup elegido tiene perfil para explotar ESE tipo?
+[ ] ¿El timing del daño es temprano, distribuido o tardío?
+[ ] ¿El parque, clima y umpire confirman o contradicen el guion?
+[ ] ¿Estoy confundiendo tráfico con carreras?
+[ ] ¿Estoy confundiendo pitcher vulnerable con under Ks/outs?
+[ ] ¿Estoy confundiendo favorito probable con run line / ML caro?
+[ ] ¿La cuota ya cobró el edge?
+[ ] ¿Hay un mercado más simple que expresa mejor la lectura?
+[ ] ¿Estoy a 3+ supuestos encadenados? (si sí → revisar pasar)
+[ ] Si no respondo claro alguna de estas, pasar.
+
+
+FRASE FINAL
+
+En MLB, el error más común no es identificar mal el edge; es traducirlo al
+mercado equivocado. La mejor apuesta es la que necesita menos supuestos para
+que el edge cobre. Pasar es jugada, no rendición.
+
+
+NOTAS PARA SIGUIENTES ITERACIONES
+
+Pendientes para revisar con muestra nueva:
+[ ] ¿Cuáles de estos patrones se repiten en 4-6 semanas? Esos son patrones reales.
+[ ] ¿Cuáles aparecen solo en esta ventana? Esos son hipótesis, no patrones.
+[ ] ¿Hay aciertos limpios que aún no están en el raw? Agregar para balancear sesgo.
+[ ] ¿La Jerarquía de Edges resiste o hay que reordenarla?
+[ ] ¿Los tipos A/B/C de vulnerabilidad cubren todos los casos o falta uno?

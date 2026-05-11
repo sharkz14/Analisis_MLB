@@ -1,0 +1,321 @@
+MLB_Patrones_Maestros_Mercados_040526_070526.txt
+
+NOTA ACTIVA — PATRONES MAESTROS MLB
+
+Este archivo resume patrones repetibles extraídos de postmortems MLB entre el 04/05/26 y el 07/05/26.
+Usar como guía corta para análisis pre-partido.
+No reemplaza el análisis del partido actual, pero sí debe servir como filtro para evitar errores repetidos de mercado.
+
+Fuente raw:
+MLB_Postmortems_Raw_040526_070526.txt
+
+Objetivo principal:
+Evitar que un diagnóstico correcto del edge termine traducido al mercado equivocado.
+
+REGLA MADRE
+
+[ ] Primero identificar dónde nace el edge.
+[ ] Después elegir el mercado que lo captura con menos dependencias.
+[ ] No apostar al equipo, apostar al mercado que mejor expresa el edge.
+[ ] Si el mercado elegido necesita demasiadas cosas perfectas, bajar stake o hacer pass.
+
+
+1. BULLPEN RIVAL MALO NO SIEMPRE SIGNIFICA TEAM TOTAL OVER
+
+[ ] Si el TT over depende de atacar el bullpen rival, revisar antes si el abridor rival puede llegar a 6-7 innings.
+[ ] Si el abridor rival tiene leash de 90-100 pitcheos, comando aceptable o whiff real, puede esconder el bullpen.
+[ ] Si el lineup elegido no está completo o le falta su bate principal, bajar confianza en TT over alto.
+[ ] Si el edge real está más en el pitcher propio que en la ofensiva, considerar pitcher outs/Ks antes que TT.
+
+Mercados a subir:
+[ ] Pitcher outs.
+[ ] Pitcher Ks.
+[ ] F5 protegido si el abridor propio es el edge.
+[ ] Live si el abridor rival muestra señales tempranas de colapso.
+
+Mercados a bajar:
+[ ] TT over alto basado solo en bullpen rival.
+[ ] Over full game si solo una ofensiva tiene ruta clara.
+[ ] Run line si no hay ruta limpia de margen.
+
+
+2. MEJOR ABRIDOR NO SIGNIFICA AUTOMÁTICAMENTE F5 SIDE
+
+[ ] No convertir “abridor mejor” en F5 ML/DNB si ese abridor no domina por K/whiff.
+[ ] Si el abridor favorito es más de comando/contact management, el rival puede dañarlo por tráfico, boletos y pitch count.
+[ ] Lineups pacientes, zurdos/switch y con velocidad pueden romper un F5 sin necesitar HR.
+[ ] Si el favorito puede producir tarde, su TT full game puede ser mejor que F5 side.
+
+Mercados a subir:
+[ ] TT full game del favorito.
+[ ] Props del bate top del favorito.
+[ ] Over full game si ambos equipos tienen rutas de tráfico.
+[ ] F5 TT rival si el underdog puede elevar conteos.
+
+Mercados a bajar:
+[ ] F5 ML favorito.
+[ ] F5 -0.5 / -1.5.
+[ ] Run line favorito.
+[ ] F5 TT favorito si el timing puede ser tardío.
+
+
+3. PITCHER VULNERABLE POR CONTACTO NO SIGNIFICA UNDER Ks/OUTS AUTOMÁTICO
+
+[ ] Si un pitcher permite contacto fuerte pero conserva leash, puede permitir daño y aun así completar 5-6 innings.
+[ ] Si enfrenta un lineup con K naturales, puede llegar a su línea de Ks aunque permita carreras.
+[ ] El diagnóstico “pitcher vulnerable” debe traducirse según el tipo de vulnerabilidad.
+[ ] Vulnerabilidad por contacto suele apuntar más a hits, bases, carreras o TT rival que a under Ks.
+
+Mercados a subir:
+[ ] Hits allowed over.
+[ ] Earned runs allowed over.
+[ ] F5 TT rival.
+[ ] F5 lado rival protegido.
+[ ] Total bases de bateadores con buen matchup.
+
+Mercados a bajar:
+[ ] Under Ks si el rival también poncha.
+[ ] Under outs si el pitcher tiene leash fuerte.
+[ ] Fade automático del pitcher si puede sobrevivir con daño.
+
+
+4. K UPSIDE NO ES SUFICIENTE PARA OVER Ks
+
+[ ] Si el pitcher tiene K upside pero también WHIP alto, BB alto o tráfico constante, cuidado con over Ks.
+[ ] Un lineup con OBP, paciencia, zurdos/switch y velocidad puede sacarlo antes de que acumule ponches.
+[ ] Si el rival puede generar innings largos, el edge puede estar en carreras tempranas, no en Ks.
+[ ] No sobrevalorar CSW/K% si el perfil de salida corta es fuerte.
+
+Orden preferido cuando hay K upside + tráfico permitido:
+[ ] TT rival.
+[ ] F5 TT rival.
+[ ] Hits allowed over.
+[ ] Outs under.
+[ ] Earned runs allowed.
+[ ] Over Ks solo si el leash y el matchup lo sostienen.
+
+
+5. EDGE OFENSIVO CLARO NO SIEMPRE ES F5 TT
+
+[ ] Si el abridor rival es vulnerable pero tiene competencia/leash para sobrevivir 5 innings, no forzar F5 TT.
+[ ] Si además el bullpen rival es débil, el edge puede ser full game.
+[ ] Si el lineup genera tráfico temprano pero no necesariamente convierte rápido, el F5 TT exige demasiada precisión.
+[ ] Props de bases pueden ser mejores que F5 TT si no dependen del inning exacto.
+
+Mercados a subir:
+[ ] TT full game.
+[ ] Hits/bases totales de bateadores.
+[ ] H+R+RBI de bates 2º-5º.
+[ ] Over full game si el rival también tiene ruta.
+
+Mercados a bajar:
+[ ] F5 TT over si necesita conversión inmediata.
+[ ] F5 side si el abridor propio tiene ruido.
+[ ] Parlay con F5 TT alto.
+
+
+6. SI SOLO UN EQUIPO TIENE RUTAS CLARAS DE ANOTACIÓN, PRIORIZAR SU TT
+
+[ ] No tomar over general si la mayoría de carreras proyectadas vienen de un solo equipo.
+[ ] Si el rival puede generar tráfico pero no convertir, el over general es menos limpio.
+[ ] El ML puede cobrar, pero no siempre paga mejor que el TT.
+[ ] El TT/F5 TT del equipo fuerte captura mejor el edge ofensivo específico.
+
+Jerarquía:
+[ ] F5 TT del equipo fuerte, si el daño debe ser temprano.
+[ ] TT full game del equipo fuerte, si también hay bullpen rival vulnerable.
+[ ] Props H+R+RBI / total bases de bates 2º-5º.
+[ ] ML si la cuota aún paga.
+[ ] Over general solo si el rival también tiene ruta clara.
+
+
+7. FAVORITO CON EDGE DE ABRIDOR PERO SIN EDGE OFENSIVO COLECTIVO = CUIDADO
+
+[ ] No convertir edge de abridor en ML caro, run line o props ofensivas si el lineup favorito no tiene base colectiva sólida.
+[ ] Un platoon edge visual no basta si el equipo viene flojo contra esa mano.
+[ ] Si el parque comprime carreras y ambos abridores pueden controlar, el partido puede favorecer under o dog +1.5.
+[ ] El favorito puede ser correcto temprano, pero incorrecto para full game ML caro o props ofensivas.
+
+Si se cumplen estas señales:
+[ ] Favorito con mejor abridor.
+[ ] Lineup favorito flojo contra esa mano.
+[ ] Parte baja poco profunda.
+[ ] Parque pitcher-friendly.
+[ ] Underdog competente y bullpen funcional.
+
+Jerarquía correcta:
+[ ] F5 protegido.
+[ ] Under.
+[ ] Underdog +1.5.
+[ ] Pitcher props.
+[ ] ML favorito solo si el precio paga.
+[ ] Evitar run line y props ofensivas del favorito.
+
+
+8. UNDERDOG +1.5 NECESITA MÁS QUE TRÁFICO
+
+[ ] Para +1.5 no basta con que el underdog pueda embasarse.
+[ ] Necesita convertir tráfico: RISP, contacto útil, poder distribuido o bates con RBI equity.
+[ ] La parte baja no puede cortar innings constantemente.
+[ ] El abridor del underdog debe evitar el inning grande en la 2ª/3ª vuelta.
+[ ] Si el favorito tiene lineup profundo 1-9, el +1.5 es más frágil.
+
+Antes de tomar underdog +1.5 exigir:
+[ ] El bulk/bullpen del favorito es débil o incierto.
+[ ] El underdog convierte tráfico, no solo OBP.
+[ ] El abridor del underdog puede pasar 5-6 innings sin blow-up.
+[ ] El favorito no tiene daño distribuido 6-9.
+[ ] El precio paga el riesgo de inning grande.
+
+
+9. OPENER / SPOT STARTER NO ES FADE AUTOMÁTICO
+
+[ ] No asumir que opener o spot starter del favorito crea valor automático en el underdog.
+[ ] Revisar si hay bulk plan real detrás.
+[ ] Revisar si el bullpen puede cubrir 6-8 innings.
+[ ] Revisar si el underdog tiene perfil para atacar ese plan: paciencia, contacto, poder y conversión.
+[ ] Un opener corto puede ser parte de una estructura preparada, no una debilidad.
+
+Mercados a subir solo si el plan es débil:
+[ ] Underdog TT.
+[ ] Underdog F5 TT.
+[ ] Underdog +1.5.
+[ ] Over full game.
+
+Mercados a bajar:
+[ ] Fade automático del favorito.
+[ ] Underdog +1.5 solo porque el abridor no llega a 5 IP.
+
+
+10. BULLPEN GAME NO SIGNIFICA DAÑO TEMPRANO
+
+[ ] Si el edge nace en “plan de pitcheo frágil + bullpen usado”, no forzarlo al F5.
+[ ] El opener/bulk puede sobrevivir y el daño aparecer recién en 6ª-9ª.
+[ ] Si el bullpen medio está débil, el mercado full game puede ser mejor.
+[ ] No atacar under Ks de un abridor/bulk con K%, SwStr%, CSW% y leash real.
+
+Mercados a subir:
+[ ] TT full game.
+[ ] Over full game.
+[ ] Live después del cambio al bullpen medio.
+[ ] Props de bates con volumen full game.
+
+Mercados a bajar:
+[ ] F5 TT si el daño no es necesariamente temprano.
+[ ] F5 side si el plan inicial puede aguantar.
+
+
+11. NO SOBREVALORAR “PITCHER RIVAL VULNERABLE” SI EL LINEUP NO TIENE PERFIL PARA CASTIGARLO
+
+[ ] No basta con que el pitcher rival tenga mala línea reciente o problemas en Triple-A.
+[ ] El lineup elegido debe tener paciencia, bajo chase, contacto y capacidad de convertir tráfico.
+[ ] Si el lineup no camina, poncha mucho o no eleva conteos, puede hacer ver mejor al pitcher vulnerable.
+[ ] Validar si el rival realmente puede obligar al pitcher a mostrar su debilidad.
+
+Señales para atacar al pitcher:
+[ ] Lineup paciente.
+[ ] Parte alta con OBP.
+[ ] Poder/contacto en 3º-6º.
+[ ] Bajo chase.
+[ ] Capacidad de tomar BB.
+[ ] Parte baja que no regala outs.
+[ ] Parque/clima no neutraliza el daño.
+
+Si no se cumplen:
+[ ] Bajar F5 side.
+[ ] Bajar TT temprano.
+[ ] Considerar under/F5 under.
+[ ] Considerar outs del pitcher rival.
+
+
+12. PITCHER ÉLITE NO BLOQUEA AUTOMÁTICAMENTE AL LINEUP FUERTE
+
+[ ] Un as con K% alto puede seguir siendo vulnerable si permite barrels, flyballs o contacto aéreo fuerte.
+[ ] En parques HR-friendly, el poder distribuido del lineup puede pesar más que el nombre del pitcher.
+[ ] No convertir “rival tiene ace” en pass automático.
+[ ] El mercado correcto puede ser full game si el equipo fuerte tiene lineup + bullpen para absorber el golpe inicial.
+
+Mercados a subir:
+[ ] ML full game del lineup fuerte si bullpen también acompaña.
+[ ] TT si el precio no está inflado.
+[ ] Props de poder / total bases.
+[ ] HR sprinkle si el perfil de barrels + parque lo permite.
+
+Mercados a bajar:
+[ ] F5 del equipo fuerte si el ace puede sostener ventaja temprana.
+[ ] Fade automático del lineup solo por nombre del pitcher rival.
+
+
+13. TEAM TOTAL ALTO DEL FAVORITO EXIGE MÁS CONFIRMACIONES
+
+[ ] No tomar TT over alto solo porque el favorito tiene mejor lineup y el abridor rival parece vulnerable.
+[ ] Si la línea ya está alta, necesita confirmación fuerte de clima, viento, lineup profundo, leash corto rival y bullpen expuesto.
+[ ] Si el abridor rival puede sobrevivir 5-6 innings, el TT alto se vuelve frágil.
+[ ] ML puede ser aburrido pero correcto si el edge es ganar, no explotar.
+
+Antes de TT over alto exigir:
+[ ] Lineup completo.
+[ ] Parte baja funcional.
+[ ] Abridor rival con leash corto o blow-up risk real.
+[ ] Bullpen rival expuesto temprano.
+[ ] Parque/clima ayudan.
+[ ] Precio no exige explosión.
+
+
+14. PROPS DE BATEADORES DEBEN SALIR DEL GUION DEL PARTIDO
+
+[ ] No analizar props como menú aislado.
+[ ] Primero definir si el juego proyecta carreras, tráfico, poder, pitcheo dominante o baja anotación.
+[ ] Si el side tiene ruido pero un bate top tiene volumen y matchup claro, la prop puede ser mejor que ML/F5.
+[ ] H+R+RBI puede ser mejor que hit simple si el bateador está 2º-5º y el equipo tiene TT alto.
+[ ] Total bases puede ser mejor que hit si el perfil es slug/contacto fuerte.
+[ ] RBI depende de tráfico delante; runs depende de OBP + bates detrás.
+
+Orden de evaluación:
+[ ] Guion del partido.
+[ ] Lineup spot.
+[ ] Volumen de PA.
+[ ] Matchup de mano/repertorio.
+[ ] Forma de producir: hit, bases, HR, RBI, run, H+R+RBI.
+[ ] Precio y varianza.
+
+
+15. CUANDO HAY RUIDO EN SIDE, BUSCAR MERCADO MÁS LIMPIO
+
+[ ] Si el ganador probable y el margen no dicen lo mismo, evitar run line.
+[ ] Si el abridor favorece a un equipo pero el bullpen contradice, separar F5 de full game.
+[ ] Si el lineup favorece a un equipo pero su abridor preocupa, mirar TT/props en vez de ML.
+[ ] Si ambos equipos tienen rutas de anotar distintas, mirar over o ambos TT antes que side.
+[ ] Si solo una pieza del análisis es fuerte, elegir el mercado que dependa de esa pieza.
+
+Traducción rápida:
+[ ] Edge en abridor propio → F5 / Ks / outs / rival TT under.
+[ ] Edge contra abridor rival → F5 TT / hits allowed / bases de bateadores.
+[ ] Edge contra bullpen rival → TT full game / over full game / live.
+[ ] Edge en lineup completo → TT / ML si bullpen acompaña.
+[ ] Edge en parque/clima → total / TT / props de poder.
+[ ] Edge en bateador específico → prop, no necesariamente side.
+[ ] Edge en underdog competitivo → +1.5 si convierte tráfico y evita inning grande.
+
+
+FILTRO FINAL ANTES DE APOSTAR
+
+[ ] ¿Cuál es el edge principal en una frase?
+[ ] ¿El mercado elegido captura ese edge directamente?
+[ ] ¿Estoy agregando dependencias innecesarias?
+[ ] ¿El abridor rival puede esconder el bullpen?
+[ ] ¿Mi abridor necesita whiffs y no los tiene?
+[ ] ¿El lineup elegido tiene perfil real para castigar al pitcher?
+[ ] ¿El timing del daño es temprano o full game?
+[ ] ¿Estoy confundiendo tráfico con carreras?
+[ ] ¿Estoy confundiendo pitcher vulnerable con under Ks/outs?
+[ ] ¿Estoy confundiendo favorito probable con run line/ML caro?
+[ ] ¿La cuota ya cobró el edge?
+[ ] ¿Hay un mercado más simple que expresa mejor la lectura?
+[ ] Si no puedo responder esto claramente, bajar stake o pass.
+
+
+FRASE FINAL
+
+En MLB, el error más común no es identificar mal el edge; es traducirlo al mercado equivocado.
+La mejor apuesta es la que necesita menos supuestos para que el edge cobre.

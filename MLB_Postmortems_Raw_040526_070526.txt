@@ -1,0 +1,291 @@
+NOTA RAW DE POSTMORTEMS MLB
+
+Este archivo contiene lecciones largas extraídas de partidos ya analizados.
+No usar como checklist directa pre-partido.
+Usar para detectar patrones de error/acierto y alimentar la nota corta de Patrones Maestros MLB.
+
+Objetivo principal:
+Identificar cuándo el edge fue correcto, pero el mercado elegido fue incorrecto.
+
+	Astros/Dodgers 050526
+No basta con identificar un bullpen vulnerable si el abridor rival tiene leash real para esconderlo.
+El error del Dodgers TT over 4.5 no fue pensar que el bullpen de Houston era atacable. De hecho, cuando entró, permitió daño. El problema fue que Lambert cubrió 7 innings en blanco, y eso redujo el partido a solo 2 innings útiles contra el bullpen.
+Para futuros MLB, antes de tomar un team total over full game basado en “lineup fuerte + bullpen rival malo”, hay que exigir una de estas dos cosas:
+1. El abridor rival tiene alta probabilidad de salir antes del 6º, por límite, pitch count, mal comando, blow-up risk o matchup muy desfavorable.
+o
+2. El lineup favorito está completo y tiene suficiente poder para dañarlo aunque llegue profundo.
+Aquí no se cumplió bien lo segundo porque Dodgers sin Ohtani bateador tenía menos margen de error ofensivo. Y lo primero falló porque Lambert no solo aguantó: 7 IP, 0 ER.
+La regla práctica sería:
+Si el TT over depende demasiado de que aparezca el bullpen rival, pero el abridor tiene leash de 90-100 pitcheos y señales reales de whiff/comando aceptable, bajar stake o preferir otro mercado.
+En este partido, el mercado más correcto en retrospectiva era Ohtani outs/Ks, porque el edge más sólido era Ohtani lanzando largo, no Dodgers explotando ofensivamente.
+
+	Orioles/Marlins 050526
+No conviertas automáticamente “mejor abridor proyectado” en “equipo no pierde F5” si ese abridor no domina por ponches y el rival tiene poder real en el top/middle order.
+En este partido, el error no fue leer que Bassitt era vulnerable. Eso estuvo bien: Miami le hizo 4 carreras en F5 y 7 en el juego. El error fue asumir que Alcantara iba a estabilizar el F5 solo porque era claramente mejor que Bassitt en ERA/WHIP/longitud esperada.
+El perfil real de Alcantara tenía una advertencia: bajo K%, mucho contacto permitido y dependencia de controlar calidad de contacto. Contra un lineup con Alonso, Basallo, Ward y Henderson, eso no es tan seguro como parece. Si el pitcher no está generando whiffs, el rival sí tiene ruta para convertir contacto en extra bases, sobre todo si hay boletos, errores o tráfico temprano.
+La conversión correcta del edge debió ser:
+Bassitt vulnerable → Miami team total / Miami F5 team total / props de bates de Miami.
+No:
+Bassitt vulnerable + Alcantara mejor → Miami/Empate F5 como pierna segura.
+El mercado que mejor capturaba el partido era ofensivo, no de resultado. Miami anotó lo suficiente para validar el ángulo contra Bassitt, pero el side F5 murió porque dependía de que Alcantara no tuviera una mala salida.
+Para futuros análisis MLB:
+Cuando el favorito tiene edge ofensivo claro, pero su abridor no es de dominio por K y el rival conserva poder/paciencia arriba, priorizar team total o props ofensivas antes que F5 side conservador.
+
+	Padres/Cardinals 070526
+El patrón global que deja este partido para futuros análisis MLB es este:
+Cuando el favorito tiene mejor abridor, pero su ofensiva solo tiene un “matchup visual” y no una base colectiva sólida contra esa mano, no conviertas automáticamente el lado favorito en props ofensivas, TT over o ML caro.
+En este caso, el error fue pensar: Liberatore vulnerable + lineup de Padres lleno de derechos = Padres debe producir. Pero el resultado mostró otra cosa: San Diego como equipo ya venía flojo contra LHP, Petco comprimía carreras, la parte baja no daba mucho volumen real y Liberatore pudo sobrevivir 6 entradas con solo 3 H, 1 ER y 6 K. El “platoon edge” existía, pero no fue suficiente para superar el contexto ofensivo real. ESPN y Reuters confirman el guion: Cardinals ganó 2-1, Liberatore permitió solo tres hits en seis innings, y King también fue muy bueno con seis innings de una carrera.
+La segunda parte del patrón es igual de importante: si ambos abridores tienen ruta real a controlar el juego y el parque baja rallies, el mejor mercado suele ser under o handicap del underdog, no props de bateadores del favorito. Aquí King cumplió totalmente la lectura: 6.0 IP, 1 H, 1 ER, 6 K. Pero eso no bastó para que Padres ganara, porque el partido se definió por swings puntuales: HR de Burleson, doble de Walker y triple de Winn. Reuters describe exactamente ese guion de baja anotación y clutch puntual.
+Regla práctica que sale de esto:
+Si se cumplen estas 5 condiciones juntas:
+Favorito con edge de abridor.
+Lineup favorito “parece” bien por mano, pero el split colectivo vs esa mano es flojo.
+Parque pitcher-friendly o clima que reduce carry/rallies.
+Parte baja del favorito no es profunda.
+Underdog tiene lineup competente y bullpen fresco/funcional.
+Entonces la jerarquía correcta debería ser:
+F5 protegido / under / underdog +1.5 > ML favorito > props ofensivas del favorito > run line favorito.
+Este partido fue exactamente eso. Padres F5 DNB habría sido push porque tras 5 entradas estaban 1-1; Cardinals +1.5 ganó cómodo; under 8.5 fue excelente; y las props ofensivas de Padres fallaron porque el juego nunca se convirtió en el guion de presión constante contra Liberatore.
+La lección más fina para props es:
+No usar “pitcher vulnerable” como argumento único para hits/TB/RBI si el rival no tiene forma colectiva contra esa mano.
+Machado +1.5 bases tenía lógica por split individual, pero dependía de que el matchup se materializara en contacto de calidad. Liberatore neutralizó a los derechos clave: Machado terminó 0-3 con BB, France 0-3, y Padres solo conectó 4 hits en todo el juego.
+Patrón final para guardar mentalmente, sin memoria:
+En MLB, cuando el favorito tiene edge de abridor pero no edge ofensivo colectivo repetible, y el parque comprime carreras, el partido puede ser “correcto” para el favorito temprano pero “incorrecto” para ML/props ofensivas. En esos spots, priorizar protección: F5 DNB, under, underdog +1.5 o pitcher ER/K props antes que favoritos caros, run line o bateadores overs.
+
+	Rangers/Yankees 070526
+El patrón global que generó este resultado fue este:
+No todo “spot starter / opener” del favorito es automáticamente edge para el underdog +1.5.
+La lectura anti-Yankees por Blackburn corto era lógica, pero el partido mostró que había una diferencia clave:
+Blackburn no era un abridor vulnerable abandonado al azar; era parte de un plan Blackburn + Beck + bullpen.
+Y ese plan funcionó.
+Patrón para futuros análisis MLB
+Cuando un favorito usa opener/spot starter/bulk game, no basta con decir:
+“El abridor no llega a 5 IP, entonces el favorito ML es frágil y el underdog +1.5 tiene valor.”
+Hay que preguntar:
+¿El favorito tiene bulk plan real y bullpen capaz de absorber 6-8 innings sin romperse?
+En este partido, sí.
+Blackburn solo lanzó 1.0 IP, pero no recibió daño. Beck cubrió 3.0 IP y aunque permitió las 2 carreras de Texas, evitó el colapso. Después Hill, Headrick, Bird y Doval dejaron a Texas en cero. Entonces el supuesto “Texas atacará el bullpen temprano” no se cumplió.
+El segundo patrón: tráfico sin conversión no sostiene +1.5
+Texas tuvo suficientes corredores para estar más cerca:
+6 hits
+7 BB
+10 dejados en base
+1-for-5 con RISP
+Solo 2 carreras
+Eso es clave. El análisis de Texas TT over 3.5 y Rangers +1.5 dependía de que Texas convirtiera tráfico contra Blackburn/Beck. Pero Texas generó tráfico sin rematar.
+Lección: para underdog +1.5 no basta con “puede embasarse”. Necesitas que tenga capacidad real de convertir rallies: contacto con RISP, parte baja que no corte innings, poder distribuido o al menos 2-3 bates con RBI equity clara.
+Texas tuvo ruta, pero no ejecución ni profundidad.
+El tercer patrón: no subestimar la profundidad funcional del favorito
+Pensamos que Yankees estaba algo recortado y menos profundo. Pero el partido lo ganó justamente por producción más allá de Judge:
+Bellinger: 3 hits, 2 RBI
+Grisham: 3 hits, 3 RBI
+McMahon: 2 hits, 2 RBI
+Escarra: HR/RBI
+Schuemann: RBI
+Judge no tuvo que destruir el partido. Yankees ganó porque el lineup 1-9 fue funcional.
+Lección: si el favorito tiene varios bates secundarios capaces de producir, no asumir que la ausencia de una pieza clave mata su capacidad de abrir margen.
+El cuarto patrón: el inning grande contra el abridor real del underdog mata el +1.5
+El pick Rangers +1.5 necesitaba que Gore mantuviera el partido dentro de rango. Lo hizo durante 5 innings, pero el 6º lo rompió todo.
+Gore terminó:
+5.1 IP
+6 H
+5 ER
+3 BB
+3 K
+El daño no vino por Blackburn. Vino porque el abridor “más real” del underdog no cerró su trabajo cuando el lineup de Yankees dio la tercera vuelta.
+Lección: si el underdog +1.5 depende de que su abridor volátil pase limpio la tercera vuelta, el handicap es más frágil de lo que parece.
+Regla futura que sale de este partido
+Spot starter del favorito + underdog con tráfico potencial no es suficiente para jugar +1.5.
+Antes de tomarlo, exigiría estas 4 cosas:
+[ ] El bulk plan del favorito es débil o incierto, no solo el opener.
+[ ] El underdog tiene capacidad probada de convertir tráfico, no solo OBP.
+[ ] El abridor del underdog puede limitar el inning grande en la 2ª/3ª vuelta del lineup.
+[ ] El favorito no tiene profundidad real 6-9 capaz de castigar cuando el abridor se cansa.
+En este partido fallaron varias:
+El bulk/bullpen de Yankees sí funcionó.
+Texas dejó demasiados corredores.
+Gore se rompió en el 6º.
+Yankees sí tuvo producción profunda.
+Frase para guardar como patrón mental
+Cuando el favorito tiene bullpen/bulk plan preparado y lineup con daño distribuido, el “abridor corto” no necesariamente genera valor en el underdog +1.5. El underdog necesita convertir tráfico temprano; si no lo hace, el favorito puede sobrevivir el opener y romper el partido en la tercera vuelta contra el abridor rival.
+
+	Guardians/Royals 070526
+Patrón principal que dejó este partido
+Cuando el favorito F5 depende de un abridor “mejor” pero no dominante en whiffs, y el underdog trae un lineup paciente/contact-heavy con zurdos/switch, el edge de abridor puede romperse por pitch count, boletos y presión de bases antes de que aparezca la supuesta superioridad.
+La lectura “Lugo > Cecconi” era cierta en papel, pero no era suficiente para convertir KC F5 DNB en la mejor pick. Cleveland no necesitó destruir a Lugo con poder: le sacó 4 BB, 7 H, 4 ER y 102 pitcheos en solo 4 IP. Eso mata cualquier F5 favorito.
+Lección práctica
+La próxima vez, si se cumple esta combinación:
+favorito tiene mejor abridor, pero no es abridor de K/whiff dominante;
+underdog tiene lineup zurdo/switch, buen OBP, paciencia y running game;
+umpire no ayuda con zona grande;
+favorito tiene bullpen dudoso;
+el lineup favorito sí tiene ofensiva, pero puede dejar corredores;
+entonces no subir tanto el F5 side. Mejor mirar:
+prop del bate correcto del favorito, como pasó con Witt bases totales;
+team total full game del favorito, no necesariamente F5;
+over full game protegido, si ambos equipos tienen rutas de tráfico;
+evitar run line y F5 -0.5/-1.5 si el underdog puede anotar temprano.
+Qué patrón específico se vio
+1) “Abridor mejor” no basta si el rival puede elevar conteos
+Lugo no fue vencido por una avalancha de HR. Fue vencido por tráfico:
+4 BB;
+102 pitcheos en 4 innings;
+Cleveland robando bases;
+parte baja aportando;
+turnos largos.
+Patrón: contra lineups pacientes/contact-heavy, un abridor de comando puede perder el F5 aunque sea mejor que el rival.
+2) El underdog tenía ruta F5 más clara de lo que parecía
+Cleveland tenía:
+Kwan para abrir tráfico;
+DeLauter caliente;
+JRam con BB/speed;
+Manzardo/Schneemann/Bazzana/Rocchio aportando profundidad;
+Naylor y Halpin no fueron outs muertos.
+La señal que debió pesar más era: Cleveland podía fabricar 3-4 carreras sin HR. Eso era peligroso para KC F5.
+3) Cecconi no necesitaba dominar; solo sobrevivir
+Cecconi permitió tráfico: 5.1 IP, 6 H, 3 BB, pero solo 2 ER. KC tuvo 12 hits y 5 carreras, pero en F5 solo una.
+Patrón: si el pitcher vulnerable puede sobrevivir con daño limitado y el favorito deja muchos corredores, el F5 TT over se vuelve más frágil que el TT full game.
+Aquí el mercado que terminó teniendo mejor lógica fue más:
+KC TT full game over 4.5, no KC F5 TT over 2.5.
+4) Cuando el side tiene ruido, la prop del bate top puede ser mejor
+La lectura de Bobby Witt Jr. fue la más limpia:
+4-4;
+HR;
+1 carrera;
+1 RBI;
+7 bases totales.
+Patrón: si el matchup ofensivo es bueno pero el equipo/side tiene ruido por pitcher rival, bullpen o timing de carreras, priorizar props del bate con volumen y matchup.
+En este partido, Witt O1.5 bases era mejor que KC F5.
+5) No descartar el over completo si ambos equipos tienen rutas distintas de anotar
+Descartamos demasiado el over porque la confianza estaba más en KC que en Cleveland. Pero Cleveland sí tenía una ruta clara:
+paciencia;
+robos;
+contacto;
+presión;
+bullpen KC vulnerable.
+Y KC también terminó produciendo tarde.
+Patrón: si un equipo tiene ventaja ofensiva por pitcher rival y el otro tiene ventaja por paciencia + bullpen rival vulnerable, el over full game puede ser mejor de lo que parece, aunque no confíes por igual en ambas ofensivas.
+Regla nueva para futuros MLB
+Antes de tomar F5 favorito por diferencia de abridores, revisar si el underdog puede romper el F5 por pitch count más que por slugging.
+Checklist rápida:
+[ ] ¿El favorito tiene abridor de whiff real o solo command/contact management?
+[ ] ¿El underdog tiene 4-5 bates pacientes arriba?
+[ ] ¿Hay muchos zurdos/switch contra el abridor?
+[ ] ¿El umpire no da zona grande?
+[ ] ¿El underdog puede correr si se embasa?
+[ ] ¿La parte baja del underdog puede extender innings?
+[ ] ¿El favorito puede dejar corredores y producir tarde en vez de temprano?
+Si varias son sí, bajar F5 side y subir:
+props top bat / TT full game / over protegido / evitar handicap agresivo.
+Frase final del patrón
+Este partido no fue “mala suerte de KC F5”; fue un spot donde el underdog tenía una ruta temprana de tráfico y pitch count que neutralizaba el edge nominal de abridor. La mejor apuesta no era que Royals liderara al 5º, sino que sus mejores bates produjeran y que el juego tuviera carreras por ambos caminos.
+
+	D-backs/Pirates 070526
+La lección más importante:
+Cuando el edge principal es “pitcher vulnerable permite contacto/daño”, no siempre la mejor traducción es under de Ks u outs; muchas veces es mejor F5 del rival, F5 team total o hits permitidos.
+En este partido la lectura correcta era que Gallen estaba vulnerable, pero el error fue asumir que esa vulnerabilidad necesariamente implicaba salida corta o pocos K. Gallen terminó permitiendo daño real:
+6 IP, 6 H, 4 ER, 2 HR, pero aun así llegó a 5 K y completó 6 entradas.
+Entonces el mercado más robusto no era:
+Gallen under Ks / under outs
+sino:
+Pittsburgh F5 protegido / Pittsburgh F5 TT / Gallen hits allowed over.
+La regla que sacaría:
+Si un pitcher con nombre/leash de abridor fuerte está vulnerable por contacto, pero enfrenta un lineup con algunos K naturales, priorizar daño permitido —hits, TB, F5 TT, F5 lado— antes que under Ks/outs.
+En simple:
+El diagnóstico “Gallen vulnerable” fue correcto; la mejor conversión era Pittsburgh temprano, no necesariamente Gallen saliendo rápido.
+
+	Phillies/Athletics 050526
+La lección más importante es:
+Cuando el edge ofensivo depende de “tráfico + abridor vulnerable + bullpen rival débil”, no hay que encasillarlo automáticamente en F5.
+En este partido la lectura de fondo fue correcta: Phillies tenía rutas claras para anotar por lineup, parque/clima, Severino con tráfico y bullpen de Oakland vulnerable. Pero el timing fue distinto:
+Phillies generó tráfico temprano, pero no convirtió.
+El F5 TT over 2.5 falló porque exigía conversión rápida.
+El daño grande llegó después, contra el bullpen: 8 carreras entre 7ª y 8ª.
+Las props de bateadores como Harper bases y Marsh bases fueron mejores porque no dependían de que las carreras llegaran exactamente en las primeras 5 entradas.
+La regla práctica para próximos MLB sería:
+Si el abridor rival es vulnerable pero también tiene leash/competencia para sobrevivir 5 innings, y el bullpen rival es débil, preferir full game team total o props de bases antes que F5 team total.
+En otras palabras: el edge era Phillies ofensiva completa, no solo Phillies ofensiva temprana.
+
+	Yankees/Rangers 050526
+La lección más importante es esta:
+No convertir automáticamente “el rival tiene al as” en pass o en apuesta contra el favorito si el lineup favorito tiene poder distribuido y el as trae señales de contacto fuerte permitido.
+En este partido, deGrom sí seguía teniendo stuff de élite: terminó con 7 K y podía sostener ventaja temprana para Texas. Pero la grieta estaba ahí: barrels/contacto fuerte + Yankee Stadium + Yankees con poder de 1 al 9. Eso terminó pesando más que su ERA previa.
+La lectura corregida para futuros MLB sería:
+Cuando un pitcher élite tiene K% alto pero también permite mucho contacto aéreo/barrels, no hay que tratarlo como “bloqueador automático” del lineup rival. En parques HR-friendly, el mercado correcto puede seguir siendo ML/team total/props de poder del lineup fuerte, aunque el abridor rival sea claramente superior.
+Aplicado al pick: Yankees ML full game era correcto; Yankees F5 seguía siendo peligroso.
+El edge no era “Yankees dominarán temprano”, sino “Yankees tienen suficiente lineup y bullpen para absorber el golpe inicial y castigar cualquier error de deGrom.”
+
+	Nationals/Twins 050526
+La lección más importante:
+No convertir automáticamente “pitcher con K upside” en over Ks cuando el perfil real grita tráfico + salida corta.
+Cavalli tenía argumentos para ponches: K%, CSW, forma reciente, línea 4.5. Pero el edge más repetible del partido estaba en otra cosa:
+Minnesota tenía demasiadas rutas para ponerlo bajo estrés temprano: OBP arriba, zurdos/switch, parte baja funcional, paciencia, velocidad y capacidad de hacer daño sin depender solo del HR.
+El resultado lo mostró perfecto:
+Cavalli solo lanzó 4.0 IP.
+Permitió 5 H, 3 BB, 6 R, 3 ER.
+Solo consiguió 2 K.
+Minnesota ya tenía 6 carreras en F5.
+La lectura correcta no era:
+“Cavalli puede ponchar a Minnesota.”
+Era:
+“Minnesota puede llenar bases, alargar innings y sacar a Cavalli antes de que acumule Ks.”
+Para futuros MLB, cuando un abridor combina K upside + WHIP alto + BB/tráfico + rival con OBP funcional, el orden de mercados debería ser:
+TT rival / F5 TT rival > hits permitidos > outs under > carreras permitidas > over Ks.
+En este partido, Minnesota F5 TT over era más limpio que Cavalli over Ks, aunque ambos salían del mismo análisis del abridor.
+
+	Orioles/Yankees 040526
+La lección más importante de este partido:
+Cuando solo un equipo tiene rutas claras de anotación, el mejor mercado suele ser su team total / F5 team total, no el over general ni necesariamente el ML.
+Aquí la lectura correcta no era solo “Yankees gana”. Era:
+Yankees lineup vs Baz + bullpen Baltimore vulnerable = carreras de Yankees.
+Y eso se confirmó perfecto:
+Yankees ganó 12-1.
+Yankees F5 TT over 2.5 cobraba justo: 3 carreras en 5 entradas.
+Yankees TT over 4.5 cobraba sobrado.
+El over general también cobraba, pero dependió casi todo de Yankees.
+Baltimore tuvo 10 hits, pero solo 1 carrera y 0-for-7 con RISP, o sea: tráfico sin conversión.
+La otra mini-lección fuerte:
+En props de bateadores, H+R+RBI puede ser mucho mejor que hit simple cuando el jugador batea 3º-5º en un equipo con TT alto.
+Bellinger no necesitaba una noche limpia de hits. Terminó cobrando por participación ofensiva total:
+1 H + 1 R + 3 RBI = 5 eventos
+Eso fue exactamente mejor que jugar solo 1+ hit o solo RBI.
+Para futuros partidos MLB: si el edge está en un lineup fuerte contra abridor vulnerable y bullpen débil, priorizaría este orden:
+F5 team total del equipo fuerte > team total full game > props H+R+RBI / total bases de bates 2º-5º > ML caro > over general.
+
+	Cardinals/Brewers 040526
+La lección más importante:
+Cuando ambos abridores son vulnerables, no hay que elegir automáticamente el lineup “más mejorado” o el team total del equipo con mejor bullpen; hay que identificar cuál abridor rival tiene la combinación más explotable de bajo K%, mal comando y poca capacidad de escapar de innings con tráfico.
+En este partido, ese abridor era Chad Patrick, no necesariamente Kyle Leahy.
+Patrick venía con señales claras: ERA engañosa, BB alta, K% bajo, first-pitch strike bajo y poca capacidad de dominar. Además, St. Louis tenía una parte alta muy bien armada: Wetherholt + Herrera para embasarse, Burleson/Walker/Gorman/Church/Pagés para daño. Eso hacía que el edge más limpio fuera Cardinals carreras temprano / Cardinals F5 TT, no Brewers TT.
+La frase para futuros análisis MLB sería:
+No basta con detectar al abridor más feo en métricas; hay que preguntarse cuál abridor tiene menos herramientas para apagar rallies. El pitcher con más boletos, menos ponches y peor control de conteos puede ser más atacable para team totals que el pitcher que permite hard contact pero sí logra sobrevivir innings.
+
+	Reds/Cubs 040526
+La lección más importante:
+No convertir automáticamente “favorito con mejor lineup + abridor rival vulnerable” en Team Total Over alto.
+En este partido, la lectura pro-Cubs era correcta para el ganador, pero no necesariamente para explosión ofensiva. Petty era frágil en papel, pero tenía stuff suficiente para competir y terminó dando 5.2 IP, 3 ER, solo 75 pitcheos. Eso fue suficiente para matar el valor de un posible Cubs TT Over 5.5, aunque Cubs terminara ganando.
+La clave global para MLB:
+Cuando el team total del favorito ya está alto, exige demasiadas confirmaciones: clima real, viento confirmado, lineup profundo, abridor rival con leash corto y bullpen expuesto temprano. Si una de esas piezas falla —como aquí con Petty sobreviviendo casi 6 innings y el viento real mucho más bajo— el TT over se vuelve frágil.
+Aplicación futura:
+Si el edge principal es “Cubs deberían ganar porque tienen mejor base global”, el ML puede ser aburrido pero correcto. Si el edge es “Cubs van a explotar ofensivamente”, entonces necesito pruebas más fuertes antes de preferir TT over 5.5 o run line.
+
+	Red Sox/Tigers 040526
+La lección más importante:
+En MLB, un “bullpen game” no significa automáticamente daño temprano; el edge real puede estar en el full game, no en F5.
+En este partido, la idea correcta era atacar la fragilidad de Detroit después de Skubal, pero el error habría sido asumir que esa fragilidad aparecería inmediatamente con Holton/Madden. De hecho:
+Holton + Madden sostuvieron 6 innings sin carrera limpia.
+Tolle dominó mucho más de lo esperado: 7 IP, 1 H, 8 K.
+El partido explotó recién cuando Detroit llegó al bullpen medio: Vanasco permitió 4 ER en 0.2 IP.
+El marcador terminó 5-4, justo un guion de over/full game, no de dominio temprano.
+Entonces la regla que queda es:
+Cuando el edge nace en “pitching plan frágil + bullpen usado”, no hay que forzarlo al F5. El mejor mercado suele ser over full game o team total full game, porque el daño puede llegar en la 6ª-9ª entrada, no necesariamente contra el opener/bulk.
+Y una sublección fuerte: no subestimar a un abridor con K%, SwStr%, CSW% y leash real. Tolle tenía señales muy fuertes de ponches y longitud; el under Ks era el mercado más peligroso de los que habíamos considerado.
+
+	Padres/Giants 040526
+La lección más importante:
+En MLB, un spot starter con mala línea reciente en Triple-A no debe tratarse automáticamente como “fade” si tiene arsenal real y el rival no llega con una ofensiva que eleve conteos/castigue contacto.
+En este partido sobrevaloramos la fragilidad de McDonald por sus BB en Triple-A y asumimos que Padres lo iba a sacar temprano. Pero pasó lo contrario: 7.0 IP, 0 BB, 8 K, 81 pitcheos. Eso destruyó la hipótesis de Padres F5.
+La corrección para próximos análisis:
+Antes de atacar a un abridor por leash/comando, validar si el lineup rival realmente tiene paciencia, bajo chase, buen contacto y capacidad de convertir tráfico en daño.
+Padres no lo hizo: 0 BB, 10 K, solo 3 hits. Entonces el mejor mercado no era F5 Padres, sino los que respetaban mejor el entorno: under 8.5, F5 under, Vásquez outs.
+En una frase: no basta con que el abridor rival parezca vulnerable; el lineup elegido tiene que tener el perfil correcto para hacerlo vulnerable.

@@ -1,0 +1,151 @@
+MLB_Template_Postmortem.txt
+
+TEMPLATE PARA REGISTRO DE POSTMORTEMS — MLB
+
+Uso:
+Copiar el bloque completo al final del archivo MLB_Postmortems_Raw cada vez que
+se cierre un partido analizado, haya o no haya apuesta jugada.
+Registrar TODOS los partidos analizados, no solo los que fallaron.
+Mantener consistencia ayuda a recalibrar las heurísticas v2 cada 2-3 semanas
+sin sesgo de selección.
+
+Reglas mínimas:
+[ ] Llenar lo más rápido posible (idealmente <10 min post-partido).
+[ ] Separar siempre proceso (¿lectura correcta?) de resultado (¿cobró?).
+[ ] Si la apuesta cobró pero la lectura era errada, registrarlo igual.
+[ ] Si la lectura era correcta pero el mercado falló, registrarlo igual.
+[ ] No reescribir la historia con el resultado en mano (sesgo de retrospección).
+
+
+===== BLOQUE TEMPLATE — COPIAR DESDE AQUÍ =====
+
+	[EQUIPO_A vs EQUIPO_B DDMMAA]
+
+1. THESIS PRE-PARTIDO (antes de ver resultado)
+
+Edge principal en una frase:
+[ ]
+
+Nivel en Jerarquía de Edges (v2):
+[ ] (ej: matchup mano/repertorio, leash, parque/clima, etc.)
+
+Tipo de vulnerabilidad del pitcher rival (si aplica):
+[ ] Tipo A / Tipo B / Tipo C / No aplica
+
+Mercado(s) elegido(s):
+[ ]
+
+Cuota(s):
+[ ]
+
+Stake relativo:
+[ ] full / medio / chico / pass
+
+Patrón v2 que respalda la jugada:
+[ ] (ej: Patrón 5, Patrón 3, etc.)
+
+2. RESULTADO OBJETIVO
+
+Marcador final:
+[ ]
+
+Línea de abridores:
+[ ] Abridor A:
+[ ] Abridor B:
+
+Bullpen relevante:
+[ ]
+
+Bates clave del partido:
+[ ]
+
+Mercado(s) elegido(s) — ganó / perdió / push:
+[ ]
+
+3. POSTMORTEM (separar proceso de resultado)
+
+¿La lectura del edge fue correcta?
+[ ] Sí / No / Parcialmente
+
+¿El mercado capturó bien el edge?
+[ ] Sí / No / Parcialmente
+
+¿El timing del daño coincidió con la proyección?
+[ ] Sí / No / N/A
+
+¿Apareció algún factor ambiental que cambió el guion?
+[ ] (clima, ump, ausencia de bate clave, lluvia, etc.)
+
+Clasificación del resultado:
+[ ] ACIERTO LIMPIO (lectura correcta + mercado correcto + cobró)
+[ ] ACIERTO RUIDOSO (lectura correcta pero cobró por motivo distinto)
+[ ] ERROR DE LECTURA (la tesis era falsa)
+[ ] ERROR DE MERCADO (lectura correcta, mercado mal elegido)
+[ ] VARIANZA (lectura y mercado correctos, perdió por variance)
+[ ] PASS CORRECTO (no se jugó y el guion confirmó la decisión)
+[ ] PASS INCORRECTO (no se jugó y había edge claro)
+
+4. PATRÓN APLICABLE / EMERGENTE
+
+¿Qué patrón v2 explica mejor lo ocurrido?
+[ ]
+
+¿Aparece un patrón nuevo que no está en v2?
+[ ] Sí / No
+Si sí, describirlo en 2-3 líneas:
+[ ]
+
+¿Algún patrón v2 fue contradicho por este partido?
+[ ] Sí / No
+Si sí, ¿requiere ajuste o es ruido de muestra chica?
+[ ]
+
+5. LECCIÓN OPERATIVA EN UNA FRASE
+
+[ ]
+
+===== FIN BLOQUE TEMPLATE =====
+
+
+NOTAS DE USO
+
+Sobre "ACIERTO RUIDOSO":
+Es la categoría más importante de monitorear. Una apuesta que cobra por motivo
+distinto al proyectado no valida la tesis. Si se repite el patrón sin que la
+tesis se cumpla, conviene revisar si el edge era real o si fue suerte alineada.
+
+Sobre "PASS CORRECTO" e "INCORRECTO":
+Los pass también son decisiones y deben registrarse. Si se pasan 5 partidos
+seguidos donde había edge claro, eso es información tan útil como una racha
+de errores de mercado.
+
+Sobre patrones emergentes:
+Si un patrón nuevo aparece en 3+ partidos dentro de una ventana de 2-3 semanas,
+candidato a sumarse a la nota v2/v3.
+
+Sobre el sesgo retrospectivo:
+La sección 1 (Thesis pre-partido) debe llenarse ANTES del partido o usando
+notas pre-partido propias. Llenarla después con el resultado en mano contamina
+toda la auditoría.
+
+
+CONTEO PERIÓDICO (revisar cada 2-3 semanas)
+
+Por cada ventana de revisión, contar:
+[ ] Aciertos limpios:        ___
+[ ] Aciertos ruidosos:       ___
+[ ] Errores de lectura:      ___
+[ ] Errores de mercado:      ___
+[ ] Varianza:                ___
+[ ] Pass correctos:          ___
+[ ] Pass incorrectos:        ___
+
+Lectura del conteo:
+[ ] Si "errores de mercado" > "errores de lectura": el problema es traducción,
+    la nota v2 necesita refinarse en mercados.
+[ ] Si "errores de lectura" > "errores de mercado": el problema es análisis
+    pre-partido, no la nota; revisar fuentes y proceso.
+[ ] Si "aciertos ruidosos" >> "aciertos limpios": cuidado, podría ser que los
+    edges identificados no son reales y se cobra por suerte alineada.
+[ ] Si "varianza" es alto: el proceso está sano pero la muestra es corta;
+    no sobrerreaccionar a resultados.
