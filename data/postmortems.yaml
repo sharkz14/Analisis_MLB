@@ -190,30 +190,48 @@ partidos:
   - id: guardians-royals-070526
     fecha: 2026-05-07
     partido: "Guardians vs Royals"
-    marcador: null
+    marcador: "Cleveland 8 - Kansas City 5"
+    cuotas_pre_partido:
+      ml_favorito: 1.67     # Royals
+      ml_underdog: 2.25     # Guardians
     edge:
-      frase: "Lugo > Cecconi → KC F5 side."
+      frase: "Lugo > Cecconi por perfil (2.95 ERA / 24.5% K / 45.7% GB vs 4.50 ERA / 14.6% K); parte baja KC 6-9 con OBP y velocidad ataca a Cecconi RHP."
       fuente: matchup_mano_repertorio
-      pitcher_vulnerable_tipo: C   # Lugo según v2 Patrón 1
+      pitcher_vulnerable_tipo: C   # Lugo perfil contact management sin whiff (v2 Patrón 1)
     apuesta:
-      mercado: "KC F5 DNB"
-      tipo_mercado: F5_DNB
-      resultado: perdió
+      mercado: "pass — ninguna pick tomada"
+      tipo_mercado: pass
+      cuota: null
+      stake: null
+      resultado: null
+      notas_apuesta: "Analizó pero no apostó. Pick principal recomendada en el análisis: KC F5 DNB @1.62 (habría perdido)."
+    picks_analizadas_no_jugadas:
+      - {pick: "KC F5 DNB", cuota: 1.62, resultado_hipotetico: perdió, motivo: "F5: CLE 4 - KC 1"}
+      - {pick: "KC F5 TT over 2.5", cuota: 1.75, resultado_hipotetico: perdió, motivo: "KC solo 1 R en F5"}
+      - {pick: "KC F5 resultado", cuota: 1.83, resultado_hipotetico: perdió, motivo: "Lugo explotó temprano"}
+      - {pick: "Witt over 1.5 bases", cuota: 1.75, resultado_hipotetico: ganó, motivo: "4-4, HR, 7 TB"}
+      - {pick: "Witt anota carrera", cuota: 1.78, resultado_hipotetico: ganó, motivo: "Anotó 1"}
+      - {pick: "KC TT over 4.5 full game", cuota: 1.72, resultado_hipotetico: ganó, motivo: "KC 5 R"}
+      - {pick: "Over 9.5 full game", cuota: 1.90, resultado_hipotetico: ganó, motivo: "8-5, 13 R totales"}
     contexto_resultado:
-      abridor_propio: "Lugo: 4.0 IP, 7 H, 4 ER, 4 BB, 102 pitcheos — roto por tráfico, no por slugging."
-      abridor_rival: "Cecconi: 5.1 IP, 6 H, 3 BB, 2 ER — sobrevivió."
-      bates_clave_underdog: "Kwan, DeLauter, JRam, Manzardo, Schneemann, Bazzana, Rocchio — profundidad sin HR."
-      bate_top_favorito: "Witt: 4-4, HR, 1 R, 1 RBI, 7 TB (prop O1.5 TB cobraba limpio)."
+      abridor_propio: "Lugo: 4.0 IP, 7 H, 4 ER, 4 BB, 5 K, 102 pitcheos — roto por tráfico (BB + alargar conteos), no por slugging."
+      abridor_rival: "Cecconi: 5.1 IP, 6 H, 3 BB, 2 ER, 3 K, 82 pitcheos — sobrevivió permitiendo tráfico sin daño grande."
+      bates_clave_underdog: "Kwan, DeLauter (caliente), JRam, Manzardo, Schneemann, Bazzana, Rocchio — profundidad zurdo/switch + paciencia + running game."
+      bate_top_favorito: "Witt: 4-4, HR, 1 R, 1 RBI, 7 TB — prop O1.5 TB cobraba limpio."
+      factor_clave: "Cleveland le sacó 4 BB y 102 pitcheos en 4 IP a Lugo; KC produjo 5 R y 12 hits pero solo 1 en F5 — daño tardío. Lección: el favorito F5 con abridor sin whiff vs underdog paciente puede romperse por pitch count, no por slugging."
     postmortem:
       lectura_correcta: parcialmente
       mercado_capturo_edge: no
+      clasificacion_jugada: PASS_CORRECTO
       clasificacion_analitica: ERROR_DE_MERCADO
-      mercado_correcto_retrospectiva: "Witt total bases O1.5 / KC TT full game over 4.5 / over full game"
+      mercado_correcto_retrospectiva: "Witt total bases O1.5 @1.75 / KC TT full game over 4.5 @1.72 / Over 9.5 @1.90"
       tipo_mercado_correcto: prop_bateador_bases
+      nota_meta: "El pre-partido recomendó KC F5 DNB @1.62 como mejor pick (habría perdido). PASS evitó esa pérdida, pero también dejó pasar 4 mercados que cobraron (props Witt, TT full, over). Pass correcto vs la pick principal recomendada, pero hubo edge real en otros mercados."
     patron_v2:
       aplicable: [2, 4, 10, 12]
-      emergente: null
+      emergente: "Antes de tomar F5 favorito por diferencia de abridores, revisar si el underdog puede romper el F5 por pitch count más que por slugging. Checklist: ¿favorito tiene whiff real o solo command? ¿underdog tiene 4-5 bates pacientes arriba? ¿muchos zurdos/switch contra el abridor? ¿umpire sin zona grande? ¿underdog puede correr? ¿parte baja del underdog puede extender innings? ¿favorito puede dejar corredores y producir tarde? Si varias son sí: bajar F5 side, subir props top bat / TT full game / over protegido."
     leccion: "Si el favorito tiene mejor abridor pero no domina por whiff y el underdog es paciente/contact-heavy con zurdos/switch, el F5 side se rompe por pitch count antes de que aparezca la superioridad. Subir props del bate top + TT full game."
+    fuente: "conversación pre/post-partido + raw"
 
   - id: dbacks-pirates-070526
     fecha: 2026-05-07

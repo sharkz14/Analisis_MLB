@@ -101,6 +101,7 @@ Tomado de la **Jerarquía de Edges** en heurísticas v2 (de más a menos confiab
 - `prop_bateador_HRR_RBI` — hit + run + RBI
 - `prop_bateador_RBI`
 - `combo` — varios mercados jugados juntos
+- `pass` — ninguna pick tomada (analizado pero no apostado)
 
 ### `postmortem.clasificacion_jugada` y `clasificacion_analitica`
 Dos campos separados porque a veces la pick **jugada** cobra mientras el
