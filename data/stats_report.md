@@ -1,6 +1,6 @@
 # MLB Postmortems — Reporte de recalibración
 
-Dataset: **28 partidos**. Fuente: `data/postmortems.yaml`.
+Dataset: **29 partidos**. Fuente: `data/postmortems.yaml`.
 
 ## 1. Resumen de decisiones
 
@@ -8,28 +8,28 @@ Dataset: **28 partidos**. Fuente: `data/postmortems.yaml`.
 
 | Clasificación | Count | % |
 |---|---:|---:|
-| ACIERTO_LIMPIO | 9 | 32% |
-| PASS_CORRECTO | 6 | 21% |
+| ACIERTO_LIMPIO | 9 | 31% |
+| PASS_CORRECTO | 7 | 24% |
 | PASS_INCORRECTO | 6 | 21% |
 | ERROR_DE_LECTURA | 4 | 14% |
 | ERROR_DE_MERCADO | 2 | 7% |
-| VARIANZA | 1 | 4% |
+| VARIANZA | 1 | 3% |
 
 **Clasificación analítica** (frame del análisis):
 
 | Clasificación | Count | % |
 |---|---:|---:|
-| ERROR_DE_MERCADO | 14 | 50% |
-| ACIERTO_LIMPIO | 8 | 29% |
+| ERROR_DE_MERCADO | 15 | 52% |
+| ACIERTO_LIMPIO | 8 | 28% |
 | ERROR_DE_LECTURA | 6 | 21% |
 
 ## 2. Apostar vs pasar
 
-- Apuestas tomadas: **16** (57%)
-- Pass: **12** (43%)
+- Apuestas tomadas: **16** (55%)
+- Pass: **13** (45%)
 
-- Pass correctos: **6/12** (50%)
-- Pass incorrectos: **6/12** (50%)
+- Pass correctos: **7/13** (54%)
+- Pass incorrectos: **6/13** (46%)
 
 ## 3. Win rate y P&L de apuestas reales
 
@@ -66,8 +66,8 @@ _Nota: P&L de parlay legs no se computa porque depende del resto del parlay, que
 |---|---:|---:|---:|---:|---:|---:|---:|
 | matchup_mano_repertorio | 15 | 7 | 3 | 1 | 2 | 1 | 1 |
 | tipo_vulnerabilidad_pitcher | 4 | 1 | 1 | 2 | 0 | 0 | 0 |
+| leash_bullpen | 3 | 0 | 2 | 1 | 0 | 0 | 0 |
 | forma_individual | 3 | 0 | 1 | 0 | 2 | 0 | 0 |
-| leash_bullpen | 2 | 0 | 1 | 1 | 0 | 0 | 0 |
 | parque_clima | 2 | 0 | 0 | 2 | 0 | 0 | 0 |
 | bullpen_rival_debil | 1 | 0 | 0 | 0 | 0 | 1 | 0 |
 | edge_combinado | 1 | 1 | 0 | 0 | 0 | 0 | 0 |
@@ -78,7 +78,7 @@ _Nota: P&L de parlay legs no se computa porque depende del resto del parlay, que
 |---|---:|---:|---:|
 | Tipo A | 6 | 2 | 1 |
 | Tipo B | 9 | 4 | 1 |
-| Tipo C | 1 | 0 | 0 |
+| Tipo C | 2 | 0 | 0 |
 
 ## 7. Frecuencia de patrones v2 aplicados
 
@@ -86,23 +86,23 @@ _Nota: P&L de parlay legs no se computa porque depende del resto del parlay, que
 |---|---:|
 | 10: Props salen del guion, no del menú | 10 |
 | 1: Tipología vulnerabilidades pitcher (A/B/C) | 9 |
-| 12: Side con ruido → mercado más limpio | 8 |
+| 12: Side con ruido → mercado más limpio | 9 |
 | 4: K upside no es over Ks si hay tráfico | 7 |
 | 11: Factores ambientales (parque/clima/umpire) | 6 |
+| 5: Un solo equipo con rutas → su TT | 6 |
 | 3: Timing del daño: F5 vs full game | 5 |
-| 5: Un solo equipo con rutas → su TT | 5 |
+| 8: Opener/spot starter no es fade automático | 4 |
 | 9: Pitcher élite no bloquea automáticamente | 4 |
 | 2: 'Mejor abridor' no es F5 side automático | 3 |
-| 8: Opener/spot starter no es fade automático | 3 |
 | 6: Favorito sin edge ofensivo colectivo | 2 |
 | 7: Underdog +1.5 necesita conversión | 2 |
 
 ## 8. Calidad del menú: picks analizadas pero no jugadas
 
-- Total: **243**
-- Habrían cobrado: **140** | perdido: 100 | push: 3
-- Win rate (sin push): **58%**
-- P&L hipotético (1u flat): **+23.60u** en 148 con cuota → ROI **+15.9%**
+- Total: **247**
+- Habrían cobrado: **143** | perdido: 101 | push: 3
+- Win rate (sin push): **59%**
+- P&L hipotético (1u flat): **+26.68u** en 152 con cuota → ROI **+17.6%**
 
 ## 9. Patrones emergentes registrados
 
@@ -188,6 +188,10 @@ Hipótesis candidatas a v3 si reaparecen en partidos futuros:
 
 > Patrón recurrente en abril: under Ks de pitcher con forma reciente mala pero arsenal MLB intacto falla más de lo esperado. Si el pitcher tiene leash y stuff, los Ks llegan aunque el rival no tenga K% alto. Para ese edge, mejor team total / hits allowed / outs under con línea generosa.
 
+**21.** `rangers-dbacks-110526`
+
+> En bullpen games del favorito con bullpen elite por ERA, el lado del underdog y/o el under del partido son más limpios que el TT del underdog. La paciencia del lineup underdog requiere que el opener pierda comando para traducirse en tráfico; si el opener mete strikes, la paciencia no genera tráfico y la conversión RISP no aparece. Para edge ofensivo del underdog en bullpen game, exigir además bullpen rival mediocre — si el bullpen es elite, expresar el edge en ML/Under, no en TT.
+
 
 ## 10. Divergencias jugada ≠ analítica
 
@@ -211,12 +215,13 @@ Partidos donde lo realmente apostado y el frame del análisis tienen clasificaci
 | royals-mariners-020526 | VARIANZA | ERROR_DE_MERCADO |
 | tigers-braves-300426 | ERROR_DE_LECTURA | ERROR_DE_MERCADO |
 | rockies-reds-300426 | PASS_INCORRECTO | ERROR_DE_MERCADO |
+| rangers-dbacks-110526 | PASS_CORRECTO | ERROR_DE_MERCADO |
 
-_16 partidos con divergencia (de 28)._
+_17 partidos con divergencia (de 29)._
 
 ## 11. Insights operativos
 
 - **Apuestas con ROI negativo**: -37.5% en 8 singles con cuota.
-- **El menú considerado supera al jugado**: ROI menú +15.9% vs jugado -37.5%. Sugiere que se descartan picks correctas por cuota/heurística de selección.
+- **El menú considerado supera al jugado**: ROI menú +17.6% vs jugado -37.5%. Sugiere que se descartan picks correctas por cuota/heurística de selección.
 - **Fuente de edge más propensa a error**: `matchup_mano_repertorio` con 3 errores. Revisar antes de apostar.
 - **Mejor mercado por win rate**: `F5_doble_oportunidad` con 2-1 (67% wr).

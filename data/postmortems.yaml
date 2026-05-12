@@ -1360,3 +1360,48 @@ partidos:
       emergente: "Patrón recurrente en abril: under Ks de pitcher con forma reciente mala pero arsenal MLB intacto falla más de lo esperado. Si el pitcher tiene leash y stuff, los Ks llegan aunque el rival no tenga K% alto. Para ese edge, mejor team total / hits allowed / outs under con línea generosa."
     leccion: "Cuando dos abridores son vulnerables, mejor TT over de cada equipo o over full game que sides/handicaps. Los under Ks contra pitchers con forma mala pero stuff intacto son trampa recurrente."
     fuente: "conversación pre/post-partido"
+
+  - id: rangers-dbacks-110526
+    fecha: 2026-05-11
+    partido: "Rangers vs D-backs"
+    marcador: "D-backs 1 - Rangers 0"
+    cuotas_pre_partido:
+      ml_underdog: 1.94    # ARI
+      # ml_favorito (TEX) no registrado tras scratch Eovaldi
+    edge:
+      frase: "Scratch Eovaldi 1h pre-partido + bullpen game improvisado TEX (Junis opener Tipo C) vs ARI lineup más paciente MLB. 3rd-time-vs-starter no aplica (bullpen game)."
+      fuente: leash_bullpen   # posición 3 jerarquía v2 + matchup repertorio (posición 2)
+      pitcher_vulnerable_tipo: C   # Junis pitch-to-contact sin whiff
+    apuesta:
+      mercado: "pass — ninguna pick tomada"
+      tipo_mercado: pass
+      cuota: null
+      stake: null
+      resultado: null
+      notas_apuesta: "Análisis recomendó TT ARI Over 3.5 @1.81 (stake medio 0.75u) como pick principal y ARI ML @1.94 como alternativa. Usuario pasó. La pick principal habría perdido (ARI 1 R), la alternativa habría cobrado (ARI 1-0)."
+    picks_analizadas_no_jugadas:
+      - {pick: "TT ARI Over 3.5", cuota: 1.81, resultado_hipotetico: perdió, motivo: "ARI solo 1 R; 2-7 RISP, 7 LOB"}
+      - {pick: "ARI ML", cuota: 1.94, resultado_hipotetico: ganó, motivo: "ARI ganó 1-0 — era la alternativa explícita"}
+      - {pick: "Under 7 partido", cuota: 2.34, resultado_hipotetico: ganó, motivo: "Solo 1 R total"}
+      - {pick: "TT TEX Under 2.5", cuota: 2.80, resultado_hipotetico: ganó, motivo: "TEX 0 R, 0-3 RISP"}
+    contexto_resultado:
+      abridor_dbacks_soroka: "6.1 IP, 3 H, 0 R, 1 BB, 5 K (W 5-2) — outing dominante"
+      abridor_rangers_junis: "2.2 IP, 2 H, 1 ER, 0 BB, 2 K (L 0-1) — opener cumplió"
+      bullpen_rangers: "Beeks + Gray + Winn + Alexander: 6.1 IP combinado, 0 ER — bullpen game ejecutado casi sin fisuras"
+      ofensiva_ari: "6 H, 2 BB, 2-7 RISP, 7 LOB — paciencia no se tradujo en tráfico porque opener metió strikes"
+      ofensiva_tex: "4 H, 1 BB, 0-3 RISP, 4 LOB"
+      ambiente: "Techo cerrado preemptivamente, 0 mph viento. Tiempo de juego 2:21. ABS challenges (Del Castillo / Duran) parecieron pausas en TV pero no son delays climáticos."
+      factor_clave: "Bullpen game TEX ejecutado limpio + Soroka outing dominante. La paciencia ARI necesitaba que el opener perdiera comando; sin tráfico no hubo conversión RISP."
+    postmortem:
+      lectura_correcta: parcialmente
+      mercado_capturo_edge: no
+      clasificacion_jugada: PASS_CORRECTO
+      clasificacion_analitica: ERROR_DE_MERCADO
+      mercado_correcto_retrospectiva: "Under 7 @2.34 / ARI ML @1.94 / TT TEX Under 2.5 @2.80"
+      tipo_mercado_correcto: over_under_full
+      nota_meta: "Pass correcto vs la pick principal (TT ARI over). La alternativa explícita (ARI ML) era el mercado correcto y estaba en el menú; descartada por preferir el TT. Caso de filtro de selección que descarta el ML por 'aburrido' en favor del TT más exigente."
+    patron_v2:
+      aplicable: [8, 5, 12]
+      emergente: "En bullpen games del favorito con bullpen elite por ERA, el lado del underdog y/o el under del partido son más limpios que el TT del underdog. La paciencia del lineup underdog requiere que el opener pierda comando para traducirse en tráfico; si el opener mete strikes, la paciencia no genera tráfico y la conversión RISP no aparece. Para edge ofensivo del underdog en bullpen game, exigir además bullpen rival mediocre — si el bullpen es elite, expresar el edge en ML/Under, no en TT."
+    leccion: "'Bullpen game improvisado' ≠ 'over-friendly'. Si el bullpen del favorito es elite por ERA de temporada, el patrón histórico es contención, no explosión. Para edge ofensivo del underdog, exigir además bullpen rival mediocre (no solo abridor débil)."
+    fuente: "conversación pre/post-partido"
