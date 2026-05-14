@@ -1,0 +1,461 @@
+MLB_Protocolo_Operativo_v1.txt
+
+NOTA ACTIVA — PROTOCOLO OPERATIVO PARA ANÁLISIS DE PARTIDOS MLB
+
+Versión: v1 (14/05/26)
+Estado: activo
+Volumen esperado de uso: 2-3 partidos/día
+Naturaleza: documento maestro de coordinación. No reemplaza a checklist v1,
+heurísticas v2.1 ni template del postmortem; los orquesta.
+
+
+PROPÓSITO
+
+Documento maestro que coordina el uso del resto de las notas del proyecto
+durante el ciclo: análisis pre-partido → postmortem → recalibración.
+
+Indica cuándo activar cada nota, en qué orden, y con qué formato de salida
+esperar las respuestas para mantener consistencia entre partidos.
+
+
+CUÁNDO ACTIVAR ESTE PROTOCOLO
+
+Activar automáticamente cuando el usuario:
+[ ] Pide analizar un partido MLB específico (pre-game).
+[ ] Pide cerrar el postmortem de un partido analizado.
+[ ] Menciona "conteo periódico", "recalibración" o "revisión de patrones".
+[ ] Acumula ~25 partidos nuevos en MLB_Postmortems_Raw sin revisión.
+
+
+ARCHIVOS DE REFERENCIA (consultar antes de responder)
+
+[ ] MLB_Checklist_Prelectura_v1: orden de las 17 secciones pre-partido.
+[ ] MLB_Heuristicas_Mercados_v2_1_300426_080526: heurísticas vigentes
+    (12 patrones, Jerarquía de Edges, Filtro Final, Check de selección).
+[ ] MLB_Template_Postmortem: estructura del bloque a generar.
+[ ] MLB_Postmortems_Raw_*: destino del bloque generado (append manual).
+[ ] data/postmortems.yaml: registro estructurado paralelo. No editarlo desde
+    el chat; el usuario lo carga en su propio flujo.
+[ ] data/stats_report.md: reporte agregado del conteo periódico.
+
+
+====================================================
+PARTE 1 — PROTOCOLO PRE-PARTIDO
+====================================================
+
+Activación: el usuario pide analizar un partido.
+
+PASO 1.1 — Verificar datos mínimos (sección 0 del checklist v1)
+
+Antes de empezar el análisis, confirmar disponibilidad de:
+[ ] Abridores confirmados.
+[ ] Lineups confirmados o probables (marcar cuál).
+[ ] Bullpen usado últimos 2-3 días.
+[ ] Cuotas actuales (ML, F5, RL, total, TT y props principales).
+[ ] Parque + clima (viento, temperatura, humedad).
+[ ] Mano de los abridores.
+[ ] Umpire si disponible (solo ajuste, no edge principal).
+
+Si faltan piezas críticas → indicarlo y proponer: (a) buscar lo que falta,
+(b) analizar con datos disponibles marcando supuestos explícitos, o
+(c) recomendar esperar.
+
+
+PASO 1.2 — Identificar el edge en una frase (sección 1 del checklist)
+
+Antes de mirar mercados, escribir una sola oración que responda:
+"¿De dónde nace el edge en este partido?"
+
+Si no se puede formular en una frase clara → decisión inicial: pass o live.
+
+GUARDAR ESTA FRASE LITERAL. Se reutilizará verbatim en el postmortem.
+No reformularla cuando llegue el resultado (regla anti-sesgo, ver Parte 4).
+
+
+PASO 1.3 — Clasificar el edge en la Jerarquía (heurísticas v2.1)
+
+Ubicar el edge identificado en una de las 9 posiciones de la Jerarquía
+de Edges de v2.1 (de más confiable a más ruidoso):
+
+1. Parque + clima confirmado el día del partido.
+2. Matchup mano/repertorio del pitcher vs perfil colectivo del lineup.
+3. Leash del abridor + plan/profundidad del bullpen.
+4. Tipo de vulnerabilidad del pitcher (A/B/C).
+5. Forma reciente del lineup contra esa mano específica.
+6. Umpire de home.
+7. Lineup spot del bateador.
+8. Forma reciente individual (últimos 10-15 PA).
+9. Narrativa de momentum / rachas de equipo.
+
+Si el edge viene de posiciones 7-9 → bajar stake o exigir confirmación
+en una fuente más alta antes de apostar.
+
+
+PASO 1.4 — Clasificar vulnerabilidad del pitcher (Patrón 1 v2.1)
+
+Si el edge involucra atacar al pitcher rival:
+[ ] Tipo A — Comando frágil (BB alto, FPS bajo, K% bajo) → tráfico
+    temprano, F5 TT rival, hits/BB permitidos over.
+[ ] Tipo B — Contacto explotable (HardHit/Barrel% altos, mantiene Ks) →
+    daño concentrado, TT con poder, props HR/TB.
+[ ] Tipo C — Híbrido sin debilidad dominante → mercados menos
+    dependientes, evitar tesis monolíticas.
+
+Atacabilidad por TT (v2.1): A > B > C.
+
+
+PASO 1.5 — Traducir edge → mercado (sección 2 del checklist + v2.1)
+
+Aplicar la tabla de traducción:
+[ ] Edge en abridor favorito → ML / RL / outs / Ks del abridor.
+[ ] Edge contra abridor rival → F5 TT rival / hits allowed rival / bases
+    de bateadores específicos.
+[ ] Edge contra bullpen rival → TT full / over full / live (NO F5).
+[ ] Edge en lineup completo → TT / ML si bullpen propio acompaña.
+[ ] Edge en parque/clima → total / TT / props de poder.
+[ ] Edge en bateador específico → prop, no necesariamente side.
+[ ] Edge en underdog competitivo → +1.5 si convierte y evita inning grande.
+
+
+PASO 1.6 — Cruzar con patrones v2.1
+
+Identificar cuál(es) de los 12 patrones aplican al partido. Listar
+explícitamente por número. Si un patrón contradice la lectura → tratar
+como bandera roja.
+
+Recordatorio de los 12:
+ 1. Tipología vulnerabilidades pitcher (A/B/C)
+ 2. "Mejor abridor" no es F5 side automático
+ 3. Timing del daño: F5 vs full game
+ 4. K upside no es over Ks si hay tráfico
+ 5. Un solo equipo con rutas de anotación → su TT
+ 6. Favorito sin edge ofensivo colectivo
+ 7. Underdog +1.5 necesita conversión, no solo tráfico
+ 8. Opener / spot starter no es fade automático
+ 9. Pitcher élite no bloquea automáticamente
+10. Props salen del guion, no del menú
+11. Factores ambientales (parque/clima/umpire)
+12. Side con ruido → mercado más limpio
+
+
+PASO 1.7 — Aplicar señales de pass (sección 16 + heurísticas v2.1)
+
+Si se cumple cualquiera:
+[ ] No se puede nombrar el edge principal.
+[ ] El edge y el mercado elegido no coinciden.
+[ ] Se necesitan 3+ supuestos encadenados.
+[ ] La cuota ya cobró la lectura.
+[ ] El abridor y el bullpen dicen cosas opuestas.
+[ ] El lineup y el parque dicen cosas opuestas.
+[ ] El total depende de un solo equipo.
+[ ] El TT está demasiado alto.
+[ ] La prop depende de HR o clutch sin precio suficiente.
+
+→ Recomendar pass o bajar stake explícitamente.
+
+
+PASO 1.8 — Filtro de selección final (v2.1, check obligatorio)
+
+Antes de cerrar la recomendación, aplicar el gatillo duro de v2.1:
+[ ] Si alguna pick descartada del top 3 tenía cuota >1.80 Y capturaba el
+    edge top → exigir una razón específica más allá de "cuota baja".
+[ ] Razones válidas para descartar: lineup no confirmado, bullpen
+    contradice el guion, parque hostil para la lectura, timing del daño
+    no calza, dependencia adicional no contemplada.
+[ ] Cuota corta SOLA no es razón válida para descartar.
+
+Este check existe porque en la ventana 30/04-08/05 el menú considerado
+tuvo ROI hipotético +15.9% mientras lo realmente jugado tuvo ROI -37.5%.
+Es señal direccional fuerte aunque la muestra sea chica.
+
+
+PASO 1.9 — Output de la fase pre-partido
+
+Estructurar la respuesta al usuario con este formato exacto:
+
+----- INICIO BLOQUE OUTPUT PRE-PARTIDO -----
+
+[EQUIPO_A vs EQUIPO_B DDMMAA]
+
+EDGE EN UNA FRASE:
+<oración exacta — esta se preserva verbatim para el postmortem>
+
+JERARQUÍA DE EDGES (nivel):
+<1-9, con nombre>
+
+TIPO DE VULNERABILIDAD DEL PITCHER (si aplica):
+<A / B / C / No aplica>
+
+MERCADOS CANDIDATOS:
+1. <mercado> @ <cuota> — <razón en 1 línea>
+2. <mercado> @ <cuota> — <razón en 1 línea>
+3. <mercado> @ <cuota> — <razón en 1 línea>
+
+RECOMENDACIÓN:
+- Mercado primario: <cuál>
+- Stake relativo: <full / medio / chico / pass>
+- Por qué este y no los otros: <1-2 líneas>
+
+PATRONES V2.1 APLICABLES:
+<lista de números + nombres>
+
+SEÑALES DE PASS PRESENTES:
+<lista o "ninguna crítica">
+
+FILTRO DE SELECCIÓN (check v2.1):
+<picks del top 3 descartadas + razón específica>
+
+----- FIN BLOQUE OUTPUT PRE-PARTIDO -----
+
+Después del bloque, comentario libre solo si el usuario pide profundizar.
+
+
+====================================================
+PARTE 2 — PROTOCOLO POSTMORTEM
+====================================================
+
+Activación: el usuario pide cerrar el postmortem de un partido.
+
+PASO 2.1 — Recuperar la thesis pre-partido
+
+[ ] Si el partido fue analizado conmigo: recuperar verbatim la frase
+    del EDGE EN UNA FRASE emitida en pre-partido. NO reformularla.
+[ ] Si no fue analizado conmigo: pedir al usuario sus notas pre-partido
+    propias. NO inferir la thesis desde el resultado.
+[ ] Si no hay notas pre-partido recuperables: marcar la sección 1
+    como "[NO DOCUMENTADO PRE-PARTIDO]" y dejarla así. Llenar el resto.
+
+Esta es la regla más importante del protocolo. Ver Parte 4.
+
+
+PASO 2.2 — Recoger inputs del usuario sobre el resultado
+
+Pedir, si no los pasó:
+[ ] Marcador final.
+[ ] Línea de los abridores (IP, ER, K, BB).
+[ ] Bullpen relevante (quién entró, qué hizo).
+[ ] Bates clave del partido.
+[ ] Si la apuesta ganó / perdió / push (o si fue pass).
+[ ] Factores ambientales que cambiaron el guion (clima, ump, ausencia
+    de bate clave, lluvia, etc.).
+
+Hacer las preguntas en bloque, no una por una.
+
+
+PASO 2.3 — Clasificar el resultado
+
+Usar el vocabulario controlado de data/README.md:
+[ ] ACIERTO_LIMPIO — lectura correcta + mercado correcto + cobró.
+[ ] ACIERTO_RUIDOSO — cobró por motivo distinto al proyectado.
+[ ] ERROR_DE_LECTURA — la tesis era falsa.
+[ ] ERROR_DE_MERCADO — lectura correcta, mercado mal elegido.
+[ ] VARIANZA — lectura y mercado correctos, perdió por variance.
+[ ] PASS_CORRECTO — no se jugó y el guion confirmó.
+[ ] PASS_INCORRECTO — no se jugó y había edge claro.
+
+Si el usuario jugó algo distinto al mercado recomendado en pre-partido,
+clasificar dos veces:
+- clasificacion_jugada: según lo realmente apostado.
+- clasificacion_analitica: según el frame analítico del análisis.
+
+
+PASO 2.4 — Generar el bloque ASCII listo para pegar
+
+Output exacto, envuelto en triple backticks para copy/paste limpio.
+Estructura idéntica al BLOQUE TEMPLATE de MLB_Template_Postmortem:
+
+```
+	[EQUIPO_A vs EQUIPO_B DDMMAA]
+
+1. THESIS PRE-PARTIDO (antes de ver resultado)
+
+Edge principal en una frase:
+<frase verbatim del pre-partido — o "[NO DOCUMENTADO PRE-PARTIDO]">
+
+Nivel en Jerarquía de Edges (v2.1):
+<nivel + nombre>
+
+Tipo de vulnerabilidad del pitcher rival (si aplica):
+<Tipo A / B / C / No aplica>
+
+Mercado(s) elegido(s):
+<lista>
+
+Cuota(s):
+<lista>
+
+Stake relativo:
+<full / medio / chico / pass>
+
+Patrón v2.1 que respalda la jugada:
+<número(s) + nombre(s)>
+
+2. RESULTADO OBJETIVO
+
+Marcador final:
+<>
+
+Línea de abridores:
+Abridor A: <IP, ER, K, BB>
+Abridor B: <IP, ER, K, BB>
+
+Bullpen relevante:
+<>
+
+Bates clave del partido:
+<>
+
+Mercado(s) elegido(s) — ganó / perdió / push:
+<>
+
+3. POSTMORTEM (separar proceso de resultado)
+
+¿La lectura del edge fue correcta?
+<Sí / No / Parcialmente>
+
+¿El mercado capturó bien el edge?
+<Sí / No / Parcialmente>
+
+¿El timing del daño coincidió con la proyección?
+<Sí / No / N/A>
+
+¿Apareció algún factor ambiental que cambió el guion?
+<>
+
+Clasificación del resultado:
+<UNO de los 7 valores controlados>
+
+4. PATRÓN APLICABLE / EMERGENTE
+
+¿Qué patrón v2.1 explica mejor lo ocurrido?
+<>
+
+¿Aparece un patrón nuevo que no está en v2.1?
+<Sí / No>
+Si sí, describirlo en 2-3 líneas:
+<>
+
+¿Algún patrón v2.1 fue contradicho por este partido?
+<Sí / No>
+Si sí, ¿requiere ajuste o es ruido de muestra chica?
+<>
+
+5. LECCIÓN OPERATIVA EN UNA FRASE
+
+<>
+```
+
+Reglas de entrega:
+[ ] El bloque va envuelto en triple backticks para preservar formato.
+[ ] NO escribir comentarios encima del bloque a menos que el usuario los pida.
+[ ] NO escribir comentarios debajo del bloque salvo una línea breve si
+    detecté un patrón emergente que vale señalar.
+[ ] El bloque se entrega listo para pegar al final de MLB_Postmortems_Raw.
+[ ] El usuario revisa, corrige si hace falta, y archiva. El control de
+    calidad final es suyo.
+
+
+====================================================
+PARTE 3 — DISPARADOR DE CONTEO PERIÓDICO
+====================================================
+
+Activación: ~25 partidos nuevos desde la última revisión, o 2-3 semanas,
+o el usuario lo pide explícitamente.
+
+A ritmo de 2-3 partidos/día, esto cae cada 9-12 días aproximadamente.
+
+PASO 3.1 — Detectar el disparador
+
+Llevar cuenta aproximada de cuántos partidos he procesado en el proyecto
+desde el último conteo. A los ~20-25, sugerir proactivamente:
+"Llevamos ~N partidos sin recalibrar. ¿Corremos el conteo periódico?"
+
+No insistir si el usuario dice que no.
+
+
+PASO 3.2 — Estructura del conteo
+
+Pedir al usuario que pase los últimos N bloques de postmortems, o
+referirse al stats_report.md si está actualizado.
+
+Producir el conteo en formato:
+[ ] Aciertos limpios:        ___
+[ ] Aciertos ruidosos:       ___
+[ ] Errores de lectura:      ___
+[ ] Errores de mercado:      ___
+[ ] Varianza:                ___
+[ ] Pass correctos:          ___
+[ ] Pass incorrectos:        ___
+
+
+PASO 3.3 — Lectura del conteo
+
+Aplicar las reglas del MLB_Template_Postmortem:
+[ ] Si errores_mercado > errores_lectura: problema de traducción.
+    La nota v2.1 necesita refinarse en mercados.
+[ ] Si errores_lectura > errores_mercado: problema de análisis
+    pre-partido. Revisar fuentes y proceso, no la nota.
+[ ] Si aciertos_ruidosos >> aciertos_limpios: cuidado, los edges
+    identificados podrían no ser reales y se cobra por suerte alineada.
+[ ] Si varianza es alto: proceso sano, muestra corta, no sobrerreaccionar.
+
+
+PASO 3.4 — Propuesta de ajustes
+
+Patrones emergentes vistos en 3+ partidos de la ventana → candidatos a
+sumarse a v2.2 o v3. Listarlos explícitamente con casos referenciados.
+
+Patrones v2.1 contradichos 2+ veces → candidatos a revisión. Distinguir
+entre ruido de muestra chica y desincronización real.
+
+Regla dura: NO modificar v2.1 directamente desde el chat. Solo proponer
+cambios. La actualización del documento es decisión del usuario.
+
+
+====================================================
+PARTE 4 — REGLA ANTI-SESGO RETROSPECTIVO (CRÍTICA)
+====================================================
+
+La sección "Thesis pre-partido" del postmortem (sección 1) DEBE llenarse
+con la frase del edge que se identificó ANTES del partido.
+
+Nunca:
+[ ] Reformularla con conocimiento del resultado.
+[ ] "Suavizarla" si el resultado la contradice.
+[ ] "Mejorarla" si el resultado la valida.
+[ ] Inferirla desde el marcador final.
+
+Si no hay registro pre-partido recuperable, marcar la sección como
+"[NO DOCUMENTADO PRE-PARTIDO]" y dejarla así. Ese hueco es información:
+indica que el partido no fue analizado con disciplina pre-game.
+
+Este hueco también se traduce, en la versión estructurada
+(data/postmortems.yaml), a clasificacion_jugada: null y
+clasificacion_analitica con el frame del raw cuando exista.
+
+Esta regla aplica también si yo (Claude) sugiero analizar el partido y
+me doy cuenta de que el resultado contradice mi propia recomendación
+pre-partido. La thesis sigue siendo la que escribí antes. El postmortem
+es el que cambia, no la historia.
+
+
+====================================================
+NOTAS PARA SIGUIENTE ITERACIÓN (v2 de este protocolo)
+====================================================
+
+Revisar después de 2-3 semanas de uso real:
+
+[ ] ¿El paso 1.9 (output pre-partido) tiene la información mínima
+    necesaria, o sobra/falta algún campo?
+[ ] ¿El bloque generado en 2.4 se pega limpio en MLB_Postmortems_Raw
+    sin edits manuales? ¿Hay desajustes de formato con bloques históricos?
+[ ] ¿El disparador del conteo periódico (~25 partidos) es la ventana
+    correcta, o conviene más corta/larga?
+[ ] ¿La regla anti-sesgo retrospectivo se sostiene en partidos no
+    analizados conmigo? ¿Cuántos quedan con "[NO DOCUMENTADO PRE-PARTIDO]"?
+[ ] ¿Algún paso del pre-partido (1.1-1.8) se omite consistentemente
+    en la práctica? Si sí, simplificar o consolidar.
+[ ] ¿Aparecen tareas recurrentes que este protocolo no cubre y que valdría
+    sumar en v2? (live betting, parlay assembly, gestión de bankroll, etc.)
+[ ] ¿La interacción con data/postmortems.yaml necesita formalizarse más
+    o se mantiene como flujo paralelo del usuario?
