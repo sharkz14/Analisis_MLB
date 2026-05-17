@@ -289,3 +289,184 @@ La corrección para próximos análisis:
 Antes de atacar a un abridor por leash/comando, validar si el lineup rival realmente tiene paciencia, bajo chase, buen contacto y capacidad de convertir tráfico en daño.
 Padres no lo hizo: 0 BB, 10 K, solo 3 hits. Entonces el mejor mercado no era F5 Padres, sino los que respetaban mejor el entorno: under 8.5, F5 under, Vásquez outs.
 En una frase: no basta con que el abridor rival parezca vulnerable; el lineup elegido tiene que tener el perfil correcto para hacerlo vulnerable.
+
+	[Giants vs Athletics 150526]
+
+1. THESIS PRE-PARTIDO (antes de ver resultado)
+
+Edge principal en una frase:
+[ ] Ofensiva OAK en parque pro-HR castiga a Mahle (Tipo A+B) mientras SF (peor ofensiva MLB) no responde a Civale (Tipo C) ni a su propio pen roto.
+
+Nivel en Jerarquía de Edges (v2.1):
+[ ] Edge combinado — Posición 1 (parque/clima) + Posición 2 (matchup mano/repertorio) + Posición 4 (tipo vulnerabilidad pitcher)
+
+Tipo de vulnerabilidad del pitcher rival (si aplica):
+[ ] Mahle (SF): Tipo B primario con A secundario
+[ ] Civale (OAK): Tipo C (no es rival a atacar, pero relevante para fade lectura SF)
+
+Mercado(s) elegido(s):
+[ ] Athletics Team Total Over 4.5
+
+Cuota(s):
+[ ] ~1.90
+
+Stake relativo:
+[ ] 7.900 CLP
+
+Patrón v2.1 que respalda la jugada:
+[ ] Patrón 1 (Tipología vulnerabilidades pitcher A/B/C)
+[ ] Patrón 2 ("Mejor abridor" no es F5 side automático)
+[ ] Patrón 5 (Un solo equipo con rutas → su TT)
+[ ] Patrón 10 (Props salen del guion, no del menú)
+[ ] Patrón 11 (Factores ambientales)
+[ ] Patrón 12 (Side con ruido → mercado más limpio)
+
+2. RESULTADO OBJETIVO
+
+Marcador final:
+[ ] Athletics 5 — Giants 2. Hits 10-10. Errores 0-0.
+[ ] Daño concentrado de OAK en la 5ª (HR 3 R Kurtz + sencillo RBI Bolte = 4 R en un solo inning).
+
+Línea de abridores:
+[ ] Abridor A: Tyler Mahle (SF, L 1-5) — 5.0 IP, 10 H, 5 R, 5 ER, 1 BB, 6 K, 1 HR, 90 pit / 54 strikes, ERA 5.59
+[ ] Abridor B: Aaron Civale (OAK, W 5-1) — 5.0 IP, 6 H, 2 R, 2 ER, 1 BB, 2 K, 2 HR, 76 pit / 52 strikes, ERA 2.70
+
+Bullpen relevante:
+[ ] Bullpen SF (3.0 IP, 0 R combinados): Hentges 1 IP 1 K · Borucki 1 IP 1 K · Beck 1 IP 1 K — limpio. No fue el problema.
+[ ] Bullpen OAK (4.0 IP, 0 R combinados): Kuhnel H3 · Suarez H1 · Medina H2 · Harris S3 — sostuvieron pese a tráfico en la 7ª.
+
+Bates clave del partido:
+[ ] Nick Kurtz (OAK): 1-3, HR de 3 R en la 5ª, 3 RBI, HBP — el swing del partido (volteó de 2-1 SF a 4-2 OAK)
+[ ] Jeff McNeil (OAK): 2-3, doble RBI, R — abrió marcador en 2ª
+[ ] Henry Bolte (OAK): 2-4, RBI — sencillo productor 5ª (5-2)
+[ ] Luis Arraez (SF): 4-5, HR, doble, RBI, R — 8 TB; HR empató 1-1
+[ ] Harrison Bader (SF): 2-4, HR, RBI, R — HR solitario puso 2-1 SF en la 5ª
+[ ] Frenos SF: Chapman 0-5 / 5 LOB · Devers 0-3 BB / 4 LOB · Eldridge 0-3 BB / 4 LOB — 10 hits SF sin conversión
+
+Mercado(s) elegido(s) — ganó / perdió / push:
+[ ] OAK TT Over 4.5: ganó (5 R)
+
+3. POSTMORTEM (separar proceso de resultado)
+
+¿La lectura del edge fue correcta?
+[ ] Sí — Mahle castigado por HR + tráfico (5 ER en 5 IP, 1 HR); SF no convirtió (10 hits, 0 hits con RISP útil, 13+ LOB entre Chapman/Devers/Eldridge).
+
+¿El mercado capturó bien el edge?
+[ ] Sí — TT directo cobró en el momento exacto (inning 5) sin depender de timing F5 ni de margen específico.
+
+¿El timing del daño coincidió con la proyección?
+[ ] Sí — OAK concentró 4 R en la 5ª para cerrar el TT en regulación. Suficiente para la pick.
+
+¿Apareció algún factor ambiental que cambió el guion?
+[ ] No — parque pro-HR funcionó (3 HR totales: Kurtz, Arraez, Bader). Ambiente sostuvo la thesis.
+
+Clasificación del resultado:
+[ ] ACIERTO LIMPIO
+
+4. PATRÓN APLICABLE / EMERGENTE
+
+¿Qué patrón v2.1 explica mejor lo ocurrido?
+[ ] Patrón 5 (Un solo equipo con rutas → su TT) + Patrón 11 (Factores ambientales). El edge unilateral combinado con parque pro-HR encaja perfecto con el orden del Patrón 5: F5 TT / TT full game antes que ML caro. El Patrón 2 audit protegió contra concentrar en F5 (donde el daño llegó solo en la 5ª, F5 TT habría sido más exigente).
+
+¿Aparece un patrón nuevo que no está en v2.1?
+[ ] Sí
+Si sí, describirlo en 2-3 líneas:
+[ ] Caso de validación de Patrón 5 cuando el rival visitante es bottom-tier ofensivo: el TT del fuerte cobra cómodo aunque el marcador full game sea moderado (5-2). La sublección del Patrón 6 sobre RL puede tener excepciones cuando el rival no convierte tráfico (SF 10 hits / 2 R) — registrar para revisión en v2.2.
+
+¿Algún patrón v2.1 fue contradicho por este partido?
+[ ] No. Notar: la parte de la thesis sobre "pen roto SF" no fue testeada — Mahle absorbió todo el daño antes de exponer al pen. No invalida el patrón, pero sí muestra que el componente bullpen fue redundante para esta pick.
+
+5. LECCIÓN OPERATIVA EN UNA FRASE
+
+[ ] Cuando el rival es bottom-tier en R/g visitante y el favorito tiene matchup limpio en casa, el TT directo expresa el edge con menos timing risk que F5/ML.
+
+
+	[Marlins vs Rays 160526]
+
+1. THESIS PRE-PARTIDO (antes de ver resultado)
+
+Edge principal en una frase:
+[ ] Tropicana suprime ~9% runs + dos pitchers Tipo C ante lineups de poder limitado vs RHP
+
+Nivel en Jerarquía de Edges (v2.1):
+[ ] Posición 1 (parque/clima confirmado) + Posición 2 (matchup mano/repertorio)
+
+Tipo de vulnerabilidad del pitcher rival (si aplica):
+[ ] Tipo C (ambos abridores)
+
+Mercado(s) elegido(s):
+[ ] Rays Bases Robadas Over 1.5
+
+Cuota(s):
+[ ] 2.08
+
+Stake relativo:
+[ ] full (1.0u)
+
+Patrón v2.1 que respalda la jugada:
+[ ] Patrón 1 (Tipología vulnerabilidades pitcher A/B/C)
+[ ] Patrón 10 (Props salen del guion, no del menú)
+[ ] Patrón 11 (Factores ambientales: parque/clima/umpire)
+[ ] Patrón 12 (Side con ruido → mercado más limpio)
+
+2. RESULTADO OBJETIVO
+
+Marcador final:
+[ ] Marlins 10 — Rays 5 (10 innings). Hits 15-10. Errores Miami 4 / Tampa 1.
+[ ] Regulación: 2-2 al final del 9º. Marlins 8 R en la 10ª, Rays 3 R en la 10ª.
+
+Línea de abridores:
+[ ] Abridor A: Sandy Alcantara (MIA) — 6.0 IP, 7 H, 1 R, 0 ER, 0 BB, 6 K, 0 HR, 101 pitcheos / 69 strikes
+[ ] Abridor B: Nick Martinez (TB) — 6.0 IP, 5 H, 0 R, 0 ER, 1 BB, 4 K, 0 HR, 77 pitcheos / 53 strikes
+
+Bullpen relevante:
+[ ] Hunter Bigge (TB, L 1-1): 1 IP, 7 ER en la 10ª — rompió el partido
+[ ] Pete Fairbanks (TB, W 1-2): expuesto en la 9ª con sencillo de Fortes que empató 2-2
+
+Bates clave del partido:
+[ ] Javier Sanoja (MIA): 2-5, 1 R, 4 RBI, 2 dobles — doble productor 9ª (2-1) + doble 3 RBI 10ª
+[ ] Jakob Marsee (MIA): 3-4, 2 R, BB, triple — anotó la del 2-1 en 9ª desde 1ª en doble de Sanoja
+[ ] Liam Hicks (MIA): 2-5, 1 R, 2 RBI — sencillo productor de 2 R en 10ª rompió empate
+[ ] Heriberto Hernández (MIA, PH): 1-2, HR, 1 RBI — HR solitario 7ª empató 1-1
+[ ] Otto Lopez (MIA): 2-4, 1 RBI, doble, SF en 10ª
+[ ] Junior Caminero (TB): 2-5, 1 R, 2 RBI, doble — produjo 2 en baja del 10º
+[ ] Nick Fortes (TB): 1-2, 1 RBI — sencillo en 9ª empató 2-2 vs Fairbanks
+[ ] Richie Palacios (TB): 2-5, 1 SB (clave para la pick) + sorprendido en 3ª
+[ ] Chandler Simpson (TB): 1-4, 1 R, 1 RBI, BB — abrió marcador en 3ª
+
+Mercado(s) elegido(s) — ganó / perdió / push:
+[ ] Rays Bases Robadas Over 1.5: ganó
+
+3. POSTMORTEM (separar proceso de resultado)
+
+¿La lectura del edge fue correcta?
+[ ] Sí — parque + Tipo C × 2 sostuvieron run environment en regulación (2-2 a 9 innings, 1 ER combinado de abridores en 12 IP).
+
+¿El mercado capturó bien el edge?
+[ ] Sí — SB prop fue matchup-específico (catcher rookie vs Rays speed), independiente del run environment, no afectado por el blow-up de extras.
+
+¿El timing del daño coincidió con la proyección?
+[ ] N/A para la pick SB. Nota: el run environment proyectado se sostuvo en regulación (2-2); el daño en extras invalidó Under full game pero no afectó la pick.
+
+¿Apareció algún factor ambiental que cambió el guion?
+[ ] Sí — 4 errores defensivos de Miami inflaron el riesgo full game, y el bullpen específico (Bigge) rompió el partido en extras. Ninguno afectó la pick SB. Parque/Tipo C funcionaron en regulación como se proyectaba.
+
+Clasificación del resultado:
+[ ] ACIERTO LIMPIO
+
+4. PATRÓN APLICABLE / EMERGENTE
+
+¿Qué patrón v2.1 explica mejor lo ocurrido?
+[ ] Patrón 10 (Props salen del guion) + Patrón 12 (Side con ruido → mercado más limpio): la pick óptima dependía SOLO de matchup catcher rookie vs Rays speed, no del run environment del partido.
+
+¿Aparece un patrón nuevo que no está en v2.1?
+[ ] Sí
+Si sí, describirlo en 2-3 líneas:
+[ ] En partidos con dos Tipo C en parque suppressor, el riesgo principal del Under NO es la regulación sino EXTRAS con bullpen débil identificable. Antes de tomar Under en este perfil, exigir: ¿hay un brazo específico del bullpen con ERA >5 que sería long-relief en extras? Si sí, bajar stake del Under y subir picks independientes del run environment (SB, hits específicos, props matchup-driven).
+
+¿Algún patrón v2.1 fue contradicho por este partido?
+[ ] No
+
+5. LECCIÓN OPERATIVA EN UNA FRASE
+
+[ ] La pick más limpia en este perfil de partido NO es Under ni props ofensivas; es la prop matchup-específica que NO depende del run environment.
