@@ -470,3 +470,144 @@ Si sí, describirlo en 2-3 líneas:
 5. LECCIÓN OPERATIVA EN UNA FRASE
 
 [ ] La pick más limpia en este perfil de partido NO es Under ni props ofensivas; es la prop matchup-específica que NO depende del run environment.
+
+
+	[ATH vs LAA 190526]
+
+1. THESIS PRE-PARTIDO (antes de ver resultado)
+
+Edge principal en una frase:
+[x] Lopez es Tipo A con overlay HR/flyballs y leash corto (<6 IP) enfrentando
+    un lineup Angels con top-10 BB% vs LHP y Adell con 6/6 HR vs zurdos esta
+    temporada, mientras Detmers (xERA 3.20, chase 38.7%, changeup nuevo grip)
+    domina a un lineup ATH free-swinging que ya sentó a sus dos mejores zurdos
+    (Soderstrom, Butler).
+
+Nivel en Jerarquía de Edges (v2.1):
+[x] Posiciones 2-3-4: matchup mano/repertorio + leash/bullpen + tipo de
+    vulnerabilidad. Edge combinado de fuentes altas.
+
+Tipo de vulnerabilidad del pitcher rival (si aplica):
+[x] Tipo A puro (BB% 14.2%, K% 15.8%, FPS bajo) con overlay HR-prone
+    (2.20 HR/9, FB 50%). Identificación correcta sobre Lopez.
+
+Mercado(s) elegido(s):
+[x] PASS — no se apostó. Top 3 singles recomendadas:
+    #1 F5 TT ATH Under 2.5 @ 1.59
+    #2 F5 TT LAA Over 2.5 @ 1.96
+    #3 Adell Total Bases Over 1.5 @ 2.25
+    Parlay leg recomendada: F5 Hándicap LAA +0.5 @ 1.54
+    Pick principal pre-menú ampliado: F5 LAA Hándicap 0 @ 1.64
+
+Cuota(s):
+[x] Ver picks arriba.
+
+Stake relativo:
+[x] PASS (decisión final del usuario; framework completo recomendaba apostar)
+
+Patrón v2.1 que respalda la jugada:
+[x] Patrón 1 (Tipo A → F5 TT rival), Patrón 3 (timing temprano → F5),
+    Patrón 12 (edge contra abridor rival → F5 TT rival / bases bateadores).
+
+2. RESULTADO OBJETIVO
+
+Marcador final:
+[x] ATH 14 — LAA 6. F5: ATH 6, LAA 4.
+
+Línea de abridores:
+[x] Detmers (LAA, L 1-5): 5.2 IP, 8 H, 8 R, 8 ER, 2 BB, 8 K, 0 HR.
+    ERA 4.38 → 5.07. Segundo blow-up vs ATH en la temporada (primero 8/4).
+[x] Lopez (ATH): 3.2 IP, 7 H, 4 R, 4 ER, 3 BB, 2 K, 1 HR (Trout).
+    ERA 5.80 → 6.14. Tipo A confirmado pero salió antes que Detmers.
+
+Bullpen relevante:
+[x] LAA bullpen: Johnson 2 IP / 5 ER / 2 HR (Gelof, Rooker), ERA 15.12.
+    Confirmación del bullpen 30º como anticipado, pero llegó tarde.
+[x] ATH bullpen: Sterner (W), Perkins, Barlow, Harris, Kuhnel: 5.1 IP,
+    3 H, 0 ER, 1 BB, 5 K. Cerraron limpio.
+
+Bates clave del partido:
+[x] ATH: Kurtz 3-5, 5 RBI (LH vs LHP, proyectado como tough matchup).
+    Rooker 2-4, 3 RBI, HR. Gelof 3-5, 3 RBI, HR. Thomas 2-3, 1 RBI
+    (rookie sin track record que produjo). Hernaiz 2-4.
+[x] LAA: Trout 1-3, 2 RBI, HR (vs Lopez en 3ª, único punto del guion
+    que se cumplió del lado LAA). Grissom 1-5, 2 RBI. Adell 0-5, 1 K —
+    colapso total del prop principal.
+
+Mercado(s) elegido(s) — ganó / perdió / push:
+[x] PASS — N/A. Hipotéticos:
+    F5 TT ATH Under 2.5 → perdió (ATH 6 en F5)
+    F5 TT LAA Over 2.5 → GANÓ (LAA 4 en F5)
+    Adell TB Over 1.5 → perdió (0 TB)
+    F5 LAA +0.5 → perdió (LAA F5 -2)
+    F5 LAA Hándicap 0 → perdió
+    Adell HR → perdió
+    Stake medio en singles 1+2+3: hipotético -2.04u.
+
+3. POSTMORTEM (separar proceso de resultado)
+
+¿La lectura del edge fue correcta?
+[x] No. La tesis "Detmers > Lopez en innings 1-5" se cayó: Detmers absorbió
+    8 ER en 5.2 IP, Lopez 4 ER en 3.2 IP. El "mejor pitcher" del partido
+    recibió más daño. La parte "Lopez es vulnerable" sí se cumplió
+    parcialmente (LAA 4 R en F5).
+
+¿El mercado capturó bien el edge?
+[x] N/A (PASS). Retrospectivamente: NO en agregado, aunque uno de los seis
+    instrumentos del menú (F5 TT LAA Over 2.5) sí cobró. Ese acierto parcial
+    confirma que el lado ofensivo LAA-vs-Lopez era real; lo que falló fue
+    asumir que Detmers contendría a ATH.
+
+¿El timing del daño coincidió con la proyección?
+[x] Parcial. LAA anotó temprano (4 R en F5 vs Lopez) — confirma timing
+    temprano vs Tipo A. PERO ATH también anotó temprano (6 R en F5, todos
+    en el 3º inning vs Detmers). Doble blow-up temprano que el análisis no
+    contempló para Detmers.
+
+¿Apareció algún factor ambiental que cambió el guion?
+[x] Sí, parcialmente. Park factor multi-año (99/101 neutro) era la lectura
+    correcta; usé el factor de muestra chica 2026 (83/84 pitcher-friendly)
+    como anclaje y el partido jugó como hitter's park (20 carreras
+    combinadas). Viento real 7 mph R-to-L (pro-HR para derechos pull a LF)
+    levemente más pro-bateo que la proyección S 5-10 mph que usé. NO fue
+    factor decisivo — la decisión la hicieron los dos abridores estallando.
+
+Clasificación del resultado:
+[x] PASS CORRECTO (jugada) — no se apostó y el menú entero hipotético
+    habría perdido neto.
+[x] ERROR DE LECTURA (analítica) — la tesis principal sobre Detmers era
+    falsa.
+
+4. PATRÓN APLICABLE / EMERGENTE
+
+¿Qué patrón v2.1 explica mejor lo ocurrido?
+[x] Patrón 9 ("Pitcher élite no bloquea automáticamente"). Detmers no era
+    élite pero la lectura "buen pitcher con xERA convergence" funcionó como
+    overrating equivalente. El partido lo gana el equipo que castiga al
+    pitcher mejor reputado.
+
+¿Aparece un patrón nuevo que no está en v2.1?
+[x] Sí. Candidato a Patrón 13: Matchup-Specific vs Metric-Average. Cuando
+    un abridor ha tenido blow-up vs UN equipo específico durante la
+    temporada actual, el riesgo de repetición es MAYOR que lo que sugieren
+    sus métricas de temporada (xERA, K%, BB%). Detmers vs ATH ya había
+    estallado el 8/4; hoy se repitió. Las métricas avanzadas son promedio
+    vs liga; no neutralizan la asimetría head-to-head reciente. Candidato
+    a observación con 2-3 casos más antes de codificar formalmente.
+
+¿Algún patrón v2.1 fue contradicho por este partido?
+[x] Parcial. Patrón 5 ("Un solo equipo con rutas de anotación → su TT"):
+    identifiqué que solo LAA tenía ruta clara, asumiendo que sentar a
+    Soderstrom/Butler dejaba a ATH en monoruta HR. Realidad: ATH anotó
+    14 con multiruta (BB, hits seguidos, XBH, HR). El patrón en sí está
+    bien; la aplicación falló porque "lineup debilitado" se confundió con
+    "lineup monoruta". Requiere refinamiento de la heurística de cuándo
+    "lineup debilitado" implica realmente monoruta vs cuando solo cambia
+    composición.
+
+5. LECCIÓN OPERATIVA EN UNA FRASE
+
+[x] Cuando un pitcher tiene blow-up reciente vs un equipo específico en la
+    misma temporada, ese matchup-specific risk overrides metric-based
+    projection — no apostar fuerte a favor del pitcher contra el mismo
+    rival sin descontar el risk premium.
