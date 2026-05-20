@@ -1039,3 +1039,104 @@ Clasificación del resultado:
 5. LECCIÓN OPERATIVA EN UNA FRASE
 
 [ ] Cuando los datos de ruta del lineup favorito y la composición individual del bullpen rival contradicen el agregado, pesar más esos datos finos que el headline ERA del bullpen y la cuota del favorito. El Patrón 5 (tráfico sin conversión) se repite: el caso clásico de Baltimore 10 hits / 1 carrera / 0-7 RISP encontró su gemelo en Seattle 14 baserunners / 3 carreras / 1-13 RISP.
+
+
+	[Mariners vs Astros 140526]
+
+1. THESIS PRE-PARTIDO (antes de ver resultado)
+
+Edge principal en una frase:
+[ ] Turn 1 (correcto): SEA equipo mejor + Burrows HR-prone (perfil de temporada) → SEA ML 1.84 como pick top.
+[ ] Turn 2 (reframe que terminó adoptándose): Castillo en regresión multi-start (58.3% HH últimas 3) vs Burrows en groove (2.50 ERA últimas 3) → atacar a Castillo con HOU RHB. Reframe que descartó el edge correcto inicial usando forma reciente individual.
+
+Nivel en Jerarquía de Edges (v2.1):
+[ ] Turn 1: Posición 2 (matchup mano/repertorio basado en perfil de temporada).
+[ ] Turn 2: Posición 8 (forma reciente individual del pitcher — alto ruido). El reframe degradó la fuente del edge de posición 2 a posición 8.
+
+Tipo de vulnerabilidad del pitcher rival (si aplica):
+[ ] Tras el reframe: Castillo clasificado Tipo B (contacto fuerte permitido recientemente). Real: Castillo cumplió perfil Tipo B sin colapsar (5.2 IP, 3 ER); el verdadero blow-up fue Burrows (2 HR allowed, 7 ER en 5.2 IP).
+
+Mercado(s) elegido(s):
+[ ] PASS — usuario no apostó tras el reframe. Pick top final del análisis: HOU TT over (~4.5) + Castillo outs under 14.5.
+
+Cuota(s):
+[ ] SEA ML @ 1.84 (Turn 1, descartada); HOU TT over ~4.5; Castillo outs under 14.5; Over 9 @ 1.87.
+
+Stake relativo:
+[ ] PASS.
+
+Patrón v2.1 que respalda la jugada:
+[ ] Patrón 1 (Tipología Tipo B para Castillo, aplicada en Turn 2).
+[ ] Patrón 2 (aplicado al revés: "mejor abridor no es F5 side automático" usado para descartar SEA F5).
+[ ] Patrón 12 (side con ruido → mercado más limpio: el reframe argumentó esto para pasar de ML a TT/outs).
+
+
+2. RESULTADO OBJETIVO
+
+Marcador final:
+[ ] Mariners 8 — Astros 3. F5: SEA 5 - HOU 1. Total 11 R.
+
+Línea de abridores:
+[ ] Abridor A: Castillo (SEA) — 5.2 IP, 4 H, 3 R, 3 ER, 3 BB, 6 K, 1 HR (Alvarez 3ª), 108 pitches. Mejor que su forma reciente sugería; perfil Tipo B se cumplió sin implosión.
+[ ] Abridor B: Burrows (HOU) — 5.2 IP, 8 H, 7 R, 7 ER, 3 BB, 4 K, 2 HR (Raley 1ª de 3 R, Garver 4ª de 2 R), 102 pitches. DEMOLIDO — perfil HR-prone de temporada (.403 xwOBA FB, 8 HR/44 IP) ganó sobre "L3 en groove" del reframe.
+
+Bullpen relevante:
+[ ] SEA: Davila 1.1 IP / 0 R; Gonzalez D. 2.0 IP / 0 R. Tapó cómodo pese a uso pesado anoche.
+[ ] HOU: Bolton 3.1 IP / 1 ER. No fue el agujero hoy.
+
+Bates clave del partido:
+[ ] SEA: Raley HR 3 R en 1ª off Burrows; Garver HR 2 R en 4ª off Burrows; Donovan 3-5 (2B + 3B); Crawford 2-5 (2B, RBI).
+[ ] HOU: Alvarez 3-3 con HR + 2B + BB → 7 TB (única amenaza HOU); Walker 1-3.
+
+Ausencias relevantes:
+[ ] SEA sin Cal Raleigh (costado). HOU sin Correa (season), Peña, Diaz, Loperfido.
+
+Ambientales:
+[ ] Daikin Park, techo cerrado, 73°F, 0 mph wind. HP Umpire Willie Traynor.
+
+Mercado(s) elegido(s) — ganó / perdió / push:
+[ ] PASS — N/A. Hipotéticos: SEA ML @ 1.84 (pick top Turn 1) → ganó. HOU TT over (Turn 2 pick) → perdió. Castillo outs under 14.5 → perdió (17 outs). Over 9 → ganó. Alvarez TB over → ganó. F5 SEA → ganó (5-1). RL SEA -1.5 @ 2.26 → ganó.
+
+
+3. POSTMORTEM (separar proceso de resultado)
+
+¿La lectura del edge fue correcta?
+[ ] Parcialmente. La lectura de Turn 1 (SEA equipo mejor + Burrows HR-prone) era correcta y se materializó perfecto. La lectura de Turn 2 (atacar Castillo basándose en forma reciente) invirtió el edge correcto y se llevó la pick top al lado equivocado. Castillo cumplió Tipo B sin implosión; Burrows fue el que se rompió.
+
+¿El mercado capturó bien el edge?
+[ ] No. El mercado correcto (SEA ML @ 1.84) era la pick top del Turn 1 y fue descartado en el reframe. El menú final del Turn 2 (HOU TT over + Castillo outs under) perdió completo.
+
+¿El timing del daño coincidió con la proyección?
+[ ] No. Daño SEA fue temprano y concentrado (3 R en 1ª, 2 más en 4ª = F5 5-1). HOU solo respondió en 3ª (HR Alvarez off Castillo) y 6ª. El guion fue exactamente lo opuesto al reframe del Turn 2.
+
+¿Apareció algún factor ambiental que cambió el guion?
+[ ] No. Techo cerrado, viento 0, 73°F — ambiente neutralizado como predicho. Los factores ambientales sostuvieron lo que el Turn 1 proyectaba. El error no fue ambiental sino metodológico (sobrecorrección por forma reciente).
+
+Clasificación del resultado:
+[X] PASS_INCORRECTO (jugada): no se apostó y la pick top inicial (SEA ML @1.84) habría cobrado con holgura. Subsidiarias que también habrían cobrado: Over 9, F5 SEA, RL SEA -1.5, Alvarez TB.
+[X] ERROR_DE_MERCADO (analítica): el reframe degradó el mercado correcto (ML) y eligió mercados incorrectos (HOU TT over + Castillo outs under) basándose en una fuente de edge ruidosa (forma reciente individual, posición 8 v2.1).
+
+
+4. PATRÓN APLICABLE / EMERGENTE
+
+¿Qué patrón v2.1 explica mejor lo ocurrido?
+[ ] Filtro de selección v2.1 — fallo en ejecución. La pick top descartada (SEA ML @1.84) cumplía las 4 condiciones del check duro: cuota >1.80 ✓, capturaba el edge top del Turn 1 ✓, factores ambientales alineados ✓, sin razón válida del menú v2.1 para descartar (cuota corta o "forma reciente" NO están en la lista de razones válidas).
+[ ] Patrón 1 (Tipología Tipo B confirmada para Castillo — sí, pero el problema fue no atacar a Burrows que era el verdadero HR-prone del perfil de temporada).
+[ ] Jerarquía de Edges v2.1 — el reframe sustituyó posición 2 (matchup mano/repertorio de temporada) por posición 8 (forma reciente individual). v2.1 dice "si el edge principal viene de las posiciones 7-9, bajar stake o buscar confirmación en otra fuente más alta antes de apostar" — el reframe hizo lo contrario.
+
+¿Aparece un patrón nuevo que no está en v2.1?
+[X] Sí — patrón META sobre proceso multi-turn:
+
+"Sobrecorrección por forma reciente individual en segundo análisis": cuando un segundo turno de análisis cambia la pick top basándose en muestra chica de forma reciente del pitcher (<20 IP, ≤4 salidas) que contradice el perfil de temporada, suele degradar el primer análisis. Forma reciente individual es posición 8 de la Jerarquía v2.1 (alto ruido) — no debe anular matchup mano/repertorio (posición 2) cuando ese matchup viene del perfil de temporada completo.
+
+Trigger candidato v2.2: si el segundo análisis usa forma reciente <20 IP para descartar la pick top del primer análisis, regresar al primer análisis salvo que haya soporte Statcast subyacente (xwOBA, HH%, velocidad) en la misma dirección. Forma reciente sola NO es razón válida para descartar la pick top inicial.
+
+Conexión con Filtro de selección v2.1: extiende la lista de razones inválidas para descartar pick top que cumple el gatillo duro. Junto a "cuota corta sola", agregar "forma reciente individual sin soporte Statcast".
+
+¿Algún patrón v2.1 fue contradicho por este partido?
+[ ] No. Patrón 1 (Tipo B Castillo sobrevive permitiendo daño) se confirmó. Jerarquía de Edges se reforzó (posición 8 es ruido). Filtro de selección se reforzó (sexto caso del run donde descartar pick top que cumple el gatillo lleva a pérdida o pass_incorrecto).
+
+
+5. LECCIÓN OPERATIVA EN UNA FRASE
+
+[ ] Forma reciente individual con muestra <20 IP es ruido, no señal. Si un reframe en segundo análisis usa forma reciente para descartar la pick top inicial a cuota ≥1.80 que capturaba el edge, regresar al primer análisis: cuota razonable + edge top inicial + sin razón válida v2.1 para descartar = la pick se mantiene.
