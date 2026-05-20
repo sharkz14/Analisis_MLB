@@ -611,3 +611,253 @@ Clasificación del resultado:
     misma temporada, ese matchup-specific risk overrides metric-based
     projection — no apostar fuerte a favor del pitcher contra el mismo
     rival sin descontar el risk premium.
+
+
+	[Nationals vs Reds 130526]
+
+1. THESIS PRE-PARTIDO (antes de ver resultado)
+
+Edge principal en una frase:
+[X] Bullpen Cincinnati en su peor momento del año (MLB-worst últimas 2
+    semanas: 8.77 ERA, 2.10 HR/9, 11.1% barrel rate) entra temprano por
+    Lodolo regresando de IL con leash corto (78 pitches última salida), en
+    parque #1 HR para LHB con viento direccional favorable, contra ofensiva
+    WSH que acaba de explotar 10-4 en el mismo lugar. Ambos abridores
+    Tipo B con leash dudoso y ambos bullpens malos — el guion natural es
+    carreras distribuidas/ambos lados.
+
+Nivel en Jerarquía de Edges (v2.1):
+[X] Posición 3 (leash + plan de bullpen) reforzado por posición 1 (parque
+    confirmado + clima parcialmente confirmado pre-partido, totalmente
+    confirmado en box score post-partido).
+
+Tipo de vulnerabilidad del pitcher rival (si aplica):
+[X] Tipo B para ambos abridores.
+    - Lodolo (LHP): Tipo B con leash CORTO post-blister IL. 6.75 ERA, 8.37
+      FIP, 3.38 HR/9, 35.3% GB rate, FB rate en alza.
+    - Irvin (RHP): Tipo B clásico con contact issues. 89.0 mph avg EV,
+      45.6% hard-hit, .352 xwOBA, 12.3% barrel rate en parque hostil.
+
+Mercado(s) elegido(s):
+[X] Pick principal: Over 9.5 @ 2.00 (stake medio).
+[X] Pick secundaria: WSH TT Over 4.5 @ ~+120 (stake chico — atenuada por
+    García Jr. fuera del lineup).
+[X] Opcional: WSH ML @ 2.39 (pass / stake mínimo, demasiadas dependencias).
+
+Cuota(s):
+[X] Over 9.5 @ 2.00; WSH TT Over 4.5 @ ~2.20; WSH ML @ 2.39.
+
+Stake relativo:
+[X] PASS — ninguna pick ejecutada por el usuario.
+
+Patrón v2.1 que respalda la jugada:
+[X] Patrón 1 (tipología vulnerabilidades — ambos Tipo B).
+[X] Patrón 3 (timing del daño — proyectado distribuido).
+[X] Patrón 5 (rutas de anotación — ambos lados con rutas → over antes que side).
+[X] Patrón 11 (factores ambientales — parque confirmado, viento direccional
+    parcialmente confirmado <90 min via KLUK Lunken Field).
+[X] Patrón 12 (side con ruido → mercado más limpio = over full game).
+
+
+2. RESULTADO OBJETIVO
+
+Marcador final:
+[X] WSH 8 - CIN 7 (10 entradas). Total combinado: 15 R. WSH 10 H 1 E.
+    CIN 7 H 0 E.
+
+Línea de abridores:
+[X] Lodolo (CIN): 4.0 IP, 6 H, 5 ER, 3 BB, 6 K, 1 HR. ERA del juego 8.68.
+    HR permitido: Ruiz K HR 2 (2ª entrada, 2 on, 2 out).
+[X] Irvin (WSH): 3.0 IP, 4 H, 6 R (5 ER), 4 BB, 4 K, 1 HR. ERA 5.91.
+    HR permitido: Stephenson grand slam (1ª entrada, 3 on, 2 out).
+
+Bullpen relevante:
+[X] CIN bullpen (post-Lodolo): Antone 2 IP 2 H 1 ER 2 K; Burke 2 IP 1 H 0 ER;
+    Ashcraft 1 IP 0 H 0 ER; Santillan (L) 1 IP 1 H 2 R 1 ER 1 HR (Lile HR
+    en 10º decisivo, 1 on). Línea agregada: 6 IP, 4 H, 3 R, 2 ER, 1 HR —
+    significativamente mejor de lo proyectado en las 6 IP previas, pero el
+    HR Lile al final fue game-decider.
+[X] WSH bullpen: Parker 3 IP 0 ER 2 K; Lovelady 1 IP 0 ER; Ribalta 1 IP 0 ER;
+    Varland (W) 1 IP 0 ER; Poulin (S) 1 IP 1 ER. Línea agregada: 7 IP 1 ER.
+    Bullpen WSH SOSTUVO la ventaja y ganó el partido — contradice mi
+    lectura pre-partido de "WSH bullpen peor que CIN".
+
+Bates clave del partido:
+[X] WSH: Ruiz K HR 3 RBI; Abrams 2-5 con 2 R y doble; Young 2-4 2 R; Lile
+    2-4 2 RBI con HR de extra innings + doble; Wiemer 1-4 RBI; García Jr.
+    (PH) 1-3 (apareció como bateador emergente y produjo hit).
+[X] CIN: Stephenson grand slam 4 RBI; Bleday 3-4 con 2 dobles y 1 RBI;
+    Steer 2-4 1 RBI con doble; De La Cruz 2-5; Lowe N 1-3 2 RBI.
+[X] HRs totales: 3 (Ruiz 2ª, Stephenson 1ª, Lile 10ª).
+    Dobles: 5+ (Abrams, Wiemer, Bleday x2, Steer, Lile).
+
+Distribución del daño por inning:
+[X] F5: WSH 6 R (4-1-0-1-0... inning 1=0) + CIN 5 R (4-0-1-0-0) = 11 R en F5.
+    Resto: 4 R distribuidos innings 6-10. El 73% del daño total fue en F5.
+
+Mercado(s) elegido(s) — ganó / perdió / push:
+[X] Over 9.5 @ 2.00 — HABRÍA GANADO (no ejecutado). +1.00u flat hipotético.
+[X] Over 9 @ 1.80 — HABRÍA GANADO. +0.80u.
+[X] Over 10 @ 2.17 — HABRÍA GANADO. +1.17u.
+[X] Over 10.5 @ 2.32 — HABRÍA GANADO. +1.32u (la "descartada" pagó más).
+[X] WSH TT Over 4.5 @ ~2.20 — HABRÍA GANADO (WSH 8 R).
+[X] WSH ML @ 2.39 — HABRÍA GANADO.
+[X] F5 Over 5/5.5 (no incluida en menú final) — HABRÍA GANADO holgado.
+
+
+3. POSTMORTEM (separar proceso de resultado)
+
+¿La lectura del edge fue correcta?
+[X] Sí. Ambos abridores Tipo B se rompieron como proyectado (Lodolo 4 IP /
+    5 ER, Irvin 3 IP / 5 ER), ambos lineups produjeron (WSH 8, CIN 7),
+    parque y viento confirmaron el contexto ofensivo. La tesis madre
+    ("guion de carreras por ambos lados") se cumplió íntegramente.
+
+¿El mercado capturó bien el edge?
+[X] Sí. El Over 9.5 @ 2.00 era el mercado con menos dependencias del menú y
+    cobró con holgura (15 R vs línea 9.5). Aplicó la Regla Madre v2.1:
+    "Apostar al mercado que mejor expresa el edge con menos dependencias".
+
+¿El timing del daño coincidió con la proyección?
+[X] Parcialmente. Proyecté "daño distribuido full game"; el daño real fue
+    MÁS temprano. F5 = 11 R = 73% del total. Stephenson grand slam en 1ª,
+    Ruiz HR 3 en 2ª — el partido se rompió en los primeros 2 innings.
+    El Over F5 alto habría sido pick incluso más limpia. Esto no invalida
+    el Over 9.5 (también cobró), pero indica refinamiento al menú estándar.
+
+¿Apareció algún factor ambiental que cambió el guion?
+[X] No, todos los factores ambientales confirmaron la proyección.
+    Box score oficial: 61°F, partly cloudy, viento 12 mph OUT TO CF.
+    Esta confirmación post-partido es MÁS alineada con el guion que mi
+    lectura pre-partido del W/NW como "no es out puro" — sugiere que mi
+    modelo geográfico fue conservador de más para GABP específicamente.
+    Umpire Dexter Kelley con 4+ ABS challenges revertidas (zona errática)
+    — no fue factor determinante.
+
+Clasificación del resultado:
+[ ] ACIERTO LIMPIO (lectura correcta + mercado correcto + cobró)
+[X] PASS INCORRECTO (no se jugó y había edge claro)
+
+Doble clasificación útil:
+[X] Analítica: ACIERTO LIMPIO.
+[X] Ejecución: PASS INCORRECTO.
+
+
+4. PATRÓN APLICABLE / EMERGENTE
+
+¿Qué patrón v2.1 explica mejor lo ocurrido?
+[X] Patrón 1 (tipología vulnerabilidades): ambos Tipo B con leash corto se
+    rompieron como predecía la tipología — pero más rápido de lo esperado.
+[X] Patrón 3 (timing): el daño fue temprano, no distribuido. Refinamiento
+    necesario (ver patrón emergente abajo).
+[X] Patrón 5 (rutas): ambos lineups produjeron — over antes que side fue
+    la traducción correcta.
+[X] Patrón 11 (factores ambientales): viento + parque alineados,
+    confirmados in-game.
+[X] Patrón 12 (mercado más limpio): el side tuvo ruido (decidido en extra
+    innings, podría haber ido en cualquier dirección), el over fue limpio.
+
+¿Aparece un patrón nuevo que no está en v2.1?
+[X] Sí — candidato a Patrón 13 o refinamiento de Patrón 3:
+
+    "Cuando AMBOS abridores son Tipo B y AMBOS comparten un guion
+    temprano (leash corto + contacto fuerte permitido + ofensiva rival
+    apta para explotarlos en primeras 3-4 entradas), el Over F5 alto
+    puede ser MÁS limpio que el Over full game. La regla actual del
+    Patrón 3 distingue Tipo A → F5 / Tipo B-C → full game, pero NO
+    contempla el caso B+B con leash compartido atenuado por contexto.
+
+    Caso confirmado: Nationals/Reds 13/05/26 — F5 = 11 R, total = 15 R;
+    ambos abridores sub-5 IP; Stephenson grand slam 1ª, Ruiz HR 3 en 2ª.
+    73% del daño ocurrió en F5."
+
+    Hipótesis a validar con muestra nueva. Si reaparece en 2-3 casos
+    similares, incorporar al Patrón 3 con sub-regla:
+
+    "Tipo B + Tipo B ambos con leash atenuado por contexto (regreso IL,
+    parque hostil + ofensiva en racha, comando frágil reciente) →
+    F5 Over alto pasa a ser pick top, no solo full game."
+
+¿Algún patrón v2.1 fue contradicho por este partido?
+[X] Parcialmente Patrón 1 sobre Tipo B. La tipología dice "permite daño
+    pero llega a 5-6 IP". Aquí ambos Tipo B salieron en 3-4 IP. El factor
+    distintivo: leash atenuado adicional (Lodolo blister return; Irvin
+    contact pitcher en parque hostil enfrentando ofensiva en racha).
+
+    Refinamiento propuesto para v2.2:
+    Distinguir entre "Tipo B clásico con leash sólido" (Gallen, Lambert)
+    y "Tipo B con leash atenuado por contexto" (Lodolo post-IL,
+    Irvin en GABP). Los Tipo B con leash atenuado se comportan más cerca
+    del Tipo A en cuanto a salida corta — y por lo tanto el mercado
+    óptimo se desplaza de "full game over" hacia "F5 over alto".
+
+¿Filtro de selección v2.1 se aplicó / falló?
+[X] FALLÓ EN EJECUCIÓN. El filtro dice: "si la pick descartada tenía cuota
+    >1.80 Y capturaba el edge top, requerir al menos UNA razón específica
+    más allá de 'la cuota es baja'."
+
+    Aquí el Over 9.5 @ 2.00 cumplía:
+    - Cuota 2.00 > 1.80 ✓
+    - Capturaba el edge top identificado en el análisis ✓
+    - Factores ambientales confirmados (viento KLUK <90 min) ✓
+    - Patrón 12 sostenía la elección ✓
+
+    La pick no se ejecutó. Este es exactamente el caso que la heurística
+    v2.1 estaba intentando prevenir. NO debilita la regla — la refuerza.
+
+¿Hipótesis emergente sobre dimensionado de stake?
+[X] Mi recomendación fue "stake medio" sobre Over 9.5 atenuando por el
+    viento parcialmente confirmado y García Jr. fuera. Visto post-partido,
+    ambas atenuaciones fueron innecesarias: el viento se confirmó out, y
+    García Jr. fuera no afectó el over (entró como PH y produjo). El stake
+    medio era apropiado bajo la información disponible, pero vale revisar
+    si el filtro de "atenuaciones cruzadas" no está siendo demasiado
+    pesimista cuando 4 de 5 piezas del guion están claras.
+
+
+5. LECCIÓN OPERATIVA EN UNA FRASE
+
+[X] Cuando ambos abridores son Tipo B con leash atenuado por contexto y
+    ambos bullpens están expuestos, el Over full game es seguro pero el
+    Over F5 alto puede ser aún más limpio; y cuando una pick cumple todo
+    el filtro v2.1 (cuota >1.80 + captura el edge top + factores
+    ambientales alineados <90 min), no ejecutarla es exactamente el
+    error que la heurística está tratando de prevenir.
+
+
+===== FIN BLOQUE POSTMORTEM =====
+
+
+NOTAS METODOLÓGICAS COMPLEMENTARIAS (para registro)
+
+Probabilidades implícitas observadas en el mercado pre-partido:
+- Over 8.5 @ 1.65: no-vig 57.7% / mi lectura ~62% / edge +4 pp.
+- Over 9.0 @ 1.80: no-vig 53.0% / mi lectura ~57% / edge +4 pp.
+- Over 9.5 @ 2.00: no-vig 47.6% / mi lectura ~52% / edge +4 pp. ← PICK PRINCIPAL
+- Over 10.0 @ 2.17: no-vig 43.9% / mi lectura ~46% / edge +2 pp.
+- Over 10.5 @ 2.32: no-vig 41.1% / mi lectura ~40% / edge -1 pp.
+
+La curva de edge cae desde 9.5 → 10 → 10.5. Resultado real (15 R) habría
+hecho cobrar TODAS las líneas. El Over 10.5 @ 2.32 fue la línea descartada
+por edge marginal negativo (-1 pp) que terminó cobrando mejor. No es error
+metodológico: el descarte fue correcto en términos de valor esperado, no en
+términos de resultado puntual.
+
+Aprendizaje meta: la diferencia entre "decisión correcta" y "resultado
+favorable" se mantiene. Tomar Over 10.5 por +1.32u retrospectivo NO sería
+mejor proceso, solo mejor varianza puntual.
+
+
+REFERENCIA CRUZADA CON OTROS POSTMORTEMS
+
+Comparar este caso con:
+- Cubs/Reds 04/05/26: TT over que perdió por margen porque viento no se
+  confirmó. Inverso de este caso — aquí el viento sí se confirmó (KLUK 4:53pm
+  + box score 12 mph Out To CF).
+- Astros/Dodgers 05/05/26: TT over perdió porque abridor rival aguantó 7 IP.
+  Inverso aquí — ambos abridores salieron en 3-4 IP, expusieron bullpens.
+- Padres/Cardinals 07/05/26: 5 condiciones de Patrón 6 cumplidas, inversión
+  drástica funcionó. Aquí NO se cumplió Patrón 6 (Reds no tenían "lineup
+  flojo vs RHP" — De La Cruz en racha) → over fue la lectura correcta.
+- Braves/Rockies 03/05/26: parque ofensivo + ambos lineups con rutas →
+  Over y TTs cobraron. Caso análogo en estructura (Coors vs GABP).
