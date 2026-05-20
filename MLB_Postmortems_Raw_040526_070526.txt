@@ -948,3 +948,94 @@ Cuando la tesis identifica correctamente vulnerabilidad pitcher Tipo A en lineup
 5. LECCIÓN OPERATIVA EN UNA FRASE
 
 [ ] Cuando la tesis es daño colectivo de un lineup vs pitcher frágil, jerarquizar mercados de evento colectivo (TT, ML, hits/ER/BB permitidos por el pitcher) sobre props individuales de bateador incluso a mayor cuota — la varianza individual tumba la tesis correcta.
+
+
+	[Mariners vs Astros 130526]
+
+1. THESIS PRE-PARTIDO (antes de ver resultado)
+
+Edge principal en una frase:
+[ ] McCullers Tipo A (BB% ~15, ERA 7.41, ya entregó 6 R en 4.1 IP a Seattle esta temporada) + bullpen HOU 6.05 ERA agregado (peor MLB, sin Hader) + lineup Seattle zurdo-heavy contra RHP (5 LHB) + parque Daikin friendly LF para zurdos pull-side. Edge ofensivo Seattle full game, no F5 (timing distribuido). Bryce Miller debutante es incógnita de segundo orden — no invalida el edge top.
+
+Nivel en Jerarquía de Edges (v2.1):
+[ ] Posición 2 (matchup mano/repertorio) + Posición 1 (parque/clima) + Posición 3 (leash/bullpen).
+
+Tipo de vulnerabilidad del pitcher rival (si aplica):
+[ ] Tipo A (McCullers: comando frágil, BB% ~15, K bajo, ERA 7.41 entrando).
+
+Mercado(s) elegido(s):
+[ ] PASS — Seattle TT over 4.5 @ 1.82 era la pick recomendada por el análisis (single, stake medio implícito), usuario no la ejecutó.
+
+Cuota(s):
+[ ] Seattle TT over 4.5 @ 1.82; alternativas evaluadas: TT over 3.5 @ 1.50, TT over 5.5 @ 2.30, Seattle ML @ 1.75, Total over 9 @ 1.87.
+
+Stake relativo:
+[ ] PASS.
+
+Patrón v2.1 que respalda la jugada:
+[ ] Patrón 1 (Tipología Tipo A → atacar comando frágil).
+[ ] Patrón 5 (lineup zurdo-heavy con rutas → su TT).
+[ ] Patrón 11 (factores ambientales: techo cerrado, viento 0, parque LF-friendly).
+
+
+2. RESULTADO OBJETIVO
+
+Marcador final:
+[ ] Astros 4 — Mariners 3 (10 innings). Total 7 R. F5: 0-0 empate.
+
+Línea de abridores:
+[ ] Abridor A (Seattle): Bryce Miller — 5.1 IP, 8 H, 2 R, 2 ER, 1 BB, 3 K, 1 HR, 81 pitches. Debut sólido post-IL, comando aceptable, K rate bajo. Perfil Tipo B en este start.
+[ ] Abridor B (Houston): Lance McCullers — 5.1 IP, 7 H, 2 R, 2 ER, 2 BB, 6 K, 2 HR (Crawford 1ª, Raley 6ª — ambos solitarios), 90 pitches. Mejor de lo proyectado por análisis: limitó daño pese a contacto.
+
+Bullpen relevante:
+[ ] HOU (4.2 IP, 0 ER combinados): Okert 1.1 IP, De Los Santos 1.1 IP, King 1.0 IP (BS 1), Abreu 1.0 IP (W). DOMINANTE — completamente contrario a la lectura pre-partido del agregado 6.05 ERA. 1 H, 0 ER, 1 BB, 5 K combinados.
+[ ] SEA: Criswell 0.2 IP (BS), Davila 1 IP, Bazardo 0.2 IP / 1 R, Simpson 0.1 IP, Muñoz 1 IP / 3 K, Hoppe 0 IP / 1 R (L) — Hoppe cargó la derrota en el 10º.
+
+Bates clave del partido:
+[ ] SEA: Crawford HR solitario 1ª off McCullers; Raley HR solitario 6ª off McCullers. Cal Raleigh 0-4. 8 H, 6 BB, 3 R, 11 LOB, 1-for-13 con RISP — conversion fail clásico (Patrón 5).
+[ ] HOU: Walker HR 6ª; Cole 3 H; Shewmake 2 H. 12 H, 3 BB, 4 R, 14 LOB, 2-for-12 con RISP — también conversion fail, pero menos severo.
+
+Mercado(s) elegido(s) — ganó / perdió / push:
+[ ] PASS — N/A. Hipotéticos: Seattle TT over 4.5 @ 1.82 → perdió (SEA 3 R). Seattle TT under 4.5 @ 1.99 → ganó. Seattle TT under 3.5 @ 2.60 → ganó. HOU +1.5 → ganó. Total over 9 → perdió (7 R). Seattle ML @ 1.75 → perdió. McCullers under 5.5 Ks → perdió (6 K).
+
+
+3. POSTMORTEM (separar proceso de resultado)
+
+¿La lectura del edge fue correcta?
+[ ] Parcialmente. McCullers sí mostró perfil Tipo A en parte (2 HR allowed, 7 H, salida en 5.1 IP) pero limitó daño a 2 ER porque los HRs fueron solitarios y los 7 H no se concentraron. La parte "bullpen HOU 6.05 ERA" fue lectura agregada que ocultó que los brazos relevantes (Okert 3.79, King 3.57, De Los Santos 4.15) son sólidos individualmente — el promedio estaba inflado por Hader IL + Abreu 8.56.
+
+¿El mercado capturó bien el edge?
+[ ] No. Seattle 14 baserunners / 1-for-13 con RISP / 11 LOB es el guion exacto del Patrón 5 — tráfico sin conversión. El TT over necesitaba conversión; lo correcto retrospectivo era TT under.
+
+¿El timing del daño coincidió con la proyección?
+[ ] No. Proyectado "edge full game ofensivo distribuido"; realidad: 2 HRs solitarios separados (1ª y 6ª) + 0 conversion de RISP. Daño puntual sin sostener.
+
+¿Apareció algún factor ambiental que cambió el guion?
+[ ] No. Techo cerrado, viento 0, 73°F interior — neutralizado como se predijo. Umpire Roberto Ortiz (rotación predicha correctamente), neutral. Los factores ambientales sostuvieron el edge teórico; lo que falló fue la lectura del bullpen y la conversión.
+
+Clasificación del resultado:
+[X] PASS_CORRECTO (jugada): no se apostó y la pick recomendada habría perdido. Pass operativamente correcto.
+[X] ERROR_DE_MERCADO (analítica): el frame del análisis era erróneo — la dirección correcta era TT under, no TT over. ATH ML / HOU +1.5 / Seattle TT under habrían cobrado.
+
+
+4. PATRÓN APLICABLE / EMERGENTE
+
+¿Qué patrón v2.1 explica mejor lo ocurrido?
+[ ] Patrón 5 (Un solo equipo con rutas → TT, pero con caveat: tráfico sin conversión no sostiene over). Seattle 14 baserunners / 3 R / 1-13 RISP es el gemelo exacto del caso canónico Baltimore 10 H / 1 R / 0-7 RISP en v2.1. Refuerza el patrón base — tráfico ≠ carreras.
+[ ] Patrón 6 (Favorito sin edge ofensivo colectivo) — Seattle road OPS .645 (5º peor MLB) era flag que el análisis no ponderó. Caveat: las 5 condiciones de inversión drástica no se cumplían todas (Seattle es favorito pero su lineup era el "fuerte", el problema fue el road performance).
+[ ] Patrón 1 (Tipo A confirmado parcialmente — McCullers permitió contacto pero limitó daño).
+
+¿Aparece un patrón nuevo que no está en v2.1?
+[X] Sí. Dos hipótesis candidatas a v2.2:
+
+(1) Road OPS del lineup como modificador de PRIMER orden para TT over visitante. Cuando el favorito tiene road OPS bottom-10 MLB (Seattle .645, 5º peor), el TT over exige confirmación adicional incluso si matchup mano/repertorio + bullpen rival agregado sugieren edge claro. El edge contra el pitcher puede materializarse (2 HR allowed) sin que la ofensiva road lo convierta (1-13 RISP). Requiere chequeo explícito en el filtro pre-partido.
+
+(2) ERA agregado de bullpen sobreestima fragilidad cuando un brazo extremo (Hader 60-IL, Abreu 8.56) infla el promedio. Antes de tomar TT over o total over apoyado en "bullpen rival débil", chequear ERA de los 3-4 brazos que realmente cubrirían 6ª-9ª, no el agregado del equipo. Conecta con el refinamiento ya en watchlist (granularidad de bullpen por rol, de PHI/BOS 13/05) — son dos caras del mismo concepto: no confiar en métricas agregadas de bullpen.
+
+¿Algún patrón v2.1 fue contradicho por este partido?
+[ ] No. Patrón 5 reforzado (caso clásico de tráfico sin conversión). Patrón 1 confirmado parcialmente (Tipo A permitió daño pero limitado). El hueco está en que faltaba un check explícito sobre road OPS antes de tomar TT over visitante, y en que el agregado de bullpen ocultaba la composición real.
+
+
+5. LECCIÓN OPERATIVA EN UNA FRASE
+
+[ ] Cuando los datos de ruta del lineup favorito y la composición individual del bullpen rival contradicen el agregado, pesar más esos datos finos que el headline ERA del bullpen y la cuota del favorito. El Patrón 5 (tráfico sin conversión) se repite: el caso clásico de Baltimore 10 hits / 1 carrera / 0-7 RISP encontró su gemelo en Seattle 14 baserunners / 3 carreras / 1-13 RISP.
