@@ -861,3 +861,90 @@ Comparar este caso con:
   flojo vs RHP" — De La Cruz en racha) → over fue la lectura correcta.
 - Braves/Rockies 03/05/26: parque ofensivo + ambos lineups con rutas →
   Over y TTs cobraron. Caso análogo en estructura (Coors vs GABP).
+
+
+	[Cardinals vs Athletics 130526]
+
+1. THESIS PRE-PARTIDO (antes de ver resultado)
+
+Edge principal en una frase:
+[ ] Liberatore overperforming peripherals (xERA 5.81 vs ERA 4.07; K% 14.6%, BB% 8.2%) con historial duro vs RHB (.878 OPS career) enfrenta lineup ATH RHB-stacked (7R+1L+1S) en Sutter Health Park (1.6x HR factor) con viento real 10 mph S/SW out — ATH cobra el partido por contacto y tráfico contra Liberatore.
+
+Nivel en Jerarquía de Edges (v2):
+[ ] Combinación: matchup mano/repertorio (#2) + parque/clima confirmado (#1) + tipo vulnerabilidad pitcher (#4). Edge multi-fuente alto en la jerarquía.
+
+Tipo de vulnerabilidad del pitcher rival (si aplica):
+[ ] Tipo A predominante (comando frágil, BB↑, K↓, overperforming) con tinte Tipo B (contacto fuerte permitido a RHB).
+
+Mercado(s) elegido(s):
+[ ] Brent Rooker Over 0.5 BB (Bases por bolas del bateador).
+
+Cuota(s):
+[ ] 2.54
+
+Stake relativo:
+[ ] Chico (0.5u).
+
+Patrón v2 que respalda la jugada:
+[ ] Patrón 1 v2.1 (Tipo A → BB allowed over como mercado primario; trasladado a bateador específico). Patrón 11 v2.1 (factores ambientales confirmados con anemómetro real <90 min). Patrón 14 (prop sale del guion, no del menú — Rooker 4º RHB vs LHP comando frágil).
+
+
+2. RESULTADO OBJETIVO
+
+Marcador final:
+[ ] ATH 6 — STL 2. Carreras por inning ATH: 0/0/0/0/4/0/1/1/x. STL: 0/0/0/1/0/0/1/0/0.
+
+Línea de abridores:
+[ ] Liberatore (L, STL): 5.0 IP, 9 H, 4 R, 4 ER, 2 BB, 5 K, 1 HR — grand slam Kurtz 5ª (3 on, 1 out). Derrota.
+[ ] Ginn (W, ATH): 6.0 IP, 9 H, 1 R, 1 ER, 3 BB, 3 K. Victoria.
+
+Bullpen relevante:
+[ ] STL: Svanson 1.0 IP / 1 ER (HR Gelof 8ª). Bruihl 0.1 / 2 H. Graceffo 1.2 / 0 ER.
+[ ] ATH: Sterner (H,8), Harris (H,7), Medina (H,1), Perkins — 3 IP combinados sin permitir carreras tras Ginn.
+
+Bates clave del partido:
+[ ] ATH: Kurtz (LHB) 2 H + GRAND SLAM 5ª off Liberatore (4 RBI, game-winner). Gelof 2 H + HR off Graceffo 8ª. Thomas 2 H + 2B off Liberatore. Stefanic 3 H. Bolte 1-2, 2 R, 1 RBI, 1 BB.
+[ ] STL: Burleson 3 H. Cards 13 H totales pero 1-9 RISP, 10 LOB. Walker 0-4 con 2 K. Wetherholt 0-4. Rooker (ATH) 0-4 / 0 BB / 0 K.
+
+Mercado(s) elegido(s) — ganó / perdió / push:
+[ ] Rooker BB Over 0.5 @ 2.54 — PERDIÓ. Net partido: -0.5u.
+
+
+3. POSTMORTEM (separar proceso de resultado)
+
+¿La lectura del edge fue correcta?
+[ ] Sí. ATH cobró 6 R contra Liberatore como se proyectaba (9 H, 4 ER, HR allowed, salida en 5 IP). Tesis colectiva ("Liberatore se rompe vs lineup ofensivamente robusto en parque favorable") se materializó limpia.
+
+¿El mercado capturó bien el edge?
+[ ] No. La prop dependía de Rooker individualmente caminar. ATH como equipo solo sacó 2 BB en todo el partido (atacó agresivo a Liberatore, consistente con "tira fastballs sobre el plato"). El daño colectivo llegó por contacto, no por BB.
+
+¿El timing del daño coincidió con la proyección?
+[ ] Parcialmente. Liberatore sobrevivió 1ª-4ª limpio; el blow-up llegó concentrado en 5ª (grand slam). No fue temprano F5 ni tardío vs bullpen — fue salida media. Coherente con "Tipo A no sobrevive innings con tráfico acumulado", aunque vino más por slug que por BB.
+
+¿Apareció algún factor ambiental que cambió el guion?
+[ ] No materialmente. Viento final del game card: 3 mph OUT to RF — más débil que la lectura previa al partido (10 mph S/SW). El HR de Kurtz fue genuino, no asistido por viento. Umpire Whitson neutral según narrativa. ABS challenges anotados pero sin impacto.
+[ ] Sutileza tipo: el grand slam lo conectó el ÚNICO LHB del lineup (Kurtz). El platoon edge RHB vs LHP no se materializó por el camino esperado, pero la tesis colectiva (que Liberatore se rompiera) sí. No invalida el edge, lo matiza.
+
+Clasificación del resultado:
+[X] ERROR DE MERCADO (lectura correcta, mercado mal elegido)
+
+Notas: la pick efectiva era prop individual de varianza alta. Cinco mercados de evento colectivo con cuota viva (1.59-2.13) capturaban el mismo guion y cobraron — ATH TT over 4.5 @ 1.69, ATH TT over 5.5 @ 2.13, Liberatore Hits allowed over 5.5 @ 1.59, Liberatore ER over 3.5 @ 2.09, ATH ML @ 1.69. Los descarté por "cuota corta" o "mercado priceó la lectura" — exactamente el patrón que el filtro de selección v2.1 advierte. Suma al cluster Ohtani outs / Cavalli outs / Pittsburgh +1 F5.
+
+
+4. PATRÓN APLICABLE / EMERGENTE
+
+¿Qué patrón v2 explica mejor lo ocurrido?
+[ ] Patrón 1 v2.1 (Tipología Tipo A) — correctamente identificado y materializado en daño colectivo. Filtro de selección v2.1 — disparado fuertemente: 5/6 mercados descartados por cuota corta cobraron, mientras la pick larga cuota tomada perdió.
+
+¿Aparece un patrón nuevo que no está en v2?
+[X] Sí. Candidato a Patrón 13/14 (revisar con 2+ casos más antes de promover):
+
+Cuando la tesis identifica correctamente vulnerabilidad pitcher Tipo A en lineup ofensivamente robusto + parque favorable, los mercados de EVENTO COLECTIVO sobre el pitcher (hits allowed over, ER over, outs under) o sobre el lineup (TT over, ML) capturan el edge con menos varianza que las props INDIVIDUALES de bateadores. La cuota individual más larga (2.50+) no compensa la varianza de depender de un solo AB específico cuando hay mercados colectivos a 1.55-1.85 que cobran si CUALQUIER bateador del lineup ejecuta. Asimetría direccional clara, magnitud requiere más muestra.
+
+¿Algún patrón v2 fue contradicho por este partido?
+[ ] No directamente. Patrón 1 confirmó (Tipo A se rompió). Lo que falló fue la operativización: traducir "BB allowed over por Tipo A" a una prop individual del bateador (Rooker BB) en vez de mantenerla en el pitcher (Liberatore BB allowed over). Refinamiento operativo, no contradicción del patrón base.
+
+
+5. LECCIÓN OPERATIVA EN UNA FRASE
+
+[ ] Cuando la tesis es daño colectivo de un lineup vs pitcher frágil, jerarquizar mercados de evento colectivo (TT, ML, hits/ER/BB permitidos por el pitcher) sobre props individuales de bateador incluso a mayor cuota — la varianza individual tumba la tesis correcta.
