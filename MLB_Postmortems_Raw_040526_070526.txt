@@ -1140,3 +1140,93 @@ Conexión con Filtro de selección v2.1: extiende la lista de razones inválidas
 5. LECCIÓN OPERATIVA EN UNA FRASE
 
 [ ] Forma reciente individual con muestra <20 IP es ruido, no señal. Si un reframe en segundo análisis usa forma reciente para descartar la pick top inicial a cuota ≥1.80 que capturaba el edge, regresar al primer análisis: cuota razonable + edge top inicial + sin razón válida v2.1 para descartar = la pick se mantiene.
+
+
+	[Blue Jays vs Tigers 150526]
+
+1. THESIS PRE-PARTIDO (antes de ver resultado)
+
+Edge principal en una frase:
+[ ] Yesavage (RHP, splitter 57% whiff, xwOBA .236) neutraliza ofensiva DET mal acoplada al splitter (39% K rate / 41% whiff vs splitter en 2026); top-5 TOR enfrenta a Hanifee opener (xwOBA .312, HH% 28.6, Barrel 11.1) seguido de Madden bulk asumido (5 pitches fringe-average) con bullpen medio DET fatigado (Vanasco 70p/3d, Holton back-to-back).
+
+Nivel en Jerarquía de Edges (v2.1):
+[ ] Posición 2 (matchup mano/repertorio del pitcher vs perfil colectivo del lineup).
+
+Tipo de vulnerabilidad del pitcher rival (si aplica):
+[ ] Hanifee/Madden (DET, bullpen game): Tipo B (contacto fuerte permitido) con tinte C (Hanifee sin whiff).
+
+Mercado(s) elegido(s):
+[ ] PASS — usuario no apostó. Análisis recomendó cartera de 3: DET TT under 3.5 @ 1.90, F5 TOR +0.5 @ 1.60, Menos de 8 @ 1.96 (stake total 3.5u).
+
+Cuota(s):
+[ ] DET TT under 3.5 @ 1.90; F5 TOR +0.5 @ 1.60; Menos de 8 @ 1.96.
+
+Stake relativo:
+[ ] PASS.
+
+Patrón v2.1 que respalda la jugada:
+[ ] Patrón 1 (Tipología), Patrón 5 (rutas de anotación), Patrón 6 (favorito sin edge ofensivo colectivo), Patrón 8 (opener no es fade automático), Patrón 9 (pitcher élite — Yesavage), Patrón 11 (factores ambientales), Patrón 12 (side con ruido → mercado más limpio).
+
+
+2. RESULTADO OBJETIVO
+
+Marcador final:
+[ ] Detroit 3 — Toronto 2 (walk-off 9ª). Total 5 R. F5: TOR 2 - DET 1.
+
+Línea de abridores:
+[ ] Abridor A (Yesavage, TOR): 6.0 IP, 4 H, 2 ER, 3 BB, 6 K, 0 HR, 88 pitches (54 strikes). Leash mucho mayor del proyectado (4-5 IP estimado). 1.40 ERA temporada.
+[ ] "Abridor" B (DET, bullpen game): Hanifee opener 1.0 IP / 1 ER; Hurter 0.2 IP / 1 ER; Madden 0.1 IP (1 batter — NO fue el bulk como se proyectó); Smith 2.0 IP / 0 R; Drew Anderson 4.0 IP / 0 R (bulk real); Jansen (W) 1.0 IP / 0 R / 2 K.
+
+Bullpen relevante:
+[ ] TOR: Fisher 1 IP / 0 R; Mantiply 1 IP / 0 R; Hoffman (L 2-3) 0.2 IP / 1 ER — entregó el walk-off en la 9ª. Closer demoteado a 6.05 ERA. Riesgo flagueado pre-partido.
+[ ] DET: Anderson dominó (4 IP scoreless), Jansen cerró. Vanasco y Holton (flagueados como fatigados) ni entraron — plan de bullpen distinto al modelo proyectado.
+
+Bates clave del partido:
+[ ] TOR top-5 colapsó: Springer 0-4, Vlad 0-4, Varsho 0-3, Sánchez 0-3. Los 2 RBI de TOR fueron de Giménez (8º).
+[ ] DET dispersado: Dingler 2-3; Greene 1-4, RBI, 2B; Torkelson 1-3, RBI (2-out RBI, walk-off).
+
+Ambientales:
+[ ] 68°F, partly cloudy, viento 9 mph IN FROM RF (OPUESTO al pronóstico matinal SSW 10-15 mph hacia LF). Umpire HP Livensparger neutral. Att 31,038. T 2:42.
+
+Mercado(s) elegido(s) — ganó / perdió / push:
+[ ] PASS — N/A. Hipotéticos: las 3 picks recomendadas (DET TT under 3.5, F5 TOR +0.5, Menos de 8) → GANARON las 3 (+2.46u en 3u flat, +82% ROI hipotético). Trampas correctamente evitadas: TOR ML @1.78 → perdió (walk-off Hoffman); TOR -1.5 @2.34 → perdió; TOR TT over 3.5/4.5 → perdió (top-5 0-fer).
+
+
+3. POSTMORTEM (separar proceso de resultado)
+
+¿La lectura del edge fue correcta?
+[ ] Sí. Yesavage neutralizó a DET (6 IP / 2 ER / 6 K) como se proyectó; el top-5 de TOR colapsó (Patrón 6) como se proyectó. La tesis defensiva y la limitación ofensiva del favorito se materializaron ambas.
+
+¿El mercado capturó bien el edge?
+[ ] N/A (PASS). Retrospectivamente: SÍ — las 3 picks del análisis (TT rival under, F5 protegido del favorito, under total) capturaban exactamente el edge y cobraron las 3.
+
+¿El timing del daño coincidió con la proyección?
+[ ] Sí en lo defensivo (DET contenido a 3 R distribuidos: 3ª, 6ª, 9ª walk-off). El walk-off en la 9ª contra Hoffman fue el mecanismo de derrota de TOR ML — exactamente el riesgo de bullpen flagueado pre-partido.
+
+¿Apareció algún factor ambiental que cambió el guion?
+[ ] Sí — viento real 9 mph IN FROM RF, dirección OPUESTA al pronóstico matinal (SSW hacia LF). No fue decisivo para las picks tomadas (under), pero habría sido trampa si se hubieran tomado HR sprinkles de Varsho/Sánchez basados en el pronóstico. Validación literal de la regla v2.1 del viento.
+
+Clasificación del resultado:
+[X] PASS_CORRECTO (jugada) — el pase evitó las trampas flagueadas (TOR ML walk-off, TOR -1.5, TT over). Nota de tensión: las 3 picks recomendadas también habrían cobrado (+2.46u), lo que activa el corolario del filtro de selección v2.1 — si la razón del pase fue solo "cuotas chicas" o "aburrido", el descarte requiere razón específica más allá de eso. Clasificación operativa ambigua entre PASS_CORRECTO y PASS_INCORRECTO; registrada como PASS_CORRECTO por decisión del usuario.
+[X] ACIERTO_LIMPIO (analítica) — el análisis identificó el edge y eligió los mercados que mejor lo expresaban; las 3 picks cobraron al 100%.
+
+4. PATRÓN APLICABLE / EMERGENTE
+
+¿Qué patrón v2.1 explica mejor lo ocurrido?
+[ ] Patrón 6 (favorito sin edge ofensivo colectivo) en tier máximo + Patrón 12 (side con ruido → mercado más limpio). El edge venía del lado DEFENSIVO del favorito (Yesavage), y la separación F5 vs full game fue correcta: F5 cobró, ML full game perdió por el punto débil de bullpen identificado.
+
+¿Aparece un patrón nuevo que no está en v2.1?
+[X] Sí — tres observaciones:
+
+(1) BULLPEN GAME IMPROVISADO NO ES PLAN FIJO (candidato a Patrón 13). Cuando un equipo reorganiza rotación por lesiones múltiples (Skubal/Verlander/Mize IL en DET), la asignación de bulk reliever cambia día a día. El análisis proyectó Madden como bulk; el plan real fue Hanifee opener → Hurter → Madden 1 batter → Smith → Anderson 4 IP bulk → Jansen. Implicación: con incertidumbre estructural de rotación, analizar el bullpen game como SISTEMA (¿puede absorber 8 IP sin romperse?) en vez de anclar en un reliever específico.
+
+(2) PATRÓN 6 EN TIER MÁXIMO (4-5 condiciones) — refinamiento. TOR cumplía 4/5 condiciones (favorito mejor abridor, lineup colectivo OPS .773 vs RHP mediocre, parte baja débil, parque pitcher-friendly). El top-5 quedó 0-fer combinado. Sugerencia v2.2: tier explícito — 4-5 condiciones cumplidas → evitar TODOS los mercados ofensivos del favorito, no solo bajar stake.
+
+(3) PATRÓN 11 — VIENTO PRONÓSTICO ≠ VIENTO REAL. Validación literal de la regla v2.1: pronóstico SSW 10-15 mph hacia LF; viento real 9 mph IN FROM RF (invertido). Confirma que solo observación con anemómetro <90 min cuenta como confirmación.
+
+¿Algún patrón v2.1 fue contradicho por este partido?
+[ ] No. Patrón 6 reforzado al máximo, Patrón 11 validado literal, Patrón 12 confirmado (el punto débil de bullpen flagueado fue el mecanismo exacto de la derrota de TOR ML). El único hueco fue proyectar el bullpen game DET anclado en un reliever específico (Madden) en vez de como sistema.
+
+5. LECCIÓN OPERATIVA EN UNA FRASE
+
+[ ] Cuando el edge principal viene del lado DEFENSIVO del favorito (su pitcher neutraliza al rival), priorizar mercados que NO dependan del lado ofensivo del favorito: rival TT under > under total > F5 protegido > resto; si además se activa Patrón 6 en tier alto (4-5 condiciones), eliminar completamente los mercados ofensivos del favorito (TT over, RL, props), y nunca tomar viento sin confirmación de anemómetro <90 min.
