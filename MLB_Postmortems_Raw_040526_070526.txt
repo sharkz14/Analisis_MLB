@@ -1230,3 +1230,95 @@ Clasificación del resultado:
 5. LECCIÓN OPERATIVA EN UNA FRASE
 
 [ ] Cuando el edge principal viene del lado DEFENSIVO del favorito (su pitcher neutraliza al rival), priorizar mercados que NO dependan del lado ofensivo del favorito: rival TT under > under total > F5 protegido > resto; si además se activa Patrón 6 en tier alto (4-5 condiciones), eliminar completamente los mercados ofensivos del favorito (TT over, RL, props), y nunca tomar viento sin confirmación de anemómetro <90 min.
+
+
+	[Athletics vs Angels 210526]
+
+1. THESIS PRE-PARTIDO (antes de ver resultado)
+
+Edge principal en una frase:
+[ ] Soriano domina (K/whiff + GB extreme + nueva mezcla anti-zurdos) sobre lineup A's con 5 LHH; Severino vulnerable a HH/Barrel pero contra lineup Angels colectivamente flojo; parque pitcher-friendly → under + F5 LAA son los mercados limpios; props ofensivas de Trout son trampa.
+
+Nivel en Jerarquía de Edges (v2.1):
+[ ] Posición 2 (matchup mano/repertorio del pitcher vs perfil colectivo del lineup) — asimetría entre los dos abridores.
+
+Tipo de vulnerabilidad del pitcher rival (si aplica):
+[ ] Severino (LAA): Tipo B pre-partido (HH 41.4%, Barrel 9.8%). Confirmado parcial: permitió HR a Schanuel pero compensó con K (10 K en 7 IP) — comportamiento más cercano a Tipo C vs este lineup específico (ver patrón emergente).
+
+Mercado(s) elegido(s):
+[ ] PASS — análisis cerrado en step 3 (de 4+). Usuario decidió no apostar antes de completar selección de líneas. Menú top: Under 8/8.5 @ 1.87, LAA F5 @ 1.76, Soriano Ks over 6.5.
+
+Cuota(s):
+[ ] Under 8/8.5 @ 1.87; LAA F5 @ 1.76; Soriano Ks over 6.5 (cuota no registrada).
+
+Stake relativo:
+[ ] PASS.
+
+Patrón v2.1 que respalda la jugada:
+[ ] Patrón 1 (Tipología vulnerabilidades pitcher).
+[ ] Patrón 3 (Timing del daño: F5 vs full game).
+[ ] Patrón 6 (Favorito sin edge ofensivo colectivo — Angels lineup flojo).
+[ ] Patrón 10 (Props salen del guion, no del menú — Trout flagueado como trampa).
+
+
+2. RESULTADO OBJETIVO
+
+Marcador final:
+[ ] Athletics 3 — Angels 2 (10 innings). Total 5 R. F5: LAA 2 - ATH 0.
+
+Línea de abridores:
+[ ] Abridor A (Severino, LAA): 7.0 IP, 3 H, 2 ER, 0 BB, 10 K, 1 HR, 97 pitches. Dominante — el HR a Schanuel fue casi el único daño que permitió.
+[ ] Abridor B (Soriano, ATH): 6.2 IP, 6 H, 2 ER, 1 BB, 7 K, 0 HR, 103 pitches. Cumplió el perfil dominante con 7 K y 1 BB.
+
+Bullpen relevante:
+[ ] LAA: Silseth 0.1 IP, Fermin 1 IP / 2 K / WP, Yates 1 IP / 1 H, Zeferjahn (L) 1 IP / 1 R / 2 BB — entregó la carrera ganadora en el 10º.
+[ ] ATH: Sterner 1 IP / 1 K, Kuhnel (W) 1 IP / 1 BB, Leiter Jr. (S4) 1 IP / 1 H.
+
+Bates clave del partido:
+[ ] LAA: Schanuel (#3, LHH) HR de 2 R en la 1ª off Severino — única producción de LAA en todo el partido. Trout 0-3 con BB.
+[ ] ATH: Kurtz, Hernaiz, Langeliers cada uno con doble. 12 LOB, 2-for-11 con RISP — conversion fail clásico.
+
+Ambientales:
+[ ] HP umpire David Rackley sin sesgo aparente. Parque pitcher-friendly funcionó como se proyectó (5 R combinadas en 10 inn).
+[ ] O'Hoppe entró tarde por defensa (catcher rotado tras serie Dodgers); Trout siguió saliendo de slot #2.
+
+Mercado(s) elegido(s) — ganó / perdió / push:
+[ ] PASS — N/A. Hipotéticos: Under 8/8.5 @ 1.87 → ganó (5 R). LAA F5 @ 1.76 → ganó (LAA 2-0 al F5). Soriano Ks over 6.5 → ganó (7 K). ATH ML @ 1.98 → ganó (NO estaba en el menú recomendado). Trout HR → perdió. Trout TB over 1.5 → perdió (0 TB). Severino outs under → perdió (21 outs).
+
+
+3. POSTMORTEM (separar proceso de resultado)
+
+¿La lectura del edge fue correcta?
+[ ] Parcialmente. La tesis "Soriano domina + Severino vulnerable + under en parque pitcher-friendly" se materializó en el total (5 R) y en Soriano (7 K / 6.2 IP). Lo que falló parcialmente: Severino no se comportó como Tipo B esperado (10 K, 0 BB, solo 1 HR), porque el lineup LAA con K% colectivo alto no extendió at-bats. La vulnerabilidad estaba ahí pero el rival no la explotó.
+
+¿El mercado capturó bien el edge?
+[ ] N/A (PASS). Retrospectivamente: SÍ — Under 8/8.5 y LAA F5 cobraban ambas, exactamente como las identificó el análisis. El menú top era correcto; lo que faltó fue ejecutar.
+
+¿El timing del daño coincidió con la proyección?
+[ ] Sí en lo relevante. LAA anotó temprano (1ª inning HR Schanuel) — confirma F5 LAA. ATH no anotó hasta el 6º, lo que sostuvo el F5 LAA y el under. El daño en extras (1 R cada lado en 10º) fue varianza pura, no contradice el guion under.
+
+¿Apareció algún factor ambiental que cambió el guion?
+[ ] No. Parque pitcher-friendly funcionó, umpire neutral, sin viento adverso reportado. El ambiente sostuvo la thesis del under.
+
+Clasificación del resultado:
+[X] PASS_INCORRECTO (jugada) — análisis recomendó 3 picks (Under 8/8.5, LAA F5, Soriano Ks); las 3 habrían cobrado. ATH ML @1.98 también habría cobrado pero NO estaba en el menú — el análisis tenía claramente identificado el edge.
+[X] PASS_INCORRECTO (analítica) — mismo veredicto desde el lado del frame: edge identificado, picks correctas seleccionadas, no se actuó.
+
+4. PATRÓN APLICABLE / EMERGENTE
+
+¿Qué patrón v2.1 explica mejor lo ocurrido?
+[ ] Patrón 6 (Favorito sin edge ofensivo colectivo) — confirmado: LAA solo produjo el HR de Schanuel en todo el partido, 0 R adicionales en 9.2 innings; el lineup colectivo no respondió. Patrón 10 (Props salen del guion, no del menú) — Trout TB/HR habrían perdido pese a ser el "bate top"; el match correcto era Schanuel LHH vs Severino RHP HR-prone.
+
+¿Aparece un patrón nuevo que no está en v2.1?
+[X] Sí — dos refinamientos:
+
+(1) Tipo B se comporta como Tipo C cuando el lineup rival es K-heavy colectivo. Severino con HH 41.4% / Barrel 9.8% (Tipo B clásico pre-partido) debería haber permitido daño por tráfico; pero el lineup LAA con K% colectivo >25% no extendió at-bats — Severino terminó con 10 K, 0 BB, comportamiento estilo Tipo C (K alto + control aceptable). Implicación: la clasificación A/B/C debe leerse SIEMPRE en contexto del lineup rival, no en aislamiento. Un Tipo B contra lineup whiff puro se transforma operativamente en Tipo C.
+
+(2) Selección de bate-prop: priorizar LHH del top 5 con matchup platoon sobre RHH "bate top" cuando hay RHP HR-prone. Severino RHP HR-prone permitió HR exactamente al LHH (Schanuel #3) — no al RHH bate top (Trout #2). El calor reciente del bate top NO sustituye la asimetría platoon. Refinamiento operativo del Patrón 10.
+
+¿Algún patrón v2.1 fue contradicho por este partido?
+[ ] No. Patrón 6 confirmado al máximo (LAA top-5 0 R post HR Schanuel). Patrón 10 reforzado. La única tensión es operativa: clasificación A/B/C del pitcher debe condicionarse al lineup, no leerse en aislamiento — refinamiento del Patrón 1.
+
+5. LECCIÓN OPERATIVA EN UNA FRASE
+
+[ ] En partidos donde se cumple Patrón 6 (favorito sin edge ofensivo colectivo), under > F5 protegido > props ofensivas; nunca recomendar props del bate top RHH si hay un LHH viable en el top 5 contra un RHP HR-prone — la asimetría platoon manda sobre el calor reciente del bate top, y la clasificación A/B/C del pitcher debe leerse en contexto del lineup rival (Tipo B contra lineup whiff = Tipo C operativo).
