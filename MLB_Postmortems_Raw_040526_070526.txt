@@ -1322,3 +1322,160 @@ Clasificación del resultado:
 5. LECCIÓN OPERATIVA EN UNA FRASE
 
 [ ] En partidos donde se cumple Patrón 6 (favorito sin edge ofensivo colectivo), under > F5 protegido > props ofensivas; nunca recomendar props del bate top RHH si hay un LHH viable en el top 5 contra un RHP HR-prone — la asimetría platoon manda sobre el calor reciente del bate top, y la clasificación A/B/C del pitcher debe leerse en contexto del lineup rival (Tipo B contra lineup whiff = Tipo C operativo).
+
+
+	[Tigers vs Rays 010626]
+
+1. THESIS PRE-PARTIDO (antes de ver resultado)
+
+Edge principal en una frase:
+[x] Detroit corre un bullpen game con abridor capado de vuelta de IL (Madden)
+    por delante del peor relevo de cierre de MLB (sin Jansen ni Anderson,
+    Finnegan a 6.9 BB/9), mientras solo Tampa "parece" tener ruta colectiva
+    de anotación.
+
+Nivel en Jerarquía de Edges (v2.1):
+[x] Posición 3 — leash del abridor + plan/profundidad del bullpen (fuente
+    confiable). Contrapeso en posición 1 — parque supresor (Tropicana, ~0.95).
+
+Tipo de vulnerabilidad del pitcher rival (si aplica):
+[x] Madden: NO es A/B/C clásico — opener capado (Patrón 8), bajo BB. El blanco
+    real era el BULLPEN de Detroit (rasgos Tipo A en Finnegan).
+[x] Jax (abridor propio): NO dominante como SP, comando dudoso, recta/sinker
+    bateables. Marcado como vulnerable pero su castigo se juzgó "ilusorio"
+    porque Detroit "no convertiría".
+
+Mercado(s) elegido(s):  [RECOMENDADOS — NO JUGADOS / PASS]
+[x] 1) Rays Team Total Más 4.5        (primaria)
+[x] 2) Caminero Total Bases Más 1.5   (poder)
+[x] 3) Rays Hits Más 7.5              (piso)
+[x] Sprinkle: Caminero Jonrón Sí
+[x] Descartada como secundaria de varianza: Rays -1.5
+[x] Pass explícito: total del juego (ambos lados), F5, Detroit +1.5,
+    props de pitcher (Jax Over Ks 4.5 = trampa Patrón 4)
+
+Cuota(s):
+[x] Rays TT 2.05 | Caminero TB 2.15 | Rays Hits 1.67 | Caminero HR 4.00
+    | (Rays -1.5 @ 2.27 descartada)
+
+Stake relativo:
+[x] PASS — no se apostó. (Recomendación: medio el TT, medio-chico props,
+    sprinkle el HR, una sola posición por correlación.)
+
+Patrón v2.1 que respalda la jugada:
+[x] 5 (un solo equipo con rutas -> su TT), 12 (side con ruido -> mercado
+    más limpio), 10 (props del guion), 11 (ambiental), 8 (opener no es fade
+    automático), 4 (no Over Ks de Jax).
+
+
+2. RESULTADO OBJETIVO
+
+Marcador final:
+[x] Tigers 10 - Rays 9 (FINAL). Ganó el underdog visitante. 19 carreras, 7 HR.
+
+Línea de abridores:
+[x] Madden (DET): 3.1 IP, 3 H, 2 R, 2 ER, 2 BB, 4 K, 1 HR (capado, como se
+    proyectó; permitió el HR de Caminero).
+[x] Jax (TB, L 1-4): 4.0 IP, 7 H, 6 R, 6 ER, 1 BB, 5 K, 3 HR — SHELLED.
+    3 HR en la 3a entrada (Dingler, Carpenter, Greene).
+
+Bullpen relevante:
+[x] DET: Holton (W) 1.2 IP 0 R; Hanifee 0.0 IP 3 R (sin sacar out, HR de
+    Vilade); Sommers (H) 0.2 IP 0 R; Finnegan (H) 1.1 IP 0 R; Brieske 0.1 IP
+    3 R (debacle, ERA 32.40, parte del rally de Tampa en la 8a); Vest (S)
+    1.2 IP 1 R -> cerró el salvamento.
+[x] TB: Martin 3.0 IP 2 R 2 HR (Dingler, Lee); Sulser 1.0 IP 2 R;
+    Cleavinger 1.0 IP 0 R.
+
+Bates clave del partido:
+[x] DET ("ofensiva muerta" -> EXPLOTÓ): 14 H, 10 R, 5 HR.
+    Dingler 4-5, 4 R, 4 RBI, 2 HR; Carpenter 3 H, HR, 2 RBI; Greene 3 H, HR,
+    3 RBI; Lee 2 H, HR, 1 RBI.
+[x] TB: Caminero 1 H (HR off Madden), 3 R, 2 RBI, 4 TB, 2 BB; Díaz 3 H (doble);
+    Vilade HR de 3 carreras off Hanifee; Aranda 0-5, 3 K (frío).
+
+Mercado(s) elegido(s) — ganó / perdió / push (hipotético):
+[x] Rays TT Más 4.5         -> GANÓ (9 carreras)
+[x] Caminero TB Más 1.5     -> GANÓ (4 TB vía HR)
+[x] Rays Hits Más 7.5       -> GANÓ (8 hits, al filo)
+[x] Caminero HR Sí          -> GANÓ
+[x] (Rays -1.5 descartada)  -> habría PERDIDO (Detroit ganó outright)
+[x] (Aranda 1+ hit, alternativa no elegida) -> habría PERDIDO (0-5)
+[x] (Total del juego, que se mandó a PASS) -> el Over habría GANADO (19 R)
+
+
+3. POSTMORTEM (separar proceso de resultado)
+
+¿La lectura del edge fue correcta?
+[x] PARCIALMENTE.
+    - Correcta la mitad de Tampa: anotó 9 vía Madden (HR Caminero) + bullpen
+      reventado (HR Vilade off Hanifee + rally 8a off Brieske). Tal como se
+      proyectó.
+    - INCORRECTA la mitad de Detroit: la premisa "ofensiva muerta que no
+      castiga a Jax" fue falsa. Detroit metió 10 R y 5 HR (3 a Jax en la 3a).
+      El ángulo de splits (zurdos de Detroit vs recta bateable de Jax) que se
+      marcó "marginal" era la historia real.
+
+¿El mercado capturó bien el edge?
+[x] SÍ — y mejor de lo esperado. El TT AISLADO de Tampa cobró sin depender de
+    quién ganó el partido. El side / ML / Rays -1.5 / under habrían perdido
+    todos. La disciplina de "mercado más limpio" (Patrón 12) BLINDÓ la
+    recomendación contra el error de lectura sobre Detroit. Vindicado bajar
+    el RL a secundaria.
+
+¿El timing del daño coincidió con la proyección?
+[x] PARCIALMENTE. Tampa dañó a Madden (temprano) y al bullpen (Hanifee 6a,
+    Brieske 8a) = full game, ok. Pero el daño de Detroit a Jax (3a entrada,
+    3 HR) NO estaba proyectado.
+
+¿Apareció algún factor ambiental que cambió el guion?
+[x] SÍ — el parque. Se trató como net-supresor, pero el sub-quirk de HR
+    dominó: 7 HR en el juego. Clima confirmado bien (Dome, 72F, 0 viento,
+    HP Dan Bellino); el error fue de PONDERACIÓN del park factor agregado vs
+    su componente HR-friendly con dos abridores de recta bateable.
+
+Clasificación del resultado:
+[x] PICKS RECOMENDADAS: PASS_INCORRECTO — había edge, no se jugó, las 3
+    habrían cobrado (P&L hipotético 1u flat: +2.87u, más el sprinkle).
+    Analíticamente ACIERTO_LIMPIO del lado de Tampa (lectura + mercado
+    correctos por el motivo proyectado).
+[x] LECTURA DEL JUEGO (Detroit / over): ERROR_DE_LECTURA — que NO contaminó
+    las picks por estar aisladas al TT de Tampa.
+
+
+4. PATRÓN APLICABLE / EMERGENTE
+
+¿Qué patrón v2.1 explica mejor lo ocurrido?
+[x] En lo bueno: Patrón 12 (el mercado más limpio protegió la pick) +
+    Patrón 5 (el TT del equipo fuerte cobró). En lo malo: subestimación del
+    Patrón 11 (componente HR del parque) + hueco no cubierto por v2.1.
+
+¿Aparece un patrón nuevo que no está en v2.1? [x] Sí
+    >> CANDIDATO A PATRÓN 13:
+    "Ofensiva con peor AVG/wRC+ del slate =/= ofensiva inofensiva. En parque
+     HR-friendly + abridor rival con recta/sinker bateables, un lineup
+     'muerto' con poder zurdo latente (Carpenter, Greene) puede explotar por
+     HR SIN convertir tráfico. El bajo promedio oculta la vía de poder.
+     Es el Patrón 9 invertido cruzado con Patrón 11. Regla operativa: antes
+     de declarar 'una sola ofensiva tiene ruta' (Patrón 5), agregar el filtro
+     '¿el equipo sin ruta tiene perfil de poder + parque HR + recta bateable
+     enfrente?'. Si sí, NO tomar el under del juego ni asumir guion unilateral;
+     el TT del equipo fuerte sigue siendo válido, pero el over del juego
+     deja de ser un pass automático."
+     Casos a vigilar para confirmar: este (Tigers/Rays 01/06).
+
+¿Algún patrón v2.1 fue contradicho por este partido? [x] Sí (parcialmente)
+    >> Patrón 5 ("un solo equipo con rutas de anotación"): la premisa de
+       exclusividad falló — AMBAS ofensivas anotaron (over de 19). PERO el
+       patrón como guía de SELECCIÓN de mercado se sostuvo: elegir el TT de
+       Tampa (no el over del juego ni el side) sobrevivió igual. Revisar si
+       es ruido de muestra chica o si Patrón 5 necesita el filtro del
+       candidato a Patrón 13. No requiere reescritura todavía; sí una nota.
+
+
+5. LECCIÓN OPERATIVA EN UNA FRASE
+
+[x] No actuar sobre un menú +EV correcto (PASS_INCORRECTO) es el costo más
+    caro; y apostar el TT aislado del equipo fuerte —no el side ni el total—
+    hace que la pick cobre aunque te equivoques con la ofensiva rival, que en
+    parque de HR contra recta bateable nunca está tan "muerta" como su wRC+.
