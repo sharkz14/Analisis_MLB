@@ -1479,3 +1479,101 @@ Clasificación del resultado:
     caro; y apostar el TT aislado del equipo fuerte —no el side ni el total—
     hace que la pick cobre aunque te equivoques con la ofensiva rival, que en
     parque de HR contra recta bateable nunca está tan "muerta" como su wRC+.
+
+
+	[Astros vs Cubs 240526]
+
+1. THESIS PRE-PARTIDO (antes de ver resultado)
+
+Edge principal en una frase:
+[ ] Imanaga LHP élite (líder MLB whiffs, K% 28, BB% 4) vs lineup Astros 100% diestro sin Alvarez ni Altuve, en Wrigley pitcher-friendly con viento entrando proyectado y frío. Edge defensivo Cubs amplificado por bullpen Astros 30/30 MLB. Ofensiva Cubs vs Lambert Tipo B es edge teórico secundario, contaminado por racha brutal (7L seguidas, blanqueados día anterior, 0-9 RISP en viernes).
+
+Nivel en Jerarquía de Edges (v2.1):
+[ ] Edge combinado — Posición 1 (parque/clima) + Posición 2 (matchup mano/repertorio) + Posición 3 (leash/bullpen).
+
+Tipo de vulnerabilidad del pitcher rival (si aplica):
+[ ] Lambert (HOU): Tipo B (postmortem Astros/Dodgers 05/05 confirmado). Pre-partido se esperaba regresión vía xwOBA .295.
+
+Mercado(s) elegido(s):
+[ ] PASS — usuario no apostó pese a múltiples recomendaciones Tier S del análisis. Tier S sugerido: Cubs F5 DNB @1.60 + Astros TT under 3.0/3.5.
+
+Cuota(s):
+[ ] Cubs F5 DNB @1.60; Astros TT under 3.0/3.5; Imanaga over Ks 5.5; Imanaga over outs 16.5.
+
+Stake relativo:
+[ ] PASS.
+
+Patrón v2.1 que respalda la jugada:
+[ ] Patrón 1 (Tipología), Patrón 4 (Ks vs tráfico), Patrón 6 (favorito sin edge ofensivo colectivo — Cubs racha brutal), Patrón 9 (pitcher élite Imanaga), Patrón 11 (factores ambientales — Wrigley + viento), Patrón 12 (side con ruido → mercado más limpio).
+
+
+2. RESULTADO OBJETIVO
+
+Marcador final:
+[ ] Houston 8 — Chicago 5. F5: HOU 7 - CHC 3 (HR Walker 5º cerró el F5).
+
+Línea de abridores:
+[ ] Abridor A (Imanaga, CHC, L): 6.0 IP, 7 H, 7 R, 7 ER, 1 BB, 6 K, 3 HR (Meyers, Allen #9, Walker). ERA 3.38 → 4.04. Segundo blow-up consecutivo tras 18/05 (8 ER vs MIL). Patrón de degradación post-mediados-temporada continuo (4.70 ERA segunda mitad 2025).
+[ ] Abridor B (Lambert, HOU, R): 5.0 IP, 5 H, 3 R, 3 ER, 4 BB, 5 K, 0 HR. Tipo B confirmado, no se rompió pese a xwOBA .295 que predecía regresión. 103 pitcheos / 57 strikes. Salida exactamente al perfil del postmortem 05/05.
+
+Bullpen relevante:
+[ ] HOU: Blubaugh 2 IP / 1 ER / 1 HR (Busch); Abreu 1 IP / 0 R; Pearson 1 IP / 0 R (SAVE). King NO disponible (usado 22+23/05). Bullpen 30/30 MLB en ERA acumulada sostuvo — exactamente lo opuesto al headline pre-partido. Confirma advertencia del artículo TonySpicks del 22/05 que el análisis citó pero descartó.
+[ ] CHC: Roberts 1 IP / 0 R; Maton 1 IP / 0 R (no entró en alta-leverage); Thielbar 1 IP / 1 ER. Sin daño grave porque el partido ya estaba decidido.
+
+Bates clave del partido:
+[ ] HOU: Walker 1-4 HR 3 RBI (golpe definitivo 5º); Allen N #9 ("automatic out" en análisis) 3-3 con HR 2 RBI 2 R; Meyers 1-4 HR 1 RBI; Paredes 2-4. Daño distribuido en 3 spots del lineup (3, 5, 9).
+[ ] CHC: Busch 2-4 HR 2 RBI; Hoerner 1-5 1 RBI; PCA 0-1 con 3 BB + SF. Bregman 1-4 + HBP, 0 producción real. Conforto 0-4 2 K.
+
+Ausencias relevantes:
+[ ] HOU sin Yordan Alvarez (espasmo lumbar), Altuve (IL oblicuo), Diaz (IL), Loperfido (IL), Brown/Javier rotación (IL). Lineup todo-RHB, B-team.
+[ ] CHC sin Happ (banca, 1-de-24 slump), Shaw (IL espalda), Cabrera (DTD dedo).
+
+Ambientales:
+[ ] 64°F, viento 3 mph IN FROM LF (¡NO IN FROM RF como decía Rotowire!). Pronóstico 7 mph IN RF resultó equivocado en dirección Y magnitud. Tercer caso confirmado de Patrón 11 (viento pronóstico ≠ viento real) tras Reds/Cubs 04/05 y BlueJays/Tigers 15/05.
+[ ] HP Umpire Bill Miller (cambio respecto a Whitson del preview). Att 40,048. Primer pitch 1:20 PM.
+
+Mercado(s) elegido(s) — ganó / perdió / push:
+[ ] PASS — N/A. Hipotéticos: Cubs F5 DNB → perdió (F5 HOU 7-3). Astros TT under → perdió (HOU 8 R). Imanaga over Ks 5.5 → ganó (6 K). Imanaga over outs 16.5 → ganó (18 outs). Walker HR sprinkle → ganó. Bregman H+R+RBI o1.5 → perdió. Under 7.5 → perdió (13 R totales). Cubs ML → perdió. **Astros ML @2.40 → ganó (descartado explícitamente por el análisis). Astros +1.5 → ganó. Astros TT over 4.5 → ganó (8 R). Over 7.5 → ganó.**
+
+
+3. POSTMORTEM (separar proceso de resultado)
+
+¿La lectura del edge fue correcta?
+[ ] No. El edge defensivo (Imanaga LHP vs all-RHB sin Alvarez) se invirtió por completo: Imanaga 7 ER / 3 HR a 3 RHB diferentes incluyendo el #9 del lineup. La tesis "matchup teórico de mano + parque + viento + ofensiva HOU sin sus piezas top = under/Cubs side" era falsa direccionalmente.
+
+¿El mercado capturó bien el edge?
+[ ] Parcialmente. Las props pitcher Imanaga (Ks/outs, recomendadas Tier A) cobraron pese al colapso del side — Patrón 1 Tipo C operativo: daño y Ks coexisten. Pero las picks Tier S (Cubs F5 DNB, Astros TT under) apuntaron al lado equivocado y habrían pinchado completas.
+
+¿El timing del daño coincidió con la proyección?
+[ ] No. Daño HOU concentrado vs Imanaga (5º inning HR Walker 3 RBI cerró el F5 en 7-3 HOU). El "favorito" (Cubs) nunca lideró el partido. Timing no calzó con el guion proyectado en ningún momento.
+
+¿Apareció algún factor ambiental que cambió el guion?
+[ ] Sí — el viento real (3 mph IN LF) era distinto del pronóstico (7 mph IN RF) en dirección Y magnitud. Pero el resultado lo definió la composición del lineup HOU y el colapso de Imanaga, no el viento. El ambiental contribuye al refinamiento del Patrón 11 (tercer caso), no como factor decisivo aquí.
+
+Clasificación del resultado:
+[X] PASS_CORRECTO (jugada): el usuario pasó por instinto y evitó pérdida total. Las picks Tier S del análisis habrían perdido completas.
+[X] ERROR_DE_LECTURA (analítica): la tesis principal sobre Imanaga como "élite vs all-RHB sin top bates" era falsa. El análisis identificó al favorito real (Cubs) pero por razones equivocadas, y el favorito real perdió outright.
+
+Nota meta: caso paralelo a Rangers/Yankees 07/05 y a Athletics/Angels 19/05 (Detmers blow-up vs ATH). En los tres, el análisis recomendaba el lado equivocado y el pass por instinto del usuario evitó pérdida.
+
+4. PATRÓN APLICABLE / EMERGENTE
+
+¿Qué patrón v2.1 explica mejor lo ocurrido?
+[ ] Patrón 9 INVERSO (pitcher élite no bloquea — y aquí no solo no bloqueó, colapsó). Patrón 11 (factor ambiental: viento pronóstico ≠ real, tercer caso). Patrón 1 alerta espejada del Patrón 4 confirmada en versión positiva: Imanaga acumuló 6 Ks pese a 7 ER (daño + Ks coexisten, props pitcher sobreviven al colapso del side).
+
+¿Aparece un patrón nuevo que no está en v2.1?
+[X] Sí — patrón emergente fuerte:
+
+"LHP élite con perfil de barrels post-blow-up vs all-RHB lineup con poder distribuido". Cuando un LHP cumple: (1) blow-up reciente <14 días, (2) Barrel% ≥9%, (3) historial de degradación post-mediados-temporada previa, (4) parque pitcher-friendly pero con viento NO confirmado por anemómetro — la ventaja teórica de mano vs lineup all-RHB puede invertirse si el lineup rival tiene poder distribuido en 3+ spots (no requiere top 3 élite). El mercado que sobrevive es prop pitcher Ks/outs (Patrón 1 Tipo C: daño y Ks coexisten); F5 DNB / TT under / ML side colapsan.
+
+Conexión con candidatos previos del watchlist:
+- Refuerza "Matchup-specific blowup overrides metric-average" (Detmers vs ATH 19/05): ahora 3 casos (Detmers 19/05, Imanaga 18/05 vs MIL, Imanaga 24/05 vs HOU). Imanaga repitió el blow-up de 6 días antes contra otro lineup distinto — esto sugiere que el patrón es del PITCHER en degradación, no solo head-to-head vs un equipo específico. Refinamiento candidato.
+- Conecta con "ofensiva con peor AVG/wRC+ ≠ ofensiva inofensiva" (Tigers/Rays 01/06): aquí HOU sin Alvarez/Altuve también explotó por poder distribuido (3 HR de 3 spots distintos incluyendo el #9), sin convertir tráfico. Segundo caso del mecanismo.
+
+¿Algún patrón v2.1 fue contradicho por este partido?
+[ ] Sí parcialmente. El edge teórico "LHP élite vs all-RHB" del Patrón 9 (en su lectura defensiva) se invirtió. Sugiere que Patrón 9 necesita un filtro adicional: "verificar que el pitcher no esté en degradación reciente medible (blow-up <14d + barrel% creciente + xFIP > ERA)". El propio análisis CITÓ degradación de bullpen Astros pero no aplicó el mismo check al pitcher Cubs.
+
+
+5. LECCIÓN OPERATIVA EN UNA FRASE
+
+[ ] Cinco lecciones críticas: (1) wRC+ colectivo vs mano en sample de 3 semanas NO predice game específico cuando el lineup del día es <80% del lineup-fuente; (2) pronóstico de viento NO es anemómetro (Patrón 11 v2.1 confirmado por tercera vez); (3) blow-up reciente + Barrel% ≥9% + degradación post-mediados-temporada previa = NO es varianza aislada, es patrón; (4) ERA bullpen acumulada es lagging indicator, métricas peripherals recientes (xFIP, K%, strand rate) son leading; (5) props pitcher Ks/outs sobreviven al colapso del side cuando el arsenal está intacto — confirma alerta espejada del Patrón 4 en su forma positiva.
