@@ -1763,3 +1763,91 @@ Nota meta: el over 9.0 general habría perdido (7 R totales); la desagregación 
 5. LECCIÓN OPERATIVA EN UNA FRASE
 
 [ ] Cuando solo una ofensiva tiene ruta clara y el abridor rival es tipo B con leash, el TT full game del equipo fuerte captura el edge con menos dependencias que el over general, que muere si el as propio blanquea al rival.
+
+
+	[Royals vs Twins 040626]
+
+1. THESIS PRE-PARTIDO (antes de ver resultado)
+
+Edge principal en una frase:
+[ ] Under 9.5 — dos ofensivas frías (ambas 3-7 L10, OPS de fondo, MIN sin Jeffers) + Lugo (Tipo C) con leash largo que tapa el bullpen vaciado de KC; F5 Under elevado a "la versión más limpia". Morris = Tipo B leash corto.
+
+Nivel en Jerarquía de Edges (v2.1):
+[ ] Edge PRINCIPAL declarado: Posición 9 (momentum / "ofensivas frías") — la posición más ruidosa de la jerarquía. Tiers altos 1-4 disponibles (parque pro-run + viento out + dos abridores vulnerables + dos bullpens débiles) apuntaban al lado contrario y se dejaron pesar menos.
+
+Tipo de vulnerabilidad del pitcher rival (si aplica):
+[ ] Lugo (KC): Tipo C — eje del error de lectura. Su K% bajo se interpretó como "control que tapa el bullpen", cuando el riesgo real era slugging por HR (viento out confirmado).
+[ ] Morris (MIN): Tipo B con leash corto. Confirmado real: 2 IP, sacado tras 5 H, 2 ER.
+
+Mercado(s) elegido(s):
+[ ] PASS — usuario no apostó. Menú top: Under 9.5 @1.80, F5 Under ~4.5/5, Witt TB over 1.5 (elevado por heurística sobre precedente Cleveland 07/05).
+
+Cuota(s):
+[ ] Under 9.5 @1.80; Over 9.5 @2.02 (relegado a "solo live"); KC -1.5 @2.37; MIN +1.5 @1.60.
+
+Stake relativo:
+[ ] PASS.
+
+Patrón v2.1 que respalda la jugada:
+[ ] Patrón 1 (Tipología — Lugo Tipo C, Morris Tipo B). Patrón 3 (Timing del daño). Patrón 9 (Pitcher élite — aplicado al revés). Patrón 11 (Factores ambientales — viento out confirmado pero pesado mal).
+
+
+2. RESULTADO OBJETIVO
+
+Marcador final:
+[ ] Royals 8 — Twins 6. Total 14 R. F5: KC 3 - MIN 5 (8 R en F5). 5 HR en el juego.
+
+Línea de abridores:
+[ ] Abridor A (Lugo, KC): 5.0 IP, 6 H, 5 R, 5 ER, 1 BB, 4 K, 3 HR. Batido por aire (slugging), no por tráfico — invierte la lectura de Tipo C clásico.
+[ ] Abridor B (Morris, MIN): 2.0 IP, 5 H, 2 ER, 1 BB, 0 K. Leash corto confirmado. Bulk Paredes: 3.2 IP, 3 ER, 1 HR.
+
+Bullpen relevante:
+[ ] El bullpen "vaciado" de KC aguantó (Lynch / Strahm / Lange ~limpios; solo HR de Caratini vs Schreiber). El daño fue de los ABRIDORES, no de los pens.
+
+Bates clave del partido:
+[ ] MIN: Buxton 2-4 HR 5 TB (HR off Lugo en la 1ª — viento out confirmado); Caratini 3-4 (2B + HR) 7 TB 2 RBI; Clemens 2 HR; Massey HR (cola).
+[ ] KC: Witt 1-5, 1 TB, 2 K (no replicó el precedente Cleveland 07/05). RISP 3-13, LOB 12.
+
+Ambientales:
+[ ] 83°F, viento 9 mph OUT TO LF (confirmado <90 min via anemómetro). Demora 1:07 por lluvia. El parque anti-HR (factor 80) se invirtió por el viento real.
+
+Mercado(s) elegido(s) — ganó / perdió / push:
+[ ] PASS — N/A. Hipotéticos: Under 9.5 → PERDIÓ (14 R). F5 Under → perdió (8 R F5). Witt TB over 1.5 → perdió (1 TB). Pasquantino TB over → perdió. Lugo outs over 17.5 → perdió (15 outs). Lugo Ks under → perdió (4 K — descarte correcto via Patrón 4 alerta espejada). MIN +1.5 → perdió. **Over 9.5 @2.02 → GANÓ (14 R, el edge real relegado a "solo live")**. **KC TT over 4.5 → ganó (8 R)**. **Buxton TB over / HR → ganó (5 TB, HR)**. KC -1.5 → ganó (cobró pese a marcarse "trampa" pre-partido). Lugo hits over 5.5 → ganó (6 H).
+
+
+3. POSTMORTEM (separar proceso de resultado)
+
+¿La lectura del edge fue correcta?
+[ ] No. La tesis "dos ofensivas frías + Lugo Tipo C tapa el bullpen" se cayó completa: 14 R combinadas, 5 HR, 8 R en F5, KC TT cobró sobrado. El error fue dejar que el tier 9 de la Jerarquía (momentum/forma reciente "ambas frías") invirtiera los tiers altos 1-4 que apuntaban al over.
+
+¿El mercado capturó bien el edge?
+[ ] No. El menú top entero apuntó al lado equivocado. Los mercados que SÍ cobraron (Over 9.5, KC TT, Buxton TB, KC -1.5) estaban identificados en el análisis pero relegados como "solo live" o "trampa pre-partido".
+
+¿El timing del daño coincidió con la proyección?
+[ ] No. Proyectado "Lugo tapa el bullpen + Morris leash corto = under temprano y tardío"; realidad: 8 R en F5 + 6 R full game. Lugo permitió 3 HR (slugging, no tráfico) — la dirección del daño se invirtió de "BB+hits" a "HR".
+
+¿Apareció algún factor ambiental que cambió el guion?
+[ ] Sí — el viento real (9 mph OUT a LF confirmado) invirtió el parque anti-HR (factor 80). Pero NO fue sorpresa: el viento estaba confirmado <90 min y el análisis lo registró. El error fue de PONDERACIÓN — confirmation de viento out se relegó a "solo live" cuando debía elevar Over/TT como el mercado principal.
+
+Clasificación del resultado:
+[X] PASS_INCORRECTO (jugada): el menú top recomendado (Under, F5 Under, Witt TB) habría perdido completo, pero el edge legible (Over) cobró cómodo. Pass protegió contra la pérdida pero dejó pasar el edge real. Cuarto PASS_INCORRECTO del run con el mismo perfil: análisis identifica el edge correcto pero lo prioriza mal o lo releva a "solo live", y el partido confirma que era la traducción.
+[X] ERROR_DE_LECTURA (analítica): la tesis principal se cayó. Inversión de la Jerarquía de Edges — tier 9 (momentum) invirtió tiers 1-4.
+
+4. PATRÓN APLICABLE / EMERGENTE
+
+¿Qué patrón v2.1 explica mejor lo ocurrido?
+[ ] Patrón 11 confirmado en su componente operativo: viento out 9 mph confirmado <90 min DEBE pesar como tier 1 — no relegarse a "solo live". Patrón 9 INVERSO: Lugo Tipo C colapsó por slugging (3 HR) pese a su perfil de "control sin whiff". Patrón 1 alerta espejada del Patrón 4 (Lugo descartado correctamente para under Ks: 4 K en 5 IP, arsenal intacto pese a forma).
+
+¿Aparece un patrón nuevo que no está en v2.1?
+[X] Sí — dos observaciones convergentes:
+
+(1) **META-REGLA candidata sobre Jerarquía de Edges**: no permitir que momentum/forma reciente (tier 7-9 ruidoso) invierta parque_clima/matchup/leash (tiers 1-4 fiables) cuando los tiers altos apuntan a una dirección clara. Este caso es paralelo a mariners-astros-140526 (sobrecorrección por forma reciente en segundo turno) — ambos son casos del mismo error meta: dejar que una fuente ruidosa invierta fuentes fiables. Suma a la mini-tipología de "razones inválidas para invertir el análisis principal".
+
+(2) **REFINAMIENTO al candidato "Manufactura sin HR / ofensiva muerta explota por HR"**: tercer caso del mecanismo "Tipo C + viento out confirmado + parque pro-run = colapso por slugging". Junto con Tigers/Rays 01/06 (DET 5 HR) y Astros/Cubs 24/05 (HOU sin Alvarez/Altuve 3 HR distribuidos), el patrón se consolida con un mecanismo causal claro: cuando hay confirmación ambiental de viento out + abridor permite contacto, "ofensiva fría" o "lineup sin top bats" NO es protección — el slugging aparece por aire.
+
+¿Algún patrón v2.1 fue contradicho por este partido?
+[ ] No directamente. Patrón 11 funcionó (viento confirmado <90 min) pero la regla de ponderación falló (se relegó a "solo live"). Patrón 9 se confirmó en su lectura inversa (pitcher de comando colapsa cuando viento + parque invierten su edge defensivo). Patrón 4 alerta espejada validada (Lugo K bajo pero arsenal intacto).
+
+5. LECCIÓN OPERATIVA EN UNA FRASE
+
+[ ] Cuando parque pro-run + viento out confirmado + dos abridores vulnerables + dos bullpens flojos apuntan al over, "ambas ofensivas frías" (tier más ruidoso de la Jerarquía v2.1) no debe invertir la lectura — el over era la traducción correcta y el F5 (8 carreras) lo confirmó.
