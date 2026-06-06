@@ -1946,3 +1946,101 @@ Conexión con casos previos:
 5. LECCIÓN OPERATIVA EN UNA FRASE
 
 [ ] Cuando el freno al lado ofensivo viene de fuente alta y la respuesta a "el rival rompe el guion" es sí, ese freno debe liderar la recomendación, no quedar de nota al pie bajo un TT.
+
+
+	[Rockies vs Angels 010626]
+
+1. THESIS PRE-PARTIDO (antes de ver resultado)
+
+Edge principal en una frase:
+[ ] Fade Freeland (Tipo B degradado): zurdo en colapso que regala contacto duro/HR a un lineup 100% diestro, con bullpen rival agotado detrás. Mercado directo: ER allowed over.
+
+Nivel en Jerarquía de Edges (v2.1):
+[ ] Edge combinado — Posición 2 (matchup mano/repertorio: LHP degradado vs lineup all-RHB) + Posición 3 (leash/bullpen — pen LAA agotado).
+
+Tipo de vulnerabilidad del pitcher rival (si aplica):
+[ ] Freeland (COL): Tipo B degradado — contacto fuerte permitido + leash que se sostiene por bullpen rival agotado. Confirmado: 5.2 IP, 5 ER, 1 HR (grand slam Siri en 3ª).
+
+Mercado(s) elegido(s):
+[ ] (1) Freeland Carreras Ganadas 4+ (over) @2.62 — single, stake medio.
+[ ] (2) Freeland Carreras Ganadas 7+ (over) @13.50 — single, stake chico (free bet / fun longshot).
+
+Cuota(s):
+[ ] 2.62 (ER 4+); 13.50 (ER 7+).
+
+Stake relativo:
+[ ] (1) medio; (2) chico (free bet).
+
+Patrón v2.1 que respalda la jugada:
+[ ] Patrón 1 (Tipología — Freeland Tipo B degradado).
+[ ] Patrón 2 ("Mejor abridor" no es F5 side automático).
+[ ] Patrón 6 (Favorito sin edge ofensivo colectivo — COL lineup visitante débil).
+[ ] Patrón 10 (Props salen del guion — prop directo del pitcher capturó el edge).
+[ ] Patrón 11 (Factores ambientales — Angel Stadium, viento).
+[ ] Patrón 12 (Side con ruido → mercado más limpio — prop aislado vs guion completo).
+
+
+2. RESULTADO OBJETIVO
+
+Marcador final:
+[ ] Rockies 9 — Angels 8. Total 17 R. Run environment alto.
+
+Línea de abridores:
+[ ] Abridor A (Freeland, COL): 5.2 IP, 7 H, 6 R, 5 ER, 1 BB, 4 K, 1 HR (grand slam Siri 3ª), 91 pitcheos. Tipo B degradado confirmado — permitió daño pero el leash llegó a 5+ porque pen LAA agotado.
+[ ] Abridor B (Soriano, LAA): 4.2 IP, 3 H, 3 R, 2 ER, 7 BB, 7 K, 1 HR (McCarthy), 108 pitcheos. Su falla de comando de mayo explotó — 7 BB fabricaron la ofensiva COL que el bate no fabricaba.
+
+Bullpen relevante:
+[ ] LAA: Fermin BS (5 ER en 0.2 IP, 8ª) voló la ventaja 8-3; Yates L (1 ER, 9ª). El pen agotado pre-partido se materializó como catastrófico.
+[ ] COL: Senzatela W (1.2 IP, 0 ER).
+
+Bates clave del partido:
+[ ] COL: McCarthy (HR, 2H, 2R, 2BB), Goodman (HR, 3 RBI), Karros (2H, 2R), Johnston (2H, RBI).
+[ ] LAA: Siri (grand slam, 4 RBI), Soler (3H, 2 RBI), Peraza (2H), Adell (1 RBI).
+
+Ambientales:
+[ ] Angel Stadium, 70°F, despejado, viento 8 mph OUT a LF (NO confirmado por anemómetro pre-partido). HP umpire Brian Walsh. 17 R totales — run environment elevado por viento out no contemplado en el menú.
+
+Mercado(s) elegido(s) — ganó / perdió / push:
+[ ] Freeland ER 4+ @2.62 → GANÓ (5 ER). Cobro limpio.
+[ ] Freeland ER 7+ @13.50 → perdió (5 ER, faltaron 2). Free bet, sin costo real.
+[ ] Hipotéticos del menú: Freeland 3+ ER @1.85 → ganó. Freeland Outs Under @1.91 → perdió (17 outs). Trout H+R+RBI 1+ @1.28 → ganó. Angels TT Over 4.5 @1.88 → ganó. Colorado TT Under 3.5 @1.72 → perdió. Soriano Ks Over 6.5 @1.62 → ganó (PASS INCORRECTO secundario). Over 8.5 @1.93 → ganó (PASS INCORRECTO — sin anemómetro). Angels -1.5 @1.98 → perdió. Colorado +1.5 @1.83 → ganó.
+
+
+3. POSTMORTEM (separar proceso de resultado)
+
+¿La lectura del edge fue correcta?
+[ ] Sí. Freeland Tipo B degradado se materializó completamente (5 ER en 5.2 IP, grand slam Siri 3ª, HR a lineup all-RHB). El edge nuclear cobró exactamente como se proyectaba.
+
+¿El mercado capturó bien el edge?
+[ ] Sí — y con margen amplio. El prop directo del pitcher rival (ER 4+ over) cobró por mecanismo proyectado (slugging RHB vs LHP degradado) y quedó aislado del caos del resto del partido. Validación canónica de la Regla Madre: "elegir el mercado que captura el edge con menos dependencias".
+
+¿El timing del daño coincidió con la proyección?
+[ ] Sí en lo relevante. Daño a Freeland concentrado en 3ª (grand slam Siri) + acumulación 4ª-5ª. El blow-up tardío del bullpen LAA (Fermin 8ª, BS) no afectó la pick — ya estaba cobrada.
+
+¿Apareció algún factor ambiental que cambió el guion?
+[ ] Sí — viento 8 mph OUT a LF se confirmó in-game pero NO había anemómetro pre-partido. Esto elevó el run environment (17 R totales) y materializó tanto el Over 8.5 como el Angels TT Over como cobradores hipotéticos. No afectó la pick principal (Freeland ER over no depende del viento), pero sí explica por qué el menú secundario tuvo más mercados ganadores de los previstos.
+
+Clasificación del resultado:
+[X] ACIERTO_LIMPIO (jugada): pick principal Freeland ER 4+ @2.62 cobró limpio por el motivo proyectado. Free bet longshot perdió sin costo real.
+[X] ACIERTO_LIMPIO (analítica): lectura correcta + mercado correcto + cobró. Prop aislado del pitcher rival = mercado con mínimas dependencias.
+
+4. PATRÓN APLICABLE / EMERGENTE
+
+¿Qué patrón v2.1 explica mejor lo ocurrido?
+[ ] Patrón 12 (Side con ruido → mercado más limpio) validado al máximo. Mismo mecanismo que Tigers/Rays 01/06 donde el TT aislado de Tampa cobró pese al error de lectura sobre Detroit: aquí el prop aislado de Freeland cobró pese a que el side LAA, el under total y el TT COL fallaron todos. La "pieza de hierro" (Freeland es malo) aislada en su prop directo gana al guion completo.
+[ ] Patrón 1 (Tipo B degradado confirmado).
+[ ] Patrón 10 (Props salen del guion — el prop correcto era ER del pitcher rival, no props ofensivas del lineup propio).
+
+¿Aparece un patrón nuevo que no está en v2.1?
+[X] Sí — refinamiento candidato del usuario:
+
+(1) "TT under del visitante débil es FRÁGIL cuando el abridor propio tiene riesgo de comando alto: los boletos fabrican la ofensiva que el bate no fabrica." Caso confirmado: Soriano 7 BB → Colorado 9 R pese a ofensiva visitante floja. Mecanismo causal claro y operacionalizable como check pre-partido: antes de TT under del visitante débil, verificar BB% del abridor propio reciente.
+
+(2) Validación corolario de la Regla Madre: "un prop directo del pitcher rival (ER over) cobra aunque side/total/TT del guion fallen — la pieza de hierro aislada gana al guion completo". Mismo mecanismo que Tigers/Rays 01/06 (TT aislado de Tampa) — ahora 2 casos del meta-principio "mercado aislado del guion completo > apostar el guion entero".
+
+¿Algún patrón v2.1 fue contradicho por este partido?
+[ ] No. Patrón 12 validado al máximo. Patrón 11 funcionó en su componente operativo (sin anemómetro confirmado, viento no se contó como pilar — y el Over 8.5 se relegó correctamente, lo cual es exactamente lo que la regla v2.1 prescribe). El "PASS INCORRECTO" en Over 8.5 no es error de proceso sino consecuencia disciplinada de la regla.
+
+5. LECCIÓN OPERATIVA EN UNA FRASE
+
+[ ] El prop directo cobró el edge real aunque side, total y TT fallaran: cuando solo una pieza es de hierro (Freeland es malo), apostar esa pieza aislada vence apostar el guion completo del partido.
