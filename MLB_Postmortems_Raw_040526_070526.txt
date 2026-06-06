@@ -1577,3 +1577,98 @@ Conexión con candidatos previos del watchlist:
 5. LECCIÓN OPERATIVA EN UNA FRASE
 
 [ ] Cinco lecciones críticas: (1) wRC+ colectivo vs mano en sample de 3 semanas NO predice game específico cuando el lineup del día es <80% del lineup-fuente; (2) pronóstico de viento NO es anemómetro (Patrón 11 v2.1 confirmado por tercera vez); (3) blow-up reciente + Barrel% ≥9% + degradación post-mediados-temporada previa = NO es varianza aislada, es patrón; (4) ERA bullpen acumulada es lagging indicator, métricas peripherals recientes (xFIP, K%, strand rate) son leading; (5) props pitcher Ks/outs sobreviven al colapso del side cuando el arsenal está intacto — confirma alerta espejada del Patrón 4 en su forma positiva.
+
+
+	[Rangers vs Cardinals 020626]
+
+1. THESIS PRE-PARTIDO (antes de ver resultado)
+
+Edge principal en una frase:
+[ ] Entorno pro-pitcher (Busch #1 supresor HR zurdo + viento in RF confirmado 8 mph) sobre dos ofensivas débiles (Texas adelgazado por lesiones, STL en mala forma) → juego bajo en carreras.
+
+Nivel en Jerarquía de Edges (v2.1):
+[ ] Posición 1 — parque + clima confirmado el día del partido (la fuente más fiable). Contrapeso: la conclusión "under de carreras" fue extrapolación equivocada del edge (parque suprime HR, no carreras vía contacto).
+
+Tipo de vulnerabilidad del pitcher rival (si aplica):
+[ ] May (STL): Tipo B (contacto + leash sólido, pero arsenal con whiff intacto). Confirmado: 9 K en 5.2 IP pese a permitir 3 ER.
+[ ] Eovaldi (TEX): Tipo B también — castigado por contacto (11 H, 4 ER) pero leash y Ks intactos (7 K en 6 IP).
+
+Mercado(s) elegido(s):
+[ ] PASS — ninguna pick tomada. Menú top hipotético: Under 7.5 @1.91, Under 6.5 @2.15.
+
+Cuota(s):
+[ ] Under 7.5 @1.91; Under 6.5 @2.15; Eovaldi over Ks 5.5 @1.66; May under Ks @2.16 (descartada); Over @1.72; STL +1.5 @1.52.
+
+Stake relativo:
+[ ] PASS.
+
+Patrón v2.1 que respalda la jugada:
+[ ] Patrón 1 (Tipología — ambos Tipo B).
+[ ] Patrón 4 (no under Ks contra May — arsenal con whiff intacto pese a forma).
+[ ] Patrón 11 (factores ambientales — parque pro-pitcher + viento confirmado).
+[ ] Patrón 12 (side con ruido → mercado más limpio).
+
+
+2. RESULTADO OBJETIVO
+
+Marcador final:
+[ ] Texas 7 — Cardinals 4. Total 11 R. F5: TEX 2 - STL 2 (4 R en F5). Hits 22 combinados (TEX 9 / STL 13). HRs totales: 1 (Gorman off Eovaldi).
+
+Línea de abridores:
+[ ] Abridor A (Eovaldi, TEX): 6.0 IP, 11 H, 4 ER, 1 BB, 7 K, 1 HR — castigado por contacto pero leash y Ks intactos. Tipo B confirmado.
+[ ] Abridor B (May, STL): 5.2 IP, 5 H, 3 ER, 2 BB, 9 K, 0 HR — permitió daño Y ponchó 9. Under Ks habría sido desastre.
+
+Bullpen relevante:
+[ ] STL: O'Brien (cierre): 1.0 IP, 3 H, 3 ER (L) — reventón en la 9ª; Romero 0.2 IP 1 ER. Daño tardío confirmado.
+[ ] TEX: Beeks / Quantrill / Junis (SAVE): 3.0 IP, 0 ER — sostuvo el resultado.
+
+Bates clave del partido:
+[ ] Joc Pederson: 3 H, 5 TB (2 dobles), 2 RBI — pase fue error.
+[ ] Gorman HR off Eovaldi (único HR del partido).
+[ ] Daño distribuido vía contacto: 22 hits combinados.
+
+Ambientales:
+[ ] Wind 8 mph In From RF (= pronóstico). Suprimió HR (1 total) pero NO las carreras. 77°F, clear. HP umpire Manny Gonzalez.
+
+Mercado(s) elegido(s) — ganó / perdió / push:
+[ ] PASS — N/A. Hipotéticos: Under 7.5 → perdió (11 R). Under 6.5 → perdió. F5 Under 4.5 → ganó (4 R en F5). Eovaldi outs over 17.5 → ganó (18 outs). Eovaldi over 5.5 Ks → ganó (7 K). May under Ks → perdió (descartada correctamente). Over 6.5/7.5 → ganó. Pederson hits over 1.5 → ganó (3 H). Pederson TB over → ganó (5 TB). STL +1.5 → perdió. Texas ML → ganó.
+
+
+3. POSTMORTEM (separar proceso de resultado)
+
+¿La lectura del edge fue correcta?
+[ ] Parcial. El edge de PODER (parque + viento suprime HR) se confirmó al máximo: solo 1 HR en 22 hits. Pero la extrapolación a "under de carreras" fue equivocada — el run environment se decidió por tráfico/contacto, no por slugging. 7 de 11 R llegaron en innings 6-9 (colapso de bullpen tardío). La parte de May Tipo B con arsenal intacto se confirmó (9 K), descartar under Ks fue acierto.
+
+¿El mercado capturó bien el edge?
+[ ] No para la lectura principal (Under). Sí para los mercados secundarios: props del abridor propio (Eovaldi outs/Ks over) y descarte de May under Ks. Las props que NO se tomaron (Pederson hits/TB, Over 6.5/7.5) eran la traducción correcta del run environment real.
+
+¿El timing del daño coincidió con la proyección?
+[ ] No. Proyectado "juego bajo en carreras"; realidad: 7 de 11 R en innings 6-9. Daño distribuido full game decidido por bullpen colapso (O'Brien 3 ER en 1 IP), no por dominio temprano de ninguno de los abridores.
+
+¿Apareció algún factor ambiental que cambió el guion?
+[ ] No factor ambiental — el viento se confirmó exactamente como el pronóstico (8 mph IN RF). El error no fue ambiental sino de extrapolación: confundir supresión de HR con supresión de carreras. Caso textbook donde el edge ambiental es real pero su traducción al mercado fue incorrecta.
+
+Clasificación del resultado:
+[X] NO_JUGADA (jugada): no se apostó. Operacionalmente: el menú top recomendado (Under) habría perdido — pase correcto vs esa recomendación. Pero hubo edge real en mercados secundarios no jugados (Eovaldi outs/Ks, Pederson hits/TB, Over).
+[X] ERROR_DE_LECTURA (analítica): la tesis principal "parque + viento → under" era falsa direccionalmente. Confundió supresión de poder con supresión de carreras.
+
+4. PATRÓN APLICABLE / EMERGENTE
+
+¿Qué patrón v2.1 explica mejor lo ocurrido?
+[ ] Patrón 1 (Tipología — May Tipo B con arsenal intacto: 9 K + 3 ER; Eovaldi Tipo B con leash + Ks pese a 11 H). Patrón 4 alerta espejada en forma positiva confirmada: tanto May como Eovaldi acumularon Ks pese a permitir daño — props pitcher Ks/outs sobrevivieron al run environment alto. Patrón 11 cumplió en su componente de POWER (1 HR confirma supresión) pero falló en extrapolación a carreras.
+
+¿Aparece un patrón nuevo que no está en v2.1?
+[X] Sí — usuario propone tres refinamientos v2.2 + promoción de Patrón 13:
+
+(1) **REFINAMIENTO Patrón 11 / Jerarquía #1**: "Parque + clima confirmado es el edge más fiable para POWER/HR, NO para el total de carreras. Parque supresor de HR + viento in NO implica under si ambos lineups tienen contacto y los bullpens son flojos. Check obligatorio antes de colgar un under del parque: ¿la ruta de carreras es poder o tráfico?"
+
+(2) **REFINAMIENTO del filtro de selección v2.1**: "El gatillo 'no descartar cuota >1.80' NO aplica si el descarte tiene razón de timing/dependencia ya documentada (F5 vs full game). Timing > regla de cuota."
+
+(3) **PROMOCIÓN del Patrón 13 — Manufactura sin HR**: usuario considera que hay casos suficientes para promover de candidato a activo. Casos referenciados: Orioles/Marlins 05/05 (Alcantara Tipo C), Yankees/Brewers 08/05 (Fried Tipo C), Rangers/Cardinals 02/06 (May Tipo B + Eovaldi Tipo B). Nota: ahora el patrón cubre Tipo B también, no solo Tipo C — el mecanismo común es "contacto + bullpen frágil decide el partido sin HR".
+
+¿Algún patrón v2.1 fue contradicho por este partido?
+[ ] No directamente. La extrapolación equivocada de Patrón 11 (supresión de HR ≠ supresión de carreras) sugiere que falta un check operativo dentro del patrón, no que el patrón sea falso. Patrón 4 alerta espejada confirmada en forma positiva (Eovaldi outs/Ks over cobrarían pese a 11 H allowed; May 9 K pese a 3 ER).
+
+5. LECCIÓN OPERATIVA EN UNA FRASE
+
+[ ] Un parque que mata el poder no mata un partido que se decide por tráfico y bullpen. Antes de un under apoyado en clima/parque, confirmar que la ruta de carreras del matchup es de poder, no de contacto. Y no dejar que una regla de filtro de cuota resucite un mercado que el análisis de timing ya bajó.
