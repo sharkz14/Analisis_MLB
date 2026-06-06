@@ -1851,3 +1851,98 @@ Clasificación del resultado:
 5. LECCIÓN OPERATIVA EN UNA FRASE
 
 [ ] Cuando parque pro-run + viento out confirmado + dos abridores vulnerables + dos bullpens flojos apuntan al over, "ambas ofensivas frías" (tier más ruidoso de la Jerarquía v2.1) no debe invertir la lectura — el over era la traducción correcta y el F5 (8 carreras) lo confirmó.
+
+
+	[Dodgers vs D-backs 040626]
+
+1. THESIS PRE-PARTIDO (antes de ver resultado)
+
+Edge principal en una frase:
+[ ] Atacar a Nelson (Tipo B: contacto/HR, 5.97 ERA casa) vía poder de LA en Chase ofensivo, con pen rival cansado/sin zurdos para la 6-9. TT LAD over como núcleo.
+
+Nivel en Jerarquía de Edges (v2.1):
+[ ] Edge combinado — Posición 1 (parque Chase ofensivo) + Posición 2 (matchup mano/repertorio) + Posición 3 (leash/bullpen).
+
+Tipo de vulnerabilidad del pitcher rival (si aplica):
+[ ] Nelson (ARI): Tipo B (contacto/HR permitido, 5.97 ERA en casa). Confirmado al revés en partido: 7 IP, 2 ER — historial vs LAD se mantuvo, NO se rompió.
+
+Mercado(s) elegido(s):
+[ ] PASS — usuario no apostó. Análisis lideró con TT LAD over + props Freeman + ML LAD; todas habrían perdido.
+
+Cuota(s):
+[ ] LAD ML @1.74; ARI ML @2.15. (Otros precios del menú no registrados en detalle).
+
+Stake relativo:
+[ ] PASS.
+
+Patrón v2.1 que respalda la jugada:
+[ ] Patrón 1 (Tipología — Nelson Tipo B).
+[ ] Patrón 5 (Un solo equipo con rutas → su TT, aplicado erróneamente a LA).
+[ ] Patrón 7 (Underdog +1.5 necesita conversión — validado en mecanismo).
+[ ] Patrón 9 (Pitcher élite no bloquea automáticamente — aplicado al revés).
+[ ] Patrón 12 (Side con ruido → mercado más limpio).
+
+
+2. RESULTADO OBJETIVO
+
+Marcador final:
+[ ] D-backs 3 — Dodgers 2 (walk-off, 9ª).
+
+Línea de abridores:
+[ ] Abridor A (Nelson, ARI): 7.0 IP, 2 ER — validó su historial vs LAD, NO se rompió como esperaba el análisis vía 5.97 ERA casa.
+[ ] Abridor B (Wrobleski, LAD): 6.0 IP, 0 R, 4 K — mucho mejor que lo proyectado. Patrón 4 alerta espejada validada en forma negativa (Wrobleski 4 K, under habría perdido).
+
+Bullpen relevante:
+[ ] LAD: Vesia BS, Scott HR walk-off en 9ª — el "edge de bullpen rival cansado" se invirtió: fue el pen DE LA el que voló el 2-0.
+[ ] ARI: pen "cansado/sin zurdos" identificado pre-partido NO se rompió porque Nelson llegó a 7 IP.
+
+Bates clave del partido:
+[ ] LAD: top-3 Betts / Freeman / Pages 0-de-12 — el corazón del lineup colapsó (el edge teórico ofensivo no se materializó).
+[ ] ARI: 2 HR solitarios + walk-off; 1-de-8 con RISP, 9 LOB — no convirtió tráfico, ganó por HR aislados (validación del Patrón 7).
+
+Mercado(s) elegido(s) — ganó / perdió / push:
+[ ] PASS — N/A. Hipotéticos: TT LAD over → perdió (LAD solo 2 R). LAD ML @1.74 → perdió (walk-off ARI). Props Freeman → perdieron. ARI +1.5 → ganó (pero por 2 HR solitarios, no por conversión — valida mecanismo del Patrón 7). Under 9.5 → ganó (5 R totales). Wrobleski outs over → ganó (18 outs). Nelson outs over → ganó (21 outs).
+
+
+3. POSTMORTEM (separar proceso de resultado)
+
+¿La lectura del edge fue correcta?
+[ ] Parcialmente. Nelson Tipo B identificado correctamente, pero el "contacto/HR vs LA top-3" no se materializó (top-3 0-12). El edge de bullpen rival cansado se invirtió: fue el pen DE LA el que voló el partido. Cautelas BvP (Muncy/Pages) validadas — el análisis ya había flagueado riesgos individuales que se confirmaron.
+
+¿El mercado capturó bien el edge?
+[ ] No. El menú top entero (TT LAD over, ML LAD, props Freeman) apuntó al lado equivocado. Los mercados que SÍ cobraron (Under 9.5, ARI +1.5, Wrobleski/Nelson outs over) estaban implícitos en sub-señales del análisis pero no se priorizaron.
+
+¿El timing del daño coincidió con la proyección?
+[ ] No. Proyectado "LAD ataca a Nelson temprano + bullpen ARI cansado tarde"; realidad: Nelson sostuvo 7 IP / 2 ER, LAD top-3 colapsó, ARI ganó en extras vía bullpen LAD (Vesia BS + Scott HR walk-off).
+
+¿Apareció algún factor ambiental que cambió el guion?
+[ ] No factor adverso. Chase ofensivo no se manifestó porque ambos abridores controlaron a sus respectivos lineups por leash sólido. El parque pro-ofensivo se neutralizó por execution dominante de ambos starters.
+
+Clasificación del resultado:
+[X] PASS_CORRECTO (jugada): el menú top recomendado habría perdido completo (LAD ML, TT LAD, props Freeman). Pass del usuario protegió contra pérdida.
+[X] ERROR_DE_LECTURA (analítica): la tesis principal "Nelson Tipo B se rompe vs LAD top-3 + bullpen ARI cansado" se invirtió. La parte sobre bullpen fue cierta en timing pero del lado equivocado (pen LAD voló).
+
+4. PATRÓN APLICABLE / EMERGENTE
+
+¿Qué patrón v2.1 explica mejor lo ocurrido?
+[ ] Patrón 7 (Underdog +1.5 necesita conversión, no solo tráfico) validado en su mecanismo: ARI cobró +1.5 SIN convertir tráfico (1-8 RISP, 9 LOB) sino por 2 HR solitarios + walk-off. Confirma la regla del Patrón 7 en su forma operativa: el underdog puede cubrir sin convertir tráfico si llega por slug aislado.
+[ ] Patrón 4 alerta espejada confirmada negativamente: Wrobleski 4 K en 6 IP + dominante — under Ks habría perdido. Caso adicional al cluster (Valdez/Abbott/Hancock/Detmers/Lugo).
+[ ] Patrón 9 INVERSO: ambos abridores (Nelson Tipo B y Wrobleski no élite) dominaron — los "lineups con edge" no rompieron el guion.
+
+¿Aparece un patrón nuevo que no está en v2.1?
+[X] Sí — refinamiento candidato del usuario:
+
+"Sin Tipo A en el partido, B atacable es relativo no absoluto; con freno de fuente alta → under/pass > TT del favorito."
+
+Implicación operativa: cuando NO hay Tipo A en el matchup (sin pitcher de comando frágil clásico), la atacabilidad del Tipo B depende fuertemente de fuentes altas de freno (lineup propio en slump, BvP histórico desfavorable). Si esos frenos existen Y vienen de tier 1-4, el under/pass debe LIDERAR la recomendación, no quedar como nota al pie bajo un TT.
+
+Conexión con casos previos:
+- Refuerza el refinamiento "no permitir que tier ruidoso invierta tier fiable" (mariners-astros 14/05 + royals-twins 04/06) — pero acá la dirección es inversa: el FRENO viene de tier alto, no la tesis ofensiva.
+- Conecta con Patrón 5 chequeado en dodgers-dbacks-030626 (caso anterior, LAD vs ARI con Gallen Tipo B): allí el TT LAD cobró sobrado porque NO había freno de fuente alta. Aquí el freno existía (BvP, slump top-3) y se subestimó.
+
+¿Algún patrón v2.1 fue contradicho por este partido?
+[ ] No directamente. Patrón 7 validado al máximo en su mecanismo. Patrón 4 alerta espejada confirmada. El error fue de ponderación: el freno (LA top-3 vs Nelson + Nelson histórico vs LAD) era de fuente alta y se subponderó.
+
+5. LECCIÓN OPERATIVA EN UNA FRASE
+
+[ ] Cuando el freno al lado ofensivo viene de fuente alta y la respuesta a "el rival rompe el guion" es sí, ese freno debe liderar la recomendación, no quedar de nota al pie bajo un TT.
