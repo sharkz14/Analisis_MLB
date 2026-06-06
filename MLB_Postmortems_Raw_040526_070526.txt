@@ -1672,3 +1672,94 @@ Clasificación del resultado:
 5. LECCIÓN OPERATIVA EN UNA FRASE
 
 [ ] Un parque que mata el poder no mata un partido que se decide por tráfico y bullpen. Antes de un under apoyado en clima/parque, confirmar que la ruta de carreras del matchup es de poder, no de contacto. Y no dejar que una regla de filtro de cuota resucite un mercado que el análisis de timing ya bajó.
+
+
+	[Dodgers vs D-backs 030626]
+
+1. THESIS PRE-PARTIDO (antes de ver resultado)
+
+Edge principal en una frase:
+[ ] Gallen tipo B (hard contact/barril, splits demoledores vs zurdos) castigado por el stack zurdo/paciente de LA, mientras Ohtani recorta la ruta de una Arizona en slump y sin Marte; el daño es asimétrico y vive en las carreras de los Dodgers, no en el over general.
+
+Nivel en Jerarquía de Edges (v2.1):
+[ ] Posición 2 (matchup mano/repertorio) reforzada por Posición 3 (leash/bullpen — pen AZ sin zurdos).
+
+Tipo de vulnerabilidad del pitcher rival (si aplica):
+[ ] Gallen (ARI): Tipo B — contacto fuerte/barril permitido con splits demoledores vs zurdos. Confirmado en partido: 9 H, 4 ER en 5 IP, 1 K (extremo bajo de Ks).
+
+Mercado(s) elegido(s):
+[ ] Dodgers TT over 4.5 — tomada SINGLE en Stake.
+
+Cuota(s):
+[ ] 1.75
+
+Stake relativo:
+[ ] No especificado (single en Stake).
+
+Patrón v2.1 que respalda la jugada:
+[ ] Patrón 1 (Tipología — Gallen Tipo B).
+[ ] Patrón 3 (Timing — daño puede ser distribuido full game, no exigir F5).
+[ ] Patrón 5 (Un solo equipo con rutas → su TT, no el over general).
+[ ] Patrón 9 (Pitcher élite Ohtani como complemento defensivo).
+[ ] Patrón 11 (Factores ambientales — techo cerrado, viento 0, entorno neutralizado).
+[ ] Patrón 12 (Side con ruido → mercado más limpio — TT del equipo fuerte > ML caro / over general).
+
+
+2. RESULTADO OBJETIVO
+
+Marcador final:
+[ ] Dodgers 7 — Diamondbacks 0. Distribución LA: 0-2-3-0-0-0-2-0-0 (5 off Gallen innings 2-3, +2 off Pfaadt en el 7º).
+
+Línea de abridores:
+[ ] Abridor A (Ohtani, LAD, W 6-2): 6.0 IP, 2 H, 0 R, 0 ER, 1 BB, 6 K, 0 HR. ERA 0.74.
+[ ] Abridor B (Gallen, ARI, L 3-5): 5.0 IP, 9 H, 5 R, 4 ER, 2 BB, 1 K, 1 HR (Tucker, 2º). ERA 5.32. Tipo B confirmado (contacto permitido, 1 K extremo).
+
+Bullpen relevante:
+[ ] ARI: Pfaadt cargó las 2 R de LA en el 7º (1.0 IP, 3 H, 2 ER). Clarke/Thompson/Loáisiga limitaron el resto.
+[ ] LAD: no requirió uso significativo — Ohtani 6 IP + bullpen cerró el shutout.
+
+Bates clave del partido:
+[ ] LAD: Tucker HR + 3 H + 2 RBI (era .300 de por vida vs Gallen — historial específico se materializó). Freeman 2 H, 2 RBI. Ohtani-bate 3 H, 1 R, 2 BB. Freeland #9: 3 H, 2 RBI — parte baja también produjo (lineup profundo 1-9).
+[ ] ARI: 2 H totales, 0 R, 0-for-3 con RISP, 4 LOB. Marte descansó. 28ª en wRC+ vs RHP, sin respuesta ante Ohtani.
+
+Ambientales:
+[ ] HP umpire Junior Valentine (proyectado por rotación, confirmado). 74°F, techo cerrado, viento 0 mph — entorno neutralizado como se anticipó.
+
+Mercado(s) elegido(s) — ganó / perdió / push:
+[ ] Dodgers TT over 4.5 @1.75 → GANÓ (LA 7 R). Hipotéticos del menú: Ohtani over 17.5 outs @1.47 → ganó (18 outs). AZ TT under 3.5 @1.64 → ganó (0 R). Gallen ER over 2.5 @1.73 → ganó (4 ER). Ohtani over 6.5 Ks @1.99 → perdió por 0.5 (descartada por coin-flip, pase correcto). Ohtani ER under 1.5 @1.92 → ganó (0 ER, pero de-priorizada por argumento de regresión — proceso correcto). LAD ML @1.50 → ganó (precio sin valor). Over 9.0 general → perdió (7 R totales — trampa del over general). ARI +1.5 → perdió (favorito con daño distribuido 1-9).
+
+
+3. POSTMORTEM (separar proceso de resultado)
+
+¿La lectura del edge fue correcta?
+[ ] Sí. Stack zurdo de LA castigó a Gallen como proyectado (5 ER vs zurdos/contacto fuerte). Ohtani recortó la ofensiva AZ exactamente como proyectaba el complemento defensivo (2 H, 0 R, 28ª wRC+ vs RHP confirmado). Asimetría total se materializó (7-0).
+
+¿El mercado capturó bien el edge?
+[ ] Sí. El TT del equipo fuerte (LAD over 4.5) capturó el edge con margen amplio sin depender del over general — que habría perdido (7 R < 9 línea). Patrón 5 validado al máximo: la desagregación en TT por equipo es el camino limpio cuando solo una ofensiva tiene ruta.
+
+¿El timing del daño coincidió con la proyección?
+[ ] Sí. Patrón 3 confirmado en su rama "daño full game vs Tipo B": 5 R off Gallen innings 2-3, +2 off bullpen (Pfaadt) en el 7º. Validó TT full game sobre F5 TT — daño distribuido como se esperaba contra leash sólido.
+
+¿Apareció algún factor ambiental que cambió el guion?
+[ ] No. Techo cerrado, viento 0, umpire confirmado por rotación — el entorno se neutralizó completamente. Sin sorpresas ambientales.
+
+Clasificación del resultado:
+[X] ACIERTO_LIMPIO (jugada): pick tomada single cobró sin sufrir.
+[X] ACIERTO_LIMPIO (analítica): lectura correcta + mercado correcto + cobró por los motivos proyectados.
+
+Nota meta: el over 9.0 general habría perdido (7 R totales); la desagregación en TT por equipo (LAD over + AZ under) fue el camino limpio y ambos cobraron — confirmación directa del Patrón 5. Patrón 6 (favorito sin edge ofensivo colectivo) se chequeó y NO se activó (solo ~1-2 de 5 condiciones): distinción clave vs el caso padres-cardinals-070526. Ohtani ER under 1.5, de-priorizada por argumento de regresión, habría cobrado — proceso correcto (el mercado precia regresión), resultado favorable por varianza del techo de un as.
+
+4. PATRÓN APLICABLE / EMERGENTE
+
+¿Qué patrón v2.1 explica mejor lo ocurrido?
+[ ] Patrón 5 (Un solo equipo con rutas → su TT) validado al máximo: el over general habría perdido pero el TT desagregado del equipo fuerte cobró. Patrón 1 (Tipo B Gallen confirmado: 4 ER, leash 5 IP, 1 K extremo). Patrón 3 (timing del daño full game vs leash sólido: 5 R contra abridor + 2 contra bullpen). Patrón 9 (pitcher élite Ohtani como complemento defensivo, no como pitcher a fadear).
+
+¿Aparece un patrón nuevo que no está en v2.1?
+[ ] No. Validación pura de patrones existentes. Caso útil como ejemplo limpio del Patrón 5 (cuándo NO usar over general y SÍ usar TT desagregado) y como contraste explícito con padres-cardinals-070526 (caso donde Patrón 6 sí se activó al máximo y la inversión drástica funcionó).
+
+¿Algún patrón v2.1 fue contradicho por este partido?
+[ ] No. Todos los patrones aplicados se confirmaron limpio. El check pre-partido del Patrón 6 (¿se cumplen las 5 condiciones?) fue ejecutado correctamente y la respuesta "no, solo 1-2 de 5" justificó NO invertir hacia el lado del under/underdog.
+
+5. LECCIÓN OPERATIVA EN UNA FRASE
+
+[ ] Cuando solo una ofensiva tiene ruta clara y el abridor rival es tipo B con leash, el TT full game del equipo fuerte captura el edge con menos dependencias que el over general, que muere si el as propio blanquea al rival.
