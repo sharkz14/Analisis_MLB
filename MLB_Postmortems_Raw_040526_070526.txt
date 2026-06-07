@@ -2134,3 +2134,93 @@ Disciplina n=1:
 5. LECCIÓN OPERATIVA EN UNA FRASE
 
 [ ] Tesis direccional correcta no salva la selección de mercado: el filtro "cuota cobrada" llevó a la expresión perdedora (F5 TT) y a pasar la ganadora (TT full a 6.5). Con relevista estirado + pen malo, leer el timing tardío antes que el precio.
+
+
+	[Pirates vs Braves 050626]
+
+1. THESIS PRE-PARTIDO (antes de ver resultado)
+
+Edge principal en una frase:
+[ ] Keller es un Tipo B (permite contacto fuerte, sobrevive innings) que enfrenta a una orden con dominio histórico inverso (7.31 ERA de por vida vs ATL) y un bullpen propio en ruinas; el daño es full game y vive en hits/carreras de Atlanta.
+
+Nivel en Jerarquía de Edges (v2.1):
+[ ] Posición 2 (matchup mano/repertorio) + Posición 3 (leash/bullpen) + Posición 4 (tipo de vulnerabilidad).
+
+Tipo de vulnerabilidad del pitcher rival (si aplica):
+[ ] Keller (PIT): Tipo B. Pérez (ATL, abridor propio): Tipo B con leash corto.
+
+Mercado(s) elegido(s):
+[ ] JUGADO: Olson Over 1.5 H+R+RBI @1.66. Cartera recomendada (no jugada): Atlanta TT Over 4.5 @2.04, Keller ER Over 2.5 @1.71.
+
+Cuota(s):
+[ ] Olson H+R+RBI over 1.5 @1.66; Atlanta TT over 4.5 @2.04; Keller ER over 2.5 @1.71.
+
+Stake relativo:
+[ ] medio-chico (edges reales pero finos, mercado afilado).
+
+Patrón v2.1 que respalda la jugada:
+[ ] Patrón 1 (Tipología — Keller Tipo B). Patrón 3 (Timing del daño full game). Patrón 5 (un solo equipo con rutas → su TT). Patrón 9 (pitcher élite no bloquea).
+
+
+2. RESULTADO OBJETIVO
+
+Marcador final:
+[ ] Atlanta 6 — Pirates 3.
+
+Línea de abridores:
+[ ] Abridor A (Keller, PIT): 4.2 IP, 7 H, 6 R, 6 ER, 3 BB, 4 K, 1 HR — las 6 carreras del partido contra él. Tipo B confirmado, castigado distribuido innings 2-5.
+[ ] Abridor B (Pérez, ATL): 5.0 IP, 3 H, 3 R, 3 ER, 2 BB, 5 K, 0 HR — exactamente 5 IP, luego pen élite 4 IP en blanco.
+
+Bullpen relevante:
+[ ] ATL: Fuentes / Lee / Suárez / Iglesias cerraron sin daño.
+[ ] PIT: tiró 3.1 IP en blanco (no se probó — el daño ya estaba hecho a Keller).
+
+Bates clave del partido:
+[ ] ATL: Dubón 2-4, 2 R, 3 RBI, HR (8º — fuente de poder NO targeteada). Acuña 2-4, 1 RBI. Riley 1-3, 2B, 1 RBI. Olson 2-4 (cobró la pick vía 2 hits).
+[ ] PIT: Cruz 0-4, 3 K.
+
+Ambientales:
+[ ] Clima confirmado 82°F, viento 5 mph (negligible, como proyectado). Sin factor ambiental.
+
+Mercado(s) elegido(s) — ganó / perdió / push:
+[ ] Olson H+R+RBI over 1.5 @1.66 → GANÓ (H+R+RBI = 2, cobró solo con 2 hits). Hipotéticos cartera: Atlanta TT over 4.5 → ganó (ATL 6 R). Keller ER over 2.5 → ganó (6 ER).
+
+
+3. POSTMORTEM (separar proceso de resultado)
+
+¿La lectura del edge fue correcta?
+[ ] Sí. Keller Tipo B castigado por ATL como proyectaba (6 ER en 4.2 IP, daño distribuido innings 2-5). El dominio histórico inverso (Keller 7.31 ERA vs ATL) se materializó. La tesis full game se cumplió íntegra.
+
+¿El mercado capturó bien el edge?
+[ ] Sí. La pick jugada (Olson H+R+RBI) cobró por mérito propio (2 hits), y toda la cartera recomendada (Atlanta TT over, Keller ER over) habría cobrado. El edge se expresó en hits/carreras de ATL como se proyectó.
+
+¿El timing del daño coincidió con la proyección?
+[ ] Sí. Daño distribuido vs el abridor (innings 2-5), consistente con Tipo B que sobrevive pero permite daño acumulado. No fue ni F5-puntual ni tardío-vs-bullpen — fue full game contra el starter.
+
+¿Apareció algún factor ambiental que cambió el guion?
+[ ] No. Clima confirmado, viento negligible. El guion se desarrolló por matchup puro.
+
+Clasificación del resultado:
+[X] ACIERTO_LIMPIO (jugada): Olson H+R+RBI @1.66 cobró.
+[X] ACIERTO_LIMPIO (analítica): lectura + mercado + cobró por el motivo proyectado.
+
+Nota ruido (prop): la fuente de poder fue Dubón (8º, NO targeteado), no los bates de matchup (Acuña/Olson/Riley aportaron pero vía sencillos/dobles). La apuesta jugada igual cobró por mérito propio — el edge colectivo (ATL castiga a Keller) era robusto a qué bate específico produjera el slugging.
+
+4. PATRÓN APLICABLE / EMERGENTE
+
+¿Qué patrón v2.1 explica mejor lo ocurrido?
+[ ] Patrón 1 (Tipo B confirmado), Patrón 3 (daño full game vs leash que sobrevive), Patrón 5 (ATL único equipo con rutas → su TT/props cobraron). Patrón 4 alerta espejada validada en negativo: Pérez sacó 5 K (Cruz 3 K), confirmando que el under Ks descartado habría perdido — la 2ª condición del patrón (lineup con K% genuinamente bajo) NO se cumplía y el framework lo marcó. Nota Cavalli: Keller terminó bajo su línea de Ks (4) pero por salida corta vía bombardeo, no por bajo K rate — exactamente la excepción documentada del Patrón 4.
+
+¿Aparece un patrón nuevo que no está en v2.1?
+[X] Sí — candidato v2.2:
+
+"Tipo B + dominio histórico inverso documentado (rival específico lo castiga, ej. Keller 7.31 ERA vs ATL) = upgrade de convicción en hits/ER over y TT del rival, por encima de Tipo B solo."
+
+Conexión con candidatos previos: complementa "matchup-specific blowup overrides metric-average" (Detmers vs ATH, Imanaga). Aquí el ángulo es el espejo POSITIVO: en lugar de "el blow-up reciente es predictor", es "el dominio histórico inverso vs un rival específico eleva la convicción del fade". Mismo principio subyacente: el head-to-head específico tiene señal por encima del perfil promedio. Podría fusionarse con ese candidato en un patrón único "señal head-to-head específica > perfil promedio (en ambas direcciones)".
+
+¿Algún patrón v2.1 fue contradicho por este partido?
+[ ] No. Validación limpia de Patrones 1, 3, 5 + alerta espejada del Patrón 4 en negativo (descarte correcto del under Ks).
+
+5. LECCIÓN OPERATIVA EN UNA FRASE
+
+[ ] Cuando un Tipo B enfrenta a un rival que históricamente lo destroza, la traducción más limpia es hits/ER over + TT del rival; y el Patrón 4 sigue salvando del under Ks aunque el abridor rival tenga ERA de humo.
