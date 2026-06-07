@@ -2044,3 +2044,93 @@ Clasificación del resultado:
 5. LECCIÓN OPERATIVA EN UNA FRASE
 
 [ ] El prop directo cobró el edge real aunque side, total y TT fallaran: cuando solo una pieza es de hierro (Freeland es malo), apostar esa pieza aislada vence apostar el guion completo del partido.
+
+
+	[Brewers vs Rockies 060626]
+
+1. THESIS PRE-PARTIDO (antes de ver resultado)
+
+Edge principal en una frase:
+[ ] Lineup paciente de NL (MIL) vs Agnos (Tipo A relevista estirado, sin leash) + bullpen COL 4º peor gastado, amplificado por Coors.
+
+Nivel en Jerarquía de Edges (v2.1):
+[ ] Top-3 apiladas — Posición 1 (parque/clima, Coors) + Posición 2 (matchup mano) + Posición 3 (leash/bullpen). Dirección del edge: correcta.
+
+Tipo de vulnerabilidad del pitcher rival (si aplica):
+[ ] Agnos (COL): Tipo A (relevista estirado, sin leash, comando frágil). Confirmado: 3 IP, 3 BB, 2 HR.
+
+Mercado(s) elegido(s):
+[ ] PASS — no se apostó. El menú lideró con F5 TT MIL over (PRINCIPAL) + TT full game (degradado por "cobrado").
+
+Cuota(s):
+[ ] ML favorito -259; Run line MIL -2.5 / COL +2.5; Total 10.5 (rango 10.5-12). TT Brewers nunca posteado fiable (proyección 6.6).
+
+Stake relativo:
+[ ] PASS.
+
+Patrón v2.1 que respalda la jugada:
+[ ] Patrón 1 (Tipología — Agnos Tipo A). Patrón 3 (Timing del daño F5 vs full game). Patrón 5 (un solo equipo con rutas → su TT). Patrón 11 (factores ambientales — Coors + viento).
+
+
+2. RESULTADO OBJETIVO
+
+Marcador final:
+[ ] Brewers 7 — Rockies 1 (Coors). Total 8 R.
+
+Línea de abridores:
+[ ] Abridor A (Misiorowski, MIL): 7.0 IP, 1 R, 0 ER, 3 BB, 8 K, 0 HR — DOMINÓ. El asterisco Coors no se materializó.
+[ ] Abridor B (Agnos, COL): 3.0 IP, 3 BB, 2 HR — Tipo A / leash corto confirmados.
+
+Bullpen relevante:
+[ ] COL: bullpen 4º peor gastado cargó el daño tardío (5 de 7 carreras MIL en innings 7-8).
+
+Bates clave del partido:
+[ ] MIL: Turang 2 HR / 2 R / 2 RBI (crush); Bauers / Contreras RBI; Hamilton (9º) 4-de-5 con HR. Chourio 0-de-5.
+[ ] Mecanismo de anotación: 5 HR solitarios; 0-de-6 con RISP; 12 LOB — vía HR, NO vía tráfico.
+
+Ambientales:
+[ ] Coors. Viento 10 mph out to CF (NO confirmado por anemómetro pre-partido).
+
+Mercado(s) elegido(s) — ganó / perdió / push:
+[ ] PASS — N/A. Hipotéticos: F5 TT MIL over (la PRINCIPAL) → pierde/push a 2-2.5 (MIL solo 2 R en F5). TT full over → gana a 6.5 (7 R, pero se bajó por "cobrado"). Over 10.5 → PIERDE (total 8); under gana. Run line +2.5 → ganó por 6 (era "el número trampa"). Props: Turang crush, Hamilton 4-5 HR cobraban.
+
+
+3. POSTMORTEM (separar proceso de resultado)
+
+¿La lectura del edge fue correcta?
+[ ] Direccionalmente sí (MIL dominó a COL, Agnos Tipo A se rompió), pero el MECANISMO fue equivocado: predije tráfico/conversión, fue HR solitario + 0-de-6 con RISP. El daño llegó por aire, no por paciencia/tráfico como proyectaba la tesis de "lineup paciente vs Tipo A".
+
+¿El mercado capturó bien el edge?
+[ ] No. La selección de mercado falló doble: (1) elevé F5 TT contra mi propio análisis de daño tardío (5 de 7 R en innings 7-8); (2) degradé el TT full game a 6.5 por "cuota cobrada" — ese era el mercado ganador. El filtro de "precio cobrado" llevó a la expresión perdedora y descartó la ganadora.
+
+¿El timing del daño coincidió con la proyección?
+[ ] No. El propio análisis anticipaba daño tardío (bullpen COL gastado), pero la selección de mercado contradijo ese análisis al elevar el F5 TT. 5 de 7 carreras llegaron en innings 7-8 contra el bullpen — exactamente el guion que el análisis describía pero que la pick no respetó.
+
+¿Apareció algún factor ambiental que cambió el guion?
+[ ] Viento 10 mph out to CF (no confirmado pre-partido por anemómetro). Amplificó el run environment vía HR. No invalidó la dirección (MIL ganó) pero sí el mecanismo (HR solitario en lugar de tráfico). Patrón 11 nuevamente: el viento out no confirmado se materializó.
+
+Clasificación del resultado:
+[X] PASS_CORRECTO (jugada): el pass evitó pérdidas en F5 TT over (la PRINCIPAL recomendada) y en Over 10.5.
+[X] ANALÍTICA desglosada: edge direccional = ACIERTO_DIRECCIONAL; mecanismo = ERROR_DE_LECTURA (predije tráfico, fue HR solitario + 0/6 RISP); selección de mercado = ERROR_DE_LECTURA (elevé F5 TT contra mi propio análisis de daño tardío); cautela over = ACIERTO (Patrón 5: over unilateral; el under ganó por dominio de Misiorowski).
+
+4. PATRÓN APLICABLE / EMERGENTE
+
+¿Qué patrón v2.1 explica mejor lo ocurrido?
+[ ] Patrón 3 (Timing del daño F5 vs full game) — el caso es textbook del error que el Patrón 3 advierte: con relevista estirado + bullpen rival malo, el daño es tardío (6ª-9ª), no F5. El análisis lo describió pero la selección de mercado lo ignoró. Patrón 5 (over unilateral): el over 10.5 perdió porque solo MIL anotó; el under ganó por dominio de Misiorowski. Patrón 11 (viento out no confirmado se materializó).
+
+¿Aparece un patrón nuevo que no está en v2.1?
+[X] Sí — dos candidatos:
+
+(1) "Eje 'bullpen detrás / daño tardío' debe primar sobre la preferencia 'F5 menos tasado' → full-game TT > F5 TT." Caso confirmado: el análisis sabía que el daño sería tardío (bullpen COL gastado) pero eligió F5 TT por precio. Refuerza el cluster del filtro de selección (el precio NO debe invertir el análisis de timing). Conecta directamente con rangers-cardinals-020626 (refinamiento "timing > regla de cuota").
+
+(2) "Equipo bajo-HR en Coors + viento out puede anotar vía HR solitario, no tráfico; no degradar props HR" — espejo ofensivo del cluster "slugging por aire pese a ofensiva fría". 5 HR solitarios, 0-de-6 RISP. Cuarto caso del meta-mecanismo "el daño llega por aire cuando hay viento out confirmado, no por tráfico" (junto a Tigers/Rays 01/06, Astros/Cubs 24/05, Royals/Twins 04/06).
+
+¿Algún patrón v2.1 fue contradicho por este partido?
+[ ] No. Patrón 3 validado (daño tardío como advierte). Patrón 5 validado (over unilateral → under ganó). Patrón 11 validado (viento out no confirmado). El error fue de selección de mercado contra el propio análisis, no de los patrones.
+
+Disciplina n=1:
+[ ] Chourio 0-de-5 / Hamilton 4-de-5 = varianza, no patrón. No sobreajustar forma reciente de un bate. El análisis se ancló en exceso al juego del viernes (16 R sin HR).
+
+5. LECCIÓN OPERATIVA EN UNA FRASE
+
+[ ] Tesis direccional correcta no salva la selección de mercado: el filtro "cuota cobrada" llevó a la expresión perdedora (F5 TT) y a pasar la ganadora (TT full a 6.5). Con relevista estirado + pen malo, leer el timing tardío antes que el precio.
