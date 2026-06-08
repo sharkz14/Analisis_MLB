@@ -1,0 +1,739 @@
+MLB_Heuristicas_Mercados_v2_2_300426_070626.txt
+
+NOTA ACTIVA — HEURÍSTICAS DE TRADUCCIÓN EDGE → MERCADO (MLB)
+
+Versión: v2.2 (revisión 08/06/26)
+Ventana de muestra acumulada: 30/04/26 al 07/06/26 (52 partidos: 28 de v2.1
++ 24 nuevos)
+Fuente estructurada: data/postmortems.yaml + MLB_Postmortems_Raw
+Recalibración: data/recalibracion_v2_2.md
+Reemplaza a: MLB_Heuristicas_Mercados_v2_1_300426_080526.txt
+
+Cambios respecto a v2.1 (recalibración tras 24 partidos nuevos):
+
+HALLAZGO CENTRAL DEL CONTEO: el problema se DESPLAZÓ de traducción de mercado
+(que v2.1 resolvió) a LECTURA pre-partido y EJECUCIÓN. En la ventana nueva,
+ERROR_DE_LECTURA (8) > ERROR_DE_MERCADO (5), y el leak más caro fue de
+ejecución: se apostó en solo 8 de 24 partidos, pero de esos 8, 6 fueron
+aciertos limpios (75% por proceso). El sistema de análisis funciona; el cuello
+de botella es ejecutar y leer, no traducir.
+
+Cambios:
+- NUEVO: Regla de Ejecución y Selección de Mercado (promovida desde el "check
+  de selección" de v2.1, con default invertido). Atiende el leak de ejecución.
+- NUEVO: Regla del Under Ks (promovida desde la alerta espejada del Patrón 4,
+  reformulada: el predictor es las IP esperadas, no el K% reciente).
+- NUEVO: Regla de Conflicto de Tiers (extensión de la Jerarquía de Edges:
+  qué hacer cuando dos señales de tiers distintos chocan).
+- NUEVO PATRÓN 13: señal específica con mecanismo > agregado de temporada.
+- Patrón 1: clasificación A/B/C ahora es CONTEXTUAL (matchup × leash × parque
+  × estado físico), no propiedad fija del pitcher.
+- Patrón 3: granularidad de bullpen (no confiar en el agregado).
+- Patrón 5/6: caveat "lineup debilitado ≠ ofensiva inofensiva".
+- Patrón 8: evaluar planes de pitcheo no estándar como sistema.
+- Patrón 10: matiz del vehículo H+R+RBI (ciego a HBP/SB).
+- Patrón 11: el ambiente gobierna el run environment, no el camino del daño.
+
+Propósito:
+Guía operativa pre-partido para evitar los dos errores más caros: (1) leer
+mal el edge, y (2) no ejecutar / mal traducir un edge bien leído.
+
+Naturaleza del documento:
+Son heurísticas activas, no leyes. Recalibrar cada 2-3 semanas con muestra
+nueva y revisar si algún patrón ya no aplica.
+
+
+REGLA MADRE
+
+[ ] Primero identificar dónde nace el edge (en una frase).
+[ ] Después elegir el mercado que lo captura con menos dependencias.
+[ ] No apostar al equipo, apostar al mercado que mejor expresa el edge.
+[ ] Si el mercado elegido necesita demasiadas cosas perfectas, bajar stake o pasar.
+
+
+JERARQUÍA DE FUENTES DE EDGE (de más confiable a más ruidoso)
+
+[ ] Parque + clima confirmado el día del partido.
+[ ] Matchup mano/repertorio del pitcher vs perfil colectivo del lineup.
+[ ] Leash del abridor + plan/profundidad del bullpen.
+[ ] Tipo de vulnerabilidad del pitcher (ver Patrón 1).
+[ ] Forma reciente del lineup contra esa mano (no contra cualquier mano).
+[ ] Umpire de home (zona, K%).
+[ ] Lineup spot del bateador analizado.
+[ ] Forma reciente individual (últimos 10-15 PA, alto ruido).
+[ ] Narrativa de momentum / rachas de equipo (último, casi siempre ruido).
+
+Si el edge principal viene de las posiciones 7-9 de esta lista, bajar stake
+o buscar confirmación en otra fuente más alta antes de apostar.
+
+REGLA DE CONFLICTO DE TIERS (v2.2):
+La Jerarquía rankea fuentes, pero no dice qué hacer cuando dos señales apuntan
+a direcciones distintas. Regla:
+[ ] Cuando dos señales chocan, la de tier MÁS ALTO manda la DIRECCIÓN.
+[ ] Una señal de tier 7-9 (momentum, forma reciente individual, narrativa)
+    puede justificar BAJAR STAKE, pero NUNCA invertir la dirección de una
+    señal de tier 1-4 (parque/clima confirmado, matchup, leash/bullpen).
+[ ] Un FRENO que viene de tier 1-4 (BvP histórico desfavorable, split
+    colectivo flojo confirmado) no se releva a "nota al pie" debajo de una
+    tesis: debe LIDERAR la recomendación o gatillar pass.
+Casos: mariners-astros 14/05 (forma reciente, tier 8, invirtió el matchup de
+temporada, tier 2 → SEA ganó 8-3); royals-twins 04/06 (momentum, tier 9,
+invirtió parque+viento+abridores, tiers 1-4 → over cobró 14 R); dodgers-dbacks
+04/06 (freno de tier alto subponderado bajo la tesis → LA top-3 fue 0-12).
+Operativo: antes de fijar la dirección, preguntar "¿hay una señal de tier más
+alto que contradice mi tesis o frena el lado que elijo?". Si sí, esa señal
+manda.
+
+
+PATRÓN 1 — TIPOLOGÍA DE VULNERABILIDADES DEL PITCHER
+
+No todos los pitchers vulnerables apuntan al mismo mercado. Antes de elegir,
+clasificar qué TIPO de vulnerabilidad tiene:
+
+Tipo A — Comando frágil (BB alto + first-pitch strike bajo + K% bajo)
+Casos: Patrick (Cardinals/Brewers), Cavalli (Nationals/Twins), Flaherty
+(Rangers/Tigers 01/05), Singer (Reds/Pirates 01/05), Agnos (Brewers/Rockies
+06/06).
+[ ] Apuntar a tráfico temprano y pitch count.
+[ ] Mercados: F5 TT rival, hits permitidos over, BB permitidos over.
+[ ] El rival no necesita poder, necesita paciencia.
+
+Tipo B — Contacto fuerte permitido pero leash sólido
+Casos: Gallen (D-backs/Pirates), Lambert (Astros/Dodgers, lado defensivo),
+Mlodzinski (Pirates/Giants 08/05), Castillo (Royals/Mariners 03/05), Keller
+(Pirates/Braves 05/06), Taillon (Giants/Cubs 07/06).
+[ ] El pitcher permite daño pero llega a 5-6 IP.
+[ ] Mercados: hits allowed over, ER allowed over, F5 TT rival, total bases.
+[ ] EVITAR under Ks/outs y fade automático del pitcher.
+
+Tipo C — Comando/contact management sin whiff
+Casos: Lugo (Guardians/Royals), Alcantara perfil teórico (Orioles/Marlins),
+Fried en spot de manufactura rival (Yankees/Brewers 08/05).
+[ ] Vulnerable a tráfico acumulado y pitch count, no a slugging.
+[ ] Mercados: BB permitidos, hits allowed, F5 TT rival si el rival es paciente.
+[ ] EVITAR confiarse del K% bajo del rival; el problema no es el ponche.
+
+Antes de apostar contra un pitcher, exigir respuesta clara:
+[ ] ¿Qué tipo de vulnerabilidad tiene (A, B o C)?
+[ ] ¿El lineup rival tiene el perfil para explotar ESE tipo?
+[ ] ¿El mercado elegido cobra por ese tipo específico, no por otro?
+
+Jerarquía de atacabilidad por TT del rival:
+[ ] Tipo A > Tipo B > Tipo C. El Tipo A no sobrevive innings con tráfico;
+    los Tipo B/C pueden sobrevivir permitiendo daño.
+[ ] Cuando AMBOS abridores son vulnerables, atacar al Tipo A es más fiable
+    que atacar al B/C (caso: Cardinals/Brewers 04/05, Patrick A > Leahy C).
+
+REFINAMIENTO v2.2: la clasificación A/B/C es CONTEXTUAL, no una propiedad fija
+del pitcher. El tipo depende del MATCHUP del día (pitcher × lineup × parque ×
+leash × estado físico), no del perfil de temporada en aislamiento.
+
+(a) Clasificación del MATCHUP, no del pitcher solo:
+[ ] Un Tipo B (contacto fuerte) vs un lineup con K% colectivo alto (>25%) que
+    no extiende at-bats opera como Tipo C (K alto + control). Severino HH
+    41.4% / Barrel 9.8% (Tipo B clásico) terminó 10 K / 0 BB porque LAA no
+    extendió turnos (athletics-angels 21/05).
+[ ] Antes de fijar el tipo, preguntar: ¿el lineup rival explota ESTE tipo o
+    lo neutraliza?
+
+(b) El leash del DÍA atenúa el tipo:
+[ ] Un Tipo B con leash atenuado por contexto (regreso de IL, parque hostil +
+    ofensiva rival en racha, comando frágil reciente) sale en 3-4 IP como un
+    Tipo A, no 5-6 IP → el mercado se desplaza de "full-game over" hacia
+    "F5 over alto" (nationals-reds 13/05: Lodolo post-IL + Irvin en parque
+    hostil, ambos sub-5 IP, 73% del daño en F5).
+
+(c) Post-IL: usar las últimas 2 salidas como overlay:
+[ ] Para un pitcher recién regresado de IL, el xwOBA/Barrel%/K% de temporada
+    agregada NO es predictor confiable; las últimas 2 salidas post-IL pesan
+    más (phillies-redsox 13/05: Gray season xwOBA .369 vs forma post-IL
+    dominante → 6 IP / 1 ER / 6 K).
+
+(d) Operacionalizar el tipo en el PITCHER, no en el bateador:
+[ ] La traducción de un tipo a mercado (ej. Tipo A → "BB allowed over") debe
+    quedar en el pitcher (Liberatore BB allowed), no migrar a prop individual
+    del bateador (Rooker BB @2.54 → perdió, ATH solo 2 BB equipo). La varianza
+    individual mata la tesis colectiva (cardinals-athletics 13/05).
+
+Conexión con la Regla de Conflicto de Tiers: cuando NO hay Tipo A en el
+partido, la atacabilidad del Tipo B es relativa a los frenos de tier alto
+(BvP histórico, split colectivo flojo). Si esos frenos existen, el under/pass
+debe liderar (dodgers-dbacks 04/06).
+
+
+PATRÓN 2 — "MEJOR ABRIDOR" NO ES F5 SIDE AUTOMÁTICO
+
+[ ] No convertir "abridor mejor" en F5 ML/DNB si no domina por K/whiff.
+[ ] Un abridor de comando/contact management puede perder F5 por tráfico,
+    BB y pitch count, no por slugging del rival.
+[ ] Lineups pacientes, zurdos/switch y con velocidad rompen F5 sin HR.
+
+Checklist antes de F5 side favorito:
+[ ] ¿El abridor favorito tiene whiff real o solo command?
+[ ] ¿El underdog tiene 4-5 bates pacientes arriba?
+[ ] ¿Hay muchos zurdos/switch contra el abridor?
+[ ] ¿El umpire da zona grande?
+[ ] ¿El underdog puede correr si se embasa?
+[ ] ¿La parte baja del underdog puede extender innings?
+[ ] ¿El favorito puede dejar corredores y producir tarde, no temprano?
+
+Si 3 o más respuestas son adversas:
+[ ] Bajar F5 side.
+[ ] Subir: TT full game del favorito, prop del bate top, over protegido.
+[ ] Evitar: run line, F5 -0.5/-1.5.
+
+
+PATRÓN 3 — TIMING DEL DAÑO: F5 VS FULL GAME
+
+El edge ofensivo correcto puede llegar tarde. Casos recurrentes en raw:
+Astros/Dodgers (daño llega contra bullpen tras Lambert), Phillies/Athletics
+(8 carreras en 7ª-8ª), Red Sox/Tigers (Vanasco explota en 0.2 IP),
+Rangers/Yankees (Gore se rompe en el 6º).
+
+[ ] Si el abridor rival tiene leash para llegar a 5-6 IP, el F5 TT exige
+    conversión rápida que muchas veces no aparece.
+[ ] Si el edge real es "bullpen rival vulnerable", el daño aparece en 6ª-9ª.
+[ ] Si el abridor del underdog es volátil en la 3ª vuelta, el +1.5 muere ahí.
+[ ] No forzar F5 cuando el guion natural del partido es full game.
+
+Antes de elegir F5 TT vs TT full game:
+[ ] ¿El daño DEBE ser temprano o puede ser distribuido?
+[ ] ¿El abridor rival es del Tipo A (sale temprano) o B/C (sobrevive)?
+[ ] ¿El bullpen rival entra en innings tempranos o medios?
+[ ] ¿La ofensiva propia convierte tráfico rápido o tarde?
+
+Traducción rápida:
+[ ] Daño debe ser temprano (Tipo A + leash corto) → F5 TT, F5 lado.
+[ ] Daño es full game (Tipo B/C o bullpen débil) → TT full game, props volumen.
+[ ] Daño contra bullpen medio → live después del cambio + over full game.
+
+REFINAMIENTO v2.2: no confiar en el AGREGADO del bullpen. El ERA de equipo,
+el ranking ("30/30 MLB"), el rótulo "pen cansado" y el ERA acumulado son
+señales agregadas que engañan. Antes de apoyar un edge en "bullpen rival
+vulnerable/expuesto", desagregar:
+
+(a) Granularidad por ROL — el agregado no distingue qué brazos cubren qué
+innings:
+[ ] "Bullpen cansado" requiere saber QUIÉN se usó ayer y QUIÉN no. Bulk/middle
+    agotado ≠ setup/closer agotado; los high-leverage (8ª-9ª) rara vez
+    participan del bullpen game previo (phillies-redsox 13/05: Whitlock +
+    Chapman cerraron limpios porque no se usaron en el bulk previo).
+
+(b) Composición — un brazo extremo infla/desinfla el agregado:
+[ ] El ERA de equipo del pen sobreestima fragilidad cuando un brazo extremo
+    (en IL, blow-up reciente) infla el promedio. Chequear el ERA de los 3-4
+    brazos que REALMENTE cubrirían 6ª-9ª (mariners-astros 13/05: pen "6.05 ERA
+    peor MLB" pero Okert 3.79 / King 3.57 / De Los Santos 4.15 cerraron
+    dominante).
+
+(c) Lagging vs leading — el ERA acumulado es lagging:
+[ ] Un pen con buen ERA acumulado puede estar regresando; uno con mal ERA
+    puede haber estabilizado. Pesar peripherals recientes (xFIP, K%, strand
+    rate, uso) por encima del ERA acumulado (rangers-dbacks 11/05: pen elite
+    por ERA contuvo; astros-cubs 24/05: HOU "30/30 MLB" había estabilizado y
+    sostuvo).
+
+Regla: antes de tomar TT over / over total / +1.5 apoyado en "bullpen rival
+débil", nombrar los 2-3 brazos específicos que cubrirían los innings del edge,
+su ERA/peripherals recientes y su carga de uso. Si no se puede, bajar
+convicción.
+
+
+PATRÓN 4 — K UPSIDE NO ES OVER Ks SI HAY TRÁFICO
+
+[ ] K upside + WHIP alto + BB alto + rival con OBP funcional = salida corta.
+[ ] El edge real está en carreras tempranas y tráfico, no en ponches.
+[ ] Un lineup zurdo/switch + paciente saca al pitcher antes de que acumule Ks.
+
+Orden de mercados cuando hay K upside + tráfico permitido:
+[ ] TT rival.
+[ ] F5 TT rival.
+[ ] Hits permitidos over.
+[ ] Outs under.
+[ ] ER permitidos over.
+[ ] Over Ks solo si el leash y el matchup lo sostienen (revisar Patrón 1).
+
+(La alerta espejada de v2.1 se promovió a la REGLA DEL UNDER Ks, sección
+propia más abajo.)
+
+
+REGLA DEL UNDER Ks (v2.2 — promovida desde la alerta espejada del Patrón 4)
+
+El predictor del under Ks es las IP ESPERADAS, no el K% reciente.
+
+Confirmado en 9 casos, dos direcciones:
+
+Dirección A — arsenal intacto + pitcher llega a 5-6 IP → los Ks llegan,
+under PIERDE pese a forma reciente mala o pese a permitir daño:
+[ ] Valdez (30/04): bajo K% reciente, 8 K en 6 IP.
+[ ] Abbott (30/04): 18% BB temporada, 5 K.
+[ ] Hancock (02/05): nuevo arsenal, 14 K en 7 IP.
+[ ] Detmers (19/05): 8 K pese a blow-up de 8 ER.
+[ ] Wrobleski (04/06): 4 K en 6 IP, under habría perdido.
+
+Dirección B — salida corta por tráfico/bombardeo → under GANA, pero por
+POCAS IP, no por bajo K rate:
+[ ] Cavalli (05/05): 2 K, salida corta.
+[ ] Lugo (04/06): 4 K, salida corta (under descartado correctamente).
+[ ] Keller (05/06): 4 K, sacado a 4.2 IP vía bombardeo.
+[ ] Nola (07/06): 4 K, sacado a 4.1 IP vía bombardeo.
+
+Regla operativa:
+[ ] Para TOMAR under Ks, no basta "forma reciente mala". Exigir riesgo real
+    de SALIDA CORTA (<4.2 IP): leash corto confirmado (límite de pitcheo,
+    regreso de IL, bullpen game) O Tipo A claro (comando frágil que se rompe
+    por tráfico temprano).
+[ ] Si el arsenal está intacto y el pitcher proyecta 5+ IP, los Ks llegan
+    aunque la forma sea catastrófica → NO tomar under Ks.
+[ ] Espejo positivo: el OVER Ks (o outs) vale incluso cuando el pitcher
+    permite daño, si el arsenal está intacto. Las props pitcher Ks/outs
+    sobreviven al colapso del side (Imanaga 6 K pese a 7 ER, astros-cubs
+    24/05; props Eovaldi/May en rangers-cardinals 02/06).
+
+
+PATRÓN 5 — UN SOLO EQUIPO CON RUTAS DE ANOTACIÓN → SU TT
+
+[ ] No tomar over general si la mayoría de carreras proyectadas vienen de un
+    solo equipo.
+[ ] Tráfico sin conversión del otro equipo no sostiene over (caso clásico:
+    Baltimore 10 hits, 1 carrera, 0-for-7 con RISP).
+[ ] El TT/F5 TT del equipo fuerte captura mejor el edge específico.
+
+Jerarquía cuando el edge es claramente unilateral:
+[ ] F5 TT del equipo fuerte (si el daño debe ser temprano).
+[ ] TT full game del equipo fuerte (si el bullpen rival también es débil).
+[ ] Props H+R+RBI / total bases de bates 2º-5º.
+[ ] ML del equipo fuerte si el precio paga.
+[ ] Over general solo si el rival también tiene ruta real.
+
+Nota sobre H+R+RBI:
+Cuando un bate top está en lineup spot 2º-5º y su equipo tiene TT alto,
+H+R+RBI suele ser mejor que hit simple, porque cobra por participación
+ofensiva total y no exige conexión limpia. (Ver matiz del vehículo en
+Patrón 10.)
+
+Caveat v2.2 — "lineup debilitado ≠ ofensiva inofensiva":
+[ ] Antes de declarar "un solo equipo tiene rutas", verificar que el lineup
+    debilitado no conserve ruta por (a) poder latente + ambiente (ver Patrón
+    11) o (b) profundidad de banca (PH con upside). Casos: athletics-angels
+    19/05 (ATH sentó sus mejores bates y anotó 14 con multi-ruta);
+    phillies-redsox 13/05 (Rafaela PH desde banca pegó el HR decisivo).
+
+
+PATRÓN 6 — FAVORITO SIN EDGE OFENSIVO COLECTIVO
+
+Combinación a vigilar (las 5 condiciones):
+[ ] Favorito con mejor abridor.
+[ ] Lineup favorito "parece" bien por mano pero el split colectivo vs esa
+    mano es flojo.
+[ ] Parte baja del favorito poco profunda.
+[ ] Parque pitcher-friendly o clima que comprime carreras.
+[ ] Underdog competente con bullpen funcional.
+
+Tier de severidad:
+[ ] Si se cumplen 3 de las 5: inversión moderada — F5 protegido / under como
+    pick secundaria, ML favorito sigue siendo el lado correcto pero con stake
+    contenido.
+[ ] Si se cumplen 4 o 5 de las 5: inversión drástica — la jerarquía correcta
+    pasa a ser F5 protegido / under / underdog +1.5 > ML favorito > props
+    ofensivas del favorito > run line favorito.
+
+Caso confirmado de inversión drástica:
+[ ] Padres/Cardinals 07/05 — las 5 condiciones se cumplieron. Cardinals +1.5
+    cobró, Under 8.5 cobró, Padres F5 DNB habría sido push. Padres props
+    ofensivas y ML perdieron.
+
+Contraste — cuándo NO se activa:
+[ ] Dodgers/D-backs 03/06 — solo 1-2 de 5 condiciones; el TT del fuerte (LAD
+    over) cobró sobrado. El check de las 5 condiciones se ejecutó y dio "no".
+
+Si se cumplen 3+:
+[ ] F5 protegido del favorito.
+[ ] Under.
+[ ] Underdog +1.5 (con condiciones del Patrón 7).
+[ ] Pitcher props del favorito.
+[ ] ML favorito solo si el precio paga (aburrido pero correcto).
+[ ] Evitar: run line favorito, TT over alto, props ofensivas del favorito.
+
+Sublección sobre TT alto:
+Si la línea de TT del favorito ya está alta, exige confirmación fuerte de
+clima, viento, lineup completo, leash corto rival y bullpen expuesto temprano.
+Si una de esas piezas falla, el TT over se vuelve frágil aunque el favorito gane.
+
+Caveat v2.2 (mismo que Patrón 5): "lineup debilitado del underdog ≠ underdog
+inofensivo". Un underdog que sentó bates o perdió piezas puede conservar ruta
+por poder latente + ambiente o profundidad de banca.
+
+
+PATRÓN 7 — UNDERDOG +1.5 NECESITA CONVERSIÓN, NO SOLO TRÁFICO
+
+[ ] Embasarse no basta. Necesita convertir: RISP, contacto útil, poder
+    distribuido, bates con RBI equity.
+[ ] La parte baja no puede cortar innings.
+[ ] El abridor del underdog debe sobrevivir la 2ª/3ª vuelta sin blow-up.
+[ ] Si el favorito tiene daño distribuido 6-9, el +1.5 es más frágil.
+
+Las 4 condiciones para tomar +1.5:
+[ ] El bulk/bullpen del favorito es débil O incierto, no solo el opener.
+[ ] El underdog convierte tráfico, no solo OBP.
+[ ] El abridor del underdog limita inning grande en 2ª/3ª vuelta.
+[ ] El favorito no tiene profundidad 6-9.
+[ ] El precio paga el riesgo de inning grande.
+
+Si faltan 2 o más, pasar.
+
+Casos confirmados:
+[ ] Rangers/Yankees 07/05 — fallaron 4 de 4. Yankees ganó 9-2, Rangers +1.5
+    perdió. El bulk plan de NYY funcionó, Texas dejó 10 LOB y 1-5 RISP.
+[ ] Phillies/Rockies 08/05 — en juego alto, Rockies +1.5 perdió pese a anotar
+    9 R porque Phillies separó tarde. En juegos altos el +1.5 underdog pierde
+    valor.
+[ ] Rangers/Tigers 01/05 (éxito) — Texas +1.5 @1.47 cobró: Flaherty Tipo A
+    colapsó, Texas convirtió temprano, bullpen TX cerró, partido cerrado 5-4.
+
+Matiz v2.2 — el +1.5 puede cobrar SIN convertir tráfico:
+[ ] El underdog puede cubrir +1.5 por slug aislado (HR solitarios) sin
+    convertir tráfico (dodgers-dbacks 04/06: ARI +1.5 cobró con 2 HR
+    solitarios + walk-off pese a 1-8 con RISP y 9 LOB). El mecanismo de
+    cobertura no siempre es la conversión; a veces es el poder puntual.
+
+
+PATRÓN 8 — OPENER / SPOT STARTER NO ES FADE AUTOMÁTICO
+
+[ ] El opener corto puede ser parte de un plan preparado, no debilidad.
+[ ] Revisar: ¿hay bulk plan real? ¿bullpen capaz de 6-8 IP sin romperse?
+[ ] Un spot starter con mala línea Triple-A puede tener arsenal real si el
+    rival no eleva conteos (McDonald vs Padres es el caso límite).
+
+Antes de fadear:
+[ ] ¿El rival tiene perfil para atacar ese plan? (paciencia, contacto, poder)
+[ ] ¿El bullpen del favorito tiene exposición temprana real?
+[ ] ¿El rival sabe convertir tráfico, no solo generarlo?
+
+Si las respuestas son débiles, mejor:
+[ ] Under / F5 under.
+[ ] Pitcher outs del opener si tiene arsenal real.
+[ ] Pasar el lado.
+
+REFINAMIENTO v2.2: evaluar el plan de pitcheo no estándar como SISTEMA, no
+como debilidad targeteable única.
+
+(a) Evaluar el bulk plan como sistema, no anclar en un brazo específico:
+[ ] La asignación de bulk reliever en equipo con rotación improvisada
+    (lesiones múltiples) cambia día a día. Analizar "¿el bullpen puede
+    absorber 6-8 IP sin romperse?", no "¿el reliever X que proyecté será el
+    bulk?" (bluejays-tigers 15/05: Madden proyectado bulk, Anderson 4 IP fue
+    el bulk real).
+
+(b) Escudo de brazo bulk fresco — puede anular DOS edges a la vez:
+[ ] Cuando el edge combina "atacar abridor vulnerable" + "bullpen rival
+    gastado", un brazo bulk/swing fresco disponible (bajada reciente, long
+    man descansado) puede anular AMBOS: el abridor sale temprano Y el bulk
+    absorbe 5-6 IP en blanco (giants-cubs 07/06: Taillon 1 IP → Assad 6.1 IP
+    shutout). Antes de fijar convicción en castigar a UN abridor, verificar
+    disponibilidad de brazo bulk fresco del rival.
+
+(c) Mercado al fadear un bullpen game: el under/ML del underdog suele ser más
+    limpio que el TT del underdog:
+[ ] La paciencia del lineup que enfrenta el opener requiere que el opener
+    PIERDA comando para generar tráfico; si mete strikes, no produce. Si el
+    bullpen del favorito es elite por ERA, el patrón es contención. Expresar
+    el edge ofensivo en under/ML, no en TT del underdog (rangers-dbacks
+    11/05: pen elite contuvo, ARI ML era el mercado correcto, no ARI TT over).
+
+
+PATRÓN 9 — PITCHER ÉLITE NO BLOQUEA AUTOMÁTICAMENTE
+
+[ ] Un as con K% alto puede ser vulnerable si permite barrels/flyballs/aéreo fuerte.
+[ ] En parques HR-friendly, el poder distribuido del lineup puede pesar más que
+    el nombre del pitcher.
+[ ] "Rival tiene ace" NO es pass automático.
+
+Cuándo apostar al lineup fuerte contra un as:
+[ ] ML/TT full game si el bullpen propio también acompaña.
+[ ] Props de poder / total bases.
+[ ] HR sprinkle si el perfil de barrels + parque lo permite.
+
+Evitar:
+[ ] F5 del equipo fuerte (el as suele sostener ventaja temprana).
+[ ] Fade del lineup solo por nombre del pitcher rival.
+
+Nota v2.2: el caso extremo de este patrón (un as que colapsa) suele tener un
+mecanismo de degradación detrás → ver Patrón 13. No es solo "el as puede ser
+vulnerable"; es "el as en degradación reciente medible se rompe".
+
+
+PATRÓN 10 — PROPS SALEN DEL GUION, NO DEL MENÚ
+
+[ ] Definir primero el guion del partido (carreras, tráfico, poder, pitcheo,
+    baja anotación).
+[ ] La prop correcta deriva del guion + lineup spot + matchup, no al revés.
+[ ] H+R+RBI cuando el bate está 2º-5º y el TT del equipo es alto.
+[ ] Total bases cuando el perfil es slug/contacto fuerte.
+[ ] RBI exige tráfico delante; runs exige OBP + bates detrás.
+
+Orden de evaluación de prop:
+[ ] Guion del partido.
+[ ] Lineup spot (PA volumen).
+[ ] Matchup mano/repertorio.
+[ ] Tipo de prop según forma de producir.
+[ ] Precio y varianza.
+
+Aplicación clave:
+Si el side tiene ruido pero un bate top tiene volumen + matchup limpio,
+la prop puede ser MEJOR apuesta que ML/F5/run line (caso Witt en Guardians/Royals).
+
+Matiz v2.2 — el vehículo H+R+RBI:
+[ ] H+R+RBI es el vehículo más forgiving para participación ofensiva (cobra
+    con hit O carrera O RBI), MEJOR que hit-solo o TB cuando el bate produce
+    vía H/R/RBI (giants-cubs 07/06: Lee H+R+RBI cobró con 1 H + 1 RBI mientras
+    su TB perdió).
+[ ] PERO es CIEGO a BB/HBP/SB. Si el bate es catalizador puro (camina, HBP,
+    roba, anota sin batear), incluso H+R+RBI puede fallar (white-sox-mariners
+    19/05: Vargas H+R+RBI perdió con HBP + SB + R anotada). Para catalizadores
+    puros, runs anotadas o el side del equipo capturan mejor.
+[ ] Para un edge COLECTIVO, los mercados colectivos (TT, hits/ER allowed del
+    pitcher) tienen menos varianza que props individuales (cardinals-athletics
+    13/05; ver Patrón 1d).
+
+
+PATRÓN 11 — FACTORES AMBIENTALES (PARQUE, CLIMA, UMPIRE)
+
+Tratar como filtro previo, no como adorno final.
+
+Parque:
+[ ] HR-friendly (Coors, Great American, Yankee Stadium, Wrigley con viento out):
+    sube props de poder y totales, baja under.
+[ ] Pitcher-friendly (Petco, Oracle, T-Mobile): baja TT over, sube under
+    y +1.5 underdog viable.
+[ ] Foul territory grande (Oakland histórico): puede comprimir ofensiva más
+    de lo que parece por dimensiones.
+
+Clima:
+[ ] Viento out 10+ mph en parques HR-friendly: confirmación fuerte para over/TT alto.
+[ ] Viento in 10+ mph: mata over alto incluso con lineups fuertes.
+[ ] Temperatura <55°F: comprime carry; baja HR props.
+[ ] Humedad alta + calor: pelota viaja más.
+[ ] Lluvia confirmada: revisar si afecta a un solo abridor o ambos.
+
+Umpire:
+[ ] Zona grande (alto K%): sube over Ks de ambos abridores, baja BB props,
+    baja F5 TT que dependa de tráfico por BB.
+[ ] Zona chica (alto BB%): lo contrario; ayuda a Tipo A (Patrón 1) a romperse.
+[ ] Revisar antes de cualquier prop de Ks o BB, no después.
+
+Confirmación de viento (regla v2.1, 3 confirmaciones nuevas en v2.2):
+[ ] Viento debe confirmarse con observación real (mph + dirección medidos en
+    el parque o estación meteorológica local) dentro de 90 minutos del primer
+    pitch, no con pronóstico matinal ni actualizado. Solo lo que mide el
+    anemómetro cuenta como confirmación.
+[ ] La dirección se invierte seguido entre pronóstico y realidad: Reds/Cubs
+    04/05 (proyectado out, real 4 mph), BlueJays/Tigers 15/05 (SSW a LF, real
+    IN desde RF), Astros/Cubs 24/05 (7 mph IN RF, real 3 mph IN LF).
+
+REFINAMIENTO v2.2: el ambiente gobierna el RUN ENVIRONMENT (cuántas carreras),
+NO el CAMINO del daño (HR vs tráfico/contacto):
+[ ] Parque suppressor de HR + viento in NO implica under de carreras si ambos
+    lineups tienen contacto y bullpens flojos — el daño llega por tráfico
+    (rangers-cardinals 02/06: 1 HR en 22 hits, pero 11 R por tráfico + colapso
+    de bullpen).
+[ ] Viento out confirmado + parque HR NO garantiza match-HR over — el daño
+    puede llegar por tráfico (white-sox-phillies 07/06: CWS 3º en HR MLB,
+    0 HR, 5 R por sencillos/dobles).
+[ ] Sub-regla contraintuitiva: una ofensiva "fría", "sin top bats" o "bajo-HR"
+    NO está protegida del slugging cuando hay viento out confirmado + abridor
+    que permite contacto. El daño aparece por aire (Tigers/Rays 01/06 DET
+    5 HR "ofensiva muerta"; Astros/Cubs 24/05 HOU sin Alvarez/Altuve 3 HR;
+    Royals/Twins 04/06 MIN 4 HR; Brewers/Rockies 06/06 MIL 5 HR solitarios).
+[ ] Traducción: para capturar un edge ambiental, usar TT / over / under de
+    CARRERAS (capturan ambos caminos del daño), NO match-HR ni props HR
+    específicas (capturan solo un camino). El viento out confirmado <90 min
+    DEBE pesar como tier 1 en la selección (subir TT/over de carreras como
+    principal), no relegarse a "solo live" (ver Regla de Ejecución).
+
+
+PATRÓN 12 — SIDE CON RUIDO → MERCADO MÁS LIMPIO
+
+Si ganador probable y margen no dicen lo mismo: evitar run line.
+Si abridor favorece a un equipo pero bullpen contradice: separar F5 de full game.
+Si lineup favorece a un equipo pero su abridor preocupa: TT/props antes que ML.
+Si ambos equipos tienen rutas distintas de anotar: over o ambos TT antes que side.
+Si solo una pieza del análisis es fuerte: elegir el mercado que dependa de esa pieza.
+
+Tabla de traducción rápida:
+[ ] Edge en abridor propio → F5 / Ks / outs / TT rival under.
+[ ] Edge contra abridor rival → F5 TT rival / hits allowed / bases bateadores.
+[ ] Edge contra bullpen rival → TT full game / over full game / live.
+[ ] Edge en lineup completo → TT / ML si bullpen acompaña.
+[ ] Edge en parque/clima → total / TT / props de poder.
+[ ] Edge en bateador específico → prop, no necesariamente side.
+[ ] Edge en underdog competitivo → +1.5 si convierte y evita inning grande.
+
+Validación v2.2 — el mercado aislado blinda contra el error de lectura:
+[ ] Un prop/TT aislado del guion completo cobra aunque el resto de la lectura
+    falle. Casos: Tigers/Rays 01/06 (TT aislado de Tampa cobró pese al error
+    de lectura sobre Detroit); Rockies/Angels 01/06 (Freeland ER over cobró
+    pese a que side, under y TT del guion fallaron). "La pieza de hierro
+    aislada gana al guion completo."
+
+
+PATRÓN 13 — SEÑAL ESPECÍFICA CON MECANISMO > AGREGADO DE TEMPORADA (v2.2)
+
+El perfil de temporada (ERA, xERA, K%, Barrel% agregados) puede ser superado
+por una señal específica reciente CUANDO esa señal tiene un mecanismo
+subyacente identificable. Sin mecanismo, la señal reciente es ruido (ver
+Regla del Under Ks: el K% reciente sin cambio de arsenal vuelve a la media).
+
+Dos vías por las que la señal específica gana:
+
+(a) Head-to-head documentado (pitcher × equipo):
+[ ] Un historial de un pitcher castigado por un equipo específico — reciente
+    o de carrera — eleva la convicción del fade por encima de su ERA/xERA
+    promedio. Mecanismo: su repertorio/perfil encaja mal contra ESE lineup,
+    asimetría que el agregado vs liga no captura.
+[ ] Detmers vs ATH: estalló el 08/04, repitió el 19/05 (8 ER). Keller vs ATL:
+    7.31 ERA de carrera → fade de alta convicción se materializó (6 ER,
+    pirates-braves 05/06).
+
+(b) Degradación reciente del pitcher (mecanismo Statcast):
+[ ] Un blow-up reciente + barrel% creciente + xFIP > ERA + (pérdida de
+    velocidad/movimiento o degradación post-mediados de temporada previa) NO
+    es varianza aislada: se repite contra CUALQUIER rival.
+[ ] Imanaga: blow-up el 18/05 (vs MIL), repitió el 24/05 (vs HOU, rival
+    distinto, 7 ER / 3 HR). La señal es del pitcher en declive, no del
+    head-to-head.
+
+Gate de mecanismo (clave para distinguir señal de ruido):
+[ ] Forma reciente del pitcher = SEÑAL solo si tiene mecanismo identificable
+    (Statcast: velocidad/barrel%/xFIP; o contexto: post-IL, head-to-head
+    documentado). Sin mecanismo = RUIDO (vuelve a la media).
+[ ] Mismo principio que el refinamiento post-IL del Patrón 1 (últimas 2
+    salidas > agregado por el mecanismo del IL) y la Regla del Under Ks (K%
+    reciente sin cambio de arsenal = ruido).
+
+Traducción a mercado: cuando aplica, subir convicción en fade del pitcher
+(hits/ER over, F5 TT rival, TT rival over) por encima de lo que sugiere el
+ERA/xERA agregado.
+
+
+CUÁNDO PASAR (NO ES "BAJAR STAKE", ES PASAR)
+
+Pasar la jugada si:
+[ ] El edge requiere 3 o más supuestos encadenados para cobrar.
+[ ] No se puede formular el edge en una sola frase clara.
+[ ] El mercado elegido tiene 2+ dependencias ajenas al edge principal.
+[ ] La cuota ya cobró la lectura (no queda valor frente a la línea).
+[ ] El edge principal viene de las posiciones 7-9 de la Jerarquía de Edges.
+[ ] No hay confirmación clima/ump y son piezas relevantes del guion.
+[ ] El bateador del prop bate 6º-9º y el equipo no tiene TT alto.
+
+Pasar es una jugada activa. No es ausencia de jugada. PERO (v2.2): pasar
+requiere justificación activa igual que apostar — ver Regla de Ejecución.
+
+
+FILTRO FINAL (recorrer en orden antes de confirmar)
+
+[ ] ¿Cuál es el edge principal en una frase?
+[ ] ¿De qué posición de la Jerarquía de Edges viene?
+[ ] ¿Hay una señal de tier más alto que contradice mi tesis o frena mi lado?
+    (Regla de Conflicto de Tiers.)
+[ ] ¿El mercado elegido captura ese edge directamente?
+[ ] ¿Qué tipo de vulnerabilidad tiene el pitcher rival (A, B o C), leído en
+    CONTEXTO del lineup/leash/parque del día? (Patrón 1 refinado.)
+[ ] ¿El lineup elegido tiene perfil para explotar ESE tipo?
+[ ] ¿El timing del daño es temprano, distribuido o tardío? (El timing elige
+    el mercado; el precio no lo invierte.)
+[ ] ¿El parque/clima gobierna el run environment o también el camino del daño?
+    (Patrón 11: usar TT/over de carreras, no match-HR.)
+[ ] ¿Estoy confundiendo tráfico con carreras?
+[ ] ¿Estoy confundiendo pitcher vulnerable con under Ks/outs? (Regla del
+    Under Ks: ¿hay riesgo real de salida corta <4.2 IP?)
+[ ] ¿Estoy confundiendo favorito probable con run line / ML caro?
+[ ] ¿La cuota ya cobró el edge?
+[ ] ¿Hay un mercado más simple que expresa mejor la lectura?
+[ ] ¿Estoy a 3+ supuestos encadenados? (si sí → revisar pasar)
+[ ] Si no respondo claro alguna de estas, pasar.
+
+
+REGLA DE EJECUCIÓN Y SELECCIÓN DE MERCADO (v2.2)
+
+Contexto empírico (24 partidos, 11/05-07/06): el error más caro NO fue
+analítico sino de ejecución. Se apostó en 8 de 24; de esos 8, 6 fueron
+aciertos limpios (75% por proceso). Pero de los 16 pass, 6 dejaron EV claro
+(PASS_INCORRECTO). El sistema de análisis funciona; el cuello de botella es
+ejecutar. 10 casos documentados de picks ganadoras descartadas, relegadas a
+"solo live", o sub-priorizadas frente a un mercado más dependiente.
+
+DEFAULT INVERTIDO:
+Cuando el análisis identifica una pick que (a) captura el edge top, (b) tiene
+cuota >1.80, y (c) no tiene razón de descarte de tier 1-4 → la acción por
+defecto es EJECUTAR A STAKE MÍNIMO, no pasar. Pasar requiere justificación
+activa, igual que apostar.
+[ ] Caveat de sobre-apuesta: la regla aplica solo a la pick que captura el
+    edge TOP (no a todo el menú) y a STAKE MÍNIMO. No es licencia para apostar
+    todo el board; es para no dejar morir el edge mejor identificado.
+
+JERARQUÍA DE SELECCIÓN (timing > precio):
+[ ] El análisis de TIMING del daño (F5 / full game / tardío) elige el mercado.
+    El precio NO invierte esa elección.
+[ ] Si el análisis dice "daño tardío / full game", NO elevar el F5 TT por
+    estar "menos tasado" (brewers-rockies 06/06: F5 TT elevado contra el
+    propio análisis de daño tardío → perdió; el full-game TT degradado por
+    "cobrado" → ganó).
+[ ] Una pick degradada por análisis de timing/dependencia documentado SÍ
+    puede descartarse (rangers-cardinals 02/06: Under 6.5 degradado por riesgo
+    de daño tardío vs bullpen → descarte válido). Timing degrada; precio no.
+
+RAZONES INVÁLIDAS para descartar una pick que captura el edge top a cuota
+>1.80 (ninguna, sola, justifica el descarte):
+[ ] "Cuota corta / poco valor."
+[ ] "Forma reciente individual del pitcher" sin soporte Statcast en la misma
+    dirección (mariners-astros 14/05: SEA ML descartado por reframe de forma
+    reciente → habría ganado).
+[ ] "Demasiado obvio / el mercado ya lo precia."
+[ ] "Solo live" (relegar a en-vivo un edge legible pre-partido —
+    royals-twins 04/06: Over relegado a 'solo live' → cobró).
+[ ] "Prefiero el bate top RHH" cuando hay LHH viable con mejor platoon
+    (athletics-angels 21/05).
+
+RAZONES VÁLIDAS para descartar (tier 1-4):
+[ ] Lineup no confirmado.
+[ ] Bullpen contradice el guion.
+[ ] Parque/clima hostil confirmado <90 min.
+[ ] Timing del daño no calza con el mercado.
+[ ] Dependencia adicional no contemplada en el edge.
+
+Qué NO cubre esta regla: los casos donde el ANÁLISIS COMPLETO estaba
+equivocado y el pass por instinto salvó (astros-cubs 24/05, dodgers-dbacks
+04/06). Ahí no hay filtro que ayude — el pass fue correcto porque la lectura
+era falsa. La regla aplica solo cuando el análisis identificó bien el edge.
+
+
+FRASE FINAL
+
+En MLB hay tres errores en cascada, no uno:
+1. Leer mal el edge (ERROR_DE_LECTURA — el más frecuente en la ventana v2.2).
+2. Traducirlo al mercado equivocado (ERROR_DE_MERCADO — el que v2.1 atacó).
+3. No ejecutar un edge bien leído y bien traducido (el leak de ejecución que
+   v2.2 ataca con el default invertido).
+
+La mejor apuesta es la que necesita menos supuestos para que el edge cobre.
+Pasar es jugada — pero pasar también requiere justificación. Si tres mercados
+capturan el edge y se descarta el de mejor cuota porque "paga poco" o "es muy
+aburrido", la regla de ejecución pide ejecutar a stake mínimo, no pasar.
+
+
+NOTAS PARA SIGUIENTES ITERACIONES (cara a v2.3)
+
+Pendientes para revisar con muestra nueva:
+[ ] ¿El default invertido de la Regla de Ejecución mejora el ROI real, o
+    introduce sobre-apuesta? (Medir con stakes reales registrados.)
+[ ] ¿La Regla del Under Ks (IP esperadas) se sostiene? ¿El threshold <4.2 IP
+    es el correcto?
+[ ] ¿El Patrón 13 (señal con mecanismo) acumula más casos de cada vía
+    (head-to-head vs degradación)? ¿Conviene separarlas?
+[ ] ¿La Regla de Conflicto de Tiers reduce las inversiones por momentum?
+[ ] ¿El refinamiento del Patrón 1 (clasificación contextual) cambia la tasa
+    de ERROR_DE_LECTURA en la próxima ventana?
+[ ] El watchlist quedó VACÍO tras la recalibración v2.2: cualquier patrón
+    emergente nuevo se trackea desde cero.
