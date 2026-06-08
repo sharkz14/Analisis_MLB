@@ -2224,3 +2224,91 @@ Conexión con candidatos previos: complementa "matchup-specific blowup overrides
 5. LECCIÓN OPERATIVA EN UNA FRASE
 
 [ ] Cuando un Tipo B enfrenta a un rival que históricamente lo destroza, la traducción más limpia es hits/ER over + TT del rival; y el Patrón 4 sigue salvando del under Ks aunque el abridor rival tenga ERA de humo.
+
+
+	[White Sox vs Phillies 070626]
+
+1. THESIS PRE-PARTIDO (antes de ver resultado)
+
+Edge principal en una frase:
+[ ] Ambas ofensivas con ruta limpia contra planes de pitcheo explotables — Filadelfia vs opener Gilbert + bulk rookie volátil Sandlin; Chicago con 7 zurdos vs el reverse-platoon severo de Nola (RHP, .356/.451/.593 a zurdos) — en parque de HR con viento out confirmado; partido de anotación colectiva, edge en totales.
+
+Nivel en Jerarquía de Edges (v2.1):
+[ ] Edge combinado — Posición 1 (parque/clima — viento 15 mph OUT a RF confirmado) + Posición 2 (matchup mano/repertorio — reverse-platoon Nola) + Posición 3 (leash/bullpen — opener/bulk explotables).
+
+Tipo de vulnerabilidad del pitcher rival (si aplica):
+[ ] Nola (PHI): Tipo B con reverse-platoon severo a zurdos (.356/.451/.593). Sandlin (bulk CWS): rookie volátil, alta varianza.
+
+Mercado(s) elegido(s):
+[ ] PASS — usuario no apostó. Análisis recomendó como principales: Chicago TT over 3.5 @1.80 + Nola hits allowed over 5.5 @2.14. Secundarias: Over 9 / Match HR over 2.5 / props.
+
+Cuota(s):
+[ ] CWS TT over 3.5 @1.80; Nola hits over 5.5 @2.14; Over 9 @1.90; Match HR over 2.5 @1.90; Nola outs under 17.5 @1.77; Nola Ks under 5.5 @1.71; Nola ER over 2.5 @2.09; Nola walks over 1.5 @1.87.
+
+Stake relativo:
+[ ] PASS.
+
+Patrón v2.1 que respalda la jugada:
+[ ] Patrón 1 (Tipología — Nola Tipo B reverse-platoon). Patrón 3 (Timing del daño full game). Patrón 4 (alerta espejada — descartar Nola under Ks). Patrón 8 (opener/spot starter — Gilbert + Sandlin). Patrón 11 (factores ambientales — viento out confirmado). Patrón 12 (side con ruido — TT > ML caro).
+
+
+2. RESULTADO OBJETIVO
+
+Marcador final:
+[ ] Phillies 9 — White Sox 5. Total 14 R.
+
+Línea de abridores:
+[ ] Abridor A (Gilbert + Sandlin, CWS bullpen game): Gilbert (opener) 0.2 IP, 1 ER. Sandlin (bulk): 3.1 IP, 3 H, 3 ER, 3 BB, 6 K, 2 HR — rookie volátil confirmado.
+[ ] Abridor B (Nola, PHI): 4.1 IP, 6 H, 5 ER, 4 BB, 4 K, 0 HR — NO se redondeó; reverse-platoon + lineup zurdo paciente lo castigó, sacado a 13 outs.
+
+Bullpen relevante:
+[ ] CWS: Davis 1.0 IP / 3 ER (blown save); Hudson 0.2 IP / 2 ER / 2 BB; Richards 2.1 IP / 0 R. Profundidad adelgazada (Burke/Eisert/Newcomb fuera) se notó.
+[ ] PHI: Mayza 0.2 + Alvarado 1.0 (W) + Kerkering 1.0 + Bowlan 2.0 = 4.2 IP en blanco. Back-end élite tapó a CWS tarde como proyectado.
+
+Bates clave del partido:
+[ ] PHI: 11 H, 9 R, RISP 5-for-11, LOB 7. 2 HR (Marchan, Marsh) + conversión de tráfico distribuida (Bohm 2 RBI, Marsh 2 RBI, Marchan 2 RBI).
+[ ] CWS: 10 H, 5 R, RISP 3-for-11, LOB 10 — muchísimo tráfico, dejó 10 en base. **0 HR pese a viento out 15 mph confirmado**. Daño vía sencillos/dobles.
+
+Ambientales:
+[ ] 85°F, parcialmente nublado, VIENTO 15 mph OUT TO RF confirmado (primer pitch 1:36 PM). HP Alan MacKay.
+
+Mercado(s) elegido(s) — ganó / perdió / push:
+[ ] PASS — N/A. Hipotéticos: CWS TT over 3.5 → ganó (5 R). Nola hits over 5.5 → ganó (6 H). Over 9 → ganó (14 R). **Match HR over 2.5 → PERDIÓ (solo 2 HR, ambos PHI)**. Nola outs under 17.5 → ganó (13 outs). Nola Ks under 5.5 → ganó (4 K). Nola ER over 2.5 → ganó (5 ER). Nola walks over 1.5 → ganó (4 BB). Phillies ML → ganó. Phillies -1.5 → ganó. CWS +1.5 → perdió.
+
+
+3. POSTMORTEM (separar proceso de resultado)
+
+¿La lectura del edge fue correcta?
+[ ] Sí. Nola reverse-platoon castigado por lineup zurdo paciente (5 ER en 4.1 IP, 4 BB pese a racha previa sin BB), sacado a 13 outs. Sandlin rookie volátil confirmado (2 HR + 6 K). Pen PHI élite tapó a CWS tarde como se proyectó. Ambas tesis materializadas.
+
+¿El mercado capturó bien el edge?
+[ ] Sí. Las 2 picks principales (CWS TT over, Nola hits over) y todas las alternativas habrían cobrado. Único miss del menú: Match HR over 2.5 — el lado "de poder" (CWS, 3º en HR MLB) anotó 5 R con 0 HR.
+
+¿El timing del daño coincidió con la proyección?
+[ ] Sí. Daño full game distribuido como proyectaba. PHI castigó a Nola, CWS castigó a Sandlin, ambos full game. El pen PHI élite cumplió su rol de "tapar" a CWS tarde — exactamente el guion.
+
+¿Apareció algún factor ambiental que cambió el guion?
+[ ] No — viento 15 mph OUT a RF confirmado se materializó EN run environment (14 R), pero NO en HR específicamente (solo 2 HR ambos PHI). CWS con 7 zurdos pull-side y viento out NO produjo HR — el daño llegó por tráfico/extra-base.
+
+Clasificación del resultado:
+[X] PASS_INCORRECTO (jugada): pase dejó EV claro. 2 de 3 picks principales y todas las alternativas habrían cobrado. 10º caso del filtro de selección en el run.
+[X] ACIERTO_LIMPIO (analítica): lectura + selección de mercados correctos por motivos proyectados. Calibración de lados defendible: Phillies -1.5 descartado (cobró por varianza de margen, 1-run game era plausible); CWS +1.5 lean secundario perdió y la razón específica marcada (blow-up del propio pitcheo de CWS) ocurrió exacto.
+
+4. PATRÓN APLICABLE / EMERGENTE
+
+¿Qué patrón v2.1 explica mejor lo ocurrido?
+[ ] Patrón 1 (Tipo B Nola con reverse-platoon agravado). Patrón 8 (opener/bulk Sandlin volátil como proyectaba). Patrón 11 (viento out confirmado se materializó en run environment). Patrón 12 (back-end PHI cerró el lado "side con ruido" tarde). Patrón 4 alerta espejada CONFIRMADA EN NEGATIVO una vez más: Nola 4 K en 4.1 IP — under Ks @1.71 habría cobrado, pero por SALIDA CORTA vía bombardeo (caso Cavalli replicado), no por bajo K rate. Cluster ahora: 8 casos.
+
+¿Aparece un patrón nuevo que no está en v2.1?
+[X] Sí — refinamiento candidato v2.2:
+
+**"Over de CARRERAS y over de HR son tesis distintas."** Viento out confirmado + parque de HR + ofensivas con poder NO garantiza match-HR over. Un partido de anotación colectiva puede ir over de carreras vía tráfico/extra-base SIN 3+ HR — el equipo "de poder" (CWS, 3º en HR MLB) anotó 5 R con 0 HR pese a viento 15 mph out a RF. La pata clima/parque del Patrón 11 confirma run environment, NO necesariamente cuenta específica de HR.
+
+Implicación operativa: cuando viento out confirmado coincide con ofensivas con ruta clara, preferir TT/over de carreras + props de hits sobre el match-HR over. Conecta con el cluster "daño por aire" (Tigers/Rays 01/06, Astros/Cubs 24/05, Royals/Twins 04/06, Brewers/Rockies 06/06) — ahora cuadro completo: a veces el daño llega por aire (lineup frío que explota por HR), a veces por tráfico (lineup con ruta de OBP). El viento out garantiza el RUN environment, no el camino del daño. La regla: tomar TT/over de carreras (capturan ambos caminos), no match-HR (captura solo un camino).
+
+¿Algún patrón v2.1 fue contradicho por este partido?
+[ ] No. Validación limpia + refinamiento del Patrón 11 (separar "run environment" de "cuenta de HR específica").
+
+5. LECCIÓN OPERATIVA EN UNA FRASE
+
+[ ] Over de carreras y over de HR son tesis distintas: con viento out confirmado las carreras pueden llegar vía tráfico/extra-base sin 3+ HR. Preferir TT/over de carreras + props de hits sobre el match-HR over cuando el lineup de poder también tiene ruta de tráfico.
