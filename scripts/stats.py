@@ -37,6 +37,7 @@ PATRON_NAMES = {
     10: "Props salen del guion, no del menú",
     11: "Factores ambientales (parque/clima/umpire)",
     12: "Side con ruido → mercado más limpio",
+    13: "Señal específica con mecanismo > agregado de temporada",
 }
 
 

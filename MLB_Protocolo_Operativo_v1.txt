@@ -2,11 +2,11 @@ MLB_Protocolo_Operativo_v1.txt
 
 NOTA ACTIVA — PROTOCOLO OPERATIVO PARA ANÁLISIS DE PARTIDOS MLB
 
-Versión: v1 (14/05/26)
+Versión: v1 (14/05/26; punteros actualizados 08/06/26 a checklist v2 + heurísticas v2.2)
 Estado: activo
 Volumen esperado de uso: 2-3 partidos/día
-Naturaleza: documento maestro de coordinación. No reemplaza a checklist v1,
-heurísticas v2.1 ni template del postmortem; los orquesta.
+Naturaleza: documento maestro de coordinación. No reemplaza a checklist v2,
+heurísticas v2.2 ni template del postmortem; los orquesta.
 
 
 PROPÓSITO
@@ -29,9 +29,10 @@ Activar automáticamente cuando el usuario:
 
 ARCHIVOS DE REFERENCIA (consultar antes de responder)
 
-[ ] MLB_Checklist_Prelectura_v1: orden de las 17 secciones pre-partido.
-[ ] MLB_Heuristicas_Mercados_v2_1_300426_080526: heurísticas vigentes
-    (12 patrones, Jerarquía de Edges, Filtro Final, Check de selección).
+[ ] MLB_Checklist_Prelectura_v2: orden de las 19 secciones pre-partido.
+[ ] MLB_Heuristicas_Mercados_v2_2_300426_070626: heurísticas vigentes
+    (13 patrones, Jerarquía de Edges + Conflicto de Tiers, Regla del Under Ks,
+    Filtro Final, Regla de Ejecución y Selección de Mercado).
 [ ] MLB_Template_Postmortem: estructura del bloque a generar.
 [ ] MLB_Postmortems_Raw_*: destino del bloque generado (append manual).
 [ ] data/postmortems.yaml: registro estructurado paralelo. No editarlo desde
@@ -45,7 +46,7 @@ PARTE 1 — PROTOCOLO PRE-PARTIDO
 
 Activación: el usuario pide analizar un partido.
 
-PASO 1.1 — Verificar datos mínimos (sección 0 del checklist v1)
+PASO 1.1 — Verificar datos mínimos (sección 0 del checklist v2)
 
 Antes de empezar el análisis, confirmar disponibilidad de:
 [ ] Abridores confirmados.
@@ -72,10 +73,10 @@ GUARDAR ESTA FRASE LITERAL. Se reutilizará verbatim en el postmortem.
 No reformularla cuando llegue el resultado (regla anti-sesgo, ver Parte 4).
 
 
-PASO 1.3 — Clasificar el edge en la Jerarquía (heurísticas v2.1)
+PASO 1.3 — Clasificar el edge en la Jerarquía (heurísticas v2.2)
 
 Ubicar el edge identificado en una de las 9 posiciones de la Jerarquía
-de Edges de v2.1 (de más confiable a más ruidoso):
+de Edges de v2.2 (de más confiable a más ruidoso):
 
 1. Parque + clima confirmado el día del partido.
 2. Matchup mano/repertorio del pitcher vs perfil colectivo del lineup.
@@ -91,7 +92,7 @@ Si el edge viene de posiciones 7-9 → bajar stake o exigir confirmación
 en una fuente más alta antes de apostar.
 
 
-PASO 1.4 — Clasificar vulnerabilidad del pitcher (Patrón 1 v2.1)
+PASO 1.4 — Clasificar vulnerabilidad del pitcher (Patrón 1 v2.2)
 
 Si el edge involucra atacar al pitcher rival:
 [ ] Tipo A — Comando frágil (BB alto, FPS bajo, K% bajo) → tráfico
@@ -101,10 +102,10 @@ Si el edge involucra atacar al pitcher rival:
 [ ] Tipo C — Híbrido sin debilidad dominante → mercados menos
     dependientes, evitar tesis monolíticas.
 
-Atacabilidad por TT (v2.1): A > B > C.
+Atacabilidad por TT (v2.2): A > B > C.
 
 
-PASO 1.5 — Traducir edge → mercado (sección 2 del checklist + v2.1)
+PASO 1.5 — Traducir edge → mercado (sección 2 del checklist + v2.2)
 
 Aplicar la tabla de traducción:
 [ ] Edge en abridor favorito → ML / RL / outs / Ks del abridor.
@@ -117,28 +118,29 @@ Aplicar la tabla de traducción:
 [ ] Edge en underdog competitivo → +1.5 si convierte y evita inning grande.
 
 
-PASO 1.6 — Cruzar con patrones v2.1
+PASO 1.6 — Cruzar con patrones v2.2
 
-Identificar cuál(es) de los 12 patrones aplican al partido. Listar
+Identificar cuál(es) de los 13 patrones aplican al partido. Listar
 explícitamente por número. Si un patrón contradice la lectura → tratar
 como bandera roja.
 
-Recordatorio de los 12:
- 1. Tipología vulnerabilidades pitcher (A/B/C)
+Recordatorio de los 13:
+ 1. Tipología vulnerabilidades pitcher (A/B/C; lectura contextual)
  2. "Mejor abridor" no es F5 side automático
- 3. Timing del daño: F5 vs full game
- 4. K upside no es over Ks si hay tráfico
+ 3. Timing del daño: F5 vs full game (granularidad de bullpen)
+ 4. K upside no es over Ks si hay tráfico (ver Regla del Under Ks)
  5. Un solo equipo con rutas de anotación → su TT
  6. Favorito sin edge ofensivo colectivo
  7. Underdog +1.5 necesita conversión, no solo tráfico
- 8. Opener / spot starter no es fade automático
+ 8. Opener / spot starter no es fade automático (plan como sistema)
  9. Pitcher élite no bloquea automáticamente
 10. Props salen del guion, no del menú
-11. Factores ambientales (parque/clima/umpire)
+11. Factores ambientales (ambiente gobierna run environment, no el camino)
 12. Side con ruido → mercado más limpio
+13. Señal específica con mecanismo > agregado de temporada
 
 
-PASO 1.7 — Aplicar señales de pass (sección 16 + heurísticas v2.1)
+PASO 1.7 — Aplicar señales de pass (sección 16 + heurísticas v2.2)
 
 Si se cumple cualquiera:
 [ ] No se puede nombrar el edge principal.
@@ -154,19 +156,26 @@ Si se cumple cualquiera:
 → Recomendar pass o bajar stake explícitamente.
 
 
-PASO 1.8 — Filtro de selección final (v2.1, check obligatorio)
+PASO 1.8 — Regla de Ejecución y Selección de Mercado (v2.2, check obligatorio)
 
-Antes de cerrar la recomendación, aplicar el gatillo duro de v2.1:
-[ ] Si alguna pick descartada del top 3 tenía cuota >1.80 Y capturaba el
-    edge top → exigir una razón específica más allá de "cuota baja".
-[ ] Razones válidas para descartar: lineup no confirmado, bullpen
-    contradice el guion, parque hostil para la lectura, timing del daño
-    no calza, dependencia adicional no contemplada.
-[ ] Cuota corta SOLA no es razón válida para descartar.
+Antes de cerrar la recomendación, aplicar la Regla de Ejecución de v2.2
+(default invertido):
+[ ] Si una pick (a) captura el edge top, (b) tiene cuota >1.80, y (c) no
+    tiene razón de descarte de tier 1-4 → la acción por defecto es EJECUTAR
+    A STAKE MÍNIMO, no pasar. Pasar requiere justificación activa.
+[ ] Razones VÁLIDAS para descartar (tier 1-4): lineup no confirmado, bullpen
+    contradice el guion, parque/clima hostil confirmado <90 min, timing del
+    daño no calza, dependencia adicional no contemplada.
+[ ] Razones INVÁLIDAS (ninguna sola justifica el descarte): "cuota corta",
+    "forma reciente del pitcher sin Statcast", "demasiado obvio", "solo live",
+    "prefiero el bate top RHH" cuando hay LHH con mejor platoon.
+[ ] Timing > precio: el análisis de timing elige el mercado; el precio no lo
+    invierte ni resucita un mercado degradado por timing.
 
-Este check existe porque en la ventana 30/04-08/05 el menú considerado
-tuvo ROI hipotético +15.9% mientras lo realmente jugado tuvo ROI -37.5%.
-Es señal direccional fuerte aunque la muestra sea chica.
+Esta regla existe porque en la ventana 11/05-07/06 el error más caro fue de
+EJECUCIÓN: se apostó en 8 de 24 partidos, pero 6 de esos 8 fueron aciertos
+limpios; de los 16 pass, 6 dejaron EV claro. El análisis funciona; el cuello
+de botella es ejecutar.
 
 
 PASO 1.9 — Output de la fase pre-partido
@@ -196,14 +205,15 @@ RECOMENDACIÓN:
 - Stake relativo: <full / medio / chico / pass>
 - Por qué este y no los otros: <1-2 líneas>
 
-PATRONES V2.1 APLICABLES:
+PATRONES V2.2 APLICABLES:
 <lista de números + nombres>
 
 SEÑALES DE PASS PRESENTES:
 <lista o "ninguna crítica">
 
-FILTRO DE SELECCIÓN (check v2.1):
-<picks del top 3 descartadas + razón específica>
+CHECK DE EJECUCIÓN (Regla v2.2):
+<si la pick top captura el edge a cuota >1.80 sin objeción tier 1-4 →
+ ejecutar a stake mínimo es el default; picks descartadas + razón válida>
 
 ----- FIN BLOQUE OUTPUT PRE-PARTIDO -----
 
@@ -272,7 +282,7 @@ Estructura idéntica al BLOQUE TEMPLATE de MLB_Template_Postmortem:
 Edge principal en una frase:
 <frase verbatim del pre-partido — o "[NO DOCUMENTADO PRE-PARTIDO]">
 
-Nivel en Jerarquía de Edges (v2.1):
+Nivel en Jerarquía de Edges (v2.2):
 <nivel + nombre>
 
 Tipo de vulnerabilidad del pitcher rival (si aplica):
@@ -287,7 +297,7 @@ Cuota(s):
 Stake relativo:
 <full / medio / chico / pass>
 
-Patrón v2.1 que respalda la jugada:
+Patrón v2.2 que respalda la jugada:
 <número(s) + nombre(s)>
 
 2. RESULTADO OBJETIVO
@@ -327,15 +337,15 @@ Clasificación del resultado:
 
 4. PATRÓN APLICABLE / EMERGENTE
 
-¿Qué patrón v2.1 explica mejor lo ocurrido?
+¿Qué patrón v2.2 explica mejor lo ocurrido?
 <>
 
-¿Aparece un patrón nuevo que no está en v2.1?
+¿Aparece un patrón nuevo que no está en v2.2?
 <Sí / No>
 Si sí, describirlo en 2-3 líneas:
 <>
 
-¿Algún patrón v2.1 fue contradicho por este partido?
+¿Algún patrón v2.2 fue contradicho por este partido?
 <Sí / No>
 Si sí, ¿requiere ajuste o es ruido de muestra chica?
 <>
@@ -392,7 +402,7 @@ PASO 3.3 — Lectura del conteo
 
 Aplicar las reglas del MLB_Template_Postmortem:
 [ ] Si errores_mercado > errores_lectura: problema de traducción.
-    La nota v2.1 necesita refinarse en mercados.
+    La nota v2.2 necesita refinarse en mercados.
 [ ] Si errores_lectura > errores_mercado: problema de análisis
     pre-partido. Revisar fuentes y proceso, no la nota.
 [ ] Si aciertos_ruidosos >> aciertos_limpios: cuidado, los edges
@@ -405,10 +415,10 @@ PASO 3.4 — Propuesta de ajustes
 Patrones emergentes vistos en 3+ partidos de la ventana → candidatos a
 sumarse a v2.2 o v3. Listarlos explícitamente con casos referenciados.
 
-Patrones v2.1 contradichos 2+ veces → candidatos a revisión. Distinguir
+Patrones v2.2 contradichos 2+ veces → candidatos a revisión. Distinguir
 entre ruido de muestra chica y desincronización real.
 
-Regla dura: NO modificar v2.1 directamente desde el chat. Solo proponer
+Regla dura: NO modificar v2.2 directamente desde el chat. Solo proponer
 cambios. La actualización del documento es decisión del usuario.
 
 

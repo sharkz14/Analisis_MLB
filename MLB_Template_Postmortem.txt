@@ -6,7 +6,7 @@ Uso:
 Copiar el bloque completo al final del archivo MLB_Postmortems_Raw cada vez que
 se cierre un partido analizado, haya o no haya apuesta jugada.
 Registrar TODOS los partidos analizados, no solo los que fallaron.
-Mantener consistencia ayuda a recalibrar las heurísticas v2 cada 2-3 semanas
+Mantener consistencia ayuda a recalibrar las heurísticas vigentes cada 2-3 semanas
 sin sesgo de selección.
 
 Reglas mínimas:

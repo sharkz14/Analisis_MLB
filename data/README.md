@@ -5,7 +5,8 @@ patrones de error sin depender de leer prosa.
 
 Fuente prosa: `../MLB_Postmortems_Raw_040526_070526.txt`
 Template canónico: `../MLB_Template_Postmortem.txt`
-Heurísticas referenciadas: `../MLB_Heuristicas_Mercados_v2_040526_070526.txt`
+Heurísticas vigentes: `../MLB_Heuristicas_Mercados_v2_2_300426_070626.txt`
+(versiones previas en `../archivo/`)
 
 ## Archivos
 
@@ -62,9 +63,9 @@ Heurísticas referenciadas: `../MLB_Heuristicas_Mercados_v2_040526_070526.txt`
 
   fuente: string                     # opcional: "raw", "conversación pre/post + raw", etc.
 
-  patron_v2:
-    aplicable: [int, ...]            # números de patrón en heurísticas v2
-    emergente: string | null         # patrón nuevo no listado en v2
+  patron_v2:                         # nombre de campo histórico; refiere a las heurísticas vigentes
+    aplicable: [int, ...]            # números de patrón en heurísticas v2.2
+    emergente: string | null         # patrón nuevo no listado en v2.2
 
   leccion: string                    # lección operativa en una frase
 ```
@@ -72,7 +73,7 @@ Heurísticas referenciadas: `../MLB_Heuristicas_Mercados_v2_040526_070526.txt`
 ## Vocabularios controlados
 
 ### `edge.fuente`
-Tomado de la **Jerarquía de Edges** en heurísticas v2 (de más a menos confiable):
+Tomado de la **Jerarquía de Edges** en heurísticas v2.2 (de más a menos confiable):
 
 - `parque_clima`
 - `matchup_mano_repertorio`
@@ -129,24 +130,29 @@ Valores (mismos para los dos campos), tomado del template original:
 - `ERROR_DE_LECTURA` — la tesis era falsa
 - `ERROR_DE_MERCADO` — lectura correcta, mercado mal elegido
 - `VARIANZA` — lectura y mercado correctos, perdió por variance
-- `PASS_CORRECTO` — no se jugó y el guion confirmó
+- `PASS_CORRECTO` — no se jugó y el guion confirmó la decisión de pasar
 - `PASS_INCORRECTO` — no se jugó y había edge claro
+- `NO_JUGADA` — no se apostó y no se emite veredicto sobre el pass (se usa
+  en `clasificacion_jugada` cuando no hay base para juzgar PASS_CORRECTO /
+  PASS_INCORRECTO; el veredicto analítico va en `clasificacion_analitica`)
 
 ### `patron_v2.aplicable`
-Referencia a los 12 patrones numerados en heurísticas v2:
+Referencia a los 13 patrones numerados en heurísticas v2.2 (el campo conserva
+el nombre `patron_v2` por compatibilidad histórica):
 
-1. Tipología de vulnerabilidades del pitcher (Tipo A/B/C)
+1. Tipología de vulnerabilidades del pitcher (Tipo A/B/C; lectura contextual)
 2. "Mejor abridor" no es F5 side automático
-3. Timing del daño: F5 vs full game
-4. K upside no es over Ks si hay tráfico
+3. Timing del daño: F5 vs full game (granularidad de bullpen)
+4. K upside no es over Ks si hay tráfico (ver Regla del Under Ks)
 5. Un solo equipo con rutas de anotación → su TT
 6. Favorito sin edge ofensivo colectivo
 7. Underdog +1.5 necesita conversión, no solo tráfico
-8. Opener / spot starter no es fade automático
+8. Opener / spot starter no es fade automático (plan como sistema)
 9. Pitcher élite no bloquea automáticamente
 10. Props salen del guion, no del menú
-11. Factores ambientales (parque, clima, umpire)
+11. Factores ambientales (ambiente gobierna run environment, no el camino)
 12. Side con ruido → mercado más limpio
+13. Señal específica con mecanismo > agregado de temporada
 
 ## Cómo filtrar (ejemplos con `yq`)
 
