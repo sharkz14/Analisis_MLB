@@ -342,3 +342,52 @@ Nota: este refinamiento absorbe dos candidatos previos del watchlist
 carreras") como sub-reglas del Patrón 11, en vez de promoverlos a patrón
 nuevo. Ambos son la misma idea: el ambiente fija el nivel de carreras, no
 el mecanismo.
+
+
+### B5 — PATRÓN 1: "LA CLASIFICACIÓN A/B/C ES CONTEXTUAL" (REFINAR)
+
+Estado v2.1: Patrón 1 trata A/B/C como propiedad del pitcher (perfil de
+temporada). Evidencia v2.2: 4 sub-refinamientos que comparten un meta-tema —
+el tipo de vulnerabilidad es función del MATCHUP del día (pitcher × lineup ×
+parque × leash × estado físico), no del perfil de temporada en aislamiento.
+
+Decisión: REFINAR el Patrón 1 con la sección de contextualidad.
+
+Texto propuesto para v2.2:
+
+----------------------------------------------------------------------
+PATRÓN 1 — REFINAMIENTO v2.2: la clasificación A/B/C es CONTEXTUAL, no una
+propiedad fija del pitcher.
+
+(a) Clasificación del MATCHUP, no del pitcher solo:
+[ ] Un Tipo B (contacto fuerte) vs un lineup con K% colectivo alto (>25%)
+    que no extiende at-bats opera como Tipo C (K alto + control). Severino
+    HH 41.4% / Barrel 9.8% (Tipo B clásico) terminó 10 K / 0 BB porque LAA
+    no extendió turnos (athletics-angels 21/05).
+[ ] Antes de fijar el tipo, preguntar: ¿el lineup rival explota ESTE tipo o
+    lo neutraliza?
+
+(b) El leash del DÍA atenúa el tipo:
+[ ] Un Tipo B con leash atenuado por contexto (regreso de IL, parque hostil +
+    ofensiva rival en racha, comando frágil reciente) sale en 3-4 IP como un
+    Tipo A, no 5-6 IP → el mercado se desplaza de "full-game over" hacia
+    "F5 over alto" (nationals-reds 13/05: Lodolo post-IL + Irvin en parque
+    hostil, ambos sub-5 IP, 73% del daño en F5).
+
+(c) Post-IL: usar las últimas 2 salidas como overlay:
+[ ] Para un pitcher recién regresado de IL, el xwOBA/Barrel%/K% de temporada
+    agregada NO es predictor confiable; las últimas 2 salidas post-IL pesan
+    más (phillies-redsox 13/05: Gray season xwOBA .369 vs forma post-IL
+    dominante → 6 IP / 1 ER / 6 K).
+
+(d) Operacionalizar el tipo en el PITCHER, no en el bateador:
+[ ] La traducción de un tipo a mercado (ej. Tipo A → "BB allowed over") debe
+    quedar en el pitcher (Liberatore BB allowed), no migrar a prop individual
+    del bateador (Rooker BB @2.54 → perdió, ATH solo 2 BB equipo). La varianza
+    individual mata la tesis colectiva (cardinals-athletics 13/05).
+
+Conexión con la Regla de Conflicto de Tiers (A3): cuando NO hay Tipo A en el
+partido, la atacabilidad del Tipo B es relativa a los frenos de tier alto
+(BvP histórico, split colectivo flojo). Si esos frenos existen, el under/pass
+debe liderar (dodgers-dbacks 04/06).
+----------------------------------------------------------------------
