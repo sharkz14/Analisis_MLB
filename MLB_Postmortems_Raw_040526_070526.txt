@@ -2312,3 +2312,90 @@ Implicación operativa: cuando viento out confirmado coincide con ofensivas con 
 5. LECCIÓN OPERATIVA EN UNA FRASE
 
 [ ] Over de carreras y over de HR son tesis distintas: con viento out confirmado las carreras pueden llegar vía tráfico/extra-base sin 3+ HR. Preferir TT/over de carreras + props de hits sobre el match-HR over cuando el lineup de poder también tiene ruta de tráfico.
+
+
+	[Giants vs Cubs 070626]
+
+1. THESIS PRE-PARTIDO (antes de ver resultado)
+
+Edge principal en una frase:
+[ ] Zurdos calientes de SF (Devers 2º, Lee 5º) castigan a Taillon, peor abridor MLB vs LHB y Tipo B, en partido de una sola vía ofensiva; cobrar en props de participación, no en el total acoplado.
+
+Nivel en Jerarquía de Edges (v2.1):
+[ ] Posición 2 (matchup mano/repertorio — zurdos SF vs Taillon reverse-platoon).
+
+Tipo de vulnerabilidad del pitcher rival (si aplica):
+[ ] Taillon (CHC): Tipo B (peor abridor MLB vs LHB).
+
+Mercado(s) elegido(s):
+[ ] PASS — usuario no apostó. Recomendación principal: Lee H+R+RBI over 1.5 @1.70 a stake estándar.
+
+Cuota(s):
+[ ] Lee H+R+RBI over 1.5 @1.70; Devers TB over 1.5 @2.14; Lee TB over 1.5 @2.08; Giants TT over 3.5 @1.81; Giants TT over 4.5 @2.34; Under 7.5 (en PASS); Giants +1.5 @1.52 (en PASS).
+
+Stake relativo:
+[ ] PASS (clasificacion_jugada queda null).
+
+Patrón v2.1 que respalda la jugada:
+[ ] Patrón 1 (Tipología — Taillon Tipo B). Patrón 3 (Timing del daño). Patrón 5 (un solo equipo con rutas → su TT/props). Patrón 8 (opener/spot starter). Patrón 11 (factores ambientales).
+
+
+2. RESULTADO OBJETIVO
+
+Marcador final:
+[ ] Giants 2 — Cubs 1. Total 3 R. 0 HR.
+
+Línea de abridores:
+[ ] Abridor A (Taillon, CHC): 1.0 IP, 2 H, 1 ER, 2 BB, 2 K, 0 HR — hook ultra-temprano (sacado en 1 IP).
+[ ] Bulk (Assad, CHC): 6.1 IP, 1 H, 0 ER, 1 BB, 5 K — blanqueo de relevo largo. EL ESCUDO.
+[ ] Abridor B (McDonald, SF): 5.0 IP, 4 H, 1 ER, 3 BB, 6 K.
+
+Bullpen relevante:
+[ ] CHC: Assad bulk 6.1 IP en blanco anuló a la vez el edge de atacar al abridor (Taillon salió en 1 IP) y el de bullpen gastado (Assad fresco absorbió todo).
+
+Bates clave del partido:
+[ ] SF: Chapman (R, 7º) 2 H, 1 RBI — lideró a SF. Lee 1 H, 1 RBI. Devers 0-3, 1 BB, 3 K. Ofensiva: 4 H, 2 R, 4 BB, 9 K, RISP 2-9, LOB 6 — blanqueada salvo 2.
+
+Ambientales:
+[ ] 5 mph In From CF, 70°F, parcialmente nublado (coincide con lectura pre-partido). HP umpire Cory Blaser (predicción por rotación falló: se esperaba Fletcher). 0 HR.
+
+Mercado(s) elegido(s) — ganó / perdió / push:
+[ ] PASS — N/A. Hipotéticos: Lee H+R+RBI over 1.5 @1.70 → ganó (1 H + 1 RBI = 2, cobro ruidoso). Devers TB over 1.5 @2.14 → perdió (0 TB). Lee TB over 1.5 @2.08 → perdió (1 TB). Giants TT over 3.5 @1.81 → perdió (2 R). Giants TT over 4.5 @2.34 → perdió. McDonald outs over → perdió (15 outs). **Under 7.5 (estaba en PASS) → ganó (3 R)**. **Giants +1.5 @1.52 (estaba en PASS) → ganó (SF 2-1 directo)**.
+
+
+3. POSTMORTEM (separar proceso de resultado)
+
+¿La lectura del edge fue correcta?
+[ ] Parcialmente. Taillon Tipo B identificado bien, pero el edge "atacar al abridor" se anuló porque Taillon salió en 1 IP y un brazo bulk fresco (Assad) absorbió 6.1 IP en blanco. La tesis "una sola vía ofensiva SF" era correcta en dirección pero el daño NO se materializó (SF blanqueado salvo 2).
+
+¿El mercado capturó bien el edge?
+[ ] Parcialmente. La pick principal (Lee H+R+RBI) cobró, pero RUIDOSO: cobró por 1 H + 1 RBI cuando SF solo anotó 2 con 4 hits y fue blanqueado por Assad 6.1 IP. No cobró por la acumulación proyectada vs Taillon. El vehículo forgiving (H+R+RBI) salvó lo que TB no habría salvado (Lee TB over perdió, Devers TB over perdió).
+
+¿El timing del daño coincidió con la proyección?
+[ ] No. Proyectado "daño a Taillon + bullpen gastado"; realidad: Taillon 1 IP, Assad bulk fresco blanqueó. El edge de timing se anuló por el escudo de bulk.
+
+¿Apareció algún factor ambiental que cambió el guion?
+[ ] No. Clima confirmado coincidió con lectura (5 mph IN CF, supresor). El partido fue bajo (3 R, 0 HR) como el clima sugería — lo cual valida que Under 7.5 (relegado a PASS) era la lectura correcta.
+
+Clasificación del resultado:
+[X] NO_JUGADA (jugada): clasificacion_jugada = null (no se apostó).
+[X] ACIERTO_RUIDOSO (analítica): la pick principal habría cobrado pero por motivo distinto al proyectado (H+R+RBI vía 1 H + 1 RBI en un SF blanqueado, no vía acumulación vs Taillon). Mercado correcto retrospectivo: Under 7.5 y/o Giants +1.5 (ambos habrían cobrado limpio).
+
+4. PATRÓN APLICABLE / EMERGENTE
+
+¿Qué patrón v2.1 explica mejor lo ocurrido?
+[ ] Patrón 8 (opener/spot starter no es fade automático) — INVERSO: aquí el problema no fue subestimar un opener, sino que un brazo bulk fresco anuló el fade del abridor titular. Patrón 5 (un solo equipo con rutas → pero la ruta se cerró por el bulk). Patrón 10 implícito (H+R+RBI forgiving salvó lo que TB no — validación del vehículo de prop).
+
+¿Aparece un patrón nuevo que no está en v2.1?
+[X] Sí — candidato v2.2 (n=1):
+
+**"Escudo de brazo bulk."** Cuando el edge combina "atacar abridor vulnerable" + "bullpen rival gastado", un brazo bulk/swing fresco disponible (bajada reciente, long man, spot en turno) puede anular AMBOS edges a la vez: el abridor sale temprano Y el bulk absorbe 5-6 IP en blanco. Caso: Taillon 1 IP → Assad 6.1 IP shutout. Inverso del Patrón 8 — donde el Patrón 8 advierte "no fadear al opener porque hay plan bulk detrás", este advierte "el plan bulk también puede aparecer cuando el titular se va temprano y anular el fade". Implicación operativa: si el edge depende de castigar a UN abridor específico, verificar disponibilidad de brazo bulk fresco del rival (bajadas recientes, long men descansados) antes de fijar convicción.
+
+Conexión: este es el espejo del cluster "bullpen games requieren tratamiento especial" (rangers-dbacks 11/05, bluejays-tigers 15/05) — ahí el bullpen game era el plan del favorito; aquí el bulk fresco aparece como respuesta defensiva que neutraliza el fade.
+
+¿Algún patrón v2.1 fue contradicho por este partido?
+[ ] No directamente. Validación del vehículo H+R+RBI sobre TB (Patrón 10): mismo bate (Lee), H+R+RBI cobró, TB perdió. Refuerza la preferencia por vehículos forgiving cuando la tesis de acumulación es incierta.
+
+5. LECCIÓN OPERATIVA EN UNA FRASE
+
+[ ] Si el edge depende de que un lineup castigue a UN abridor específico, verificar disponibilidad de brazo bulk fresco del rival antes de fijar convicción, y preferir vehículos forgiving (H+R+RBI) que cobran aun cuando la tesis de acumulación no se cumple.
