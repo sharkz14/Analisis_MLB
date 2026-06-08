@@ -442,3 +442,62 @@ Esto cierra el CLUSTER B (refinamientos a patrones existentes). Las 3
 refinaciones (B4 Patrón 11, B5 Patrón 1, B6 Patrón 3) profundizan patrones
 sin agregar slots nuevos, y absorben 3 candidatos del watchlist como
 sub-reglas.
+
+
+### C7 — PATRÓN 13 NUEVO: "SEÑAL ESPECÍFICA CON MECANISMO > AGREGADO" (PROMOVER)
+
+Nota de honestidad sobre los casos: NO son 4 instancias de un mecanismo,
+sino DOS sub-mecanismos que comparten un meta-principio:
+- Head-to-head (Detmers vs ATH 2×, Keller vs ATL de carrera): el pitcher
+  encaja mal contra ESE lineup.
+- Degradación del pitcher (Imanaga: blow-up vs MIL 18/05 → repitió vs HOU
+  24/05, rival distinto): la señal es del pitcher en declive.
+
+El meta-principio que los une — y que también aparece en A2 (under Ks) y
+B5c (post-IL) — es: la señal reciente/específica supera al agregado de
+temporada SOLO si tiene mecanismo subyacente; sin mecanismo es ruido. Es un
+principio cross-cutting genuino, no cubierto por los 12 patrones actuales.
+
+Decisión: PROMOVER a Patrón 13, unificado bajo el gate de mecanismo.
+
+Texto propuesto para v2.2:
+
+----------------------------------------------------------------------
+PATRÓN 13 — SEÑAL ESPECÍFICA CON MECANISMO > AGREGADO DE TEMPORADA
+
+El perfil de temporada (ERA, xERA, K%, Barrel% agregados) puede ser superado
+por una señal específica reciente CUANDO esa señal tiene un mecanismo
+subyacente identificable. Sin mecanismo, la señal reciente es ruido (ver
+Regla del Under Ks: el K% reciente sin cambio de arsenal vuelve a la media).
+
+Dos vías por las que la señal específica gana:
+
+(a) Head-to-head documentado (pitcher × equipo):
+[ ] Un historial de un pitcher castigado por un equipo específico — reciente
+    o de carrera — eleva la convicción del fade por encima de su ERA/xERA
+    promedio. Mecanismo: su repertorio/perfil encaja mal contra ESE lineup,
+    asimetría que el agregado vs liga no captura.
+[ ] Detmers vs ATH: estalló el 08/04, repitió el 19/05 (8 ER). Keller vs ATL:
+    7.31 ERA de carrera → fade de alta convicción se materializó (6 ER,
+    pirates-braves 05/06).
+
+(b) Degradación reciente del pitcher (mecanismo Statcast):
+[ ] Un blow-up reciente + barrel% creciente + xFIP > ERA + (pérdida de
+    velocidad/movimiento o degradación post-mediados de temporada previa) NO
+    es varianza aislada: se repite contra CUALQUIER rival.
+[ ] Imanaga: blow-up el 18/05 (vs MIL), repitió el 24/05 (vs HOU, rival
+    distinto, 7 ER / 3 HR). La señal es del pitcher en declive, no del
+    head-to-head.
+
+Gate de mecanismo (clave para distinguir señal de ruido):
+[ ] Forma reciente del pitcher = SEÑAL solo si tiene mecanismo identificable
+    (Statcast: velocidad/barrel%/xFIP; o contexto: post-IL, head-to-head
+    documentado). Sin mecanismo = RUIDO (vuelve a la media).
+[ ] Mismo principio que el refinamiento post-IL del Patrón 1 (últimas 2
+    salidas > agregado por el mecanismo del IL) y la Regla del Under Ks (K%
+    reciente sin cambio de arsenal = ruido).
+
+Traducción a mercado: cuando aplica, subir convicción en fade del pitcher
+(hits/ER over, F5 TT rival, TT rival over) por encima de lo que sugiere el
+ERA/xERA agregado.
+----------------------------------------------------------------------
