@@ -112,4 +112,76 @@ C) Candidatos a patrón NUEVO (decidir promoción / fusión):
   10. Resto n=1-2 → mantener en watchlist
 
 
-## (pendiente) Decisiones por cluster — se completa en la siguiente fase
+## DECISIONES POR CLUSTER
+
+### A1 — FILTRO DE SELECCIÓN → REGLA DE EJECUCIÓN (PROMOVER)
+
+Estado v2.1: "check de selección" = gatillo duro defensivo (exige razón para
+descartar). Evidencia v2.2: 10 casos de picks ganadoras descartadas/relegadas/
+sub-priorizadas + 6 PASS_INCORRECTO. Es el leak dominante del run.
+
+Decisión: PROMOVER de gatillo a regla primaria con DEFAULT INVERTIDO.
+
+Texto propuesto para v2.2:
+
+----------------------------------------------------------------------
+REGLA DE EJECUCIÓN Y SELECCIÓN DE MERCADO (v2.2)
+
+Contexto empírico (24 partidos, 11/05-07/06): el error más caro NO fue
+analítico sino de ejecución. Se apostó en 8 de 24; de esos 8, 6 fueron
+aciertos limpios (75% por proceso). Pero de los 16 pass, 6 dejaron EV claro.
+El sistema de análisis funciona; el cuello de botella es ejecutar.
+
+DEFAULT INVERTIDO:
+Cuando el análisis identifica una pick que (a) captura el edge top, (b) tiene
+cuota >1.80, y (c) no tiene razón de descarte de tier 1-4 → la acción por
+defecto es EJECUTAR A STAKE MÍNIMO, no pasar. Pasar requiere justificación
+activa, igual que apostar.
+[ ] Caveat de sobre-apuesta: la regla aplica solo a la pick que captura el
+    edge TOP (no a todo el menú) y a STAKE MÍNIMO. No es licencia para
+    apostar todo el board; es para no dejar morir el edge mejor identificado.
+
+JERARQUÍA DE SELECCIÓN (timing > precio):
+[ ] El análisis de TIMING del daño (F5 / full game / tardío) elige el
+    mercado. El precio NO invierte esa elección.
+[ ] Si el análisis dice "daño tardío / full game", NO elevar el F5 TT por
+    estar "menos tasado" (brewers-rockies 06/06: F5 TT elevado contra el
+    propio análisis de daño tardío → perdió; el full-game TT degradado por
+    "cobrado" → ganó).
+[ ] Una pick degradada por análisis de timing/dependencia documentado SÍ
+    puede descartarse (rangers-cardinals 02/06: Under 6.5 degradado por
+    riesgo de daño tardío vs bullpen → descarte válido). Timing degrada;
+    precio no.
+
+RAZONES INVÁLIDAS para descartar una pick que captura el edge top a cuota
+>1.80 (ninguna, sola, justifica el descarte):
+[ ] "Cuota corta / poco valor."
+[ ] "Forma reciente individual del pitcher" sin soporte Statcast en la misma
+    dirección (mariners-astros 14/05: SEA ML descartado por reframe de forma
+    reciente → habría ganado).
+[ ] "Demasiado obvio / el mercado ya lo precia."
+[ ] "Solo live" (relegar a en-vivo un edge legible pre-partido —
+    royals-twins 04/06: Over relegado a 'solo live' → cobró).
+[ ] "Prefiero el bate top RHH" cuando hay LHH viable con mejor platoon
+    (athletics-angels 21/05).
+
+RAZONES VÁLIDAS para descartar (tier 1-4):
+[ ] Lineup no confirmado.
+[ ] Bullpen contradice el guion.
+[ ] Parque/clima hostil confirmado <90 min.
+[ ] Timing del daño no calza con el mercado.
+[ ] Dependencia adicional no contemplada en el edge.
+
+CASOS DE REFERENCIA (10): Ohtani outs (Astros/Dodgers 05/05), Cavalli outs
+(Nationals/Twins 05/05), PIT +1 F5 (D-backs/Pirates 07/05), Over 9.5
+(Nationals/Reds 13/05), mercados colectivos (Cardinals/Athletics 13/05),
+SEA ML (Mariners/Astros 14/05), picks recomendadas (Athletics/Angels 21/05),
+Over (Royals/Twins 04/06), full-game TT (Brewers/Rockies 06/06), 2-de-3
+principales (White Sox/Phillies 07/06).
+----------------------------------------------------------------------
+
+Qué NO cubre esta regla (importante): los casos donde el ANÁLISIS COMPLETO
+estaba equivocado y el pass por instinto salvó (astros-cubs 24/05,
+dodgers-dbacks 04/06). Ahí no hay filtro que ayude — el pass fue correcto
+porque la lectura era falsa. La regla de ejecución aplica solo cuando el
+análisis identificó bien el edge; no fuerza ejecutar análisis dudosos.
