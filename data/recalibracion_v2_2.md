@@ -501,3 +501,49 @@ Traducción a mercado: cuando aplica, subir convicción en fade del pitcher
 (hits/ER over, F5 TT rival, TT rival over) por encima de lo que sugiere el
 ERA/xERA agregado.
 ----------------------------------------------------------------------
+
+
+### C8 — "PLANES DE PITCHEO NO ESTÁNDAR" → REFINAR PATRÓN 8 (NO patrón nuevo)
+
+Evaluación crítica: los 3 casos NO se refuerzan entre sí; son 3 observaciones
+PARALELAS (cada una n=1) con un umbral común. Y al examinarlas, las tres son
+territorio del Patrón 8 existente ("opener/spot starter no es fade
+automático"), no un patrón nuevo:
+- rangers-dbacks 11/05: bulk plan + pen bueno sostuvo = advertencia exacta P8.
+- giants-cubs 07/06: brazo bulk fresco sostuvo = "pen capaz de absorber", P8.
+- bluejays-tigers 15/05: "analizar como sistema, no anclar en un brazo" = cómo
+  evaluar el bulk plan, P8.
+
+Decisión: REFINAR Patrón 8, NO crear Patrón 14. (Disciplina: acabamos de
+agregar Patrón 13; un Patrón 14 vago con 3 n=1 heterogéneos diluiría el
+framework.)
+
+Texto propuesto para v2.2:
+
+----------------------------------------------------------------------
+PATRÓN 8 — REFINAMIENTO v2.2: evaluar el plan de pitcheo no estándar como
+SISTEMA, no como debilidad targeteable única.
+
+(a) Evaluar el bulk plan como sistema, no anclar en un brazo específico:
+[ ] La asignación de bulk reliever en equipo con rotación improvisada
+    (lesiones múltiples) cambia día a día. Analizar "¿el bullpen puede
+    absorber 6-8 IP sin romperse?", no "¿el reliever X que proyecté será el
+    bulk?" (bluejays-tigers 15/05: Madden proyectado bulk, Anderson 4 IP fue
+    el bulk real).
+
+(b) Escudo de brazo bulk fresco — puede anular DOS edges a la vez:
+[ ] Cuando el edge combina "atacar abridor vulnerable" + "bullpen rival
+    gastado", un brazo bulk/swing fresco disponible (bajada reciente, long
+    man descansado) puede anular AMBOS: el abridor sale temprano Y el bulk
+    absorbe 5-6 IP en blanco (giants-cubs 07/06: Taillon 1 IP → Assad 6.1 IP
+    shutout). Antes de fijar convicción en castigar a UN abridor, verificar
+    disponibilidad de brazo bulk fresco del rival.
+
+(c) Mercado al fadear un bullpen game: el under/ML del underdog suele ser más
+    limpio que el TT del underdog:
+[ ] La paciencia del lineup que enfrenta el opener requiere que el opener
+    PIERDA comando para generar tráfico; si mete strikes, no produce. Si el
+    bullpen del favorito es elite por ERA, el patrón es contención. Expresar
+    el edge ofensivo en under/ML, no en TT del underdog (rangers-dbacks
+    11/05: pen elite contuvo, ARI ML era el mercado correcto, no ARI TT over).
+----------------------------------------------------------------------
