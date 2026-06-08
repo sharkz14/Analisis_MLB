@@ -391,3 +391,54 @@ partido, la atacabilidad del Tipo B es relativa a los frenos de tier alto
 (BvP histórico, split colectivo flojo). Si esos frenos existen, el under/pass
 debe liderar (dodgers-dbacks 04/06).
 ----------------------------------------------------------------------
+
+
+### B6 — PATRÓN 3: GRANULARIDAD DE BULLPEN (REFINAR)
+
+Estado v2.1: Patrón 3 usa "bullpen rival vulnerable/expuesto" como señal de
+timing tardío sin especificar cómo evaluar el bullpen. Evidencia v2.2: 4
+casos donde el AGREGADO del bullpen engañó (por rol, por composición, por
+lag). (El componente "timing > precio" de este patrón ya quedó en A1.)
+
+Decisión: REFINAR el Patrón 3 con la regla de granularidad de bullpen.
+
+Texto propuesto para v2.2:
+
+----------------------------------------------------------------------
+PATRÓN 3 — REFINAMIENTO v2.2: no confiar en el AGREGADO del bullpen.
+
+El ERA de equipo, el ranking ("30/30 MLB"), el rótulo "pen cansado" y el ERA
+acumulado son señales agregadas que engañan. Antes de apoyar un edge en
+"bullpen rival vulnerable/expuesto", desagregar:
+
+(a) Granularidad por ROL — el agregado no distingue qué brazos cubren qué
+innings:
+[ ] "Bullpen cansado" requiere saber QUIÉN se usó ayer y QUIÉN no. Bulk/middle
+    agotado ≠ setup/closer agotado; los high-leverage (8ª-9ª) rara vez
+    participan del bullpen game previo (phillies-redsox 13/05: Whitlock +
+    Chapman cerraron limpios porque no se usaron en el bulk previo).
+
+(b) Composición — un brazo extremo infla/desinfla el agregado:
+[ ] El ERA de equipo del pen sobreestima fragilidad cuando un brazo extremo
+    (en IL, blow-up reciente) infla el promedio. Chequear el ERA de los 3-4
+    brazos que REALMENTE cubrirían 6ª-9ª (mariners-astros 13/05: pen "6.05 ERA
+    peor MLB" pero Okert 3.79 / King 3.57 / De Los Santos 4.15 cerraron
+    dominante).
+
+(c) Lagging vs leading — el ERA acumulado es lagging:
+[ ] Un pen con buen ERA acumulado puede estar regresando; uno con mal ERA
+    puede haber estabilizado. Pesar peripherals recientes (xFIP, K%, strand
+    rate, uso) por encima del ERA acumulado (rangers-dbacks 11/05: pen elite
+    por ERA contuvo; astros-cubs 24/05: HOU "30/30 MLB" había estabilizado y
+    sostuvo — el análisis lo citó pero lo descartó).
+
+Regla: antes de tomar TT over / over total / +1.5 apoyado en "bullpen rival
+débil", nombrar los 2-3 brazos específicos que cubrirían los innings del edge,
+su ERA/peripherals recientes y su carga de uso. Si no se puede, bajar
+convicción.
+----------------------------------------------------------------------
+
+Esto cierra el CLUSTER B (refinamientos a patrones existentes). Las 3
+refinaciones (B4 Patrón 11, B5 Patrón 1, B6 Patrón 3) profundizan patrones
+sin agregar slots nuevos, y absorben 3 candidatos del watchlist como
+sub-reglas.
