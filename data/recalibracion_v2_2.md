@@ -287,3 +287,58 @@ con momentum.
 Esto cierra el CLUSTER A (promociones de regla operativa). Las 3 promociones
 atacan el hallazgo central del conteo: el problema migró a LECTURA y
 EJECUCIÓN, no a traducción de mercado.
+
+
+### B4 — PATRÓN 11: "AMBIENTE GOBIERNA RUN ENVIRONMENT, NO EL CAMINO DEL DAÑO" (REFINAR)
+
+Estado v2.1: Patrón 11 tiene la regla del viento (<90 min) ya incorporada,
+más parque/clima como filtro previo. Evidencia v2.2: 6 casos que afilan el
+patrón en tres sub-hallazgos con un principio unificador — el ambiente
+gobierna CUÁNTAS carreras esperar, NO CÓMO se anotan (HR vs tráfico).
+
+Decisión: REFINAR el Patrón 11 con la sección unificada.
+
+Texto propuesto para v2.2:
+
+----------------------------------------------------------------------
+PATRÓN 11 — REFINAMIENTO v2.2: el ambiente gobierna el run environment,
+no el camino del daño.
+
+(i) Confirmación de viento (regla v2.1, 3 confirmaciones nuevas):
+El pronóstico matinal NO cuenta como confirmación; solo anemómetro/
+observación <90 min del primer pitch. La dirección se invierte seguido
+entre pronóstico y realidad.
+[ ] Reds/Cubs 04/05: proyectado out, real 4 mph → TT over perdió por margen.
+[ ] BlueJays/Tigers 15/05: proyectado SSW a LF, real IN desde RF.
+[ ] Astros/Cubs 24/05: proyectado 7 mph IN RF, real 3 mph IN LF.
+
+(ii) El factor ambiental gobierna CUÁNTAS carreras (run environment), NO
+CÓMO se anotan (camino del daño: HR vs tráfico/contacto):
+[ ] Parque suppressor de HR + viento in NO implica under de carreras si
+    ambos lineups tienen contacto y bullpens flojos — el daño llega por
+    tráfico (rangers-cardinals 02/06: 1 HR en 22 hits, pero 11 R por
+    tráfico/contacto + colapso de bullpen).
+[ ] Viento out confirmado + parque HR NO garantiza match-HR over — el daño
+    puede llegar por tráfico (white-sox-phillies 07/06: CWS 3º en HR MLB,
+    0 HR, 5 R por sencillos/dobles).
+[ ] Sub-regla contraintuitiva: una ofensiva "fría", "sin top bats" o
+    "bajo-HR" NO está protegida del slugging cuando hay viento out confirmado
+    + abridor que permite contacto. El daño aparece por aire (Tigers/Rays
+    01/06 DET 5 HR "ofensiva muerta"; Astros/Cubs 24/05 HOU sin Alvarez/
+    Altuve 3 HR; Royals/Twins 04/06 MIN 4 HR; Brewers/Rockies 06/06 MIL
+    5 HR solitarios).
+
+Traducción a mercado:
+[ ] Para capturar un edge ambiental, usar TT / over / under de CARRERAS
+    (capturan ambos caminos del daño), NO match-HR ni props HR específicas
+    (capturan solo un camino).
+[ ] Viento out confirmado <90 min DEBE pesar como tier 1 en la selección de
+    mercado (subir TT/over de carreras como principal), no relegarse a
+    "solo live" (ver Regla de Ejecución, A1).
+----------------------------------------------------------------------
+
+Nota: este refinamiento absorbe dos candidatos previos del watchlist
+("daño por aire pese a ofensiva fría" y "supresión de poder ≠ supresión de
+carreras") como sub-reglas del Patrón 11, en vez de promoverlos a patrón
+nuevo. Ambos son la misma idea: el ambiente fija el nivel de carreras, no
+el mecanismo.
