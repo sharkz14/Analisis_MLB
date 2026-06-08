@@ -185,3 +185,56 @@ estaba equivocado y el pass por instinto salvó (astros-cubs 24/05,
 dodgers-dbacks 04/06). Ahí no hay filtro que ayude — el pass fue correcto
 porque la lectura era falsa. La regla de ejecución aplica solo cuando el
 análisis identificó bien el edge; no fuerza ejecutar análisis dudosos.
+
+
+### A2 — ALERTA ESPEJADA P4 → REGLA DEL UNDER Ks (PROMOVER + AFILAR)
+
+Estado v2.1: alerta embebida en el Patrón 4 ("forma reciente mala ≠ pocos
+Ks si arsenal intacto"), con 4 casos. Evidencia v2.2: 9 casos, y al verlos
+juntos emerge un insight más afilado — el predictor real NO es el K%
+reciente sino las IP ESPERADAS. Esto reconcilia las dos direcciones del
+patrón (que el under gane o pierda depende de IP, no de K rate).
+
+Decisión: PROMOVER de alerta a regla operativa propia, reformulada en
+términos de IP.
+
+Texto propuesto para v2.2:
+
+----------------------------------------------------------------------
+REGLA DEL UNDER Ks (v2.2)
+
+El predictor del under Ks es las IP ESPERADAS, no el K% reciente.
+
+Confirmado en 9 casos, dos direcciones:
+
+Dirección A — arsenal intacto + pitcher llega a 5-6 IP → los Ks llegan,
+under PIERDE pese a forma reciente mala o pese a permitir daño:
+[ ] Valdez (30/04): bajo K% reciente, 8 K en 6 IP.
+[ ] Abbott (30/04): 18% BB temporada, 5 K.
+[ ] Hancock (02/05): nuevo arsenal, 14 K en 7 IP.
+[ ] Detmers (19/05): 8 K pese a blow-up de 8 ER.
+[ ] Wrobleski (04/06): 4 K en 6 IP, under habría perdido.
+
+Dirección B — salida corta por tráfico/bombardeo → under GANA, pero por
+POCAS IP, no por bajo K rate:
+[ ] Cavalli (05/05): 2 K, salida corta.
+[ ] Lugo (04/06): 4 K, salida corta (under descartado correctamente).
+[ ] Keller (05/06): 4 K, sacado a 4.2 IP vía bombardeo.
+[ ] Nola (07/06): 4 K, sacado a 4.1 IP vía bombardeo.
+
+Regla operativa:
+[ ] Para TOMAR under Ks, no basta "forma reciente mala". Exigir riesgo real
+    de SALIDA CORTA (<4.2 IP): leash corto confirmado (límite de pitcheo,
+    regreso de IL, bullpen game) O Tipo A claro (comando frágil que se
+    rompe por tráfico temprano).
+[ ] Si el arsenal está intacto y el pitcher proyecta 5+ IP, los Ks llegan
+    aunque la forma sea catastrófica → NO tomar under Ks.
+[ ] Espejo positivo: el OVER Ks (o outs) vale incluso cuando el pitcher
+    permite daño, si el arsenal está intacto. Las props pitcher Ks/outs
+    sobreviven al colapso del side (Imanaga 6 K pese a 7 ER, astros-cubs
+    24/05; props Eovaldi/May en rangers-cardinals 02/06).
+----------------------------------------------------------------------
+
+Nota de conexión: refuerza el principio "forma reciente individual = tier 8
+ruidoso" de la Jerarquía de Edges. El K% de las últimas 4-5 salidas es ruido;
+la IP esperada (leash + tipo de vulnerabilidad) es la señal.
