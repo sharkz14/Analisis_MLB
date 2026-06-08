@@ -547,3 +547,53 @@ SISTEMA, no como debilidad targeteable única.
     el edge ofensivo en under/ML, no en TT del underdog (rangers-dbacks
     11/05: pen elite contuvo, ARI ML era el mercado correcto, no ARI TT over).
 ----------------------------------------------------------------------
+
+
+### C9 — CIERRE DEL WATCHLIST (candidatos n=1/n=2)
+
+Decisiones por candidato restante:
+
+(1) Vehículo H+R+RBI — 2 casos con matiz COMPLETO y opuesto → FOLD en Patrón 10:
+[ ] white-sox-mariners 19/05: Vargas H+R+RBI PERDIÓ porque el bate fue
+    CATALIZADOR (HBP + SB + R anotada) — HBP y SB no cuentan para H+R+RBI.
+[ ] giants-cubs 07/06: Lee H+R+RBI GANÓ como vehículo FORGIVING (cobró con
+    1 H + 1 RBI) mientras su TB perdió.
+[ ] Juntos caracterizan el vehículo: H+R+RBI > hit-solo / TB cuando el bate
+    produce vía H/R/RBI, PERO es CIEGO a HBP/SB — si el bate es catalizador
+    puro (camina, HBP, roba, anota sin batear), incluso H+R+RBI puede fallar.
+    Sub-nota propuesta para Patrón 10: "H+R+RBI es el vehículo más forgiving
+    para participación ofensiva, salvo cuando el bate produce por vías que no
+    cuentan (BB/HBP/SB sin hit). Para catalizadores puros, runs anotadas o
+    el side del equipo capturan mejor."
+
+(2) "Lineup debilitado ≠ ofensiva inofensiva" — 2 casos → CAVEAT a Patrón 5/6:
+[ ] athletics-angels 19/05: ATH sentó a sus mejores bates y aun así anotó 14
+    con multi-ruta (no monoruta HR).
+[ ] phillies-redsox 13/05: Rafaela (PH desde banca) pegó el HR decisivo — la
+    profundidad de banca era recurso no contemplado.
+[ ] Caveat propuesto para Patrón 5/6: antes de declarar "un solo equipo tiene
+    rutas" o "favorito sin edge ofensivo colectivo", verificar que el lineup
+    debilitado no conserve ruta por (a) poder latente + ambiente (ver Patrón
+    11 B4) o (b) profundidad de banca (PH con upside). "Lineup debilitado" ≠
+    "ofensiva inofensiva".
+
+(3) "Eventos colectivos > props individuales para edge Tipo A" — 1 caso:
+[ ] cardinals-athletics 13/05. Mayormente ABSORBIDO en B5(d) (operacionalizar
+    el tipo en el pitcher, no en prop individual del bateador). Residual: el
+    principio general "mercados colectivos tienen menos varianza que props
+    individuales para un edge colectivo" queda anotado en B5(d); no requiere
+    slot propio.
+
+(4) ACIERTO_RUIDOSO de Lee (giants-cubs 07/06) — recordatorio de higiene, no
+    patrón. El template ya cubre cómo leer ACIERTO_RUIDOSO ("la categoría más
+    importante de monitorear"). Sin acción; solo registrar.
+
+QUEDA EN WATCHLIST para la próxima ventana (sin masa suficiente todavía):
+[ ] (vacío de candidatos vivos) — tras las absorciones de B4/B5/B6/C8 y los
+    folds de C9, no quedan candidatos n=1 sin hogar. La próxima ventana parte
+    limpia: cualquier patrón emergente nuevo se trackea desde cero.
+
+
+====================================================================
+FIN DE LAS DECISIONES POR CLUSTER. Pendiente: resumen ejecutivo v2.1 → v2.2.
+====================================================================
