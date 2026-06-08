@@ -238,3 +238,52 @@ Regla operativa:
 Nota de conexión: refuerza el principio "forma reciente individual = tier 8
 ruidoso" de la Jerarquía de Edges. El K% de las últimas 4-5 salidas es ruido;
 la IP esperada (leash + tipo de vulnerabilidad) es la señal.
+
+
+### A3 — META-REGLA: CONFLICTO DE TIERS (NUEVA, extiende la Jerarquía)
+
+Estado v2.1: la Jerarquía de Edges rankea fuentes pero solo dice "si el edge
+viene de posiciones 7-9, bajar stake o confirmar en fuente más alta". NO
+cubre el caso de CONFLICTO — qué hacer cuando dos señales de tiers distintos
+apuntan a direcciones opuestas. 3 casos del run exponen este hueco.
+
+Decisión: AGREGAR una regla de conflicto a la sección Jerarquía de Edges.
+
+Texto propuesto para v2.2:
+
+----------------------------------------------------------------------
+REGLA DE CONFLICTO DE TIERS (v2.2 — extensión de la Jerarquía de Edges)
+
+La Jerarquía rankea fuentes, pero no dice qué hacer cuando dos señales
+apuntan a direcciones distintas. Regla:
+
+[ ] Cuando dos señales chocan, la de tier MÁS ALTO manda la DIRECCIÓN.
+[ ] Una señal de tier 7-9 (momentum, forma reciente individual, narrativa)
+    puede justificar BAJAR STAKE, pero NUNCA invertir la dirección de una
+    señal de tier 1-4 (parque/clima confirmado, matchup, leash/bullpen).
+[ ] Un FRENO que viene de tier 1-4 (BvP histórico desfavorable, split
+    colectivo flojo confirmado) no se releva a "nota al pie" debajo de una
+    tesis: debe LIDERAR la recomendación o gatillar pass.
+
+Casos:
+[ ] mariners-astros 14/05: el reframe del 2º turno usó forma reciente
+    (tier 8) para invertir el matchup de temporada (tier 2: SEA ML). SEA
+    ganó 8-3, Burrows se reventó como decía su perfil. Tier 8 invirtió
+    tier 2 → error.
+[ ] royals-twins 04/06: "ambas ofensivas frías" (tier 9 momentum) invirtió
+    parque pro-run + viento out + 2 abridores vulnerables (tiers 1-4) que
+    apuntaban al over. Over cobró (14 R). Tier 9 invirtió tiers 1-4 → error.
+[ ] dodgers-dbacks 04/06 (dirección inversa): el FRENO de tier alto (Nelson
+    histórico vs LAD + top-3 en slump) se subponderó debajo de la tesis "LA
+    castiga a Nelson Tipo B". LA top-3 fue 0-12. El freno debió liderar →
+    pass o under.
+
+Operativo: antes de fijar la dirección de la apuesta, preguntar "¿hay una
+señal de tier más alto que contradice mi tesis o que frena el lado que
+elijo?". Si sí, esa señal manda — no se releva a nota al pie ni se invierte
+con momentum.
+----------------------------------------------------------------------
+
+Esto cierra el CLUSTER A (promociones de regla operativa). Las 3 promociones
+atacan el hallazgo central del conteo: el problema migró a LECTURA y
+EJECUCIÓN, no a traducción de mercado.
