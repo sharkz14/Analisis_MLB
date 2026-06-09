@@ -2399,3 +2399,91 @@ Conexión: este es el espejo del cluster "bullpen games requieren tratamiento es
 5. LECCIÓN OPERATIVA EN UNA FRASE
 
 [ ] Si el edge depende de que un lineup castigue a UN abridor específico, verificar disponibilidad de brazo bulk fresco del rival antes de fijar convicción, y preferir vehículos forgiving (H+R+RBI) que cobran aun cuando la tesis de acumulación no se cumple.
+
+
+	[Phillies vs Blue Jays 080626]
+
+1. THESIS PRE-PARTIDO (antes de ver resultado)
+
+Edge principal en una frase:
+[ ] Asimetría de abridores zurdos: Sánchez élite suprime a una ofensiva de Toronto diezmada (sin Santander/Kirk) mientras Corbin es atacable por espejismo de ERA + H2H documentado vs PHI; entorno de supresión bilateral vs LHP.
+
+Nivel en Jerarquía de Edges (v2.2):
+[ ] Edge combinado (Posición 1 supresión por arsenal + Posición 2 matchup mano + Posición 3 H2H histórico documentado vs PHI).
+
+Tipo de vulnerabilidad del pitcher rival (si aplica):
+[ ] Corbin (TOR): Tipo B (contacto duro + leash nominal funcional), con overlay C (sin whiff). Clasificación contextual conforme al refinamiento Patrón 1 v2.2.
+
+Mercado(s) elegido(s):
+[ ] PASS — sesión incompleta, no se llegó a apostar. Default de ejecución apuntaba a TOR TT Under 2.5 @ 2.01 (cobró).
+
+Cuota(s):
+[ ] TOR TT Under 2.5 @2.01 (#1 default ejecución); Under 7.5 @1.88; F5 TOR TT Under 1.5 @1.62; F5 Under 4 @1.80; Corbin ER over 2.5 @1.90; Corbin Outs under 15.5 @1.63; Sánchez Ks over 6.5 @2.16 (marcada AVOID); Sánchez Outs over 20.5 @1.82; PHI ML @1.55; PHI -1.5 @1.98 (marcada AVOID); TOR +1.5 @1.85; Schwarber HR over 0.5 @3.80.
+
+Stake relativo:
+[ ] PASS (clasificacion_jugada = PASS_INCORRECTO, no se ejecutó la Regla de Ejecución v2.2 antes del primer pitch).
+
+Patrón v2.2 que respalda la jugada:
+[ ] Patrón 1 (Corbin Tipo B contextual). Patrón 3 (timing del daño y leash). Patrón 4 (Sánchez arsenal de whiff vs lineup bajo-K — alerta espejada NO aplica). Patrón 6 (favorito con ofensiva real + rival diezmado). Patrón 12 (bullpen TOR no élite). Patrón 13 (H2H documentado Corbin vs PHI con mecanismo: comando frágil + contacto duro).
+
+
+2. RESULTADO OBJETIVO
+
+Marcador final:
+[ ] Phillies 5 — Blue Jays 2. Total 7 R. 2 HR.
+
+Línea de abridores:
+[ ] Abridor A (Sánchez, PHI): 7.0 IP, 4 H, 2 ER, 1 BB, 10 K, 1 HR (solo de Clement, 5ª).
+[ ] Abridor B (Corbin, TOR): 3.0 IP, 4 H, 5 ER, 4 BB, 1 K, 1 HR — KO en la 3ª.
+
+Bullpen relevante:
+[ ] PHI: Keller 1 IP 0 R, Duran S(16) 1 IP 0 R. TOR: Macko 1 IP, Woods Richardson 4 IP 0 R 3 BB, Nance 1 IP 2 H. Pen de TOR tiró 6 IP de 1 carrera — el bulk absorbió tras el KO de Corbin.
+
+Bates clave del partido:
+[ ] PHI: García 2-run HR (2ª off Corbin) 2 RBI, Bohm RBI, Stott RBI, Turner SB(14). Ofensiva: 7 H, 5 BB, 8 K, RISP 3-7 — daño concentrado en innings 2-3 off Corbin (5 R). TOR: Clement 2-4 HR solitario (5ª off Sánchez), Piñango RBI. Ofensiva: 6 H, 2 BB, 11 K, 6 LOB, 0-de-10 RISP — ambas carreras sin convertir tráfico (1 vía HR solitario).
+
+Ambientales:
+[ ] 68°F, despejado, techo abierto, viento 12 mph R→L (lateral, no inflador). Park neutral confirmado. HP ump: Jansen Visconti. Sin overlay climático relevante.
+
+Mercado(s) elegido(s) — ganó / perdió / push:
+[ ] PASS — N/A. Hipotéticos relevantes: TOR TT Under 2.5 @2.01 → ganó (TOR = 2). Under 7.5 @1.88 → ganó (7 R). F5 TOR TT Under 1.5 @1.62 → perdió (TOR F5 = 2, HR solitario Clement no absorbido por línea ajustada). F5 Under 4 @1.80 → perdió (F5 = 7). F5 TT PHI over → ganó (PHI F5 = 5, fade temprano subestimado). Corbin ER over 2.5 @1.90 → ganó (5 ER en 3 IP). Corbin Outs under 15.5 @1.63 → ganó (KO 3ª = 9 outs). Sánchez Ks over 6.5 @2.16 → ganó (10 K — se advirtió AVOID por "lineup bajo-K", validación negativa). Sánchez Outs over 20.5 @1.82 → ganó (7.0 IP = 21 outs). PHI ML @1.55 → ganó (proceso correcto: pasada por falta de valor). PHI -1.5 @1.98 → ganó por azar de margen (marcada AVOID, juego pudo ser cerrado). TOR +1.5 @1.85 → perdió (margen 3). Schwarber HR over 0.5 @3.80 → perdió (1 H single).
+
+
+3. POSTMORTEM (separar proceso de resultado)
+
+¿La lectura del edge fue correcta?
+[ ] Parcialmente. Tesis macro correcta (supresión bilateral vs LHP, Corbin atacable, Sánchez domina lineup bajo-K). Materialización del daño a Corbin OK en magnitud (5 ER) pero el TIMING falló: proyectaba "daño distribuido / 3ª vuelta tardía con leash nominal funcional"; realidad fue blow-up en 3 IP (innings 2-3). Sánchez dominante exactamente como se proyectaba. Toronto 0-10 RISP, anotó solo por slug aislado.
+
+¿El mercado capturó bien el edge?
+[ ] Parcialmente. El default de ejecución (TOR TT Under 2.5 @2.01) era el #1 del menú y cobró limpio — el filtro de selección se cumplió pero NO se ejecutó por sesión incompleta. El winner de mayor varianza (F5 TT PHI over / Corbin ER over como fade temprano) quedó subestimado porque la lectura puso el daño en 3ª vuelta, no en F5. La asimetría se verificó pero en timing inverso.
+
+¿El timing del daño coincidió con la proyección?
+[ ] No. El H2H Patrón 13 se materializó temprano (innings 2-3), no en 3ª vuelta como proyecté. Corbin con leash nominal "funcional" explotó en 3 IP y todo el daño PHI fue F5, contradiciendo proyección de daño distribuido/tardío. Para Sánchez el timing fue como se proyectaba (7 IP dominantes).
+
+¿Apareció algún factor ambiental que cambió el guion?
+[ ] No. Clima/parque neutrales confirmados, sin overlay relevante. Toronto anotó por slug aislado (HR solitario Clement), no por overlay ambiental.
+
+Clasificación del resultado:
+[X] PASS_INCORRECTO (jugada): no se ejecutó la Regla de Ejecución v2.2 antes del primer pitch; el default invertido habría capturado TOR TT Under 2.5 @2.01 con lectura limpia. 11º caso del filtro de selección / leak de ejecución en el run.
+[X] ACIERTO_LIMPIO (analítica): lectura del edge correcta en dirección y mercado (TOR TT Under #1 del menú), mecanismo Patrón 13 confirmado. Mercado correcto en retrospectiva = TOR TT Under 2.5 @2.01 (lectura limpia de supresión).
+
+4. PATRÓN APLICABLE / EMERGENTE
+
+¿Qué patrón v2.2 explica mejor lo ocurrido?
+[ ] Patrón 1 (Corbin Tipo B contextual con overlay C — clasificación contextual del refinamiento v2.2 funcionó). Patrón 3 (timing del daño — pero invertido: el leash nominal "funcional" no protegió). Patrón 4 (Sánchez arsenal de whiff intacto anuló el lineup bajo-K — la alerta espejada NO disparó: 7 IP esperadas > 4.2 IP umbral). Patrón 6 (favorito con ofensiva real + rival diezmado materializado en magnitud). Patrón 12 (bullpen TOR no élite absorbió 6 IP de 1 R porque el daño ya estaba hecho). Patrón 13 (H2H documentado Corbin vs PHI con mecanismo — comando frágil + contacto duro — se materializó temprano).
+
+¿Aparece un patrón nuevo que no está en v2.2?
+[X] Sí — refinamiento candidato v2.3 (n=1):
+
+**"Timing-inversión por H2H fuerte."** Un Tipo B con H2H documentado de comando frágil + contacto duro vs un rival específico (Patrón 13 fuerte) puede INVERTIR la lectura de leash nominal — el blow-up llega en F5, no en 3ª vuelta como sugeriría el perfil "funcional". Corbin con leash nominal de 5-6 IP explotó en 3 IP y todo el daño PHI fue F5, contradiciendo proyección de daño tardío distribuido. Implicación operativa: cuando Patrón 13 (H2H con mecanismo) está fuerte, el fade temprano (F5 TT rival / ER over / Outs under) queda VIVO aunque el perfil nominal del Tipo B diga "sobrevive 5-6 IP". Mantener el default de TT full game pero abrir explícitamente el carril temprano cuando hay H2H documentado con mecanismo de comando frágil. Conecta con el cluster Patrón 13 — primera materialización donde H2H invierte timing de leash (las anteriores eran señales de degradación pitcher).
+
+Notas secundarias:
+(a) Cuando el rival anota por HR solitario, preferir TT full a línea alta (2.5) sobre F5 TT a línea ajustada (1.5). El slug aislado se absorbe mejor por línea ancha full game.
+(b) Arsenal de whiff élite anula la tendencia bajo-K del lineup — NO fadear Ks over por "lineup de contacto" cuando el arsenal del pitcher es élite. Validación negativa del Sánchez Ks over @2.16 marcado AVOID (cobró 10 K).
+
+¿Algún patrón v2.2 fue contradicho por este partido?
+[ ] No directamente — el refinamiento de timing-inversión es un MATIZ del Patrón 3 (leash) cuando interactúa con Patrón 13 (H2H), no una contradicción. Validación limpia del refinamiento v2.2 del Patrón 1 (clasificación contextual Tipo B + overlay C de Corbin se cumplió). Validación de la Regla del Under Ks v2.2: Sánchez con IP esperadas 7+ NO disparaba la alerta espejada (umbral <4.2 IP), correctamente NO se tomó el under Ks — el over cobró.
+
+5. LECCIÓN OPERATIVA EN UNA FRASE
+
+[ ] Cuando un Tipo B carga un H2H fuerte de comando frágil vs el rival, no asumir leash nominal funcional: el fade temprano (F5 TT rival / ER over) queda vivo aunque el perfil diga "sobrevive 5-6 IP", y el default de ejecución de la lectura de supresión (TT full game del rival diezmado) sigue siendo el mercado #1.
