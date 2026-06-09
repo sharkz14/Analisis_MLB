@@ -1,6 +1,6 @@
 # MLB Postmortems — Reporte de recalibración
 
-Dataset: **29 partidos**. Fuente: `data/postmortems.yaml`.
+Dataset: **50 partidos**. Fuente: `data/postmortems.yaml`.
 
 ## 1. Resumen de decisiones
 
@@ -8,39 +8,42 @@ Dataset: **29 partidos**. Fuente: `data/postmortems.yaml`.
 
 | Clasificación | Count | % |
 |---|---:|---:|
-| ACIERTO_LIMPIO | 9 | 31% |
-| PASS_CORRECTO | 7 | 24% |
-| PASS_INCORRECTO | 6 | 21% |
-| ERROR_DE_LECTURA | 4 | 14% |
-| ERROR_DE_MERCADO | 2 | 7% |
-| VARIANZA | 1 | 3% |
+| ACIERTO_LIMPIO | 14 | 28% |
+| PASS_CORRECTO | 13 | 26% |
+| PASS_INCORRECTO | 13 | 26% |
+| ERROR_DE_LECTURA | 4 | 8% |
+| ERROR_DE_MERCADO | 3 | 6% |
+| NO_JUGADA | 2 | 4% |
+| VARIANZA | 1 | 2% |
 
 **Clasificación analítica** (frame del análisis):
 
 | Clasificación | Count | % |
 |---|---:|---:|
-| ERROR_DE_MERCADO | 15 | 52% |
-| ACIERTO_LIMPIO | 8 | 28% |
-| ERROR_DE_LECTURA | 6 | 21% |
+| ERROR_DE_MERCADO | 18 | 36% |
+| ACIERTO_LIMPIO | 18 | 36% |
+| ERROR_DE_LECTURA | 12 | 24% |
+| PASS_INCORRECTO | 1 | 2% |
+| ACIERTO_RUIDOSO | 1 | 2% |
 
 ## 2. Apostar vs pasar
 
-- Apuestas tomadas: **16** (55%)
-- Pass: **13** (45%)
+- Apuestas tomadas: **22** (44%)
+- Pass: **28** (56%)
 
-- Pass correctos: **7/13** (54%)
-- Pass incorrectos: **6/13** (46%)
+- Pass correctos: **13/28** (46%)
+- Pass incorrectos: **13/28** (46%)
 
 ## 3. Win rate y P&L de apuestas reales
 
-- Total apuestas/piernas: **17**
-- Ganadas: **10** (59%)
-- Perdidas: 7 (41%)
+- Total apuestas/piernas: **23**
+- Ganadas: **15** (65%)
+- Perdidas: 8 (35%)
 - Push: 0
   - Piernas de parlay: 7 cobraron / 2 perdieron
 
-- **P&L estimado** (singles, 1u flat): **-3.00u** en 8 apuestas
-- **ROI singles**: **-37.5%**
+- **P&L estimado** (singles, 1u flat): **+1.01u** en 14 apuestas
+- **ROI singles**: **+7.2%**
 
 _Nota: P&L de parlay legs no se computa porque depende del resto del parlay, que no se registra._
 
@@ -48,61 +51,66 @@ _Nota: P&L de parlay legs no se computa porque depende del resto del parlay, que
 
 | Mercado | W | L | Push | P&L singles (u) |
 |---|---:|---:|---:|---:|
+| prop_bateador_HRR_RBI | 2 | 0 | 0 | +1.46 |
+| TT_full_game | 2 | 1 | 0 | +0.65 |
 | F5_doble_oportunidad | 2 | 1 | 0 | — |
 | partial_DNB | 1 | 0 | 0 | +0.31 |
-| prop_bateador_HRR_RBI | 1 | 0 | 0 | +0.80 |
 | ML | 1 | 0 | 0 | — |
 | F5_DNB | 2 | 1 | 0 | -0.11 |
 | over_under_full | 1 | 0 | 0 | — |
 | run_line_underdog_1.5 | 1 | 0 | 0 | — |
-| TT_full_game | 0 | 1 | 0 | -1.00 |
+| prop_equipo | 1 | 0 | 0 | +1.08 |
+| prop_pitcher_ER | 1 | 0 | 0 | +1.62 |
 | prop_bateador_bases | 1 | 2 | 0 | -2.00 |
 | F5_under | 0 | 1 | 0 | — |
 | prop_pitcher_Ks | 0 | 1 | 0 | -1.00 |
+| prop_bateador_BB | 0 | 1 | 0 | -1.00 |
 
 ## 5. Performance por fuente de edge
 
 | Fuente | N | Acierto | Pass✓ | Pass✗ | Err_Lectura | Err_Mercado | Varianza |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| matchup_mano_repertorio | 15 | 7 | 3 | 1 | 2 | 1 | 1 |
+| matchup_mano_repertorio | 19 | 8 | 4 | 2 | 2 | 1 | 1 |
+| edge_combinado | 14 | 5 | 5 | 3 | 0 | 1 | 0 |
+| leash_bullpen | 4 | 0 | 2 | 2 | 0 | 0 | 0 |
 | tipo_vulnerabilidad_pitcher | 4 | 1 | 1 | 2 | 0 | 0 | 0 |
-| leash_bullpen | 3 | 0 | 2 | 1 | 0 | 0 | 0 |
-| forma_individual | 3 | 0 | 1 | 0 | 2 | 0 | 0 |
-| parque_clima | 2 | 0 | 0 | 2 | 0 | 0 | 0 |
+| forma_individual | 4 | 0 | 1 | 1 | 2 | 0 | 0 |
+| parque_clima | 3 | 0 | 0 | 2 | 0 | 0 | 0 |
 | bullpen_rival_debil | 1 | 0 | 0 | 0 | 0 | 1 | 0 |
-| edge_combinado | 1 | 1 | 0 | 0 | 0 | 0 | 0 |
+| momentum | 1 | 0 | 0 | 1 | 0 | 0 | 0 |
 
 ## 6. Performance por tipo de pitcher vulnerable
 
 | Tipo | N | Aciertos | Errores |
 |---|---:|---:|---:|
-| Tipo A | 6 | 2 | 1 |
-| Tipo B | 9 | 4 | 1 |
-| Tipo C | 2 | 0 | 0 |
+| Tipo A | 11 | 2 | 2 |
+| Tipo B | 23 | 8 | 1 |
+| Tipo C | 4 | 1 | 0 |
 
 ## 7. Frecuencia de patrones v2 aplicados
 
 | Patrón | Apariciones |
 |---|---:|
-| 10: Props salen del guion, no del menú | 10 |
-| 1: Tipología vulnerabilidades pitcher (A/B/C) | 9 |
-| 12: Side con ruido → mercado más limpio | 9 |
-| 4: K upside no es over Ks si hay tráfico | 7 |
-| 11: Factores ambientales (parque/clima/umpire) | 6 |
-| 5: Un solo equipo con rutas → su TT | 6 |
-| 3: Timing del daño: F5 vs full game | 5 |
-| 8: Opener/spot starter no es fade automático | 4 |
-| 9: Pitcher élite no bloquea automáticamente | 4 |
-| 2: 'Mejor abridor' no es F5 side automático | 3 |
-| 6: Favorito sin edge ofensivo colectivo | 2 |
-| 7: Underdog +1.5 necesita conversión | 2 |
+| 1: Tipología vulnerabilidades pitcher (A/B/C) | 27 |
+| 12: Side con ruido → mercado más limpio | 22 |
+| 11: Factores ambientales (parque/clima/umpire) | 18 |
+| 10: Props salen del guion, no del menú | 17 |
+| 5: Un solo equipo con rutas → su TT | 17 |
+| 4: K upside no es over Ks si hay tráfico | 13 |
+| 3: Timing del daño: F5 vs full game | 12 |
+| 9: Pitcher élite no bloquea automáticamente | 10 |
+| 6: Favorito sin edge ofensivo colectivo | 8 |
+| 8: Opener/spot starter no es fade automático | 8 |
+| 2: 'Mejor abridor' no es F5 side automático | 6 |
+| 7: Underdog +1.5 necesita conversión | 3 |
+| 13: Señal específica con mecanismo > agregado de temporada | 1 |
 
 ## 8. Calidad del menú: picks analizadas pero no jugadas
 
-- Total: **247**
-- Habrían cobrado: **143** | perdido: 101 | push: 3
-- Win rate (sin push): **59%**
-- P&L hipotético (1u flat): **+26.68u** en 152 con cuota → ROI **+17.6%**
+- Total: **352**
+- Habrían cobrado: **211** | perdido: 138 | push: 3
+- Win rate (sin push): **60%**
+- P&L hipotético (1u flat): **+49.30u** en 230 con cuota → ROI **+21.4%**
 
 ## 9. Patrones emergentes registrados
 
@@ -192,6 +200,86 @@ Hipótesis candidatas a v3 si reaparecen en partidos futuros:
 
 > En bullpen games del favorito con bullpen elite por ERA, el lado del underdog y/o el under del partido son más limpios que el TT del underdog. La paciencia del lineup underdog requiere que el opener pierda comando para traducirse en tráfico; si el opener mete strikes, la paciencia no genera tráfico y la conversión RISP no aparece. Para edge ofensivo del underdog en bullpen game, exigir además bullpen rival mediocre — si el bullpen es elite, expresar el edge en ML/Under, no en TT.
 
+**22.** `giants-athletics-150526`
+
+> Validación de Patrón 5 cuando el rival visitante es bottom-tier ofensivo: el TT del fuerte cobra cómodo aunque el marcador full game sea moderado (5-2). La sublección del Patrón 6 sobre RL puede tener excepciones cuando el rival no convierte tráfico (SF 10 hits / 2 R).
+
+**23.** `marlins-rays-160526`
+
+> En partidos con dos Tipo C en parque suppressor, el riesgo principal del Under NO es la regulación sino EXTRAS con bullpen débil identificable. Antes de tomar Under en este perfil, chequear si hay un brazo con ERA >5 que sería long-relief en extras; si sí, bajar stake del Under y subir picks independientes del run environment (SB, hits específicos, props matchup-driven).
+
+**24.** `ath-laa-190526`
+
+> Candidato Patrón 13 (matchup-específico vs métrica-promedio): cuando un abridor tuvo blow-up vs UN equipo específico en la temporada actual, el riesgo de repetición es mayor que lo que sugieren sus métricas de temporada. Detmers vs ATH ya había estallado el 8/4 y hoy se repitió. Las métricas avanzadas son promedio vs liga; no neutralizan la asimetría head-to-head reciente. También: 'lineup debilitado' (ATH sin sus 2 mejores zurdos) ≠ 'lineup monoruta' — ATH anotó 14 con multiruta.
+
+**25.** `nationals-reds-130526`
+
+> Refinamiento Patrón 3: cuando AMBOS abridores son Tipo B con leash atenuado por contexto (regreso IL, parque hostil + ofensiva en racha), salen en 3-4 IP y el Over F5 alto puede ser MÁS limpio que el Over full game. Distinguir 'Tipo B clásico con leash sólido' de 'Tipo B con leash atenuado por contexto' — el segundo se comporta más cerca del Tipo A.
+
+**26.** `cardinals-athletics-130526`
+
+> Cuando la tesis identifica vulnerabilidad Tipo A en lineup robusto + parque favorable, los mercados de EVENTO COLECTIVO (TT over, hits/ER/BB allowed del pitcher, ML) capturan el edge con menos varianza que las props INDIVIDUALES de bateadores. La cuota individual más larga no compensa la varianza de depender de un solo AB. Suma al cluster Ohtani outs / Cavalli outs / Pittsburgh +1 F5.
+
+**27.** `mariners-astros-130526`
+
+> (1) Road OPS del lineup como modificador de primer orden para TT over visitante: con favorito road OPS bottom-10 MLB, el TT over exige confirmación adicional aunque matchup + bullpen agregado sugieran edge (Seattle 1-13 RISP). (2) ERA agregado de bullpen sobreestima fragilidad cuando un brazo extremo (Hader IL, Abreu 8.56) infla el promedio — chequear los 3-4 brazos que cubrirían 6ª-9ª. Gemelo del caso Baltimore 10H/1R/0-7 RISP (Patrón 5).
+
+**28.** `mariners-astros-140526`
+
+> Patrón META multi-turn — 'sobrecorrección por forma reciente individual en segundo análisis': cuando un segundo turno cambia la pick top basándose en muestra chica de forma reciente del pitcher (<20 IP) que contradice el perfil de temporada, suele degradar el primer análisis. Forma reciente individual (P8) no debe anular matchup mano/repertorio (P2). Trigger: regresar al primer análisis salvo soporte Statcast en la misma dirección.
+
+**29.** `bluejays-tigers-150526`
+
+> (1) Bullpen game improvisado NO es plan fijo (candidato P13/P8): con incertidumbre de rotación, analizar el bullpen game como SISTEMA, no anclar en un reliever específico (proyecté Madden bulk; fue Anderson). (2) Patrón 6 en tier máximo (4-5 condiciones) → evitar TODOS los mercados ofensivos del favorito. (3) Patrón 11 viento pronóstico ≠ real (caso confirmado).
+
+**30.** `athletics-angels-210526`
+
+> (1) Tipo B se comporta como Tipo C cuando el lineup rival es K-heavy colectivo: la clasificación A/B/C debe leerse SIEMPRE en contexto del lineup rival, no en aislamiento (refinamiento Patrón 1). (2) Selección de bate-prop: priorizar LHH del top-5 con platoon sobre RHH 'bate top' cuando hay RHP HR-prone — el calor reciente del bate top no sustituye la asimetría platoon.
+
+**31.** `tigers-rays-010626`
+
+> Candidato Patrón 13: 'ofensiva con peor AVG/wRC+ del slate ≠ ofensiva inofensiva'. En parque HR-friendly + abridor rival con recta bateable, un lineup 'muerto' con poder zurdo latente puede explotar por HR SIN convertir tráfico. Antes de declarar 'una sola ofensiva tiene ruta' (Patrón 5), agregar el filtro '¿el equipo sin ruta tiene perfil de poder + parque HR + recta bateable enfrente?'. Si sí, el over del juego deja de ser pass automático.
+
+**32.** `astros-cubs-240526`
+
+> 'LHP élite con perfil de barrels post-blow-up vs all-RHB con poder distribuido': cuando un LHP cumple (1) blow-up <14 días, (2) Barrel% ≥9%, (3) degradación post-mediados-temporada previa, (4) viento no confirmado, la ventaja teórica de mano puede invertirse si el lineup rival tiene poder en 3+ spots. Refuerza 'matchup-specific blowup overrides metric-average' (Detmers, ahora Imanaga ×2 = patrón del PITCHER en degradación). Props pitcher Ks/outs sobreviven (Patrón 4 alerta espejada positiva).
+
+**33.** `rangers-cardinals-020626`
+
+> (1) Refinamiento Patrón 11: parque + clima confirmado es el edge más fiable para POWER/HR, NO para el total de carreras. Check obligatorio antes de colgar un under del parque: ¿la ruta de carreras es poder o tráfico? (2) Refinamiento filtro de selección: timing > regla de cuota. (3) Promoción Patrón 13 'manufactura sin HR' (May+Eovaldi Tipo B): el mecanismo común es 'contacto + bullpen frágil decide el partido sin HR'.
+
+**34.** `royals-twins-040626`
+
+> (1) META-REGLA sobre Jerarquía de Edges: no permitir que momentum/forma reciente (tier 7-9) invierta parque/matchup/leash (tiers 1-4) cuando los tiers altos apuntan claro. Paralelo a mariners-astros-140526. (2) Refinamiento 'ofensiva muerta explota por HR': tercer caso del mecanismo 'Tipo C + viento out confirmado + parque pro-run = colapso por slugging' (junto a Tigers/Rays 01/06, Astros/Cubs 24/05).
+
+**35.** `dodgers-dbacks-040626`
+
+> Refinamiento del usuario: 'sin Tipo A en el partido, B atacable es relativo no absoluto; con freno de fuente alta → under/pass > TT del favorito'. Cuando NO hay Tipo A en el matchup, la atacabilidad del Tipo B depende de frenos de fuente alta (lineup propio en slump, BvP desfavorable); si esos frenos existen y vienen de tier 1-4, el under/pass debe LIDERAR la recomendación. Contraste con dodgers-dbacks-030626 (allí NO había freno → TT LAD cobró).
+
+**36.** `rockies-angels-010626`
+
+> (1) 'TT under del visitante débil es FRÁGIL cuando el abridor propio tiene riesgo de comando alto: los boletos fabrican la ofensiva que el bate no fabrica' (Soriano 7 BB → COL 9 R). Check pre-partido: BB% del abridor propio reciente. (2) Corolario de la Regla Madre: un prop directo del pitcher rival cobra aunque side/total/TT fallen — la pieza de hierro aislada gana al guion completo (2 casos con Tigers/Rays 01/06).
+
+**37.** `brewers-rockies-060626`
+
+> (1) 'Eje bullpen detrás / daño tardío debe primar sobre la preferencia F5 menos tasado → full-game TT > F5 TT'. El precio NO debe invertir el análisis de timing (conecta con rangers-cardinals-020626). (2) 'Equipo bajo-HR en Coors + viento out puede anotar vía HR solitario, no tráfico; no degradar props HR' — cuarto caso del meta-mecanismo 'el daño llega por aire con viento out confirmado' (con Tigers/Rays 01/06, Astros/Cubs 24/05, Royals/Twins 04/06).
+
+**38.** `pirates-braves-050626`
+
+> Candidato Patrón 13: 'Tipo B + dominio histórico inverso documentado (rival específico lo castiga, ej. Keller 7.31 ERA vs ATL) = upgrade de convicción en hits/ER over y TT del rival'. Espejo POSITIVO de 'matchup-specific blowup overrides metric-average' (Detmers/Imanaga). Mismo principio: el head-to-head específico tiene señal por encima del perfil promedio, en ambas direcciones. Patrón 4 alerta espejada validada en negativo (Pérez 5 K, under Ks habría perdido).
+
+**39.** `white-sox-phillies-070626`
+
+> Refinamiento Patrón 11: 'over de CARRERAS y over de HR son tesis distintas'. Viento out confirmado + parque de HR + ofensivas con poder NO garantiza match-HR over — un partido de anotación colectiva puede ir over de carreras vía tráfico/extra-base SIN 3+ HR (CWS, 3º en HR MLB, anotó 5 R con 0 HR). El viento out garantiza el RUN environment, no el camino del daño. Regla: tomar TT/over de carreras (capturan ambos caminos), no match-HR (captura solo un camino).
+
+**40.** `giants-cubs-070626`
+
+> Escudo de brazo bulk (n=1): cuando el edge combina 'atacar abridor vulnerable' + 'bullpen rival gastado', un brazo bulk/swing fresco (bajada reciente, long man, spot en turno) puede anular AMBOS edges a la vez: el abridor sale temprano Y el bulk absorbe 5-6 IP en blanco. Caso: Taillon 1 IP → Assad 6.1 IP shutout. Inverso del Patrón 8. Implicación: si el edge depende de castigar a UN abridor específico, verificar disponibilidad de brazo bulk fresco del rival antes de fijar convicción.
+
+**41.** `phillies-bluejays-080626`
+
+> Timing-inversión por H2H fuerte (n=1): un Tipo B con H2H documentado de comando frágil + contacto duro vs un rival específico (Patrón 13 fuerte) puede invertir la lectura de leash — el blow-up llega en F5, no en 3ª vuelta. Corbin, con leash nominal 'funcional', explotó en 3 IP y todo el daño de PHI fue F5. Notas secundarias: (a) cuando el rival anota por HR solitario, preferir TT full a línea alta (2.5) sobre F5 TT a línea ajustada (1.5); (b) arsenal de whiff élite anula la tendencia bajo-K del lineup — no fadear Ks over por 'lineup de contacto'.
+
 
 ## 10. Divergencias jugada ≠ analítica
 
@@ -216,12 +304,26 @@ Partidos donde lo realmente apostado y el frame del análisis tienen clasificaci
 | tigers-braves-300426 | ERROR_DE_LECTURA | ERROR_DE_MERCADO |
 | rockies-reds-300426 | PASS_INCORRECTO | ERROR_DE_MERCADO |
 | rangers-dbacks-110526 | PASS_CORRECTO | ERROR_DE_MERCADO |
+| ath-laa-190526 | PASS_CORRECTO | ERROR_DE_LECTURA |
+| nationals-reds-130526 | PASS_INCORRECTO | ACIERTO_LIMPIO |
+| mariners-astros-130526 | PASS_CORRECTO | ERROR_DE_MERCADO |
+| mariners-astros-140526 | PASS_INCORRECTO | ERROR_DE_MERCADO |
+| bluejays-tigers-150526 | PASS_CORRECTO | ACIERTO_LIMPIO |
+| tigers-rays-010626 | PASS_INCORRECTO | ACIERTO_LIMPIO |
+| astros-cubs-240526 | PASS_CORRECTO | ERROR_DE_LECTURA |
+| rangers-cardinals-020626 | NO_JUGADA | ERROR_DE_LECTURA |
+| royals-twins-040626 | PASS_INCORRECTO | ERROR_DE_LECTURA |
+| dodgers-dbacks-040626 | PASS_CORRECTO | ERROR_DE_LECTURA |
+| brewers-rockies-060626 | PASS_CORRECTO | ERROR_DE_LECTURA |
+| white-sox-phillies-070626 | PASS_INCORRECTO | ACIERTO_LIMPIO |
+| giants-cubs-070626 | NO_JUGADA | ACIERTO_RUIDOSO |
+| phillies-bluejays-080626 | PASS_INCORRECTO | ACIERTO_LIMPIO |
 
-_17 partidos con divergencia (de 29)._
+_31 partidos con divergencia (de 50)._
 
 ## 11. Insights operativos
 
-- **Apuestas con ROI negativo**: -37.5% en 8 singles con cuota.
-- **El menú considerado supera al jugado**: ROI menú +17.6% vs jugado -37.5%. Sugiere que se descartan picks correctas por cuota/heurística de selección.
+- **Apuestas con ROI positivo**: +7.2% en 14 singles con cuota.
+- **El menú considerado supera al jugado**: ROI menú +21.4% vs jugado +7.2%. Sugiere que se descartan picks correctas por cuota/heurística de selección.
 - **Fuente de edge más propensa a error**: `matchup_mano_repertorio` con 3 errores. Revisar antes de apostar.
-- **Mejor mercado por win rate**: `F5_doble_oportunidad` con 2-1 (67% wr).
+- **Mejor mercado por win rate**: `prop_bateador_HRR_RBI` con 2-0 (100% wr).

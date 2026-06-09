@@ -1405,3 +1405,964 @@ partidos:
       emergente: "En bullpen games del favorito con bullpen elite por ERA, el lado del underdog y/o el under del partido son más limpios que el TT del underdog. La paciencia del lineup underdog requiere que el opener pierda comando para traducirse en tráfico; si el opener mete strikes, la paciencia no genera tráfico y la conversión RISP no aparece. Para edge ofensivo del underdog en bullpen game, exigir además bullpen rival mediocre — si el bullpen es elite, expresar el edge en ML/Under, no en TT."
     leccion: "'Bullpen game improvisado' ≠ 'over-friendly'. Si el bullpen del favorito es elite por ERA de temporada, el patrón histórico es contención, no explosión. Para edge ofensivo del underdog, exigir además bullpen rival mediocre (no solo abridor débil)."
     fuente: "conversación pre/post-partido"
+
+  # ===== Backfill ventana 13/05/26 → 08/06/26 (derivado del raw, generado en chat) =====
+
+  - id: giants-athletics-150526
+    fecha: 2026-05-15
+    partido: "Giants vs Athletics"
+    marcador: "Athletics 5 - Giants 2"
+    cuotas_pre_partido:
+      ml_favorito: null
+      ml_underdog: null
+    edge:
+      frase: "Ofensiva OAK en parque pro-HR castiga a Mahle (Tipo A+B) mientras SF (peor ofensiva MLB) no responde a Civale (Tipo C) ni a su propio pen roto."
+      fuente: edge_combinado   # P1 parque/clima + P2 matchup mano + P4 tipo vulnerabilidad
+      pitcher_vulnerable_tipo: B   # Mahle: Tipo B primario con A secundario
+    apuesta:
+      mercado: "Athletics Team Total Over 4.5"
+      tipo_mercado: TT_full_game
+      cuota: 1.90
+      stake: "7.900 CLP"
+      formato: single
+      resultado: ganó
+      notas_apuesta: "Cobró en el momento exacto (inning 5: HR 3R Kurtz + sencillo RBI Bolte = 4 R). OAK 5 R total."
+    picks_analizadas_no_jugadas: []
+    contexto_resultado:
+      abridor_rival: "Mahle (SF, L): 5.0 IP, 10 H, 5 R, 5 ER, 1 BB, 6 K, 1 HR, 90 pit. ERA 5.59."
+      abridor_propio: "Civale (OAK, W): 5.0 IP, 6 H, 2 R, 2 ER, 1 BB, 2 K, 2 HR, 76 pit. ERA 2.70."
+      bullpen_relevante: "SF 3 IP 0 R (Hentges/Borucki/Beck, limpio, no fue el problema). OAK 4 IP 0 R (Kuhnel/Suarez/Medina/Harris S3, sostuvieron pese a tráfico 7ª)."
+      bates_clave: "OAK: Kurtz 1-3 HR 3R 3 RBI (swing del partido, volteó 2-1 SF a 4-2 OAK); McNeil 2-3 2B RBI; Bolte 2-4 RBI. SF: Arraez 4-5 HR 2B RBI 8 TB; Bader 2-4 HR RBI."
+      ofensiva_rival: "SF 10 hits sin conversión: Chapman 0-5 5 LOB, Devers 0-3 BB 4 LOB, Eldridge 0-3 BB 4 LOB."
+      ambiente: "Parque pro-HR funcionó (3 HR totales: Kurtz, Arraez, Bader). Ambiente sostuvo la tesis."
+      factor_clave: "Mahle castigado por HR + tráfico; SF no convirtió (10 hits, 2 R)."
+    postmortem:
+      lectura_correcta: sí
+      mercado_capturo_edge: sí
+      clasificacion_jugada: ACIERTO_LIMPIO
+      clasificacion_analitica: ACIERTO_LIMPIO
+      mercado_correcto_retrospectiva: "OAK TT Over 4.5 — el TT directo expresó el edge con menos timing risk que F5/ML"
+      tipo_mercado_correcto: TT_full_game
+    patron_v2:
+      aplicable: [1, 2, 5, 10, 11, 12]
+      emergente: "Validación de Patrón 5 cuando el rival visitante es bottom-tier ofensivo: el TT del fuerte cobra cómodo aunque el marcador full game sea moderado (5-2). La sublección del Patrón 6 sobre RL puede tener excepciones cuando el rival no convierte tráfico (SF 10 hits / 2 R)."
+    fuente: "conversación pre/post-partido"
+    leccion: "Cuando el rival es bottom-tier en R/g visitante y el favorito tiene matchup limpio en casa, el TT directo expresa el edge con menos timing risk que F5/ML."
+
+  - id: marlins-rays-160526
+    fecha: 2026-05-16
+    partido: "Marlins vs Rays"
+    marcador: "Marlins 10 - Rays 5 (10 innings)"
+    cuotas_pre_partido:
+      ml_favorito: null
+      ml_underdog: null
+    edge:
+      frase: "Tropicana suprime ~9% runs + dos pitchers Tipo C ante lineups de poder limitado vs RHP."
+      fuente: edge_combinado   # P1 parque/clima confirmado + P2 matchup mano/repertorio
+      pitcher_vulnerable_tipo: C   # ambos abridores Tipo C
+    apuesta:
+      mercado: "Rays Bases Robadas Over 1.5"
+      tipo_mercado: prop_equipo
+      cuota: 2.08
+      stake: "full (1.0u)"
+      formato: single
+      resultado: ganó
+      notas_apuesta: "Prop matchup-específico (catcher rookie vs Rays speed), independiente del run environment; no afectado por el blow-up de extras."
+    picks_analizadas_no_jugadas: []
+    contexto_resultado:
+      abridor_propio: "Alcantara (MIA): 6.0 IP, 7 H, 1 R, 0 ER, 0 BB, 6 K, 0 HR, 101 pit."
+      abridor_rival: "Martinez (TB): 6.0 IP, 5 H, 0 R, 0 ER, 1 BB, 4 K, 0 HR, 77 pit."
+      bullpen_relevante: "Bigge (TB, L): 1 IP, 7 ER en la 10ª — rompió el partido. Fairbanks (TB): expuesto en 9ª (sencillo Fortes empató 2-2)."
+      bates_clave: "MIA: Sanoja 2-5 4 RBI (2 dobles); Marsee 3-4 triple; Hicks 2-5 2 RBI; H.Hernández PH HR. TB: Caminero 2-5 2 RBI 2B; Palacios 2-5 1 SB (clave); Simpson 1-4 R RBI."
+      ambiente: "Regulación 2-2 a 9 innings (1 ER combinado de abridores en 12 IP); parque + Tipo C×2 sostuvieron el run environment proyectado en regulación."
+      factor_clave: "4 errores defensivos de Miami + Bigge rompió en extras. Ninguno afectó la pick SB; parque/Tipo C funcionaron en regulación como se proyectaba."
+    postmortem:
+      lectura_correcta: sí
+      mercado_capturo_edge: sí
+      clasificacion_jugada: ACIERTO_LIMPIO
+      clasificacion_analitica: ACIERTO_LIMPIO
+      mercado_correcto_retrospectiva: "Rays SB Over 1.5 — prop matchup-driven que NO depende del run environment (el Under full game habría perdido en extras)"
+      tipo_mercado_correcto: prop_equipo
+    patron_v2:
+      aplicable: [1, 10, 11, 12]
+      emergente: "En partidos con dos Tipo C en parque suppressor, el riesgo principal del Under NO es la regulación sino EXTRAS con bullpen débil identificable. Antes de tomar Under en este perfil, chequear si hay un brazo con ERA >5 que sería long-relief en extras; si sí, bajar stake del Under y subir picks independientes del run environment (SB, hits específicos, props matchup-driven)."
+    fuente: "conversación pre/post-partido"
+    leccion: "La pick más limpia en este perfil NO es Under ni props ofensivas; es la prop matchup-específica que no depende del run environment."
+
+  - id: ath-laa-190526
+    fecha: 2026-05-19
+    partido: "Athletics vs Angels"
+    marcador: "Athletics 14 - Angels 6"
+    cuotas_pre_partido:
+      ml_favorito: null
+      ml_underdog: null
+    edge:
+      frase: "Lopez es Tipo A con overlay HR/flyballs y leash corto (<6 IP) enfrentando lineup Angels top-10 BB% vs LHP y Adell 6/6 HR vs zurdos, mientras Detmers (xERA 3.20, chase 38.7%) domina a un lineup ATH free-swinging que sentó a sus dos mejores zurdos."
+      fuente: edge_combinado   # P2 matchup + P3 leash/bullpen + P4 tipo vulnerabilidad
+      pitcher_vulnerable_tipo: A   # Lopez Tipo A puro con overlay HR-prone
+    apuesta:
+      mercado: "PASS — no se apostó (framework recomendaba apostar)"
+      tipo_mercado: pass
+      cuota: null
+      stake: null
+      formato: single
+      resultado: null
+      notas_apuesta: "Top 3 singles recomendadas: F5 TT ATH Under 2.5 @1.59, F5 TT LAA Over 2.5 @1.96, Adell TB Over 1.5 @2.25. Stake medio hipotético en 1+2+3: -2.04u."
+    picks_analizadas_no_jugadas:
+      - {pick: "F5 TT ATH Under 2.5", cuota: 1.59, resultado_hipotetico: perdió, motivo: "ATH 6 en F5"}
+      - {pick: "F5 TT LAA Over 2.5", cuota: 1.96, resultado_hipotetico: ganó, motivo: "LAA 4 en F5"}
+      - {pick: "Adell TB Over 1.5", cuota: 2.25, resultado_hipotetico: perdió, motivo: "0 TB (Adell 0-5, 1 K)"}
+      - {pick: "F5 LAA Hándicap +0.5", cuota: 1.54, resultado_hipotetico: perdió, motivo: "LAA F5 -2"}
+      - {pick: "F5 LAA Hándicap 0", cuota: 1.64, resultado_hipotetico: perdió, motivo: "LAA perdió el F5"}
+    contexto_resultado:
+      abridor_rival: "Detmers (LAA, L): 5.2 IP, 8 H, 8 R, 8 ER, 2 BB, 8 K, 0 HR. Segundo blow-up vs ATH en la temporada (primero 8/4)."
+      abridor_propio: "Lopez (ATH): 3.2 IP, 7 H, 4 R, 4 ER, 3 BB, 2 K, 1 HR (Trout). Tipo A confirmado pero salió antes que Detmers."
+      bullpen_relevante: "LAA: Johnson 2 IP 5 ER 2 HR (ERA 15.12), bullpen 30º confirmado pero llegó tarde. ATH: Sterner(W)/Perkins/Barlow/Harris/Kuhnel 5.1 IP 0 ER."
+      bates_clave: "ATH: Kurtz 3-5 5 RBI (LH vs LHP, proyectado tough); Rooker 2-4 3 RBI HR; Gelof 3-5 3 RBI HR; Thomas 2-3 (rookie produjo). LAA: Trout 1-3 2 RBI HR (único punto del guion LAA); Adell 0-5 (colapso del prop principal)."
+      ambiente: "Park factor multi-año neutro (99/101); usé el factor de muestra chica 2026 (83/84) como anclaje y el partido jugó como hitter's park (20 R combinadas). Viento 7 mph R-to-L. NO fue factor decisivo — los dos abridores estallaron."
+      factor_clave: "Doble blow-up temprano: ambos abridores estallaron en F5. La tesis 'Detmers > Lopez en innings 1-5' se cayó."
+    postmortem:
+      lectura_correcta: no
+      mercado_capturo_edge: no
+      clasificacion_jugada: PASS_CORRECTO
+      clasificacion_analitica: ERROR_DE_LECTURA
+      mercado_correcto_retrospectiva: "Ninguno del menú en agregado (habría perdido neto); solo F5 TT LAA Over confirmó que el lado ofensivo LAA-vs-Lopez era real"
+      tipo_mercado_correcto: null
+    patron_v2:
+      aplicable: [5, 9]
+      emergente: "Candidato Patrón 13 (matchup-específico vs métrica-promedio): cuando un abridor tuvo blow-up vs UN equipo específico en la temporada actual, el riesgo de repetición es mayor que lo que sugieren sus métricas de temporada. Detmers vs ATH ya había estallado el 8/4 y hoy se repitió. Las métricas avanzadas son promedio vs liga; no neutralizan la asimetría head-to-head reciente. También: 'lineup debilitado' (ATH sin sus 2 mejores zurdos) ≠ 'lineup monoruta' — ATH anotó 14 con multiruta."
+    fuente: "conversación pre/post-partido"
+    leccion: "Cuando un pitcher tiene blow-up reciente vs un equipo específico en la misma temporada, ese matchup-specific risk override a la proyección métrica — no apostar fuerte a favor del pitcher contra el mismo rival sin descontar el risk premium."
+
+  - id: nationals-reds-130526
+    fecha: 2026-05-13
+    partido: "Nationals vs Reds"
+    marcador: "Nationals 8 - Reds 7 (10 innings)"
+    cuotas_pre_partido:
+      ml_favorito: null
+      ml_underdog: 2.39   # WSH ML
+    edge:
+      frase: "Bullpen Cincinnati en su peor momento (MLB-worst últimas 2 semanas) entra temprano por Lodolo (leash corto post-IL) en parque #1 HR para LHB, contra WSH que acaba de explotar 10-4 en el mismo lugar; ambos abridores Tipo B y ambos bullpens malos → carreras por ambos lados."
+      fuente: edge_combinado   # P3 leash/bullpen reforzado por P1 parque/clima
+      pitcher_vulnerable_tipo: B   # ambos abridores Tipo B con leash dudoso
+    apuesta:
+      mercado: "PASS — ninguna pick ejecutada"
+      tipo_mercado: pass
+      cuota: null
+      stake: null
+      formato: single
+      resultado: null
+      notas_apuesta: "Pick principal recomendada: Over 9.5 @2.00 (stake medio). El filtro de selección v2.1 FALLÓ en ejecución — la pick cumplía cuota >1.80 + edge top + ambiente confirmado <90 min."
+    picks_analizadas_no_jugadas:
+      - {pick: "Over 9.5", cuota: 2.00, resultado_hipotetico: ganó, motivo: "15 R total; pick principal con menos dependencias (+1.00u flat)"}
+      - {pick: "Over 9", cuota: 1.80, resultado_hipotetico: ganó, motivo: "15 R"}
+      - {pick: "Over 10.5", cuota: 2.32, resultado_hipotetico: ganó, motivo: "la línea descartada por edge marginal pagó más"}
+      - {pick: "WSH TT Over 4.5", cuota: 2.20, resultado_hipotetico: ganó, motivo: "WSH 8 R"}
+      - {pick: "WSH ML", cuota: 2.39, resultado_hipotetico: ganó, motivo: "WSH 8-7"}
+    contexto_resultado:
+      abridor_rival: "Lodolo (CIN): 4.0 IP, 6 H, 5 ER, 3 BB, 6 K, 1 HR (Ruiz 2ª). Tipo B se rompió como proyectado, más rápido."
+      abridor_propio: "Irvin (WSH): 3.0 IP, 4 H, 6 R (5 ER), 4 BB, 4 K, 1 HR (Stephenson grand slam 1ª)."
+      bullpen_relevante: "CIN: 6 IP, 4 H, 3 R, 2 ER (Santillan L, HR Lile 10º decisivo) — mejor de lo proyectado en las 6 IP previas. WSH: 7 IP 1 ER — SOSTUVO la ventaja y ganó, contradiciendo la lectura 'WSH bullpen peor que CIN'."
+      bates_clave: "WSH: Ruiz HR 3 RBI; Abrams 2-5 2R 2B; Lile 2-4 2 RBI HR walk-off-zone + 2B; García Jr. PH 1-3. CIN: Stephenson grand slam 4 RBI; Bleday 3-4 2 2B; Steer 2-4 RBI 2B."
+      ambiente: "Box score: 61°F, viento 12 mph OUT TO CF — confirmó la proyección, más alineado que mi lectura conservadora pre-partido. F5 = 11 R = 73% del daño total."
+      factor_clave: "Ambos Tipo B se rompieron como proyectaba la tipología pero más rápido (3-4 IP). El daño fue temprano, no distribuido."
+    postmortem:
+      lectura_correcta: sí
+      mercado_capturo_edge: sí
+      clasificacion_jugada: PASS_INCORRECTO
+      clasificacion_analitica: ACIERTO_LIMPIO
+      mercado_correcto_retrospectiva: "Over 9.5 @2.00 (cobró con holgura, 15 R vs 9.5); el Over F5 alto habría sido aún más limpio"
+      tipo_mercado_correcto: over_under_full
+      nota_meta: "Pick cumplía TODO el filtro v2.1 (cuota >1.80 + captura edge top + ambiente alineado <90 min) y no se ejecutó — exactamente el error que la heurística trata de prevenir. La refuerza, no la debilita."
+    patron_v2:
+      aplicable: [1, 3, 5, 11, 12]
+      emergente: "Refinamiento Patrón 3: cuando AMBOS abridores son Tipo B con leash atenuado por contexto (regreso IL, parque hostil + ofensiva en racha), salen en 3-4 IP y el Over F5 alto puede ser MÁS limpio que el Over full game. Distinguir 'Tipo B clásico con leash sólido' de 'Tipo B con leash atenuado por contexto' — el segundo se comporta más cerca del Tipo A."
+    fuente: "conversación pre/post-partido"
+    leccion: "Cuando ambos abridores son Tipo B con leash atenuado y ambos bullpens expuestos, el Over full game es seguro pero el Over F5 alto puede ser aún más limpio; y no ejecutar una pick que cumple todo el filtro v2.1 es exactamente el error que la heurística previene."
+
+  - id: cardinals-athletics-130526
+    fecha: 2026-05-13
+    partido: "Cardinals vs Athletics"
+    marcador: "Athletics 6 - Cardinals 2"
+    cuotas_pre_partido:
+      ml_favorito: null
+      ml_underdog: null
+    edge:
+      frase: "Liberatore overperforming peripherals (xERA 5.81 vs ERA 4.07) con historial duro vs RHB enfrenta lineup ATH RHB-stacked en Sutter Health Park (1.6x HR) con viento out — ATH cobra por contacto y tráfico contra Liberatore."
+      fuente: edge_combinado   # P2 matchup + P1 parque/clima + P4 tipo vulnerabilidad
+      pitcher_vulnerable_tipo: A   # Tipo A predominante con tinte B (contacto fuerte a RHB)
+    apuesta:
+      mercado: "Brent Rooker Over 0.5 BB"
+      tipo_mercado: prop_bateador_BB
+      cuota: 2.54
+      stake: "chico (0.5u)"
+      formato: single
+      resultado: perdió
+      notas_apuesta: "Prop individual de varianza alta. ATH como equipo solo sacó 2 BB (atacó agresivo a Liberatore). El daño colectivo llegó por contacto, no por BB. 5 mercados de evento colectivo capturaban el mismo guion y cobraron."
+    picks_analizadas_no_jugadas:
+      - {pick: "ATH TT Over 4.5", cuota: 1.69, resultado_hipotetico: ganó, motivo: "ATH 6 R"}
+      - {pick: "ATH TT Over 5.5", cuota: 2.13, resultado_hipotetico: ganó, motivo: "ATH 6 R"}
+      - {pick: "Liberatore Hits allowed Over 5.5", cuota: 1.59, resultado_hipotetico: ganó, motivo: "9 H"}
+      - {pick: "Liberatore ER Over 3.5", cuota: 2.09, resultado_hipotetico: ganó, motivo: "4 ER"}
+      - {pick: "ATH ML", cuota: 1.69, resultado_hipotetico: ganó, motivo: "ATH 6-2"}
+    contexto_resultado:
+      abridor_rival: "Liberatore (STL, L): 5.0 IP, 9 H, 4 R, 4 ER, 2 BB, 5 K, 1 HR (grand slam Kurtz 5ª, game-winner)."
+      abridor_propio: "Ginn (ATH, W): 6.0 IP, 9 H, 1 R, 1 ER, 3 BB, 3 K."
+      bullpen_relevante: "STL: Svanson 1 IP 1 ER (HR Gelof 8ª). ATH: Sterner/Harris/Medina/Perkins 3 IP sin permitir carreras tras Ginn."
+      bates_clave: "ATH: Kurtz 2 H + GRAND SLAM 5ª off Liberatore (4 RBI); Gelof 2 H + HR; Thomas 2 H 2B; Stefanic 3 H. STL: Burleson 3 H; 13 H totales pero 1-9 RISP, 10 LOB. Rooker (ATH) 0-4 / 0 BB / 0 K."
+      ambiente: "Viento final 3 mph OUT to RF — más débil que la lectura previa (10 mph). El HR de Kurtz fue genuino, no asistido por viento."
+      factor_clave: "ATH cobró 6 R contra Liberatore (9 H, 4 ER, HR, salida 5 IP) como se proyectaba. El daño llegó por contacto colectivo, no por BB de Rooker individual."
+    postmortem:
+      lectura_correcta: sí
+      mercado_capturo_edge: no
+      clasificacion_jugada: ERROR_DE_MERCADO
+      clasificacion_analitica: ERROR_DE_MERCADO
+      mercado_correcto_retrospectiva: "ATH TT Over / Liberatore Hits over / ER over / ATH ML (5 mercados colectivos a 1.59-2.13 cobraron); la prop individual larga cuota tomada perdió"
+      tipo_mercado_correcto: TT_full_game
+    patron_v2:
+      aplicable: [1, 10]
+      emergente: "Cuando la tesis identifica vulnerabilidad Tipo A en lineup robusto + parque favorable, los mercados de EVENTO COLECTIVO (TT over, hits/ER/BB allowed del pitcher, ML) capturan el edge con menos varianza que las props INDIVIDUALES de bateadores. La cuota individual más larga no compensa la varianza de depender de un solo AB. Suma al cluster Ohtani outs / Cavalli outs / Pittsburgh +1 F5."
+    fuente: "conversación pre/post-partido"
+    leccion: "Cuando la tesis es daño colectivo de un lineup vs pitcher frágil, jerarquizar mercados de evento colectivo (TT, ML, hits/ER/BB permitidos del pitcher) sobre props individuales de bateador incluso a mayor cuota — la varianza individual tumba la tesis correcta."
+
+  - id: mariners-astros-130526
+    fecha: 2026-05-13
+    partido: "Mariners vs Astros"
+    marcador: "Astros 4 - Mariners 3 (10 innings)"
+    cuotas_pre_partido:
+      ml_favorito: 1.75   # Seattle
+      ml_underdog: null
+    edge:
+      frase: "McCullers Tipo A (BB% ~15, ERA 7.41, ya entregó 6 R en 4.1 IP a Seattle) + bullpen HOU peor MLB sin Hader + lineup Seattle zurdo-heavy vs RHP + parque LF-friendly. Edge ofensivo Seattle full game."
+      fuente: edge_combinado   # P2 matchup + P1 parque/clima + P3 leash/bullpen
+      pitcher_vulnerable_tipo: A   # McCullers comando frágil
+    apuesta:
+      mercado: "PASS — Seattle TT over 4.5 @1.82 era la pick recomendada, no ejecutada"
+      tipo_mercado: pass
+      cuota: null
+      stake: null
+      formato: single
+      resultado: null
+      notas_apuesta: "Pass correcto: la pick recomendada habría perdido (SEA 3 R, 14 baserunners / 1-for-13 RISP / 11 LOB)."
+    picks_analizadas_no_jugadas:
+      - {pick: "Seattle TT over 4.5", cuota: 1.82, resultado_hipotetico: perdió, motivo: "SEA 3 R — tráfico sin conversión"}
+      - {pick: "Seattle TT under 4.5", cuota: 1.99, resultado_hipotetico: ganó, motivo: "SEA 3 R"}
+      - {pick: "HOU +1.5", cuota: null, resultado_hipotetico: ganó, motivo: "HOU ganó 4-3"}
+      - {pick: "Total over 9", cuota: 1.87, resultado_hipotetico: perdió, motivo: "7 R total"}
+      - {pick: "Seattle ML", cuota: 1.75, resultado_hipotetico: perdió, motivo: "HOU ganó en 10ª"}
+    contexto_resultado:
+      abridor_propio: "Bryce Miller (SEA): 5.1 IP, 8 H, 2 R, 2 ER, 1 BB, 3 K, 1 HR, 81 pit. Perfil Tipo B en este start."
+      abridor_rival: "McCullers (HOU): 5.1 IP, 7 H, 2 R, 2 ER, 2 BB, 6 K, 2 HR (Crawford 1ª, Raley 6ª, solitarios), 90 pit. Limitó daño pese a contacto."
+      bullpen_relevante: "HOU: Okert/De Los Santos/King(BS)/Abreu(W) 4.2 IP 0 ER 5 K — DOMINANTE, contrario al agregado 6.05 ERA (inflado por Hader IL + Abreu 8.56). SEA: Hoppe cargó la derrota 10º."
+      bates_clave: "SEA: Crawford HR solitario 1ª, Raley HR solitario 6ª; 8 H, 6 BB, 3 R, 11 LOB, 1-13 RISP — conversion fail clásico. HOU: Walker HR 6ª; 12 H, 4 R, 14 LOB, 2-12 RISP."
+      ambiente: "Techo cerrado, viento 0, 73°F — neutralizado como predicho. Umpire Ortiz neutral. Los factores ambientales sostuvieron el edge teórico; falló la lectura del bullpen y la conversión."
+      factor_clave: "El agregado de bullpen ocultó que los brazos relevantes son sólidos. Seattle road OPS .645 (5º peor MLB) no se ponderó."
+    postmortem:
+      lectura_correcta: parcialmente
+      mercado_capturo_edge: no
+      clasificacion_jugada: PASS_CORRECTO
+      clasificacion_analitica: ERROR_DE_MERCADO
+      mercado_correcto_retrospectiva: "TT under / ATH ML / HOU +1.5 (la dirección correcta era under, no over)"
+      tipo_mercado_correcto: TT_full_game
+    patron_v2:
+      aplicable: [1, 5, 6]
+      emergente: "(1) Road OPS del lineup como modificador de primer orden para TT over visitante: con favorito road OPS bottom-10 MLB, el TT over exige confirmación adicional aunque matchup + bullpen agregado sugieran edge (Seattle 1-13 RISP). (2) ERA agregado de bullpen sobreestima fragilidad cuando un brazo extremo (Hader IL, Abreu 8.56) infla el promedio — chequear los 3-4 brazos que cubrirían 6ª-9ª. Gemelo del caso Baltimore 10H/1R/0-7 RISP (Patrón 5)."
+    fuente: "conversación pre/post-partido"
+    leccion: "Cuando los datos de ruta del lineup favorito y la composición individual del bullpen rival contradicen el agregado, pesar más esos datos finos que el headline ERA del bullpen y la cuota del favorito. El Patrón 5 (tráfico sin conversión) se repite."
+
+  - id: mariners-astros-140526
+    fecha: 2026-05-14
+    partido: "Mariners vs Astros"
+    marcador: "Mariners 8 - Astros 3"
+    cuotas_pre_partido:
+      ml_favorito: 1.84   # SEA (Turn 1, descartada)
+      ml_underdog: null
+    edge:
+      frase: "Turn 1 (correcto): SEA equipo mejor + Burrows HR-prone (perfil temporada) → SEA ML 1.84 pick top. Turn 2 (reframe adoptado): Castillo en regresión multi-start vs Burrows en groove → atacar a Castillo. El reframe descartó el edge correcto usando forma reciente individual."
+      fuente: forma_individual   # el reframe adoptado degradó de P2 a P8 (forma reciente individual)
+      pitcher_vulnerable_tipo: B   # Castillo clasificado Tipo B tras reframe; real: cumplió B sin colapsar
+    apuesta:
+      mercado: "PASS — usuario no apostó tras el reframe"
+      tipo_mercado: pass
+      cuota: null
+      stake: null
+      formato: single
+      resultado: null
+      notas_apuesta: "Pick top final del reframe (HOU TT over + Castillo outs under) perdió completa. La pick top del Turn 1 (SEA ML @1.84) habría cobrado con holgura."
+    picks_analizadas_no_jugadas:
+      - {pick: "SEA ML (Turn 1)", cuota: 1.84, resultado_hipotetico: ganó, motivo: "SEA 8-3 — la pick top inicial descartada en el reframe"}
+      - {pick: "HOU TT over (Turn 2 pick)", cuota: null, resultado_hipotetico: perdió, motivo: "HOU 3 R"}
+      - {pick: "Castillo outs under 14.5", cuota: null, resultado_hipotetico: perdió, motivo: "17 outs (5.2 IP)"}
+      - {pick: "Over 9", cuota: 1.87, resultado_hipotetico: ganó, motivo: "11 R"}
+      - {pick: "RL SEA -1.5", cuota: 2.26, resultado_hipotetico: ganó, motivo: "SEA por 5"}
+    contexto_resultado:
+      abridor_propio: "Castillo (SEA): 5.2 IP, 4 H, 3 R, 3 ER, 3 BB, 6 K, 1 HR (Alvarez 3ª), 108 pit. Mejor que su forma reciente; perfil Tipo B sin implosión."
+      abridor_rival: "Burrows (HOU): 5.2 IP, 8 H, 7 R, 7 ER, 3 BB, 4 K, 2 HR (Raley 1ª 3R, Garver 4ª 2R), 102 pit. DEMOLIDO — perfil HR-prone de temporada ganó sobre 'L3 en groove'."
+      bullpen_relevante: "SEA: Davila 1.1 IP / Gonzalez 2 IP, 0 R, tapó cómodo. HOU: Bolton 3.1 IP 1 ER."
+      bates_clave: "SEA: Raley HR 3R 1ª off Burrows; Garver HR 2R 4ª; Donovan 3-5 (2B+3B); Crawford 2-5 2B RBI. HOU: Alvarez 3-3 HR + 2B + BB = 7 TB (única amenaza)."
+      ausencias: "SEA sin Cal Raleigh (costado). HOU sin Correa (season), Peña, Diaz, Loperfido."
+      ambiente: "Daikin Park, techo cerrado, 73°F, 0 mph. HP Willie Traynor. El error no fue ambiental sino metodológico."
+      factor_clave: "Daño SEA temprano y concentrado (F5 5-1). El guion fue exactamente lo opuesto al reframe del Turn 2."
+    postmortem:
+      lectura_correcta: parcialmente
+      mercado_capturo_edge: no
+      clasificacion_jugada: PASS_INCORRECTO
+      clasificacion_analitica: ERROR_DE_MERCADO
+      mercado_correcto_retrospectiva: "SEA ML @1.84 (pick top del Turn 1, descartada en el reframe); subsidiarias Over 9, F5 SEA, RL SEA -1.5"
+      tipo_mercado_correcto: ML
+      nota_meta: "El reframe sustituyó posición 2 (matchup de temporada) por posición 8 (forma reciente individual). v2.1 dice exigir confirmación más alta para P7-9; el reframe hizo lo contrario."
+    patron_v2:
+      aplicable: [1, 2, 12]
+      emergente: "Patrón META multi-turn — 'sobrecorrección por forma reciente individual en segundo análisis': cuando un segundo turno cambia la pick top basándose en muestra chica de forma reciente del pitcher (<20 IP) que contradice el perfil de temporada, suele degradar el primer análisis. Forma reciente individual (P8) no debe anular matchup mano/repertorio (P2). Trigger: regresar al primer análisis salvo soporte Statcast en la misma dirección."
+    fuente: "conversación pre/post-partido (multi-turn)"
+    leccion: "Forma reciente individual con muestra <20 IP es ruido, no señal. Si un reframe usa forma reciente para descartar la pick top inicial a cuota ≥1.80 que capturaba el edge, regresar al primer análisis."
+
+  - id: bluejays-tigers-150526
+    fecha: 2026-05-15
+    partido: "Blue Jays vs Tigers"
+    marcador: "Detroit 3 - Toronto 2 (walk-off 9ª)"
+    cuotas_pre_partido:
+      ml_favorito: 1.78   # TOR
+      ml_underdog: null
+    edge:
+      frase: "Yesavage (splitter 57% whiff, xwOBA .236) neutraliza ofensiva DET mal acoplada al splitter; top-5 TOR enfrenta a Hanifee opener + Madden bulk asumido con bullpen medio DET fatigado."
+      fuente: matchup_mano_repertorio   # P2 matchup mano/repertorio del pitcher vs perfil del lineup
+      pitcher_vulnerable_tipo: B   # Hanifee/Madden bullpen game Tipo B con tinte C
+    apuesta:
+      mercado: "PASS — usuario no apostó (cartera de 3 recomendada)"
+      tipo_mercado: pass
+      cuota: null
+      stake: null
+      formato: single
+      resultado: null
+      notas_apuesta: "Las 3 picks recomendadas cobraron (+2.46u en 3u flat, +82% ROI hipotético). El pase evitó las trampas (TOR ML walk-off, TOR -1.5, TT over) pero también dejó pasar las 3 ganadoras."
+    picks_analizadas_no_jugadas:
+      - {pick: "DET TT under 3.5", cuota: 1.90, resultado_hipotetico: ganó, motivo: "DET 3 R"}
+      - {pick: "F5 TOR +0.5", cuota: 1.60, resultado_hipotetico: ganó, motivo: "F5 TOR 2-1"}
+      - {pick: "Menos de 8", cuota: 1.96, resultado_hipotetico: ganó, motivo: "5 R total"}
+      - {pick: "TOR ML", cuota: 1.78, resultado_hipotetico: perdió, motivo: "walk-off DET 9ª (Hoffman)"}
+      - {pick: "TOR -1.5", cuota: 2.34, resultado_hipotetico: perdió, motivo: "TOR perdió"}
+    contexto_resultado:
+      abridor_propio: "Yesavage (TOR): 6.0 IP, 4 H, 2 ER, 3 BB, 6 K, 0 HR, 88 pit. Leash mucho mayor del proyectado (4-5 IP). ERA 1.40."
+      abridor_rival: "DET bullpen game: Hanifee opener 1 IP 1 ER; Hurter 0.2 IP 1 ER; Madden 0.1 IP (1 batter, NO fue el bulk); Smith 2 IP 0 R; Anderson 4 IP 0 R (bulk real); Jansen(W) 1 IP 0 R 2 K."
+      bullpen_relevante: "TOR: Fisher/Mantiply 0 R; Hoffman (L) 0.2 IP 1 ER — entregó el walk-off 9ª (closer demoteado, 6.05 ERA, flagueado pre-partido). DET: Anderson dominó, Vanasco/Holton (flagueados fatigados) ni entraron."
+      bates_clave: "TOR top-5 colapsó: Springer 0-4, Vlad 0-4, Varsho 0-3, Sánchez 0-3 (los 2 RBI fueron de Giménez 8º). DET: Dingler 2-3; Greene 1-4 RBI 2B; Torkelson 1-3 RBI (walk-off 2-out)."
+      ambiente: "68°F, viento 9 mph IN FROM RF (OPUESTO al pronóstico matinal SSW 10-15 hacia LF). Validación literal de la regla v2.1 del viento."
+      factor_clave: "El edge venía del lado DEFENSIVO del favorito (Yesavage); el top-5 colapsó (Patrón 6 en tier máximo). La derrota de TOR ML llegó por el punto débil de bullpen flagueado."
+    postmortem:
+      lectura_correcta: sí
+      mercado_capturo_edge: sí
+      clasificacion_jugada: PASS_CORRECTO
+      clasificacion_analitica: ACIERTO_LIMPIO
+      mercado_correcto_retrospectiva: "DET TT under / F5 TOR +0.5 / Menos de 8 (las 3 cobraron); el ML full game murió por el bullpen"
+      tipo_mercado_correcto: TT_full_game
+      nota_meta: "Tensión PASS_CORRECTO vs PASS_INCORRECTO: el pase evitó trampas pero las 3 picks recomendadas también cobraban (+2.46u) — activa el corolario del filtro de selección. Registrado PASS_CORRECTO por decisión del usuario."
+    patron_v2:
+      aplicable: [1, 5, 6, 8, 9, 11, 12]
+      emergente: "(1) Bullpen game improvisado NO es plan fijo (candidato P13/P8): con incertidumbre de rotación, analizar el bullpen game como SISTEMA, no anclar en un reliever específico (proyecté Madden bulk; fue Anderson). (2) Patrón 6 en tier máximo (4-5 condiciones) → evitar TODOS los mercados ofensivos del favorito. (3) Patrón 11 viento pronóstico ≠ real (caso confirmado)."
+    fuente: "conversación pre/post-partido"
+    leccion: "Cuando el edge viene del lado defensivo del favorito, priorizar mercados que NO dependan de su ofensiva: rival TT under > under total > F5 protegido; si además Patrón 6 está en tier alto, eliminar los mercados ofensivos del favorito; y nunca tomar viento sin anemómetro <90 min."
+
+  - id: athletics-angels-210526
+    fecha: 2026-05-21
+    partido: "Athletics vs Angels"
+    marcador: "Athletics 3 - Angels 2 (10 innings)"
+    cuotas_pre_partido:
+      ml_favorito: null
+      ml_underdog: 1.98   # ATH ML (no estaba en el menú recomendado)
+    edge:
+      frase: "Soriano domina (K/whiff + GB extreme) sobre lineup A's con 5 LHH; Severino vulnerable a HH/Barrel pero contra lineup Angels colectivamente flojo; parque pitcher-friendly → under + F5 LAA son los mercados limpios; props de Trout son trampa."
+      fuente: matchup_mano_repertorio   # P2 asimetría entre los dos abridores
+      pitcher_vulnerable_tipo: B   # Severino Tipo B pre-partido; operó como C vs lineup K-heavy
+    apuesta:
+      mercado: "PASS — análisis cerrado en step 3 de 4+, usuario no apostó"
+      tipo_mercado: pass
+      cuota: null
+      stake: null
+      formato: single
+      resultado: null
+      notas_apuesta: "Menú top (Under 8/8.5, LAA F5, Soriano Ks) habría cobrado las 3. ATH ML @1.98 también, pero NO estaba en el menú."
+    picks_analizadas_no_jugadas:
+      - {pick: "Under 8/8.5", cuota: 1.87, resultado_hipotetico: ganó, motivo: "5 R total"}
+      - {pick: "LAA F5", cuota: 1.76, resultado_hipotetico: ganó, motivo: "LAA 2-0 al F5"}
+      - {pick: "Soriano Ks over 6.5", cuota: null, resultado_hipotetico: ganó, motivo: "7 K"}
+      - {pick: "ATH ML", cuota: 1.98, resultado_hipotetico: ganó, motivo: "ATH 3-2 — NO estaba en el menú recomendado"}
+      - {pick: "Trout TB over 1.5", cuota: null, resultado_hipotetico: perdió, motivo: "0 TB (trampa del bate top)"}
+    contexto_resultado:
+      abridor_rival: "Severino (LAA): 7.0 IP, 3 H, 2 ER, 0 BB, 10 K, 1 HR, 97 pit. Dominante — el HR a Schanuel fue casi el único daño."
+      abridor_propio: "Soriano (ATH): 6.2 IP, 6 H, 2 ER, 1 BB, 7 K, 0 HR, 103 pit. Cumplió el perfil dominante."
+      bullpen_relevante: "LAA: Zeferjahn (L) 1 IP 1 R 2 BB — entregó la carrera ganadora 10º. ATH: Leiter Jr. (S4) 1 IP."
+      bates_clave: "LAA: Schanuel (#3 LHH) HR 2R 1ª off Severino — única producción LAA. Trout 0-3 BB. ATH: Kurtz/Hernaiz/Langeliers cada uno con doble; 12 LOB, 2-11 RISP."
+      ambiente: "Parque pitcher-friendly funcionó (5 R en 10 inn). Umpire Rackley neutral, sin viento adverso."
+      factor_clave: "Severino (Tipo B) operó como Tipo C: el lineup LAA K-heavy no extendió at-bats (10 K, 0 BB). El HR fue al LHH (Schanuel #3), no al RHH bate top (Trout)."
+    postmortem:
+      lectura_correcta: parcialmente
+      mercado_capturo_edge: sí
+      clasificacion_jugada: PASS_INCORRECTO
+      clasificacion_analitica: PASS_INCORRECTO
+      mercado_correcto_retrospectiva: "Under 8/8.5 + LAA F5 + Soriano Ks (las 3 del menú top habrían cobrado)"
+      tipo_mercado_correcto: over_under_full
+    patron_v2:
+      aplicable: [1, 3, 6, 10]
+      emergente: "(1) Tipo B se comporta como Tipo C cuando el lineup rival es K-heavy colectivo: la clasificación A/B/C debe leerse SIEMPRE en contexto del lineup rival, no en aislamiento (refinamiento Patrón 1). (2) Selección de bate-prop: priorizar LHH del top-5 con platoon sobre RHH 'bate top' cuando hay RHP HR-prone — el calor reciente del bate top no sustituye la asimetría platoon."
+    fuente: "conversación pre/post-partido"
+    leccion: "En partidos con Patrón 6, under > F5 protegido > props ofensivas; nunca props del bate top RHH si hay un LHH viable en el top-5 vs RHP HR-prone; y la clasificación A/B/C del pitcher debe leerse en contexto del lineup rival (Tipo B vs lineup whiff = Tipo C operativo)."
+
+  - id: tigers-rays-010626
+    fecha: 2026-06-01
+    partido: "Tigers vs Rays"
+    marcador: "Tigers 10 - Rays 9"
+    cuotas_pre_partido:
+      ml_favorito: null
+      ml_underdog: null
+    edge:
+      frase: "Detroit corre un bullpen game con abridor capado (Madden) por delante del peor relevo de cierre de MLB (Finnegan 6.9 BB/9), mientras solo Tampa 'parece' tener ruta colectiva de anotación."
+      fuente: leash_bullpen   # P3 leash + plan/profundidad del bullpen; contrapeso P1 parque supresor
+      pitcher_vulnerable_tipo: A   # el blanco real era el bullpen DET (rasgos Tipo A en Finnegan); Madden opener capado (P8)
+    apuesta:
+      mercado: "PASS — recomendados no jugados"
+      tipo_mercado: pass
+      cuota: null
+      stake: null
+      formato: single
+      resultado: null
+      notas_apuesta: "Las 3 recomendadas (Rays TT más 4.5, Caminero TB, Rays Hits) habrían cobrado (+2.87u 1u flat + sprinkle). El TT aislado de Tampa cobró sin depender de quién ganó — Patrón 12 blindó la pick contra el error de lectura sobre Detroit."
+    picks_analizadas_no_jugadas:
+      - {pick: "Rays Team Total Más 4.5", cuota: 2.05, resultado_hipotetico: ganó, motivo: "Tampa 9 R"}
+      - {pick: "Caminero Total Bases Más 1.5", cuota: 2.15, resultado_hipotetico: ganó, motivo: "4 TB vía HR"}
+      - {pick: "Rays Hits Más 7.5", cuota: 1.67, resultado_hipotetico: ganó, motivo: "8 hits, al filo"}
+      - {pick: "Caminero Jonrón Sí", cuota: 4.00, resultado_hipotetico: ganó, motivo: "HR off Madden"}
+      - {pick: "Rays -1.5", cuota: 2.27, resultado_hipotetico: perdió, motivo: "Detroit ganó outright (descartada como secundaria de varianza)"}
+    contexto_resultado:
+      abridor_rival: "Madden (DET): 3.1 IP, 3 H, 2 R, 2 ER, 2 BB, 4 K, 1 HR (Caminero). Capado como se proyectó."
+      abridor_propio: "Jax (TB, L): 4.0 IP, 7 H, 6 R, 6 ER, 1 BB, 5 K, 3 HR — SHELLED (3 HR en la 3ª: Dingler, Carpenter, Greene)."
+      bullpen_relevante: "DET: Hanifee 0 outs 3 R (HR Vilade); Brieske 0.1 IP 3 R (ERA 32.40); Vest (S) cerró. TB: Martin 3 IP 2 R 2 HR; Sulser 1 IP 2 R."
+      bates_clave: "DET ('ofensiva muerta' → EXPLOTÓ): 14 H, 10 R, 5 HR. Dingler 4-5 4R 4 RBI 2 HR; Carpenter 3H HR; Greene 3H HR 3 RBI. TB: Caminero 1H HR 3R 2 RBI 4 TB 2 BB; Vilade HR 3R off Hanifee."
+      ambiente: "Dome, 72°F, 0 viento. HP Dan Bellino. Park net-supresor pero el sub-quirk de HR dominó: 7 HR. Error de PONDERACIÓN del park factor agregado vs su componente HR-friendly."
+      factor_clave: "La premisa 'ofensiva muerta DET no castiga a Jax' fue falsa (DET 10 R, 5 HR). El TT AISLADO de Tampa cobró pese al error de lectura sobre Detroit."
+    postmortem:
+      lectura_correcta: parcialmente
+      mercado_capturo_edge: sí
+      clasificacion_jugada: PASS_INCORRECTO
+      clasificacion_analitica: ACIERTO_LIMPIO
+      mercado_correcto_retrospectiva: "Rays TT Más 4.5 (cobró sin depender del side; el ML / Rays -1.5 / under habrían perdido todos)"
+      tipo_mercado_correcto: TT_full_game
+      nota_meta: "Lectura del juego (Detroit/over): ERROR_DE_LECTURA que NO contaminó las picks por estar aisladas al TT de Tampa."
+    patron_v2:
+      aplicable: [4, 5, 8, 10, 11, 12]
+      emergente: "Candidato Patrón 13: 'ofensiva con peor AVG/wRC+ del slate ≠ ofensiva inofensiva'. En parque HR-friendly + abridor rival con recta bateable, un lineup 'muerto' con poder zurdo latente puede explotar por HR SIN convertir tráfico. Antes de declarar 'una sola ofensiva tiene ruta' (Patrón 5), agregar el filtro '¿el equipo sin ruta tiene perfil de poder + parque HR + recta bateable enfrente?'. Si sí, el over del juego deja de ser pass automático."
+    fuente: "conversación pre/post-partido"
+    leccion: "No actuar sobre un menú +EV correcto (PASS_INCORRECTO) es el costo más caro; y apostar el TT aislado del equipo fuerte hace que la pick cobre aunque te equivoques con la ofensiva rival, que en parque de HR contra recta bateable nunca está tan 'muerta' como su wRC+."
+
+  - id: astros-cubs-240526
+    fecha: 2026-05-24
+    partido: "Astros vs Cubs"
+    marcador: "Houston 8 - Chicago 5"
+    cuotas_pre_partido:
+      ml_favorito: null
+      ml_underdog: 2.40   # Astros ML (descartado explícitamente)
+    edge:
+      frase: "Imanaga LHP élite vs lineup Astros 100% diestro sin Alvarez ni Altuve, en Wrigley pitcher-friendly con viento entrando proyectado. Edge defensivo Cubs amplificado por bullpen Astros 30/30 MLB."
+      fuente: edge_combinado   # P1 parque/clima + P2 matchup + P3 leash/bullpen
+      pitcher_vulnerable_tipo: B   # Lambert (HOU) Tipo B; pero la tesis defensiva era sobre Imanaga
+    apuesta:
+      mercado: "PASS — usuario no apostó pese a recomendaciones Tier S"
+      tipo_mercado: pass
+      cuota: null
+      stake: null
+      formato: single
+      resultado: null
+      notas_apuesta: "Pass correcto por instinto: las picks Tier S (Cubs F5 DNB, Astros TT under) apuntaban al lado equivocado y habrían perdido. Astros ML @2.40 (descartado por el análisis) ganó."
+    picks_analizadas_no_jugadas:
+      - {pick: "Cubs F5 DNB", cuota: 1.60, resultado_hipotetico: perdió, motivo: "F5 HOU 7-3"}
+      - {pick: "Astros TT under", cuota: null, resultado_hipotetico: perdió, motivo: "HOU 8 R"}
+      - {pick: "Imanaga over Ks 5.5", cuota: null, resultado_hipotetico: ganó, motivo: "6 K (props pitcher sobreviven al colapso del side)"}
+      - {pick: "Astros ML", cuota: 2.40, resultado_hipotetico: ganó, motivo: "HOU 8-5 — descartado explícitamente por el análisis"}
+      - {pick: "Astros TT over 4.5", cuota: null, resultado_hipotetico: ganó, motivo: "HOU 8 R"}
+    contexto_resultado:
+      abridor_rival: "Imanaga (CHC, L): 6.0 IP, 7 H, 7 R, 7 ER, 1 BB, 6 K, 3 HR (Meyers, Allen #9, Walker). Segundo blow-up consecutivo tras 18/05 (8 ER vs MIL). Degradación post-mediados-temporada."
+      abridor_propio: "Lambert (HOU): 5.0 IP, 5 H, 3 R, 3 ER, 4 BB, 5 K, 0 HR. Tipo B confirmado, no se rompió pese a xwOBA .295."
+      bullpen_relevante: "HOU: Blubaugh 2 IP 1 ER; Pearson (SAVE). Bullpen 30/30 MLB sostuvo — opuesto al headline. CHC: sin daño grave (partido ya decidido)."
+      bates_clave: "HOU: Walker 1-4 HR 3 RBI (5º); Allen #9 ('automatic out') 3-3 HR 2 RBI 2R; Meyers 1-4 HR. Daño distribuido en spots 3, 5, 9. CHC: Busch 2-4 HR 2 RBI."
+      ausencias: "HOU sin Alvarez, Altuve, Diaz, Loperfido (lineup todo-RHB B-team). CHC sin Happ, Shaw, Cabrera."
+      ambiente: "64°F, viento 3 mph IN FROM LF (NO in from RF como decía Rotowire). Tercer caso Patrón 11 (viento pronóstico ≠ real). HP Bill Miller."
+      factor_clave: "El edge defensivo (Imanaga LHP vs all-RHB) se invirtió: 7 ER / 3 HR a 3 RHB distintos incluyendo el #9. El favorito real (Cubs) perdió outright."
+    postmortem:
+      lectura_correcta: no
+      mercado_capturo_edge: parcialmente
+      clasificacion_jugada: PASS_CORRECTO
+      clasificacion_analitica: ERROR_DE_LECTURA
+      mercado_correcto_retrospectiva: "Astros ML / Astros TT over / Over 7.5 (todos descartados o relegados); las props pitcher Imanaga Ks/outs cobraron pese al colapso"
+      tipo_mercado_correcto: ML
+      nota_meta: "Caso paralelo a Rangers/Yankees 07/05 y Athletics/Angels 19/05: el análisis recomendaba el lado equivocado y el pass por instinto evitó pérdida."
+    patron_v2:
+      aplicable: [1, 4, 6, 9, 11, 12]
+      emergente: "'LHP élite con perfil de barrels post-blow-up vs all-RHB con poder distribuido': cuando un LHP cumple (1) blow-up <14 días, (2) Barrel% ≥9%, (3) degradación post-mediados-temporada previa, (4) viento no confirmado, la ventaja teórica de mano puede invertirse si el lineup rival tiene poder en 3+ spots. Refuerza 'matchup-specific blowup overrides metric-average' (Detmers, ahora Imanaga ×2 = patrón del PITCHER en degradación). Props pitcher Ks/outs sobreviven (Patrón 4 alerta espejada positiva)."
+    fuente: "conversación pre/post-partido"
+    leccion: "wRC+ colectivo en 3 semanas no predice game cuando el lineup del día es <80% del lineup-fuente; pronóstico de viento no es anemómetro; blow-up reciente + Barrel% ≥9% + degradación previa = patrón, no varianza; ERA bullpen acumulada es lagging; props pitcher Ks/outs sobreviven al colapso del side."
+
+  - id: rangers-cardinals-020626
+    fecha: 2026-06-02
+    partido: "Rangers vs Cardinals"
+    marcador: "Texas 7 - Cardinals 4"
+    cuotas_pre_partido:
+      ml_favorito: null
+      ml_underdog: null
+    edge:
+      frase: "Entorno pro-pitcher (Busch #1 supresor HR zurdo + viento in RF confirmado 8 mph) sobre dos ofensivas débiles → juego bajo en carreras."
+      fuente: parque_clima   # P1 parque + clima confirmado; la conclusión 'under de carreras' fue extrapolación equivocada
+      pitcher_vulnerable_tipo: B   # ambos Tipo B (May y Eovaldi)
+    apuesta:
+      mercado: "PASS — ninguna pick tomada"
+      tipo_mercado: pass
+      cuota: null
+      stake: null
+      formato: single
+      resultado: null
+      notas_apuesta: "El menú top (Under) habría perdido — pase correcto vs esa recomendación. Pero hubo edge real en mercados secundarios no jugados (Eovaldi outs/Ks, Pederson hits/TB, Over)."
+    picks_analizadas_no_jugadas:
+      - {pick: "Under 7.5", cuota: 1.91, resultado_hipotetico: perdió, motivo: "11 R"}
+      - {pick: "Under 6.5", cuota: 2.15, resultado_hipotetico: perdió, motivo: "11 R"}
+      - {pick: "Eovaldi over Ks 5.5", cuota: 1.66, resultado_hipotetico: ganó, motivo: "7 K"}
+      - {pick: "May under Ks", cuota: 2.16, resultado_hipotetico: perdió, motivo: "9 K — descartada correctamente vía Patrón 4"}
+      - {pick: "Pederson hits over 1.5", cuota: null, resultado_hipotetico: ganó, motivo: "3 H"}
+      - {pick: "Texas ML", cuota: null, resultado_hipotetico: ganó, motivo: "TEX 7-4"}
+    contexto_resultado:
+      abridor_propio: "Eovaldi (TEX): 6.0 IP, 11 H, 4 ER, 1 BB, 7 K, 1 HR — castigado por contacto pero leash y Ks intactos. Tipo B."
+      abridor_rival: "May (STL): 5.2 IP, 5 H, 3 ER, 2 BB, 9 K, 0 HR — permitió daño Y ponchó 9. Under Ks habría sido desastre."
+      bullpen_relevante: "STL: O'Brien (cierre, L) 1 IP 3 ER — reventón 9ª; Romero 0.2 IP 1 ER. TEX: Beeks/Quantrill/Junis (S) 3 IP 0 ER."
+      bates_clave: "Joc Pederson 3 H 5 TB (2 dobles) 2 RBI — pase fue error; Gorman HR off Eovaldi (único HR). Daño distribuido vía contacto: 22 hits combinados."
+      ambiente: "Viento 8 mph In From RF (= pronóstico). Suprimió HR (1 total) pero NO las carreras. 77°F, clear. HP Manny Gonzalez."
+      factor_clave: "El edge de PODER se confirmó (1 HR en 22 hits) pero la extrapolación a 'under de carreras' falló — 7 de 11 R en innings 6-9 (colapso de bullpen tardío)."
+    postmortem:
+      lectura_correcta: parcialmente
+      mercado_capturo_edge: no
+      clasificacion_jugada: NO_JUGADA
+      clasificacion_analitica: ERROR_DE_LECTURA
+      mercado_correcto_retrospectiva: "Over 6.5/7.5, Pederson hits/TB, Eovaldi outs/Ks over (la traducción correcta del run environment real)"
+      tipo_mercado_correcto: over_under_full
+    patron_v2:
+      aplicable: [1, 4, 11, 12]
+      emergente: "(1) Refinamiento Patrón 11: parque + clima confirmado es el edge más fiable para POWER/HR, NO para el total de carreras. Check obligatorio antes de colgar un under del parque: ¿la ruta de carreras es poder o tráfico? (2) Refinamiento filtro de selección: timing > regla de cuota. (3) Promoción Patrón 13 'manufactura sin HR' (May+Eovaldi Tipo B): el mecanismo común es 'contacto + bullpen frágil decide el partido sin HR'."
+    fuente: "conversación pre/post-partido"
+    leccion: "Un parque que mata el poder no mata un partido que se decide por tráfico y bullpen. Antes de un under apoyado en clima/parque, confirmar que la ruta de carreras es de poder, no de contacto."
+
+  - id: dodgers-dbacks-030626
+    fecha: 2026-06-03
+    partido: "Dodgers vs D-backs"
+    marcador: "Dodgers 7 - Diamondbacks 0"
+    cuotas_pre_partido:
+      ml_favorito: 1.50   # LAD
+      ml_underdog: null
+    edge:
+      frase: "Gallen tipo B (hard contact/barril, splits demoledores vs zurdos) castigado por el stack zurdo/paciente de LA, mientras Ohtani recorta la ruta de una Arizona en slump y sin Marte; el daño vive en las carreras de los Dodgers, no en el over general."
+      fuente: matchup_mano_repertorio   # P2 reforzada por P3 (pen AZ sin zurdos)
+      pitcher_vulnerable_tipo: B   # Gallen contacto/barril, splits vs zurdos
+    apuesta:
+      mercado: "Dodgers TT over 4.5"
+      tipo_mercado: TT_full_game
+      cuota: 1.75
+      stake: null
+      formato: single
+      resultado: ganó
+      notas_apuesta: "El TT del equipo fuerte capturó el edge con margen amplio (LA 7 R) sin depender del over general — que habría perdido (7 R < 9 línea). Patrón 5 validado al máximo."
+    picks_analizadas_no_jugadas:
+      - {pick: "Ohtani over 17.5 outs", cuota: 1.47, resultado_hipotetico: ganó, motivo: "18 outs"}
+      - {pick: "AZ TT under 3.5", cuota: 1.64, resultado_hipotetico: ganó, motivo: "0 R"}
+      - {pick: "Gallen ER over 2.5", cuota: 1.73, resultado_hipotetico: ganó, motivo: "4 ER"}
+      - {pick: "Ohtani over 6.5 Ks", cuota: 1.99, resultado_hipotetico: perdió, motivo: "por 0.5 (descartada por coin-flip, pase correcto)"}
+      - {pick: "Over 9.0 general", cuota: null, resultado_hipotetico: perdió, motivo: "7 R totales — trampa del over general"}
+      - {pick: "ARI +1.5", cuota: null, resultado_hipotetico: perdió, motivo: "favorito con daño distribuido 1-9"}
+    contexto_resultado:
+      abridor_propio: "Ohtani (LAD, W): 6.0 IP, 2 H, 0 R, 0 ER, 1 BB, 6 K, 0 HR. ERA 0.74."
+      abridor_rival: "Gallen (ARI, L): 5.0 IP, 9 H, 5 R, 4 ER, 2 BB, 1 K, 1 HR (Tucker 2º). ERA 5.32. Tipo B confirmado (1 K extremo)."
+      bullpen_relevante: "ARI: Pfaadt cargó las 2 R de LA en el 7º (1 IP, 3 H, 2 ER). LAD: no requirió uso significativo."
+      bates_clave: "LAD: Tucker HR + 3 H 2 RBI (.300 de por vida vs Gallen — historial específico se materializó); Freeman 2 H 2 RBI; Freeland #9 3 H 2 RBI (parte baja produjo). ARI: 2 H totales, 0 R, 0-3 RISP, 28ª wRC+ vs RHP."
+      ambiente: "74°F, techo cerrado, viento 0 mph — entorno neutralizado. HP Junior Valentine confirmado por rotación."
+      factor_clave: "Asimetría total se materializó (7-0). Patrón 6 se chequeó y NO se activó (solo 1-2 de 5 condiciones) — distinción clave vs padres-cardinals-070526."
+    postmortem:
+      lectura_correcta: sí
+      mercado_capturo_edge: sí
+      clasificacion_jugada: ACIERTO_LIMPIO
+      clasificacion_analitica: ACIERTO_LIMPIO
+      mercado_correcto_retrospectiva: "Dodgers TT over 4.5 (el over general habría perdido; la desagregación en TT por equipo fue el camino limpio)"
+      tipo_mercado_correcto: TT_full_game
+    patron_v2:
+      aplicable: [1, 3, 5, 9, 11, 12]
+      emergente: null
+    fuente: "conversación pre/post-partido"
+    leccion: "Cuando solo una ofensiva tiene ruta clara y el abridor rival es Tipo B con leash, el TT full game del equipo fuerte captura el edge con menos dependencias que el over general, que muere si el as propio blanquea al rival."
+
+  - id: royals-twins-040626
+    fecha: 2026-06-04
+    partido: "Royals vs Twins"
+    marcador: "Royals 8 - Twins 6"
+    cuotas_pre_partido:
+      ml_favorito: null
+      ml_underdog: null
+    edge:
+      frase: "Under 9.5 — dos ofensivas frías (ambas 3-7 L10, MIN sin Jeffers) + Lugo (Tipo C) con leash largo que tapa el bullpen vaciado de KC; F5 Under como versión más limpia. Morris Tipo B leash corto."
+      fuente: momentum   # P9 declarado como edge principal (la posición más ruidosa); tiers 1-4 apuntaban al contrario
+      pitcher_vulnerable_tipo: C   # Lugo Tipo C — eje del error; Morris Tipo B leash corto
+    apuesta:
+      mercado: "PASS — usuario no apostó"
+      tipo_mercado: pass
+      cuota: null
+      stake: null
+      formato: single
+      resultado: null
+      notas_apuesta: "El menú top (Under 9.5, F5 Under, Witt TB) habría perdido completo. El edge legible (Over) cobró cómodo pero estaba relegado a 'solo live'. Cuarto PASS_INCORRECTO del run con el mismo perfil."
+    picks_analizadas_no_jugadas:
+      - {pick: "Under 9.5", cuota: 1.80, resultado_hipotetico: perdió, motivo: "14 R"}
+      - {pick: "F5 Under", cuota: null, resultado_hipotetico: perdió, motivo: "8 R en F5"}
+      - {pick: "Witt TB over 1.5", cuota: null, resultado_hipotetico: perdió, motivo: "1 TB (no replicó precedente Cleveland 07/05)"}
+      - {pick: "Over 9.5", cuota: 2.02, resultado_hipotetico: ganó, motivo: "14 R — el edge real relegado a 'solo live'"}
+      - {pick: "KC TT over 4.5", cuota: null, resultado_hipotetico: ganó, motivo: "8 R"}
+      - {pick: "Buxton TB over / HR", cuota: null, resultado_hipotetico: ganó, motivo: "5 TB, HR off Lugo 1ª"}
+    contexto_resultado:
+      abridor_rival: "Lugo (KC): 5.0 IP, 6 H, 5 R, 5 ER, 1 BB, 4 K, 3 HR. Batido por aire (slugging), no por tráfico — invierte la lectura de Tipo C clásico."
+      abridor_propio: "Morris (MIN): 2.0 IP, 5 H, 2 ER, 1 BB, 0 K. Leash corto confirmado. Bulk Paredes: 3.2 IP, 3 ER, 1 HR."
+      bullpen_relevante: "El bullpen 'vaciado' de KC aguantó (Lynch/Strahm/Lange limpios). El daño fue de los ABRIDORES, no de los pens."
+      bates_clave: "MIN: Buxton 2-4 HR 5 TB (off Lugo 1ª, viento out); Caratini 3-4 (2B+HR) 7 TB; Clemens 2 HR; Massey HR. KC: Witt 1-5 1 TB 2 K (no replicó Cleveland 07/05); RISP 3-13, LOB 12."
+      ambiente: "83°F, viento 9 mph OUT TO LF (confirmado <90 min). Parque anti-HR (factor 80) invertido por el viento real. Demora 1:07 por lluvia."
+      factor_clave: "El tier 9 (momentum/'ambas frías') invirtió los tiers altos 1-4 que apuntaban al over. Viento out confirmado se relegó a 'solo live' cuando debía elevar Over/TT."
+    postmortem:
+      lectura_correcta: no
+      mercado_capturo_edge: no
+      clasificacion_jugada: PASS_INCORRECTO
+      clasificacion_analitica: ERROR_DE_LECTURA
+      mercado_correcto_retrospectiva: "Over 9.5 @2.02, KC TT over, Buxton TB (identificados pero relegados como 'solo live' o 'trampa pre-partido')"
+      tipo_mercado_correcto: over_under_full
+    patron_v2:
+      aplicable: [1, 3, 9, 11]
+      emergente: "(1) META-REGLA sobre Jerarquía de Edges: no permitir que momentum/forma reciente (tier 7-9) invierta parque/matchup/leash (tiers 1-4) cuando los tiers altos apuntan claro. Paralelo a mariners-astros-140526. (2) Refinamiento 'ofensiva muerta explota por HR': tercer caso del mecanismo 'Tipo C + viento out confirmado + parque pro-run = colapso por slugging' (junto a Tigers/Rays 01/06, Astros/Cubs 24/05)."
+    fuente: "conversación pre/post-partido"
+    leccion: "Cuando parque pro-run + viento out confirmado + dos abridores vulnerables + dos bullpens flojos apuntan al over, 'ambas ofensivas frías' (tier más ruidoso) no debe invertir la lectura — el over era la traducción correcta y el F5 (8 carreras) lo confirmó."
+
+  - id: dodgers-dbacks-040626
+    fecha: 2026-06-04
+    partido: "Dodgers vs D-backs"
+    marcador: "D-backs 3 - Dodgers 2 (walk-off 9ª)"
+    cuotas_pre_partido:
+      ml_favorito: 1.74   # LAD
+      ml_underdog: 2.15   # ARI
+    edge:
+      frase: "Atacar a Nelson (Tipo B: contacto/HR, 5.97 ERA casa) vía poder de LA en Chase ofensivo, con pen rival cansado/sin zurdos para la 6-9. TT LAD over como núcleo."
+      fuente: edge_combinado   # P1 parque Chase + P2 matchup + P3 leash/bullpen
+      pitcher_vulnerable_tipo: B   # Nelson contacto/HR; confirmado al revés (no se rompió, 7 IP 2 ER)
+    apuesta:
+      mercado: "PASS — usuario no apostó"
+      tipo_mercado: pass
+      cuota: null
+      stake: null
+      formato: single
+      resultado: null
+      notas_apuesta: "El menú top (TT LAD over, ML LAD, props Freeman) apuntó al lado equivocado y habría perdido. Pass protegió contra pérdida."
+    picks_analizadas_no_jugadas:
+      - {pick: "TT LAD over", cuota: null, resultado_hipotetico: perdió, motivo: "LAD solo 2 R"}
+      - {pick: "LAD ML", cuota: 1.74, resultado_hipotetico: perdió, motivo: "walk-off ARI 9ª"}
+      - {pick: "ARI +1.5", cuota: null, resultado_hipotetico: ganó, motivo: "por 2 HR solitarios, no por conversión — valida mecanismo Patrón 7"}
+      - {pick: "Under 9.5", cuota: null, resultado_hipotetico: ganó, motivo: "5 R totales"}
+      - {pick: "Wrobleski outs over", cuota: null, resultado_hipotetico: ganó, motivo: "18 outs"}
+    contexto_resultado:
+      abridor_rival: "Nelson (ARI): 7.0 IP, 2 ER — validó su historial vs LAD, NO se rompió como esperaba el análisis vía 5.97 ERA casa."
+      abridor_propio: "Wrobleski (LAD): 6.0 IP, 0 R, 4 K — mucho mejor que lo proyectado. Patrón 4 alerta espejada negativa (under habría perdido)."
+      bullpen_relevante: "LAD: Vesia BS, Scott HR walk-off 9ª — el 'edge de bullpen rival cansado' se invirtió: fue el pen DE LA el que voló el 2-0. ARI: pen 'cansado' NO se rompió porque Nelson llegó a 7 IP."
+      bates_clave: "LAD: top-3 Betts/Freeman/Pages 0-12 — el corazón colapsó. ARI: 2 HR solitarios + walk-off; 1-8 RISP, 9 LOB — no convirtió tráfico, ganó por HR aislados (Patrón 7)."
+      ambiente: "Chase ofensivo no se manifestó — ambos abridores controlaron por leash sólido. Sin factor adverso."
+      factor_clave: "Nelson sostuvo 7 IP/2 ER, LAD top-3 colapsó, ARI ganó en extras vía bullpen LAD. El freno (BvP, slump top-3) era de fuente alta y se subponderó."
+    postmortem:
+      lectura_correcta: parcialmente
+      mercado_capturo_edge: no
+      clasificacion_jugada: PASS_CORRECTO
+      clasificacion_analitica: ERROR_DE_LECTURA
+      mercado_correcto_retrospectiva: "Under 9.5, ARI +1.5, Wrobleski/Nelson outs over (implícitos en sub-señales pero no priorizados)"
+      tipo_mercado_correcto: over_under_full
+    patron_v2:
+      aplicable: [1, 5, 7, 9, 12]
+      emergente: "Refinamiento del usuario: 'sin Tipo A en el partido, B atacable es relativo no absoluto; con freno de fuente alta → under/pass > TT del favorito'. Cuando NO hay Tipo A en el matchup, la atacabilidad del Tipo B depende de frenos de fuente alta (lineup propio en slump, BvP desfavorable); si esos frenos existen y vienen de tier 1-4, el under/pass debe LIDERAR la recomendación. Contraste con dodgers-dbacks-030626 (allí NO había freno → TT LAD cobró)."
+    fuente: "conversación pre/post-partido"
+    leccion: "Cuando el freno al lado ofensivo viene de fuente alta y la respuesta a '¿el rival rompe el guion?' es sí, ese freno debe liderar la recomendación, no quedar de nota al pie bajo un TT."
+
+  - id: rockies-angels-010626
+    fecha: 2026-06-01
+    partido: "Rockies vs Angels"
+    marcador: "Rockies 9 - Angels 8"
+    cuotas_pre_partido:
+      ml_favorito: null
+      ml_underdog: null
+    edge:
+      frase: "Fade Freeland (Tipo B degradado): zurdo en colapso que regala contacto duro/HR a un lineup 100% diestro, con bullpen rival agotado detrás. Mercado directo: ER allowed over."
+      fuente: edge_combinado   # P2 matchup (LHP degradado vs all-RHB) + P3 leash/bullpen (pen LAA agotado)
+      pitcher_vulnerable_tipo: B   # Freeland Tipo B degradado
+    apuesta:
+      mercado: "Freeland Carreras Ganadas 4+ (over)"
+      tipo_mercado: prop_pitcher_ER
+      cuota: 2.62
+      stake: "medio"
+      formato: single
+      resultado: ganó
+      notas_apuesta: "Prop directo del pitcher rival cobró por mecanismo proyectado (slugging RHB vs LHP degradado), aislado del caos del resto del partido. También: free bet Freeland 7+ ER @13.50 perdió sin costo real."
+    picks_analizadas_no_jugadas:
+      - {pick: "Freeland ER 7+", cuota: 13.50, resultado_hipotetico: perdió, motivo: "5 ER (free bet, sin costo)"}
+      - {pick: "Freeland 3+ ER", cuota: 1.85, resultado_hipotetico: ganó, motivo: "5 ER"}
+      - {pick: "Angels TT Over 4.5", cuota: 1.88, resultado_hipotetico: ganó, motivo: "LAA 8 R"}
+      - {pick: "Soriano Ks Over 6.5", cuota: 1.62, resultado_hipotetico: ganó, motivo: "7 K (PASS_INCORRECTO secundario)"}
+      - {pick: "Over 8.5", cuota: 1.93, resultado_hipotetico: ganó, motivo: "17 R — relegado correctamente sin anemómetro"}
+      - {pick: "Colorado +1.5", cuota: 1.83, resultado_hipotetico: ganó, motivo: "COL ganó"}
+    contexto_resultado:
+      abridor_rival: "Freeland (COL): 5.2 IP, 7 H, 6 R, 5 ER, 1 BB, 4 K, 1 HR (grand slam Siri 3ª), 91 pit. Tipo B degradado confirmado — leash llegó a 5+ por pen LAA agotado."
+      abridor_propio: "Soriano (LAA): 4.2 IP, 3 H, 3 R, 2 ER, 7 BB, 7 K, 1 HR (McCarthy), 108 pit. Su falla de comando explotó — 7 BB fabricaron la ofensiva COL."
+      bullpen_relevante: "LAA: Fermin BS (5 ER en 0.2 IP, 8ª) voló la ventaja 8-3; Yates L. El pen agotado se materializó catastrófico. COL: Senzatela W (1.2 IP 0 ER)."
+      bates_clave: "COL: McCarthy HR 2H 2R 2BB; Goodman HR 3 RBI; Karros 2H 2R. LAA: Siri grand slam 4 RBI; Soler 3H 2 RBI; Adell 1 RBI."
+      ambiente: "Angel Stadium, 70°F, viento 8 mph OUT a LF (NO confirmado por anemómetro pre-partido). 17 R totales — run environment elevado por viento out no contemplado."
+      factor_clave: "El prop directo del pitcher rival (ER 4+ over) cobró por el motivo proyectado y quedó aislado del caos. La 'pieza de hierro' (Freeland es malo) ganó al guion completo."
+    postmortem:
+      lectura_correcta: sí
+      mercado_capturo_edge: sí
+      clasificacion_jugada: ACIERTO_LIMPIO
+      clasificacion_analitica: ACIERTO_LIMPIO
+      mercado_correcto_retrospectiva: "Freeland ER 4+ @2.62 — prop aislado del pitcher rival con mínimas dependencias (side LAA, under total y TT COL fallaron todos)"
+      tipo_mercado_correcto: prop_pitcher_ER
+    patron_v2:
+      aplicable: [1, 2, 6, 10, 11, 12]
+      emergente: "(1) 'TT under del visitante débil es FRÁGIL cuando el abridor propio tiene riesgo de comando alto: los boletos fabrican la ofensiva que el bate no fabrica' (Soriano 7 BB → COL 9 R). Check pre-partido: BB% del abridor propio reciente. (2) Corolario de la Regla Madre: un prop directo del pitcher rival cobra aunque side/total/TT fallen — la pieza de hierro aislada gana al guion completo (2 casos con Tigers/Rays 01/06)."
+    fuente: "conversación pre/post-partido"
+    leccion: "El prop directo cobró el edge real aunque side, total y TT fallaran: cuando solo una pieza es de hierro (Freeland es malo), apostar esa pieza aislada vence apostar el guion completo del partido."
+
+  - id: brewers-rockies-060626
+    fecha: 2026-06-06
+    partido: "Brewers vs Rockies"
+    marcador: "Brewers 7 - Rockies 1"
+    cuotas_pre_partido:
+      ml_favorito: 1.39   # MIL (-259)
+      ml_underdog: null
+    edge:
+      frase: "Lineup paciente de NL (MIL) vs Agnos (Tipo A relevista estirado, sin leash) + bullpen COL 4º peor gastado, amplificado por Coors."
+      fuente: edge_combinado   # top-3 apiladas: P1 Coors + P2 matchup + P3 leash/bullpen
+      pitcher_vulnerable_tipo: A   # Agnos relevista estirado, comando frágil
+    apuesta:
+      mercado: "PASS — no se apostó"
+      tipo_mercado: pass
+      cuota: null
+      stake: null
+      formato: single
+      resultado: null
+      notas_apuesta: "El menú lideró con F5 TT MIL over (PRINCIPAL, perdió/push a 2-2.5) + degradó el TT full game a 6.5 por 'cobrado' — ese era el ganador. El filtro de 'precio cobrado' llevó a la expresión perdedora y descartó la ganadora."
+    picks_analizadas_no_jugadas:
+      - {pick: "F5 TT MIL over (la PRINCIPAL)", cuota: null, resultado_hipotetico: perdió, motivo: "MIL solo 2 R en F5"}
+      - {pick: "TT full MIL over", cuota: null, resultado_hipotetico: ganó, motivo: "7 R, pero se bajó por 'cobrado'"}
+      - {pick: "Over 10.5", cuota: null, resultado_hipotetico: perdió, motivo: "total 8 — el under ganó"}
+      - {pick: "COL +2.5 run line", cuota: null, resultado_hipotetico: ganó, motivo: "perdió por 6, era 'el número trampa'"}
+    contexto_resultado:
+      abridor_propio: "Misiorowski (MIL): 7.0 IP, 1 R, 0 ER, 3 BB, 8 K, 0 HR — DOMINÓ. El asterisco Coors no se materializó."
+      abridor_rival: "Agnos (COL): 3.0 IP, 3 BB, 2 HR — Tipo A / leash corto confirmados."
+      bullpen_relevante: "COL: bullpen 4º peor gastado cargó el daño tardío (5 de 7 carreras MIL en innings 7-8)."
+      bates_clave: "MIL: Turang 2 HR 2R 2 RBI; Hamilton (9º) 4-5 HR; Chourio 0-5. Mecanismo: 5 HR solitarios; 0-6 RISP; 12 LOB — vía HR, NO vía tráfico."
+      ambiente: "Coors. Viento 10 mph out to CF (NO confirmado por anemómetro pre-partido). Amplificó run environment vía HR."
+      factor_clave: "Dirección correcta (MIL dominó, Agnos Tipo A se rompió) pero mecanismo equivocado (HR solitario + 0-6 RISP, no tráfico). El daño fue tardío (5 de 7 R innings 7-8) como el análisis describía pero la pick (F5 TT) no respetó."
+    postmortem:
+      lectura_correcta: parcialmente
+      mercado_capturo_edge: no
+      clasificacion_jugada: PASS_CORRECTO
+      clasificacion_analitica: ERROR_DE_LECTURA
+      mercado_correcto_retrospectiva: "TT full game MIL over (degradado a 6.5 por 'cuota cobrada'); el under del juego ganó por dominio de Misiorowski"
+      tipo_mercado_correcto: TT_full_game
+      nota_meta: "Edge direccional = acierto; mecanismo = error de lectura (predije tráfico, fue HR solitario); selección de mercado = error (elevé F5 TT contra mi propio análisis de daño tardío). Disciplina n=1: Chourio 0-5 / Hamilton 4-5 = varianza, no patrón."
+    patron_v2:
+      aplicable: [1, 3, 5, 11]
+      emergente: "(1) 'Eje bullpen detrás / daño tardío debe primar sobre la preferencia F5 menos tasado → full-game TT > F5 TT'. El precio NO debe invertir el análisis de timing (conecta con rangers-cardinals-020626). (2) 'Equipo bajo-HR en Coors + viento out puede anotar vía HR solitario, no tráfico; no degradar props HR' — cuarto caso del meta-mecanismo 'el daño llega por aire con viento out confirmado' (con Tigers/Rays 01/06, Astros/Cubs 24/05, Royals/Twins 04/06)."
+    fuente: "conversación pre/post-partido"
+    leccion: "Tesis direccional correcta no salva la selección de mercado: el filtro 'cuota cobrada' llevó a la expresión perdedora (F5 TT) y a pasar la ganadora (TT full a 6.5). Con relevista estirado + pen malo, leer el timing tardío antes que el precio."
+
+  - id: pirates-braves-050626
+    fecha: 2026-06-05
+    partido: "Pirates vs Braves"
+    marcador: "Atlanta 6 - Pirates 3"
+    cuotas_pre_partido:
+      ml_favorito: null
+      ml_underdog: null
+    edge:
+      frase: "Keller es un Tipo B (permite contacto fuerte, sobrevive innings) que enfrenta a una orden con dominio histórico inverso (7.31 ERA de por vida vs ATL) y un bullpen propio en ruinas; el daño es full game y vive en hits/carreras de Atlanta."
+      fuente: edge_combinado   # P2 matchup + P3 leash/bullpen + P4 tipo vulnerabilidad
+      pitcher_vulnerable_tipo: B   # Keller Tipo B; Pérez (ATL) Tipo B leash corto
+    apuesta:
+      mercado: "Olson Over 1.5 H+R+RBI"
+      tipo_mercado: prop_bateador_HRR_RBI
+      cuota: 1.66
+      stake: "medio-chico"
+      formato: single
+      resultado: ganó
+      notas_apuesta: "Cobró por mérito propio (2 hits). Toda la cartera recomendada (Atlanta TT over @2.04, Keller ER over @1.71) también habría cobrado. La fuente de poder fue Dubón (8º, no targeteado), pero el edge colectivo era robusto a qué bate produjera."
+    picks_analizadas_no_jugadas:
+      - {pick: "Atlanta TT Over 4.5", cuota: 2.04, resultado_hipotetico: ganó, motivo: "ATL 6 R"}
+      - {pick: "Keller ER Over 2.5", cuota: 1.71, resultado_hipotetico: ganó, motivo: "6 ER"}
+    contexto_resultado:
+      abridor_rival: "Keller (PIT): 4.2 IP, 7 H, 6 R, 6 ER, 3 BB, 4 K, 1 HR — las 6 carreras del partido contra él. Tipo B confirmado, castigado distribuido innings 2-5."
+      abridor_propio: "Pérez (ATL): 5.0 IP, 3 H, 3 R, 3 ER, 2 BB, 5 K, 0 HR — exactamente 5 IP, luego pen élite 4 IP en blanco."
+      bullpen_relevante: "ATL: Fuentes/Lee/Suárez/Iglesias cerraron sin daño. PIT: 3.1 IP en blanco (no se probó — el daño ya estaba hecho a Keller)."
+      bates_clave: "ATL: Dubón 2-4 2R 3 RBI HR (8º, fuente de poder NO targeteada); Acuña 2-4 RBI; Riley 1-3 2B RBI; Olson 2-4 (cobró la pick). PIT: Cruz 0-4 3 K."
+      ambiente: "82°F, viento 5 mph (negligible, como proyectado). Sin factor ambiental."
+      factor_clave: "Keller Tipo B castigado por ATL (6 ER en 4.2 IP, daño distribuido innings 2-5) como proyectaba; el dominio histórico inverso (7.31 ERA vs ATL) se materializó."
+    postmortem:
+      lectura_correcta: sí
+      mercado_capturo_edge: sí
+      clasificacion_jugada: ACIERTO_LIMPIO
+      clasificacion_analitica: ACIERTO_LIMPIO
+      mercado_correcto_retrospectiva: "Olson H+R+RBI / Atlanta TT over / Keller ER over (toda la cartera cobró por el motivo proyectado)"
+      tipo_mercado_correcto: prop_bateador_HRR_RBI
+    patron_v2:
+      aplicable: [1, 3, 4, 5]
+      emergente: "Candidato Patrón 13: 'Tipo B + dominio histórico inverso documentado (rival específico lo castiga, ej. Keller 7.31 ERA vs ATL) = upgrade de convicción en hits/ER over y TT del rival'. Espejo POSITIVO de 'matchup-specific blowup overrides metric-average' (Detmers/Imanaga). Mismo principio: el head-to-head específico tiene señal por encima del perfil promedio, en ambas direcciones. Patrón 4 alerta espejada validada en negativo (Pérez 5 K, under Ks habría perdido)."
+    fuente: "conversación pre/post-partido"
+    leccion: "Cuando un Tipo B enfrenta a un rival que históricamente lo destroza, la traducción más limpia es hits/ER over + TT del rival; y el Patrón 4 sigue salvando del under Ks aunque el abridor rival tenga ERA de humo."
+
+  - id: white-sox-phillies-070626
+    fecha: 2026-06-07
+    partido: "White Sox vs Phillies"
+    marcador: "Phillies 9 - White Sox 5"
+    cuotas_pre_partido:
+      ml_favorito: null
+      ml_underdog: null
+    edge:
+      frase: "Ambas ofensivas con ruta limpia contra planes de pitcheo explotables — Filadelfia vs opener Gilbert + bulk rookie volátil Sandlin; Chicago con 7 zurdos vs el reverse-platoon severo de Nola (.356/.451/.593 a zurdos) — en parque de HR con viento out confirmado; partido de anotación colectiva."
+      fuente: edge_combinado   # P1 parque/clima (viento 15 mph OUT) + P2 matchup + P3 leash/bullpen
+      pitcher_vulnerable_tipo: B   # Nola Tipo B reverse-platoon; Sandlin bulk rookie volátil
+    apuesta:
+      mercado: "PASS — usuario no apostó"
+      tipo_mercado: pass
+      cuota: null
+      stake: null
+      formato: single
+      resultado: null
+      notas_apuesta: "Principales recomendadas (CWS TT over 3.5 @1.80, Nola hits over 5.5 @2.14) cobraron. 10º caso del filtro de selección en el run. Match HR over 2.5 fue el único miss del menú (0 HR de CWS pese a viento out)."
+    picks_analizadas_no_jugadas:
+      - {pick: "CWS TT over 3.5", cuota: 1.80, resultado_hipotetico: ganó, motivo: "CWS 5 R"}
+      - {pick: "Nola hits over 5.5", cuota: 2.14, resultado_hipotetico: ganó, motivo: "6 H allowed"}
+      - {pick: "Over 9", cuota: 1.90, resultado_hipotetico: ganó, motivo: "14 R"}
+      - {pick: "Match HR over 2.5", cuota: 1.90, resultado_hipotetico: perdió, motivo: "solo 2 HR, ambos PHI (CWS 0 HR pese a viento out)"}
+      - {pick: "Nola ER over 2.5", cuota: 2.09, resultado_hipotetico: ganó, motivo: "5 ER"}
+      - {pick: "Phillies -1.5", cuota: null, resultado_hipotetico: ganó, motivo: "PHI por 4"}
+    contexto_resultado:
+      abridor_rival: "CWS bullpen game: Gilbert opener 0.2 IP 1 ER; Sandlin bulk 3.1 IP, 3 H, 3 ER, 3 BB, 6 K, 2 HR — rookie volátil confirmado."
+      abridor_propio: "Nola (PHI): 4.1 IP, 6 H, 5 ER, 4 BB, 4 K, 0 HR — NO se redondeó; reverse-platoon + lineup zurdo paciente lo castigó, sacado a 13 outs."
+      bullpen_relevante: "CWS: Davis 1 IP 3 ER (blown save); Hudson 0.2 IP 2 ER 2 BB. Profundidad adelgazada se notó. PHI: Mayza/Alvarado(W)/Kerkering/Bowlan 4.2 IP en blanco — back-end élite tapó a CWS tarde."
+      bates_clave: "PHI: 11 H, 9 R, RISP 5-11, 2 HR (Marchan, Marsh) + conversión distribuida. CWS: 10 H, 5 R, RISP 3-11, LOB 10 — 0 HR pese a viento out 15 mph confirmado, daño vía sencillos/dobles."
+      ambiente: "85°F, VIENTO 15 mph OUT TO RF confirmado. HP Alan MacKay. 14 R totales — run environment confirmado, pero el daño NO llegó por HR específicamente."
+      factor_clave: "Nola castigado por el lineup zurdo (Patrón 1 reverse-platoon). Viento out confirmó el run environment (14 R) pero NO la cuenta de HR (solo 2, ambos PHI; CWS 0 HR con 7 zurdos pull-side)."
+    postmortem:
+      lectura_correcta: sí
+      mercado_capturo_edge: sí
+      clasificacion_jugada: PASS_INCORRECTO
+      clasificacion_analitica: ACIERTO_LIMPIO
+      mercado_correcto_retrospectiva: "CWS TT over + Nola hits over (2 de 3 principales y todas las alternativas cobraron); único miss Match HR over"
+      tipo_mercado_correcto: TT_full_game
+      nota_meta: "Tensión PASS_CORRECTO vs PASS_INCORRECTO registrada como PASS_INCORRECTO por decisión del usuario. Calibración de lados defendible (PHI -1.5 descartado cobró por varianza de margen; CWS +1.5 lean perdió por la razón marcada)."
+    patron_v2:
+      aplicable: [1, 4, 8, 11, 12]
+      emergente: "Refinamiento Patrón 11: 'over de CARRERAS y over de HR son tesis distintas'. Viento out confirmado + parque de HR + ofensivas con poder NO garantiza match-HR over — un partido de anotación colectiva puede ir over de carreras vía tráfico/extra-base SIN 3+ HR (CWS, 3º en HR MLB, anotó 5 R con 0 HR). El viento out garantiza el RUN environment, no el camino del daño. Regla: tomar TT/over de carreras (capturan ambos caminos), no match-HR (captura solo un camino)."
+    fuente: "conversación pre/post-partido"
+    leccion: "Over de carreras y over de HR son tesis distintas: con viento out confirmado las carreras pueden llegar vía tráfico/extra-base sin 3+ HR. Preferir TT/over de carreras + props de hits sobre el match-HR over cuando el lineup de poder también tiene ruta de tráfico."
+
+  - id: giants-cubs-070626
+    fecha: 2026-06-07
+    partido: "Giants vs Cubs"
+    marcador: "Giants 2 - Cubs 1"
+    cuotas_pre_partido:
+      ml_favorito: null     # SF favorito; ML no registrado en el raw
+      ml_underdog: null
+    edge:
+      frase: "Zurdos calientes de SF (Devers 2º, Lee 5º) castigan a Taillon, peor abridor MLB vs LHB y Tipo B, en partido de una sola vía ofensiva; cobrar en props de participación, no en el total acoplado."
+      fuente: matchup_mano_repertorio   # P2 matchup mano/repertorio (zurdos SF vs Taillon reverse-platoon)
+      pitcher_vulnerable_tipo: B   # Taillon peor abridor MLB vs LHB
+    apuesta:
+      mercado: "PASS — usuario no apostó. Recomendación principal: Lee H+R+RBI over 1.5 @1.70 a stake estándar"
+      tipo_mercado: pass
+      cuota: null
+      stake: null
+      formato: single
+      resultado: null
+      notas_apuesta: "PASS (clasificacion_jugada = null). El menú incluía Under 7.5 y Giants +1.5 relegados a PASS — ambos habrían cobrado limpio."
+    picks_analizadas_no_jugadas:
+      - {pick: "Lee H+R+RBI over 1.5", cuota: 1.70, resultado_hipotetico: ganó, motivo: "1 H + 1 RBI = 2, cobro RUIDOSO (SF blanqueado salvo 2, no por acumulación vs Taillon)"}
+      - {pick: "Devers TB over 1.5", cuota: 2.14, resultado_hipotetico: perdió, motivo: "0 TB (Devers 0-3, 1 BB, 3 K)"}
+      - {pick: "Lee TB over 1.5", cuota: 2.08, resultado_hipotetico: perdió, motivo: "1 TB"}
+      - {pick: "Giants TT over 3.5", cuota: 1.81, resultado_hipotetico: perdió, motivo: "SF 2 R"}
+      - {pick: "Under 7.5 full game", cuota: null, resultado_hipotetico: ganó, motivo: "3 R total — estaba relegado a PASS"}
+      - {pick: "Giants +1.5", cuota: 1.52, resultado_hipotetico: ganó, motivo: "SF 2-1 directo — estaba relegado a PASS"}
+    contexto_resultado:
+      abridor_rival: "Taillon (CHC): 1.0 IP, 2 H, 1 ER, 2 BB, 2 K, 0 HR — hook ultra-temprano (sacado en 1 IP)."
+      bulk_rival: "Assad (CHC): 6.1 IP, 1 H, 0 ER, 1 BB, 5 K — blanqueo de relevo largo. EL ESCUDO."
+      abridor_propio: "McDonald (SF): 5.0 IP, 4 H, 1 ER, 3 BB, 6 K."
+      bullpen_relevante: "CHC: Assad bulk 6.1 IP en blanco anuló a la vez el edge de atacar al abridor (Taillon salió en 1 IP) y el de bullpen gastado (Assad fresco absorbió todo)."
+      bates_clave: "SF: Chapman (R, 7º) 2 H, 1 RBI — lideró a SF. Lee 1 H, 1 RBI. Devers 0-3, 1 BB, 3 K. Ofensiva: 4 H, 2 R, 4 BB, 9 K, RISP 2-9, LOB 6 — blanqueada salvo 2."
+      ambiente: "5 mph In From CF, 70°F, parcialmente nublado (coincide con lectura pre-partido). HP umpire Cory Blaser. 0 HR."
+      factor_clave: "Taillon 1 IP → Assad bulk fresco blanqueó 6.1 IP. El edge de timing se anuló por el escudo de bulk; el partido fue bajo (3 R, 0 HR) como el clima sugería."
+    postmortem:
+      lectura_correcta: parcialmente
+      mercado_capturo_edge: parcialmente
+      clasificacion_jugada: NO_JUGADA
+      clasificacion_analitica: ACIERTO_RUIDOSO
+      mercado_correcto_retrospectiva: "Under 7.5 y/o Giants +1.5 @1.52 (ambos habrían cobrado limpio; estaban relegados a PASS)"
+      tipo_mercado_correcto: over_under_full
+    patron_v2:
+      aplicable: [8, 5, 10]
+      emergente: "Escudo de brazo bulk (n=1): cuando el edge combina 'atacar abridor vulnerable' + 'bullpen rival gastado', un brazo bulk/swing fresco (bajada reciente, long man, spot en turno) puede anular AMBOS edges a la vez: el abridor sale temprano Y el bulk absorbe 5-6 IP en blanco. Caso: Taillon 1 IP → Assad 6.1 IP shutout. Inverso del Patrón 8. Implicación: si el edge depende de castigar a UN abridor específico, verificar disponibilidad de brazo bulk fresco del rival antes de fijar convicción."
+    fuente: "conversación pre-partido + resultado final"
+    leccion: "Si el edge depende de que un lineup castigue a UN abridor específico, verificar disponibilidad de brazo bulk fresco del rival antes de fijar convicción, y preferir vehículos forgiving (H+R+RBI) que cobran aun cuando la tesis de acumulación no se cumple."
+
+  - id: phillies-bluejays-080626
+    fecha: 2026-06-08
+    partido: "Phillies vs Blue Jays"
+    marcador: "Phillies 5 - Blue Jays 2"
+    cuotas_pre_partido:
+      ml_favorito: 1.55    # Phillies
+      ml_underdog: 2.50    # Blue Jays
+    edge:
+      frase: "Asimetría de abridores zurdos: Sánchez élite suprime a una ofensiva de Toronto diezmada (sin Santander/Kirk) mientras Corbin es atacable por espejismo de ERA + H2H documentado vs PHI; entorno de supresión bilateral vs LHP."
+      fuente: edge_combinado   # P1 supresión por arsenal + P2 matchup mano + P13 H2H documentado
+      pitcher_vulnerable_tipo: B   # Corbin: contacto duro + leash nominal funcional, con overlay C (sin whiff)
+    apuesta:
+      mercado: "Ninguna — sesión incompleta, no se llegó a apostar"
+      tipo_mercado: pass
+      cuota: null
+      stake: null
+      formato: single
+      resultado: null
+      notas_apuesta: "No se alcanzó a aplicar filtro final / Regla de Ejecución antes del primer pitch. El default de ejecución apuntaba a TOR TT Under 2.5 @ 2.01, que cobró."
+    picks_analizadas_no_jugadas:
+      - {pick: "TOR TT Under 2.5", cuota: 2.01, resultado_hipotetico: ganó, motivo: "TOR = 2 carreras; Sánchez suprimió como se proyectó (#1 del menú, default de ejecución)"}
+      - {pick: "Under 7.5 full game", cuota: 1.88, resultado_hipotetico: ganó, motivo: "Total 7 carreras"}
+      - {pick: "F5 TOR TT Under 1.5", cuota: 1.62, resultado_hipotetico: perdió, motivo: "TOR F5 = 2 (HR solitario de Clement en la 5ª off Sánchez); línea ajustada no absorbió el slug aislado"}
+      - {pick: "F5 Under 4", cuota: 1.80, resultado_hipotetico: perdió, motivo: "F5 total = 7; PHI explotó 5 en innings 2-3 off Corbin"}
+      - {pick: "F5 TT PHI over (sin línea)", cuota: null, resultado_hipotetico: ganó, motivo: "PHI F5 = 5; el fade temprano a Corbin que subestimé"}
+      - {pick: "Corbin ER over 2.5", cuota: 1.90, resultado_hipotetico: ganó, motivo: "5 ER en 3 IP"}
+      - {pick: "Corbin Outs under 15.5", cuota: 1.63, resultado_hipotetico: ganó, motivo: "KO en la 3ª = 9 outs"}
+      - {pick: "Sánchez Ks over 6.5", cuota: 2.16, resultado_hipotetico: ganó, motivo: "10 K; el arsenal de whiff anuló el lineup bajo-K vs LHP (se advirtió evitar el over)"}
+      - {pick: "Sánchez Outs over 20.5", cuota: 1.82, resultado_hipotetico: ganó, motivo: "7.0 IP = 21 outs"}
+      - {pick: "PHI ML", cuota: 1.55, resultado_hipotetico: ganó, motivo: "PHI 5-2; pasada por falta de valor (proceso correcto)"}
+      - {pick: "PHI -1.5", cuota: 1.98, resultado_hipotetico: ganó, motivo: "Margen 3; marcada AVOID, ganó por azar de margen en juego que pudo ser cerrado"}
+      - {pick: "TOR +1.5", cuota: 1.85, resultado_hipotetico: perdió, motivo: "Margen 3 > 1.5; falló el criterio de conversión como se proyectó"}
+      - {pick: "Schwarber HR over 0.5", cuota: 3.80, resultado_hipotetico: perdió, motivo: "0 HR (1 H, single)"}
+    contexto_resultado:
+      abridor_propio: "Sánchez (PHI): 7.0 IP, 4 H, 2 ER, 1 BB, 10 K, 1 HR (solo de Clement, 5ª)."
+      abridor_rival: "Corbin (TOR): 3.0 IP, 4 H, 5 ER, 4 BB, 1 K, 1 HR — KO en la 3ª."
+      bullpen_relevante: "PHI: Keller 1 IP 0 R, Duran S(16) 1 IP 0 R. TOR: Macko 1 IP, Woods Richardson 4 IP 0 R 3 BB, Nance 1 IP 2 H — pen TOR tiró 6 IP de 1 carrera tras el KO."
+      bates_clave: "PHI: García 2-run HR (2ª off Corbin) 2 RBI, Bohm RBI, Stott RBI, Turner SB(14). TOR: Clement 2-4 HR solitario (5ª off Sánchez), Piñango RBI."
+      ofensiva_rival: "TOR 6 H, 2 BB, 11 K, 6 LOB, 0-de-10 RISP — ambas carreras sin convertir tráfico (1 vía HR solitario)."
+      ofensiva_propio: "PHI 7 H, 5 BB, 8 K, RISP 3-7 — todo el daño (5 R) en innings 2-3 off Corbin."
+      ausencias: "TOR sin Santander, Kirk, Cease, Berríos, Scherzer."
+      ambiente: "68°F, despejado, techo abierto, viento 12 mph R→L (lateral, no inflador). Park neutral confirmado. HP ump: Jansen Visconti."
+      factor_clave: "Corbin explotó en F5 (5 ER/4 BB en 3 IP): el H2H Patrón 13 se materializó temprano, no en 3ª vuelta como proyecté. Sánchez dominante (10 K vs el lineup que menos poncha vs LHP). Toronto 0-10 RISP, anotó solo por slug aislado."
+    postmortem:
+      lectura_correcta: parcialmente
+      mercado_capturo_edge: parcialmente
+      clasificacion_jugada: PASS_INCORRECTO
+      clasificacion_analitica: ACIERTO_LIMPIO
+      mercado_correcto_retrospectiva: "TOR TT Under 2.5 @ 2.01 (#1 del menú, lectura limpia de supresión); el winner de mayor varianza era el fade temprano a Corbin (F5 TT PHI / Corbin ER over) que subestimé"
+      tipo_mercado_correcto: TT_full_game
+    patron_v2:
+      aplicable: [1, 3, 4, 6, 12, 13]
+      emergente: "Timing-inversión por H2H fuerte (n=1): un Tipo B con H2H documentado de comando frágil + contacto duro vs un rival específico (Patrón 13 fuerte) puede invertir la lectura de leash — el blow-up llega en F5, no en 3ª vuelta. Corbin, con leash nominal 'funcional', explotó en 3 IP y todo el daño de PHI fue F5. Notas secundarias: (a) cuando el rival anota por HR solitario, preferir TT full a línea alta (2.5) sobre F5 TT a línea ajustada (1.5); (b) arsenal de whiff élite anula la tendencia bajo-K del lineup — no fadear Ks over por 'lineup de contacto'."
+    fuente: "conversación pre-partido (análisis 14 bloques) + resultado final"
+    leccion: "Cuando un Tipo B carga un H2H fuerte de comando frágil vs el rival, no asumir leash funcional: el fade temprano (F5 TT rival / ER over) queda vivo aunque el perfil nominal diga 'sobrevive 5-6 IP'."

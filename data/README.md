@@ -107,6 +107,8 @@ Tomado de la **Jerarquía de Edges** en heurísticas v2.2 (de más a menos confi
 - `prop_bateador_bases` — total bases
 - `prop_bateador_HRR_RBI` — hit + run + RBI
 - `prop_bateador_RBI`
+- `prop_bateador_BB` — bases por bolas del bateador
+- `prop_equipo` — prop de equipo no-side (ej. bases robadas, hits de equipo)
 - `combo` — varios mercados jugados juntos
 - `pass` — ninguna pick tomada (analizado pero no apostado)
 
