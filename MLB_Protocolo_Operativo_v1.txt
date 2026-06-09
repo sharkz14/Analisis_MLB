@@ -472,5 +472,6 @@ Revisar después de 2-3 semanas de uso real:
     en la práctica? Si sí, simplificar o consolidar.
 [ ] ¿Aparecen tareas recurrentes que este protocolo no cubre y que valdría
     sumar en v2? (live betting, parlay assembly, gestión de bankroll, etc.)
-[ ] ¿La interacción con data/postmortems.yaml necesita formalizarse más
-    o se mantiene como flujo paralelo del usuario?
+[ ] data/postmortems.yaml: ya se formalizó (Claude lo genera y registra en
+    el chat junto al resultado, ver ARCHIVOS DE REFERENCIA). Revisar si el
+    flujo en-chat se sostiene sin reintroducir sesgo retrospectivo.
