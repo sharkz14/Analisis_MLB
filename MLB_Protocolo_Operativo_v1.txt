@@ -35,9 +35,14 @@ ARCHIVOS DE REFERENCIA (consultar antes de responder)
     Filtro Final, Regla de Ejecución y Selección de Mercado).
 [ ] MLB_Template_Postmortem: estructura del bloque a generar.
 [ ] MLB_Postmortems_Raw_*: destino del bloque generado (append manual).
-[ ] data/postmortems.yaml: registro estructurado paralelo. No editarlo desde
-    el chat; el usuario lo carga en su propio flujo.
-[ ] data/stats_report.md: reporte agregado del conteo periódico.
+[ ] data/postmortems.yaml: registro estructurado paralelo. Se genera EN el
+    chat junto con el resultado y Claude lo registra como commit (un entry por
+    partido). El campo edge.frase va verbatim del pre-partido, nunca
+    reformulado con el resultado a la vista (regla anti-sesgo, ver Parte 4).
+    Campos no registrados quedan en null, no se inventan. Vocabulario
+    controlado en data/README.md.
+[ ] data/stats_report.md: reporte agregado del conteo periódico. Regenerar con
+    `python3 scripts/stats.py --output data/stats_report.md` tras cada tanda.
 
 
 ====================================================
@@ -413,7 +418,7 @@ Aplicar las reglas del MLB_Template_Postmortem:
 PASO 3.4 — Propuesta de ajustes
 
 Patrones emergentes vistos en 3+ partidos de la ventana → candidatos a
-sumarse a v2.2 o v3. Listarlos explícitamente con casos referenciados.
+sumarse a v2.3 o v3. Listarlos explícitamente con casos referenciados.
 
 Patrones v2.2 contradichos 2+ veces → candidatos a revisión. Distinguir
 entre ruido de muestra chica y desincronización real.
