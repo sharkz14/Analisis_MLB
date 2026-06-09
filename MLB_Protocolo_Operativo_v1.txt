@@ -413,7 +413,7 @@ Aplicar las reglas del MLB_Template_Postmortem:
 PASO 3.4 — Propuesta de ajustes
 
 Patrones emergentes vistos en 3+ partidos de la ventana → candidatos a
-sumarse a v2.2 o v3. Listarlos explícitamente con casos referenciados.
+sumarse a v2.3 o v3. Listarlos explícitamente con casos referenciados.
 
 Patrones v2.2 contradichos 2+ veces → candidatos a revisión. Distinguir
 entre ruido de muestra chica y desincronización real.
