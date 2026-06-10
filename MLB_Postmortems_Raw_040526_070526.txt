@@ -2487,3 +2487,91 @@ Notas secundarias:
 5. LECCIÓN OPERATIVA EN UNA FRASE
 
 [ ] Cuando un Tipo B carga un H2H fuerte de comando frágil vs el rival, no asumir leash nominal funcional: el fade temprano (F5 TT rival / ER over) queda vivo aunque el perfil diga "sobrevive 5-6 IP", y el default de ejecución de la lectura de supresión (TT full game del rival diezmado) sigue siendo el mercado #1.
+
+
+	[Mariners vs Orioles 090626]
+
+1. THESIS PRE-PARTIDO (antes de ver resultado)
+
+Edge principal en una frase:
+[ ] Asimetría de abridores en parque HR; SEA 7-RHB muerto colectivamente vs LHP (sub-80 wRC+); el edge real migra al arma de Gilbert.
+
+Nivel en Jerarquía de Edges (v2.2):
+[ ] Posición 2 (matchup mano/repertorio: lineup SEA all-RHB vs Rogers LHP) + Posición 1 parcial (parque HR, viento NO confirmable pre-partido — tratado neutral).
+
+Tipo de vulnerabilidad del pitcher rival (si aplica):
+[ ] Rogers (BAL): Tipo B (contacto aéreo). Confirmado en partido: 5.2 IP, 3 ER, 1 HR (Garver 3-run).
+
+Mercado(s) elegido(s):
+[ ] Seattle Mariners TT Under 4.5 (incluye extra innings) @ 1.81, stake 1u, tier A.
+
+Cuota(s):
+[ ] SEA TT Under 4.5 @1.81; BAL +1.5 @1.62; Gilbert Outs Over 17.5 @1.83; Gilbert Ks Over 6.5 @1.92; Gilbert ER Under 2.5 @1.77.
+
+Stake relativo:
+[ ] 1u (tier A).
+
+Patrón v2.2 que respalda la jugada:
+[ ] Patrón 1 (Rogers Tipo B). Patrón 5 (un solo lado con ruta — BAL contra Gilbert vía contacto). Patrón 6 (SEA sin edge ofensivo colectivo vs LHP). Patrón 7 (BAL +1.5 análisis paralelo). Patrón 11 (factores ambientales — viento NO confirmado pre-partido).
+
+
+2. RESULTADO OBJETIVO
+
+Marcador final:
+[ ] Seattle 6 — Baltimore 5 (10 innings). En reglamentario: SEA 4 - BAL 5.
+
+Línea de abridores:
+[ ] Abridor B (Rogers, BAL): 5.2 IP, 3 ER, 1 HR (Garver 3-run). Tipo B confirmado.
+[ ] Abridor A (Gilbert, SEA): 6.0 IP, ~17-18 outs, 5 K (bajo over 6.5), ER bajos.
+
+Bullpen relevante:
+[ ] BAL: cargó la 10ª (HR 2-run de Arozarena que volteó el partido). SEA: aguantó hasta extras.
+
+Bates clave del partido:
+[ ] SEA: Garver HR 3-run (la única vía ofensiva en reglamentario); Arozarena HR 2-run en la 10ª (bust del under por extra innings). BAL: 5 carreras distribuidas. SEA ofensiva colectiva: 0 rallies sostenidos, 3/9 RISP, 7 LOB — todas las carreras de SEA vía HR (lectura de "muerto colectivo vs LHP" confirmada).
+
+Ambientales:
+[ ] 78°F, Camden Yards (HR-friendly). VIENTO 15 mph OUT TO LF — confirmado POST-partido, NO confirmable pre-partido. HP umpire: Doug Eddings.
+
+Mercado(s) elegido(s) — ganó / perdió / push:
+[ ] SEA TT Under 4.5 @1.81 → PERDIÓ. Cobraba en reglamentario (SEA 4 R en 9 IP); bust por HR 2-run de Arozarena en la 10ª → SEA 6 → bust por cláusula de extra innings.
+[ ] Hipotéticos del menú: BAL +1.5 @1.62 → ganó. Gilbert Outs Over 17.5 @1.83 → ganó (descartada por pivote a Ks, micro-error). Gilbert Ks Over 6.5 @1.92 → perdió (5 K). Gilbert ER Under 2.5 @1.77 → ganó.
+
+
+3. POSTMORTEM (separar proceso de resultado)
+
+¿La lectura del edge fue correcta?
+[ ] Parcialmente. La lectura colectiva SEA-vs-LHP fue CORRECTA en mecánica (0 rallies sostenidos, 3/9 RISP, 7 LOB, todas las carreras vía HR — exactamente el perfil del "muerto colectivo"). FALLÓ el downweight del run environment: viento out + parque HR + Rogers Tipo B = camino de slugging abierto, justo lo que el Patrón 11 refinado v2.2 advierte y NO apliqué por viento sin confirmar.
+
+¿El mercado capturó bien el edge?
+[ ] No. Se eligió el único mercado del menú expuesto al gate ambiental sin resolver. BAL +1.5 y Gilbert Outs over (ambos en el menú) ganaron y eran retrospectivamente las picks limpias.
+
+¿El timing del daño coincidió con la proyección?
+[ ] Parcialmente. Daño de SEA llegó vía HR (slugging), no vía rallies — consistente con la lectura del lineup "muerto colectivo". El bust del under fue por extra innings (HR 2-run Arozarena 10ª), no por colapso de la lectura ofensiva en reglamentario.
+
+¿Apareció algún factor ambiental que cambió el guion?
+[ ] Sí. Viento 15 mph OUT TO LF confirmado post-partido elevó el run environment vía HR. Pre-partido NO era confirmable y se trató como neutral — esto es el error operativo central, no un imprevisto.
+
+Clasificación del resultado:
+[X] ERROR_DE_LECTURA (jugada): el under perdió por un HR en extras, pero el frame del análisis (downweight ambiental fallido) era la falla real. Bust con componente fuerte de varianza (under vivo a través de 9, perdido en 10ª).
+[X] ERROR_DE_LECTURA (analítica): lectura ofensiva correcta + downweight ambiental fallido. Validación repetida del Patrón 11 refinado v2.2: "ofensiva floja NO está protegida del slugging con viento out".
+
+4. PATRÓN APLICABLE / EMERGENTE
+
+¿Qué patrón v2.2 explica mejor lo ocurrido?
+[ ] Patrón 1 (Rogers Tipo B confirmado). Patrón 5 (BAL único lado con ruta — pero el slugging de SEA vía HR lo discutió). Patrón 6 (SEA muerto colectivo vs LHP confirmado en mecánica). Patrón 11 refinado (ambiente gobierna run environment NO el camino — viento out abrió el slugging que el "muerto colectivo" no protegía).
+
+¿Aparece un patrón nuevo que no está en v2.2?
+[X] Sí — refinamiento candidato v2.3 (n≥2 ahora):
+
+**"TT-UNDER expuesto a viento-out no confirmado en parque HR → tratar el viento no confirmado como señal de PASS específica para ese under, no neutral."** El gate de viento no resuelto NO es neutral para un TT-UNDER del lado débil; es señal de PASS o downweight fuerte. Validación repetida del Patrón 11 refinado: ofensiva floja NO está protegida del slugging con viento out. Casos: este (mariners-orioles 09/06) + cluster previo (Tigers/Rays 01/06, Royals/Twins 04/06, Brewers/Rockies 06/06) — el meta-mecanismo "el daño llega por aire con viento out" ya se aplica a OFENSIVAS "muertas" que explotan; este caso lo extiende al espejo: NO tomar TT-UNDER cuando el viento out es plausible-no-confirmado.
+
+Micro-lección secundaria: no abandonar "outs over" por línea alta cuando la racha de IP la sostiene (Gilbert Outs Over 17.5 ganó, descartado por pivote a Ks que perdió).
+
+¿Algún patrón v2.2 fue contradicho por este partido?
+[ ] No directamente. Validación del Patrón 11 refinado v2.2. La Regla del Under Ks NO disparó porque Gilbert tenía IP esperadas altas (la pick Ks perdió por bajo K rate, no por salida corta — caso distinto del cluster Cavalli).
+
+5. LECCIÓN OPERATIVA EN UNA FRASE
+
+[ ] Viento sin confirmar + parque HR + abridor de contacto (Tipo B) = PASS o downweight fuerte de cualquier TT-UNDER del lado débil; el gate de viento no resuelto es señal de PASS para el under, no neutral.
+

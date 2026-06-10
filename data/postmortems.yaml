@@ -2366,3 +2366,49 @@ partidos:
       emergente: "Timing-inversión por H2H fuerte (n=1): un Tipo B con H2H documentado de comando frágil + contacto duro vs un rival específico (Patrón 13 fuerte) puede invertir la lectura de leash — el blow-up llega en F5, no en 3ª vuelta. Corbin, con leash nominal 'funcional', explotó en 3 IP y todo el daño de PHI fue F5. Notas secundarias: (a) cuando el rival anota por HR solitario, preferir TT full a línea alta (2.5) sobre F5 TT a línea ajustada (1.5); (b) arsenal de whiff élite anula la tendencia bajo-K del lineup — no fadear Ks over por 'lineup de contacto'."
     fuente: "conversación pre-partido (análisis 14 bloques) + resultado final"
     leccion: "Cuando un Tipo B carga un H2H fuerte de comando frágil vs el rival, no asumir leash funcional: el fade temprano (F5 TT rival / ER over) queda vivo aunque el perfil nominal diga 'sobrevive 5-6 IP'."
+
+  - id: mariners-orioles-090626
+    fecha: 2026-06-09
+    partido: "Mariners vs Orioles"
+    marcador: "Mariners 6 - Orioles 5 (10 innings)"
+    cuotas_pre_partido:
+      ml_favorito: null
+      ml_underdog: null
+    edge:
+      frase: "Asimetría de abridores en parque HR; SEA 7-RHB muerto colectivamente vs LHP (sub-80 wRC+); el edge real migra al arma de Gilbert."
+      fuente: matchup_mano_repertorio   # P2 lineup all-RHB vs Rogers LHP + P1 parcial (parque HR, viento no confirmable)
+      pitcher_vulnerable_tipo: B   # Rogers (BAL): contacto aéreo. Confirmado 5.2 IP / 3 ER / 1 HR (Garver 3-run)
+    apuesta:
+      mercado: "Seattle Mariners TT Under 4.5 (incluye extra innings)"
+      tipo_mercado: TT_full_game
+      cuota: 1.81
+      stake: full   # 1u, tier A
+      formato: single
+      resultado: perdió
+      notas_apuesta: "Tier A, 1u. Under cobraba en reglamentario (SEA 4 R en 9 IP); bust por HR 2-run de Arozarena en la 10ª → SEA 6 → bust por cláusula de extra innings."
+    picks_analizadas_no_jugadas:
+      - {pick: "BAL +1.5", cuota: 1.62, resultado_hipotetico: ganó, motivo: "underdog cubrió el 1.5; pick retrospectivamente limpia, aislada del gate ambiental"}
+      - {pick: "Gilbert Outs Over 17.5", cuota: 1.83, resultado_hipotetico: ganó, motivo: "Gilbert llegó a 6 IP / ~17-18 outs; descartada por pivote a Ks — micro-error"}
+      - {pick: "Gilbert Ks Over 6.5", cuota: 1.92, resultado_hipotetico: perdió, motivo: "5 K — bajo K rate, no salida corta (caso distinto al cluster Cavalli)"}
+      - {pick: "Gilbert ER Under 2.5", cuota: 1.77, resultado_hipotetico: ganó, motivo: "ER bajos confirmados"}
+    contexto_resultado:
+      abridor_rival: "Rogers (BAL): 5.2 IP, 3 ER, 1 HR (Garver 3-run). Tipo B contacto aéreo confirmado."
+      abridor_propio: "Gilbert (SEA): 6.0 IP, ~17-18 outs, 5 K (bajo over 6.5), ER bajos. Arma confirmada en outs/ER, no en Ks."
+      bullpen_relevante: "BAL: cargó la 10ª (HR 2-run de Arozarena que volteó el partido y bust del under). SEA: aguantó hasta extras."
+      bates_clave: "SEA: Garver HR 3-run (única vía ofensiva en reglamentario); Arozarena HR 2-run en la 10ª (bust del under por extra innings). BAL: 5 carreras distribuidas."
+      ofensiva_propio: "SEA 0 rallies sostenidos, 3/9 RISP, 7 LOB — todas las carreras vía HR. Lectura de 'muerto colectivo vs LHP' confirmada en mecánica."
+      ambiente: "78°F, Camden Yards (HR-friendly). VIENTO 15 mph OUT TO LF — confirmado POST-partido, NO confirmable pre-partido. HP umpire Doug Eddings."
+      factor_clave: "Viento out elevó el run environment vía HR exactamente como el Patrón 11 refinado v2.2 advierte. El downweight ambiental fallido (viento sin confirmar tratado como neutral) es el error operativo central."
+    postmortem:
+      lectura_correcta: parcialmente
+      mercado_capturo_edge: no
+      clasificacion_jugada: ERROR_DE_LECTURA
+      clasificacion_analitica: ERROR_DE_LECTURA
+      mercado_correcto_retrospectiva: "Gilbert Outs Over 17.5 @1.83 / BAL +1.5 @1.62 / Gilbert ER Under 2.5 @1.77 — el único del menú aislado del gate ambiental era Gilbert Outs (prop pitcher directo)"
+      tipo_mercado_correcto: prop_pitcher_outs
+      nota_meta: "Lectura ofensiva colectiva CORRECTA en mecánica (0 rallies sostenidos, 3/9 RISP, 7 LOB, todas vía HR); el error fue el downweight ambiental. Componente fuerte de varianza: under vivo a través de 9 IP, perdido en la 10ª por HR 2-run de Arozarena (cláusula de extra innings)."
+    patron_v2:
+      aplicable: [1, 5, 6, 11]
+      emergente: "(1) TT-UNDER expuesto a viento-out no confirmado en parque HR → tratar el viento no confirmado como señal de PASS específica para ese under, NO neutral. n≥2 ahora (junto con cluster Tigers/Rays 01/06, Royals/Twins 04/06, Brewers/Rockies 06/06 del meta-mecanismo 'daño por aire con viento out'). El espejo: NO tomar TT-UNDER cuando el viento out es plausible-no-confirmado en parque HR + abridor Tipo B. (2) Micro-lección: no abandonar 'outs over' por línea alta cuando la racha de IP la sostiene (Gilbert Outs Over 17.5 ganó, descartado por pivote a Ks que perdió)."
+    fuente: "conversación pre/post-partido"
+    leccion: "Viento sin confirmar + parque HR + abridor de contacto (Tipo B) = PASS o downweight fuerte de cualquier TT-UNDER del lado débil; el gate de viento no resuelto es señal de PASS para el under, no neutral."
