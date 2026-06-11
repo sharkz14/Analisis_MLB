@@ -2,7 +2,7 @@ MLB_Checklist_Prelectura_v2.txt
 
 NOTA ACTIVA — CHECKLIST DE PRELECTURA PRE-PARTIDO (MLB)
 
-Versión: v2 (revisión 08/06/26)
+Versión: v2 (revisión 11/06/26)
 Complemento de: MLB_Heuristicas_Mercados_v2_2_300426_070626.txt
 Reemplaza a: MLB_Checklist_Prelectura_v1.txt
 
@@ -27,12 +27,51 @@ Cambios respecto a v1 (integran la recalibración v2.2):
 - Sección 16: referencia "Cuándo pasar" de v2.2 (no duplica la lista).
 - NUEVA Sección 18: check de ejecución (default invertido).
 
+Revisión 11/06/26:
+- Sección 0: agregada REGLA DE SECUENCIA — no asumir/proponer picks ni pedir
+  líneas para cerrar hasta recorrer el checklist al menos hasta el punto 12.
+  Los puntos 0-12 son investigación/lectura; el menú se arma en 13-14 y se
+  finaliza en 15-18. Corrige la falla de fijar picks antes de completar la
+  lectura (el edge migra con abridores/lineups/bullpen/clima).
+
 Naturaleza del documento:
 Mantener intacta durante 2-3 semanas de uso real. Recalibrar junto con la
 Heurísticas cuando haya muestra nueva.
 
 
 0. DATOS MÍNIMOS ANTES DE ANALIZAR
+
+=========================================================================
+REGLA DE SECUENCIA (CRÍTICA — leer ANTES de cualquier otra cosa)
+=========================================================================
+
+Esta checklist se recorre PUNTO POR PUNTO y EN ORDEN. Cuando se va alimentando
+el chat con los datos del partido punto por punto, regla dura:
+
+[ ] NO asumir, NO proponer y NO "lockear" NINGUNA pick hasta haber recorrido
+    el checklist COMPLETO al menos hasta el punto 12 (Team Totals).
+[ ] NO pedir líneas/cuotas para CERRAR una apuesta ni armar un menú de picks
+    antes del punto 12. Las cuotas se recolectan como DATO (lista de abajo),
+    no para disparar una recomendación temprana.
+[ ] Todo lo que va del punto 0 al 12 es INVESTIGACIÓN Y LECTURA: abridores (3),
+    lineups (4), F5 vs full game (5), bullpen (6), parque/clima (7) y el survey
+    de mercados de lado y totales (8-12). El edge se NOMBRA en el punto 1, pero
+    NO se traduce a una apuesta concreta hasta tener el cuadro completo.
+[ ] Si durante la lectura aparece una pick tentadora antes del punto 12:
+    anotarla como "HIPÓTESIS A CONFIRMAR", nunca como recomendación. El menú
+    de picks se ARMA recién en las props (13-14) y se FINALIZA en las secciones
+    de decisión (15-18: precio, señales de pass, checklist final, ejecución).
+[ ] Si el usuario va enviando los puntos de a uno: responder SOLO el punto
+    recibido. No adelantarse a pedir datos de puntos posteriores ni a sugerir
+    apuestas que dependan de información todavía no entregada.
+
+POR QUÉ: saltar a picks antes de completar la lectura es la causa raíz de las
+dos clasificaciones de error más frecuentes del dataset (ERROR_DE_LECTURA y
+ERROR_DE_MERCADO). El edge real SUELE MIGRAR a medida que se completan
+abridores → lineups → bullpen → clima; fijar la pick temprano congela una
+lectura incompleta y sesga todo lo que viene después.
+
+=========================================================================
 
 No empezar si faltan demasiadas piezas.
 
