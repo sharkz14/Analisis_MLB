@@ -2575,3 +2575,94 @@ Micro-lección secundaria: no abandonar "outs over" por línea alta cuando la ra
 
 [ ] Viento sin confirmar + parque HR + abridor de contacto (Tipo B) = PASS o downweight fuerte de cualquier TT-UNDER del lado débil; el gate de viento no resuelto es señal de PASS para el under, no neutral.
 
+
+	[Twins vs Tigers 100626]
+
+1. THESIS PRE-PARTIDO (antes de ver resultado)
+
+Edge principal en una frase:
+[ ] Paredes capado (~4 IP) descarga al peor bullpen de MLB (gastado) ante el plató zurdo y el top de alto OBP de DET, en un Comerica caluroso (viento calma confirmado); daño tardío/distribuido → TT full game, ruta de DET más limpia que el over general porque MIN se degrada vs el zurdo Valdez.
+
+Nivel en Jerarquía de Edges (v2.2):
+[ ] Tier 3 (leash + bullpen) + Tier 1 (parque/clima) + Tier 2 (matchup).
+
+Tipo de vulnerabilidad del pitcher rival (si aplica):
+[ ] Paredes (MIN): Tipo C + leash corto atenuado (RHP comando, sweeper blunteado vs LHB) — el blanco real del DET TT over.
+[ ] Valdez (DET): Tipo B sub-variante HR/flyballs, leash largo, degradación con mecanismo (Patrón 13).
+
+Mercado(s) elegido(s):
+[ ] DET Team Total Over 4.5 @ 1.69, stake mínimo-medio (una sola posición).
+
+Cuota(s):
+[ ] DET TT Over 4.5 @1.69. Contrastes del menú: Over 9.5 del juego, DET TT Over 5.5, MIN +1.5, DET ML, DET RL -1.5, F5 DET, Under 9.5.
+
+Stake relativo:
+[ ] Mínimo-medio, una posición.
+
+Patrón v2.2 que respalda la jugada:
+[ ] Patrón 1 (tipología — Paredes Tipo C, Valdez Tipo B). Patrón 3 (timing tardío/distribuido). Patrón 5 (ruta de anotación). Patrón 8 (spot starter como sistema). Patrón 11 (ambiente caluroso). Patrón 13 (degradación con mecanismo de Valdez).
+
+
+2. RESULTADO OBJETIVO
+
+Marcador final:
+[ ] Twins 6 — Tigers 4. Total 10 R. F5: MIN 4 - DET 3 (7 R en F5). 2 HR (Buxton 3-run, Lewis solo; ambos MIN vs Valdez).
+
+Línea de abridores:
+[ ] Abridor A (Paredes, MIN): 3.0 IP, 58 pitcheos, 1 ER, 4 K — cortado por demora 1:07 (salida aún más corta de lo proyectado).
+[ ] Abridor B (Valdez, DET): castigado por el poder de MIN (Buxton 3-run + Lewis solo HR) — la "ruta degradada" de MIN sí convirtió.
+
+Bullpen relevante:
+[ ] MIN (post-Paredes): 6 IP, 3 ER, 10 K (Rogers/Adams/Banda en cero) — el "peor bullpen de MLB" tiró whiff y contuvo a la ofensiva alto-K de DET. NO fue el blow-up tardío proyectado.
+
+Bates clave del partido:
+[ ] MIN: Buxton HR 3-run, Lewis HR solitario (poder latente del lineup "degradado" que se subestimó). DET: 4 R, 7 H, 6 BB, 14 K, RISP 3-10, LOB 10 — 13 embasados sin convertir (14 K mató los rallies).
+
+Ambientales:
+[ ] 87°F, viento 13 mph R→L (vs CALMA confirmada a las 5:15). Demora 1:07 por tormenta. El anemómetro previo quedó invalidado por la demora.
+
+Mercado(s) elegido(s) — ganó / perdió / push:
+[ ] DET TT Over 4.5 @1.69 → PERDIÓ (DET 4 R; perdió por 1 carrera, 13 embasados pero 14 K / 3-10 RISP / 10 LOB).
+[ ] Counterfactuals: Over 9.5 del juego → GANÓ (10 > 9.5, el vehículo robusto demotado por error). DET TT Over 5.5 → perdió. MIN +1.5 → perdió (MIN ganó outright). DET ML → perdió. DET RL -1.5 → perdió. F5 DET → perdió (MIN 4-3 en F5). Under 9.5 → perdió (correctamente evitado).
+
+
+3. POSTMORTEM (separar proceso de resultado)
+
+¿La lectura del edge fue correcta?
+[ ] Sí en el run environment (over cobró, 10 R, el under era trampa). El error fue de SELECCIÓN DE VEHÍCULO: TT de un solo equipo en vez del over del juego.
+
+¿El mercado capturó bien el edge?
+[ ] No. El TT de DET exigía adivinar CUÁL ofensiva convertía. El over del juego (9.5) capturaba el run environment sin esa dependencia y cobró.
+
+¿El timing del daño coincidió con la proyección?
+[ ] Parcialmente. Hubo 7 R en F5 (daño temprano, no el tardío proyectado). El bullpen "gastado" de MIN no se rompió tarde — tiró whiff (10 K en 6 IP). El daño llegó vía el poder de MIN sobre Valdez, no vía el ataque proyectado a Paredes/pen MIN.
+
+¿Apareció algún factor ambiental que cambió el guion?
+[ ] Sí. Demora 1:07 por tormenta + viento que pasó de calma (5:15) a 13 mph R→L. El anemómetro previo quedó invalidado — re-confirmar viento DESPUÉS de cualquier demora.
+
+Clasificación del resultado:
+[X] ERROR_DE_MERCADO (jugada y analítica): lectura del run environment correcta, vehículo mal elegido (TT individual en vez de over del juego). Perdió por 1 carrera.
+
+4. PATRÓN APLICABLE / EMERGENTE
+
+¿Qué patrón v2.2 explica mejor lo ocurrido?
+[ ] Patrón 1 (Paredes Tipo C / Valdez Tipo B confirmados). Patrón 3 (timing — aunque el daño fue más temprano). Patrón 8 (spot starter como sistema). Patrón 11 (ambiente, pero invalidado por la demora). Patrón 13 (mecanismo de degradación de Valdez se materializó). Patrón 6 chequeado y NO activado (1-2 de 5) — correcto, no fue trampa de favorito.
+
+¿Aparece un patrón nuevo que no está en v2.2?
+[X] Sí — VIOLACIÓN del Patrón 5 (caveat aplicado al revés) + 2 candidatos n=1:
+
+Se declaró "solo DET tiene ruta" ignorando el poder latente de MIN (Buxton/Lewis HR) + ambiente caliente. "Lineup debilitado ≠ ofensiva inofensiva" — MIN anotó 6 > DET 4. El caveat del Patrón 5 hay que aplicarlo ACTIVAMENTE antes de estrechar a una sola ruta.
+
+Candidatos n=1:
+(1) ambos abridores vulnerables + parque caliente → el over del juego ≥ TT individual (menos dependencias; no exige adivinar qué ofensiva convierte).
+(2) lineup alto-K vs pen malo-pero-con-whiff → descontar el TT-over pese al ERA agregado del pen (DET 14 K / 3-10 RISP; el pen MIN "peor de MLB" tiró 10 K).
+
+Nota de proceso: demora por tormenta (1:07) invalida la lectura de anemómetro previa. Re-confirmar viento DESPUÉS de cualquier demora — conecta con el gate de viento de mariners-orioles 09/06.
+
+¿Algún patrón v2.2 fue contradicho por este partido?
+[ ] Sí — el Patrón 5 se aplicó al revés (estrechar a una sola ruta ignorando poder latente del lado "degradado"). Refuerza el caveat v2.2 "lineup debilitado ≠ ofensiva inofensiva".
+
+5. LECCIÓN OPERATIVA EN UNA FRASE
+
+[ ] Con AMBOS abridores vulnerables + parque caliente, el over del juego tiene menos dependencias que cualquier TT individual (no exige adivinar qué ofensiva convierte); aplicar ACTIVAMENTE el caveat del Patrón 5 antes de estrechar a una sola ruta — el poder latente + ambiente mantiene viva la ruta del lineup "degradado".
+

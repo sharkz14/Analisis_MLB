@@ -1,6 +1,6 @@
 # MLB Postmortems — Reporte de recalibración
 
-Dataset: **51 partidos**. Fuente: `data/postmortems.yaml`.
+Dataset: **52 partidos**. Fuente: `data/postmortems.yaml`.
 
 ## 1. Resumen de decisiones
 
@@ -12,7 +12,7 @@ Dataset: **51 partidos**. Fuente: `data/postmortems.yaml`.
 | PASS_CORRECTO | 13 | 25% |
 | PASS_INCORRECTO | 13 | 25% |
 | ERROR_DE_LECTURA | 5 | 10% |
-| ERROR_DE_MERCADO | 3 | 6% |
+| ERROR_DE_MERCADO | 4 | 8% |
 | NO_JUGADA | 2 | 4% |
 | VARIANZA | 1 | 2% |
 
@@ -20,7 +20,7 @@ Dataset: **51 partidos**. Fuente: `data/postmortems.yaml`.
 
 | Clasificación | Count | % |
 |---|---:|---:|
-| ERROR_DE_MERCADO | 18 | 35% |
+| ERROR_DE_MERCADO | 19 | 37% |
 | ACIERTO_LIMPIO | 18 | 35% |
 | ERROR_DE_LECTURA | 13 | 25% |
 | PASS_INCORRECTO | 1 | 2% |
@@ -28,22 +28,22 @@ Dataset: **51 partidos**. Fuente: `data/postmortems.yaml`.
 
 ## 2. Apostar vs pasar
 
-- Apuestas tomadas: **23** (45%)
-- Pass: **28** (55%)
+- Apuestas tomadas: **24** (46%)
+- Pass: **28** (54%)
 
 - Pass correctos: **13/28** (46%)
 - Pass incorrectos: **13/28** (46%)
 
 ## 3. Win rate y P&L de apuestas reales
 
-- Total apuestas/piernas: **24**
-- Ganadas: **15** (62%)
-- Perdidas: 9 (38%)
+- Total apuestas/piernas: **25**
+- Ganadas: **15** (60%)
+- Perdidas: 10 (40%)
 - Push: 0
   - Piernas de parlay: 7 cobraron / 2 perdieron
 
-- **P&L estimado** (singles, 1u flat): **+0.01u** en 15 apuestas
-- **ROI singles**: **+0.1%**
+- **P&L estimado** (singles, 1u flat): **-0.99u** en 16 apuestas
+- **ROI singles**: **-6.2%**
 
 _Nota: P&L de parlay legs no se computa porque depende del resto del parlay, que no se registra._
 
@@ -60,7 +60,7 @@ _Nota: P&L de parlay legs no se computa porque depende del resto del parlay, que
 | run_line_underdog_1.5 | 1 | 0 | 0 | — |
 | prop_equipo | 1 | 0 | 0 | +1.08 |
 | prop_pitcher_ER | 1 | 0 | 0 | +1.62 |
-| TT_full_game | 2 | 2 | 0 | -0.35 |
+| TT_full_game | 2 | 3 | 0 | -1.35 |
 | prop_bateador_bases | 1 | 2 | 0 | -2.00 |
 | F5_under | 0 | 1 | 0 | — |
 | prop_pitcher_Ks | 0 | 1 | 0 | -1.00 |
@@ -71,7 +71,7 @@ _Nota: P&L de parlay legs no se computa porque depende del resto del parlay, que
 | Fuente | N | Acierto | Pass✓ | Pass✗ | Err_Lectura | Err_Mercado | Varianza |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | matchup_mano_repertorio | 20 | 8 | 4 | 2 | 3 | 1 | 1 |
-| edge_combinado | 14 | 5 | 5 | 3 | 0 | 1 | 0 |
+| edge_combinado | 15 | 5 | 5 | 3 | 0 | 2 | 0 |
 | leash_bullpen | 4 | 0 | 2 | 2 | 0 | 0 | 0 |
 | tipo_vulnerabilidad_pitcher | 4 | 1 | 1 | 2 | 0 | 0 | 0 |
 | forma_individual | 4 | 0 | 1 | 1 | 2 | 0 | 0 |
@@ -85,31 +85,31 @@ _Nota: P&L de parlay legs no se computa porque depende del resto del parlay, que
 |---|---:|---:|---:|
 | Tipo A | 11 | 2 | 2 |
 | Tipo B | 24 | 8 | 2 |
-| Tipo C | 4 | 1 | 0 |
+| Tipo C | 5 | 1 | 1 |
 
 ## 7. Frecuencia de patrones v2 aplicados
 
 | Patrón | Apariciones |
 |---|---:|
-| 1: Tipología vulnerabilidades pitcher (A/B/C) | 28 |
+| 1: Tipología vulnerabilidades pitcher (A/B/C) | 29 |
 | 12: Side con ruido → mercado más limpio | 22 |
-| 11: Factores ambientales (parque/clima/umpire) | 19 |
-| 5: Un solo equipo con rutas → su TT | 18 |
+| 11: Factores ambientales (parque/clima/umpire) | 20 |
+| 5: Un solo equipo con rutas → su TT | 19 |
 | 10: Props salen del guion, no del menú | 17 |
+| 3: Timing del daño: F5 vs full game | 13 |
 | 4: K upside no es over Ks si hay tráfico | 13 |
-| 3: Timing del daño: F5 vs full game | 12 |
 | 9: Pitcher élite no bloquea automáticamente | 10 |
 | 6: Favorito sin edge ofensivo colectivo | 9 |
-| 8: Opener/spot starter no es fade automático | 8 |
+| 8: Opener/spot starter no es fade automático | 9 |
 | 2: 'Mejor abridor' no es F5 side automático | 6 |
 | 7: Underdog +1.5 necesita conversión | 3 |
-| 13: Señal específica con mecanismo > agregado de temporada | 1 |
+| 13: Señal específica con mecanismo > agregado de temporada | 2 |
 
 ## 8. Calidad del menú: picks analizadas pero no jugadas
 
-- Total: **356**
-- Habrían cobrado: **214** | perdido: 139 | push: 3
-- Win rate (sin push): **61%**
+- Total: **363**
+- Habrían cobrado: **215** | perdido: 145 | push: 3
+- Win rate (sin push): **60%**
 - P&L hipotético (1u flat): **+50.52u** en 234 con cuota → ROI **+21.6%**
 
 ## 9. Patrones emergentes registrados
@@ -284,6 +284,10 @@ Hipótesis candidatas a v3 si reaparecen en partidos futuros:
 
 > (1) TT-UNDER expuesto a viento-out no confirmado en parque HR → tratar el viento no confirmado como señal de PASS específica para ese under, NO neutral. n≥2 ahora (junto con cluster Tigers/Rays 01/06, Royals/Twins 04/06, Brewers/Rockies 06/06 del meta-mecanismo 'daño por aire con viento out'). El espejo: NO tomar TT-UNDER cuando el viento out es plausible-no-confirmado en parque HR + abridor Tipo B. (2) Micro-lección: no abandonar 'outs over' por línea alta cuando la racha de IP la sostiene (Gilbert Outs Over 17.5 ganó, descartado por pivote a Ks que perdió).
 
+**43.** `twins-tigers-100626`
+
+> VIOLACIÓN del Patrón 5 (caveat al revés): se declaró 'solo DET tiene ruta' ignorando poder latente de MIN (Buxton/Lewis HR) + ambiente caliente — 'lineup debilitado ≠ ofensiva inofensiva', MIN anotó 6 > DET 4. Candidatos n=1: (1) ambos abridores vulnerables + parque caliente → over del juego ≥ TT individual (menos dependencias, no exige adivinar qué ofensiva convierte); (2) lineup alto-K vs pen malo-pero-con-whiff → descontar TT-over pese al ERA agregado del pen (DET 14 K / 3-10 RISP; pen MIN tiró 10 K). Nota de proceso: demora por tormenta invalida el anemómetro previo — re-confirmar viento DESPUÉS de cualquier demora (conecta con el gate de viento de mariners-orioles 09/06).
+
 
 ## 10. Divergencias jugada ≠ analítica
 
@@ -323,10 +327,11 @@ Partidos donde lo realmente apostado y el frame del análisis tienen clasificaci
 | giants-cubs-070626 | NO_JUGADA | ACIERTO_RUIDOSO |
 | phillies-bluejays-080626 | PASS_INCORRECTO | ACIERTO_LIMPIO |
 
-_31 partidos con divergencia (de 51)._
+_31 partidos con divergencia (de 52)._
 
 ## 11. Insights operativos
 
-- **El menú considerado supera al jugado**: ROI menú +21.6% vs jugado +0.1%. Sugiere que se descartan picks correctas por cuota/heurística de selección.
+- **Apuestas con ROI negativo**: -6.2% en 16 singles con cuota.
+- **El menú considerado supera al jugado**: ROI menú +21.6% vs jugado -6.2%. Sugiere que se descartan picks correctas por cuota/heurística de selección.
 - **Fuente de edge más propensa a error**: `matchup_mano_repertorio` con 4 errores. Revisar antes de apostar.
 - **Mejor mercado por win rate**: `prop_bateador_HRR_RBI` con 2-0 (100% wr).
