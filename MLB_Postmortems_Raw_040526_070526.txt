@@ -2666,3 +2666,100 @@ Nota de proceso: demora por tormenta (1:07) invalida la lectura de anemómetro p
 
 [ ] Con AMBOS abridores vulnerables + parque caliente, el over del juego tiene menos dependencias que cualquier TT individual (no exige adivinar qué ofensiva convierte); aplicar ACTIVAMENTE el caveat del Patrón 5 antes de estrechar a una sola ruta — el poder latente + ambiente mantiene viva la ruta del lineup "degradado".
 
+
+	[Dodgers vs Pirates 110626]
+
+1. THESIS PRE-PARTIDO (antes de ver resultado)
+
+Edge principal en una frase:
+[ ] La ofensiva zurda élite de LAD vs Keller (Tipo B en regresión, recién bombardeado, con agujero estructural vs zurdos), en un ambiente que ambos lineups pueden alimentar; Wrobleski no saca outs por whiff.
+
+Nivel en Jerarquía de Edges (v2.2):
+[ ] Posición 2 (matchup mano/repertorio — zurdos LAD vs Keller Tipo B con agujero vs LHB).
+
+Tipo de vulnerabilidad del pitcher rival (si aplica):
+[ ] Keller (PIT): Tipo B (contacto fuerte, en regresión post-bombardeo). Wrobleski (LAD) no es Tipo dominante — no saca outs por whiff (1 K en 4.2 IP confirmado).
+
+Mercado(s) elegido(s):
+[ ] PASS — sesión cortada por inicio del partido; pilar (LAD TT / F5 TT LAD) sin línea de Stake → sin ejecución. Cuello de botella de EJECUCIÓN, no de lectura.
+
+Cuota(s):
+[ ] LAD ML @1.60; PIT ML @2.40; Over 9.5 @1.91; Under 9.5 @1.90; LAD -1.5 @1.88; PIT +1.5 @1.93. Pilares sin línea: F5 TT LAD over, LAD TT over (full), Keller ER allowed over ~3.5.
+
+Stake relativo:
+[ ] PASS (sin ejecución).
+
+Patrón v2.2 que respalda la jugada:
+[ ] Patrón 1 (Keller Tipo B). Patrón 3 (timing del daño — temprano vs Keller). Patrón 5 (LAD único lado con ruta clara). Patrón 11 (factores ambientales — viento NO confirmado, lecturas web stale). Patrón 13 (señal específica con mecanismo — Keller agujero vs LHB).
+
+
+2. RESULTADO OBJETIVO
+
+Marcador final:
+[ ] Dodgers 8 — Pirates 6. Total 14 R. F5: LAD 5 - PIT 4 (9 R en F5). 3 HR (Ohtani off Keller 3ª, Flores Jr off Wrobleski 5ª, Lowe HR 2-run off Wrobleski 5ª).
+
+Línea de abridores:
+[ ] Abridor A (Wrobleski, LAD): 4.2 IP, 6 H, 4 ER, 2 BB, 1 K, 2 HR. ERA 2.62→2.95.
+[ ] Abridor B (Keller, PIT, L): 4.0 IP, 7 H, 5 ER, 4 BB, ~1 K, 1 HR, 98 pit, sacado en 4 IP. ERA 4.81→5.14. Tipo B en regresión confirmado.
+
+Bullpen relevante:
+[ ] PIT: Ramirez 2.0 IP 0 R (cubrió BULK — brazo NO enumerado en el pre); Sisk 0.2 IP 2 ER (zurdo "counterweight" se rompió en el 7º); Bidois 1.1 IP 1 R; Santana 1.0 IP 0 R.
+[ ] LAD: Klein 1.0 0R (3H); Vesia 0.1 0R; Dreyer 1.0 0R (W); Henriquez 0.2 2 ER; Scott 1.1 0R (S, 7).
+
+Bates clave del partido:
+[ ] LAD: Ohtani 2-2 + HR (3ª off Keller) + 2 BB. PIT: Flores Jr 2-3 HR (5ª off Wrobleski); Lowe HR 2-run (5ª off Wrobleski).
+
+Ofensivas:
+[ ] LAD: 8 R, 10 H, 8 BB, RISP 3-12, LOB 14 — conversión floja, volumen alto.
+[ ] PIT: 6 R, 12 H, 3 BB, RISP 3-9, LOB 8. El 4-spot del 5º llegó vía HR off Wrobleski, NO vía tráfico vs LHP.
+
+Ambientales:
+[ ] 72°F, overcast, viento 11 mph OUT TO LF — NO los 5-6 mph "neutros" leídos <90 min en lecturas web stale (AccuWeather POI, Mesonet 2 días atrás). PNC factor 78 (anti-HR) — destrabado por el viento real. HP Chris Conroy.
+
+Mercado(s) elegido(s) — ganó / perdió / push:
+[ ] PASS — N/A. Hipotéticos: F5 TT LAD over → ganó (LAD 5 en F5). LAD TT over (full) → ganó (LAD 8). Keller ER over ~3.5 → ganó (5 ER). Over 9.5 @1.91 → ganó (14 R; PASADO por asimetría + viento juzgado neutro — error). Under 9.5 @1.90 → perdió (correctamente evitado como trap del Patrón 11). LAD ML @1.60 → ganó (descartada por expresión inferior/correlacionada). LAD -1.5 @1.88 → ganó (margen 2). PIT +1.5 @1.93 → perdió (PIT perdió por 2 — correctamente descartada).
+
+
+3. POSTMORTEM (separar proceso de resultado)
+
+¿La lectura del edge fue correcta?
+[ ] Parcialmente. La tesis ofensiva LAD vs Keller se materializó (8 R, 5 ER en 4 IP, Keller sacado a 12 outs). El error fue ambiental: viento 11 mph OUT TO LF, no 5-6 mph "neutros". Wrobleski (no Tipo dominante, perfil FB/hard-hit) fue castigado por 2 HR — el viento out destrabó su perfil exactamente como advertía el Patrón 11 refinado v2.2.
+
+¿El mercado capturó bien el edge?
+[ ] No (porque no se ejecutó). Los pilares (F5 TT LAD over, LAD TT over) capturaban el edge limpio y cobraban. El Over 9.5 también cobraba — descartado por "viento juzgado neutro", el error que el cluster del viento sigue señalando.
+
+¿El timing del daño coincidió con la proyección?
+[ ] Sí. Daño temprano sobre Keller (5 ER en 4 IP, sacado a 12 outs). LAD F5 = 5 R. Lo que NO se proyectaba era el daño a Wrobleski en el 5º (2 HR back-to-back de Flores Jr y Lowe vía viento out).
+
+¿Apareció algún factor ambiental que cambió el guion?
+[ ] Sí — viento real 11 mph OUT TO LF vs 5-6 mph "neutros" de lecturas web stale (AccuWeather POI 2 días atrás, Mesonet stale). El Patrón 11 refinado v2.2 advertía exactamente esto: ambiente gobierna el run environment. PNC con factor 78 (anti-HR) NO protege con viento out + abridor FB/hard-hit.
+
+Clasificación del resultado:
+[X] NO_JUGADA (jugada): sesión cortada por inicio del partido; pilar (LAD TT / F5 TT LAD) sin línea de Stake → sin ejecución.
+[X] PASS_INCORRECTO (analítica): el menú correcto estaba identificado (F5 TT LAD over, LAD TT full, Keller ER over) pero no se ejecutó por cuello de botella de tiempo + falta de líneas. Cuarto caso del run de leak de ejecución post-v2.2 (junto a mariners-orioles + tigers-rays + nationals-reds).
+
+4. PATRÓN APLICABLE / EMERGENTE
+
+¿Qué patrón v2.2 explica mejor lo ocurrido?
+[ ] Patrón 1 (Keller Tipo B confirmado). Patrón 3 (timing temprano sobre Keller). Patrón 5 (LAD único lado con ruta clara — pero PIT también convirtió vía HR off Wrobleski). Patrón 11 refinado (ambiente gobierna run environment — viento out destrabó el perfil de Wrobleski). Patrón 13 (señal específica con mecanismo — Keller H2H/agujero vs LHB).
+
+¿Aparece un patrón nuevo que no está en v2.2?
+[X] Sí — extensión del candidato v2.3:
+
+**"Viento SIN CONFIRMAR en parque HR-supresor NO es 'neutro': es ensanchador de varianza que mantiene vivas AMBAS colas."** Con abridor FB/hard-hit + día cálido, NO pasar el over apoyándose en el factor HR del parque. Extiende el candidato n=1 previo (mariners-orioles 09/06, aplicaba a UNDERS) a los OVERS → **n=2 para el principio "viento sin confirmar ≠ neutro"**. El espejo se cierra: tanto un TT-UNDER del lado débil como un OVER del juego pueden ser invalidados por el gate de viento no resuelto.
+
+Sub-hallazgo de proceso: las lecturas PWS vía web (AccuWeather POI, weatherforyou Mesonet) estaban stale (2 días) o erradas y subestimaron el viento real (5-6 vs 11 out). Hay que descartar lecturas web cuando no son anemómetro <90 min — exactamente lo que la regla v2.1 del viento ya prescribe pero que el operativo tiende a relajar.
+
+Conexión con cluster del viento (3 partidos seguidos):
+- mariners-orioles 09/06: viento sin confirmar destrabó el UNDER (TT-under perdió por HR en 10ª).
+- twins-tigers 10/06: demora por tormenta invalidó el anemómetro previo (calma → 13 mph R→L).
+- dodgers-pirates 11/06: lecturas web stale dieron viento "neutro" (5-6 vs 11 out real).
+
+¿Algún patrón v2.2 fue contradicho por este partido?
+[ ] No. Patrón 11 refinado validado. Patrón 1 confirmado (Keller Tipo B). El error fue operativo (cuello de botella de tiempo + lectura web stale), no de patrón.
+
+5. LECCIÓN OPERATIVA EN UNA FRASE
+
+[ ] Viento sin confirmar en parque que suprime HR NO habilita pasar el over si el abridor es FB/hard-hit: tratar la lectura web de PWS como poco fiable y mantener AMBAS COLAS vivas hasta tener el anemómetro real.
+
+

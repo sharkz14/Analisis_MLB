@@ -2460,3 +2460,56 @@ partidos:
       emergente: "VIOLACIÓN del Patrón 5 (caveat al revés): se declaró 'solo DET tiene ruta' ignorando poder latente de MIN (Buxton/Lewis HR) + ambiente caliente — 'lineup debilitado ≠ ofensiva inofensiva', MIN anotó 6 > DET 4. Candidatos n=1: (1) ambos abridores vulnerables + parque caliente → over del juego ≥ TT individual (menos dependencias, no exige adivinar qué ofensiva convierte); (2) lineup alto-K vs pen malo-pero-con-whiff → descontar TT-over pese al ERA agregado del pen (DET 14 K / 3-10 RISP; pen MIN tiró 10 K). Nota de proceso: demora por tormenta invalida el anemómetro previo — re-confirmar viento DESPUÉS de cualquier demora (conecta con el gate de viento de mariners-orioles 09/06)."
     fuente: "conversación pre/post-partido"
     leccion: "Con AMBOS abridores vulnerables + parque caliente, el over del juego tiene menos dependencias que cualquier TT individual (no exige adivinar qué ofensiva convierte); aplicar ACTIVAMENTE el caveat del Patrón 5 antes de estrechar a una sola ruta — el poder latente + ambiente mantiene viva la ruta del lineup 'degradado'."
+
+  - id: dodgers-pirates-110626
+    fecha: 2026-06-11
+    partido: "Dodgers vs Pirates"
+    marcador: "Dodgers 8 - Pirates 6"
+    cuotas_pre_partido:
+      ml_favorito: 1.60   # LAD
+      ml_underdog: 2.40   # PIT
+    edge:
+      frase: "La ofensiva zurda élite de LAD vs Keller (Tipo B en regresión, recién bombardeado, con agujero estructural vs zurdos), en un ambiente que ambos lineups pueden alimentar; Wrobleski no saca outs por whiff."
+      fuente: matchup_mano_repertorio   # P2 zurdos LAD vs Keller Tipo B con agujero vs LHB
+      pitcher_vulnerable_tipo: B   # Keller en regresión, contacto fuerte + agujero estructural vs LHB
+    apuesta:
+      mercado: "Ninguna — análisis no finalizado antes del primer pitch (faltó línea de Stake LAD TT / F5 TT LAD)"
+      tipo_mercado: pass
+      cuota: null
+      stake: null
+      formato: single
+      resultado: null
+      notas_apuesta: "Sesión cortada por inicio del partido; pilar (LAD TT / F5 TT LAD) sin línea de Stake → sin ejecución. Cuello de botella de EJECUCIÓN, no de lectura."
+    picks_analizadas_no_jugadas:
+      - {pick: "F5 TT LAD over", cuota: null, resultado_hipotetico: ganó, motivo: "LAD 5 carreras en F5; cobra con margen. Keller 5 ER en 4 IP."}
+      - {pick: "LAD TT over (full)", cuota: null, resultado_hipotetico: ganó, motivo: "LAD 8 carreras; cualquier línea razonable (≤6.5) cobra."}
+      - {pick: "Keller ER allowed over (~3.5)", cuota: null, resultado_hipotetico: ganó, motivo: "Keller 5 ER en 4 IP."}
+      - {pick: "Over 9.5 (full)", cuota: 1.91, resultado_hipotetico: ganó, motivo: "14 carreras. PASADO por asimetría + viento juzgado neutro. Error: viento real 11 out to LF destrabó el perfil FB/hard-hit de Wrobleski."}
+      - {pick: "Under 9.5 (full)", cuota: 1.90, resultado_hipotetico: perdió, motivo: "14 carreras; correctamente evitado como trap (Patrón 11)."}
+      - {pick: "LAD ML", cuota: 1.60, resultado_hipotetico: ganó, motivo: "LAD ganó 8-6; descartada como expresión inferior/correlacionada."}
+      - {pick: "LAD -1.5", cuota: 1.88, resultado_hipotetico: ganó, motivo: "LAD por 2 (cubre); descartada por correlación con el TT."}
+      - {pick: "PIT +1.5", cuota: 1.93, resultado_hipotetico: perdió, motivo: "PIT perdió por 2; correctamente descartada (contra-tesis)."}
+    contexto_resultado:
+      abridor_propio: "Wrobleski (LAD): 4.2 IP, 6 H, 4 ER, 2 BB, 1 K, 2 HR (ERA 2.62→2.95)."
+      abridor_rival: "Keller (PIT, L): 4.0 IP, 7 H, 5 ER, 4 BB, ~1 K, 1 HR, 98 pitcheos, sacado en 4 IP (ERA 4.81→5.14). Tipo B en regresión confirmado."
+      bullpen_rival: "PIT: Ramirez 2.0 IP 0 R (cubrió BULK — brazo NO enumerado en el pre); Sisk 0.2 IP 2 ER (zurdo 'counterweight' se rompió en 7º); Bidois 1.1 IP 1 R; Santana 1.0 IP 0 R."
+      bullpen_propio: "LAD: Klein 1.0 0R (3H); Vesia 0.1 0R; Dreyer 1.0 0R (W); Henriquez 0.2 2 ER; Scott 1.1 0R (S, 7)."
+      bates_clave: "LAD: Ohtani 2-2 + HR (3ª off Keller) + 2 BB. PIT: Flores Jr 2-3 HR (5ª off Wrobleski); Lowe HR 2-run (5ª off Wrobleski)."
+      ofensiva_propio: "LAD 8 R, 10 H, 8 BB, RISP 3-12, LOB 14 — conversión floja, volumen alto."
+      ofensiva_rival: "PIT 6 R, 12 H, 3 BB, RISP 3-9, LOB 8. El 4-spot del 5º llegó vía HR off Wrobleski, NO vía tráfico vs LHP."
+      ambiente: "72°F, overcast, viento 11 mph OUT TO LF — NO los 5-6 mph 'neutros' leídos <90 min en lecturas web stale (AccuWeather POI, Mesonet 2 días atrás). PNC Park factor 78 (anti-HR) destrabado por viento real. HP Chris Conroy."
+      factor_clave: "Viento real 11 mph OUT TO LF destrabó exactamente el perfil FB/hard-hit de Wrobleski → 3 HR en el juego pese a PNC factor 78. El gate de viento (lectura web stale) es el error operativo central."
+      total_resultado: "14 carreras vs O/U 9.5 → OVER. F5 total 9 (LAD 5 / PIT 4)."
+    postmortem:
+      lectura_correcta: parcialmente
+      mercado_capturo_edge: no
+      clasificacion_jugada: NO_JUGADA
+      clasificacion_analitica: PASS_INCORRECTO
+      mercado_correcto_retrospectiva: "F5 TT LAD over (y LAD TT full). Además el Over 9.5 @1.91 era jugable: el viento out destrabó el over que pasamos por 'neutro'."
+      tipo_mercado_correcto: F5_TT
+      nota_meta: "Cuello de botella de EJECUCIÓN (sesión cortada por inicio del partido, pilar sin línea de Stake), no de lectura. Cuarto caso del run de leak de ejecución post-v2.2."
+    patron_v2:
+      aplicable: [1, 3, 5, 11, 13]
+      emergente: "Viento SIN CONFIRMAR en parque HR-supresor NO es 'neutro': es ensanchador de varianza que mantiene vivas AMBAS colas. Con abridor FB/hard-hit + día cálido, no pasar el over apoyándose en el factor HR del parque. Extiende el candidato n=1 previo (mariners-orioles 09/06, aplicaba a UNDERS) a los OVERS → n=2 para el principio 'viento sin confirmar ≠ neutro'. Sub-hallazgo de proceso: las lecturas PWS vía web (AccuWeather POI, weatherforyou Mesonet) estaban stale (2 días) o erradas y subestimaron el viento real (5-6 vs 11 out). Cluster del viento ahora 3 partidos seguidos (mariners-orioles 09/06 + twins-tigers 10/06 + dodgers-pirates 11/06)."
+    fuente: "conversación pre/post-partido (análisis bloques 0-12 + box score final)"
+    leccion: "Viento sin confirmar en parque que suprime HR no habilita pasar el over si el abridor es FB/hard-hit: tratar la lectura web de PWS como poco fiable y mantener ambas colas vivas hasta tener el anemómetro real."
